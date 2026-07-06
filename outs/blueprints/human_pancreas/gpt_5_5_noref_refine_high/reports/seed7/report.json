@@ -1,0 +1,52 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers human pancreas compartments but needs targeted cleanup of the unsupported endocrine progenitor-like axis, beta maturation/stress labeling, and a few vascular/endocrine distinctions.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "axis:endocrine_progenitor_like_state / module:endocrine_progenitor_like",
+      "description": "Healthy human pancreas without developmental or injury notes should not require a true endocrine progenitor axis, and the current module mixes ductal/progenitor markers with endocrine and stress/dedifferentiation-associated genes.",
+      "suggested_fix": "Delete this axis/module, or replace it in place with a clearly named beta/endocrine dedifferentiation or stress-state module gated more narrowly by beta/endocrine identity and without SOX9/HES1-driven ductal signal.",
+      "remove": [
+        "axis:endocrine_progenitor_like_state",
+        "module:endocrine_progenitor_like"
+      ]
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "axis:beta_maturation / module:immature_beta_like",
+      "description": "The negative immature_beta_like module contains several generic ER-stress and hypoxia/glycolysis genes, so beta_maturation can read as mature beta versus stressed/dedifferentiated beta rather than true maturation.",
+      "suggested_fix": "Either rename/reframe the axis as beta stress/dedifferentiation, or replace the negative genes with a cleaner immature/dedifferentiated beta set while keeping generic ER-stress genes in secretory_er_stress.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:endocrine_vs_exocrine_epithelium",
+      "description": "The axis name implies endocrine versus all exocrine epithelium, but the negative side is acinar only and omits ductal/centroacinar epithelium.",
+      "suggested_fix": "Rename it to endocrine_vs_acinar, or introduce/use a broader exocrine_epithelium negative module that includes acinar plus ductal/centroacinar programs.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "vascular endothelial axes",
+      "description": "The blueprint separates vascular from lymphatic endothelium, but does not resolve arterial, venous, and capillary/islet endothelial states expected in pancreas tissue.",
+      "suggested_fix": "Add one or two gated endothelial subtype axes if dimensionality permits, such as arterial endothelial versus venous/ACKR1-like and/or fenestrated/islet capillary endothelial within endothelial_core.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "gene-set-hygiene",
+      "where": "module:immune_core",
+      "description": "The immune core includes LST1 and TYROBP, which are myeloid-skewed and make the general immune identity less neutral.",
+      "suggested_fix": "Keep pan-immune markers in immune_core and move strongly myeloid-skewed genes to macrophage_myeloid.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "The broad stress axes are acceptable as generic scRNA-seq state dimensions, but downstream users should not interpret them as pancreas-specific identity axes."
+  ]
+}

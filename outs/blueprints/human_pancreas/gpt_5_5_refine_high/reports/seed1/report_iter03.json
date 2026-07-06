@@ -1,0 +1,45 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers human pancreas but needs targeted refinement of ductal, immune, neural, and redundant stromal axes.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "ductal branch / canonical_cftr_duct",
+      "description": "The canonical CFTR/bicarbonate duct module is only used as a negative comparator for the activated remodeling duct axis, so canonical duct identity is not exposed as a positive ductal subtype or state axis.",
+      "suggested_fix": "Add a gated canonical_cftr_duct_identity axis under ductal_cell contrasting canonical_cftr_duct against activated_remodeling_duct, or otherwise expose canonical duct identity positively.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "immune branch",
+      "description": "The immune branch lacks a granulocyte/neutrophil axis, so rare granulocytes in whole human pancreas would likely be absorbed into monocyte_inflammatory because of shared inflammatory markers.",
+      "suggested_fix": "Add a gated neutrophil/granulocyte immune axis with canonical human markers such as FCGR3B, CSF3R, CXCR2, S100A8, S100A9, MPO, ELANE, and OLFM4 as supported by the chosen resources; tune monocyte_inflammatory if needed.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "neural_ganglial gate",
+      "description": "The neural_ganglial gate averages Schwann/glial markers with autonomic neuronal markers, which are largely mutually exclusive programs rather than a coherent gate.",
+      "suggested_fix": "Use separate axes for schwann_glial and autonomic_neuronal_ganglionic without the mixed gate, or replace neural_ganglial with a more coherent parent design that does not average mutually exclusive neuronal and glial markers.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "gene-set-hygiene",
+      "where": "stromal branch / mural_pericyte_smooth_muscle_stroma",
+      "description": "The mural_pericyte_smooth_muscle module and axis duplicate the already-present pericyte and vascular_smooth_muscle axes and do not represent a distinct state.",
+      "suggested_fix": "Delete the redundant umbrella module and axis, or repurpose them into a genuinely distinct parent gate only if the revised axis topology needs it.",
+      "remove": [
+        "axis:mural_pericyte_smooth_muscle_stroma",
+        "module:mural_pericyte_smooth_muscle"
+      ]
+    }
+  ],
+  "out_of_scope": [
+    "Paper and atlas DOI correctness was not checked.",
+    "Rare mesothelial/capsular cells or finer centroacinar-terminal duct subdivisions could be added in a more granular atlas, but are not required for this baseline scenario."
+  ]
+}

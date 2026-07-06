@@ -1,0 +1,55 @@
+axis_name_canonical,n_raw_spellings,raw_spellings,n_runs,fraction_runs,modal_kind,modal_positive,modal_gate
+glutamatergicneuronvsgabaergicneuron,3,glutamatergic_vs_gabaergic (8) | glutamatergic_vs_gabaergic_neuron (1) | excitatory_vs_inhibitory_neuron (1),10,1.0,contrast,glutamatergic_neuron,
+neuronalactivityieg,4,neuronal_activity_state (4) | neuronal_activity_ieg (2) | neuronal_activity_response (2) | neuronal_activity_immediate_early (2),10,1.0,gated,neuronal_activity_ieg,pan_neuronal
+vlmc,5,vlmc_fibroblast_identity (4) | vlmc_fibroblast (2) | vascular_leptomeningeal_fibroblast (2) | vascular_leptomeningeal_fibroblast_identity (1) | vascular_vlmc_fibroblast_like (1),10,1.0,plain,vlmc,vascular
+astrocyte,2,astrocyte_identity (5) | astrocyte (4),9,0.9,plain,astrocyte,glia
+endothelial,4,endothelial_identity (3) | endothelial (3) | vascular_endothelial_identity (2) | vascular_endothelial (1),9,0.9,plain,endothelial,vascular
+l23it,4,excitatory_l23_it (5) | glutamatergic_l23_it (2) | l23_it_program (1) | excitatory_l2_3_it (1),9,0.9,gated,l23_it,glutamatergic_neuron
+l4it,3,excitatory_l4_it (6) | glutamatergic_l4_it (2) | l4_it_program (1),9,0.9,gated,l4_it,glutamatergic_neuron
+l5et,5,excitatory_l5_et (4) | excitatory_l5_et_pt (2) | glutamatergic_l5_et_pt (1) | l5_et_pt_program (1) | glutamatergic_l5_et (1),9,0.9,gated,l5_et,glutamatergic_neuron
+l5it,3,excitatory_l5_it (6) | glutamatergic_l5_it (2) | l5_it_program (1),9,0.9,gated,l5_it,glutamatergic_neuron
+l6b,5,excitatory_l6b (5) | glutamatergic_l6b_subplate (1) | l6b_program (1) | excitatory_l6b_subplate (1) | glutamatergic_l6b (1),9,0.9,gated,l6b,glutamatergic_neuron
+l6ct,3,excitatory_l6_ct (6) | glutamatergic_l6_ct (2) | l6_ct_program (1),9,0.9,gated,l6_ct,glutamatergic_neuron
+lamp5,8,interneuron_lamp5_reln (2) | gabaergic_lamp5_reln (1) | lamp5_program (1) | interneuron_lamp5 (1) | lamp5_interneuron (1) | inhibitory_lamp5_neurogliaform (1) | gabaergic_lamp5 (1) | lamp5_reln_interneuron (1),9,0.9,gated,lamp5,gabaergic_neuron
+microglia,5,microglia (3) | microglia_identity (3) | microglia_homeostatic (1) | microglia_homeostatic_program (1) | microglia_homeostasis (1),9,0.9,plain,microglia,myeloid
+opc,5,opc (3) | opc_identity (3) | oligodendrocyte_precursor_identity (1) | oligodendrocyte_lineage_opc (1) | oligodendrocyte_precursor (1),9,0.9,plain,opc,oligodendrocyte_lineage
+pvalb,5,interneuron_pvalb (3) | gabaergic_pvalb (2) | pvalb_interneuron (2) | pvalb_program (1) | inhibitory_pvalb (1),9,0.9,gated,pvalb,gabaergic_neuron
+sst,5,interneuron_sst (3) | gabaergic_sst (2) | sst_interneuron (2) | sst_program (1) | inhibitory_sst (1),9,0.9,gated,sst,gabaergic_neuron
+vip,5,interneuron_vip (3) | gabaergic_vip (2) | vip_interneuron (2) | vip_program (1) | inhibitory_vip (1),9,0.9,gated,vip,gabaergic_neuron
+sncg,7,interneuron_sncg_serpinf1 (2) | sncg_program (1) | interneuron_sncg (1) | sncg_serpinf1_interneuron (1) | inhibitory_sncg (1) | gabaergic_sncg (1) | sncg_interneuron (1),8,0.8,gated,sncg,gabaergic_neuron
+matureoligodendrocyte,5,oligodendrocyte (2) | mature_oligodendrocyte (1) | mature_oligodendrocyte_identity (1) | mature_oligodendrocyte_myelin_identity (1) | oligodendrocyte_lineage_mature_myelinating (1),6,0.6,plain,mature_oligodendrocyte,oligodendrocyte_lineage
+oligodendrocytematuration,1,oligodendrocyte_maturation (5),5,0.5,contrast,mature_oligodendrocyte,glia
+panneuronalvsnonneuronal,2,neuronal_vs_non_neuronal (3) | neuron_vs_non_neuronal (2),5,0.5,contrast,pan_neuronal,
+l6itcar3,3,excitatory_l6_it_car3 (2) | l6_it_car3_program (1) | glutamatergic_l6_it_car3 (1),4,0.4,gated,l6_it_car3,glutamatergic_neuron
+mural,3,mural_pericyte_smooth_muscle_identity (2) | mural_pericyte_smooth_muscle (1) | mural (1),4,0.4,plain,mural,non_neuronal
+panneuronal,3,neuronal_identity (2) | pan_neuronal_identity (1) | pan_neuron_identity (1),4,0.4,plain,pan_neuronal,
+smoothmuscle,3,vascular_smooth_muscle (2) | smooth_muscle_identity (1) | vascular_smooth_muscle_identity (1),4,0.4,plain,smooth_muscle,vascular
+committedoligoprecursor,3,committed_oligodendrocyte_precursor (1) | committed_oligodendrocyte_precursor_identity (1) | oligodendrocyte_lineage_committed_precursor (1),3,0.3,plain,committed_oligo_precursor,oligodendrocyte_lineage
+l56np,3,l5_6_np_program (1) | glutamatergic_l56_np (1) | excitatory_l56_np (1),3,0.3,gated,l5_6_np,glutamatergic_neuron
+macrophage,3,border_macrophage_program (1) | border_macrophage (1) | border_associated_macrophage_identity (1),3,0.3,plain,macrophage,myeloid
+meis2,3,meis2_program (1) | inhibitory_meis2 (1) | gabaergic_meis2 (1),3,0.3,gated,meis2,gabaergic_neuron
+pericyte,3,pericyte (1) | pericyte_identity (1) | vascular_pericyte (1),3,0.3,plain,pericyte,vascular
+matureoligodendrocytevsopc,2,oligodendrocyte_vs_opc (1) | mature_oligodendrocyte_vs_opc (1),2,0.2,contrast,mature_oligodendrocyte,
+smoothmusclevspericyte,2,mural_contractile_vs_pericyte (1) | smooth_muscle_vs_pericyte (1),2,0.2,contrast,smooth_muscle,
+sncgingabaergicneuron,2,sncg_within_gabaergic (1) | serpinf1_within_gabaergic (1),2,0.2,gated,sncg,gabaergic_neuron
+astrocytevsoligodendrocytelineage,1,astrocyte_vs_oligodendrocyte_lineage (1),1,0.1,contrast,astrocyte,
+cellcycle,1,proliferation_state (1),1,0.1,plain,cell_cycle,
+endothelialvsmural,1,vascular_endothelial_vs_mural (1),1,0.1,contrast,endothelial,
+l23itinglutamatergicneuron,1,upper_it_l23_within_excitatory (1),1,0.1,gated,l23_it,glutamatergic_neuron
+l4itinglutamatergicneuron,1,layer4_it_within_excitatory (1),1,0.1,gated,l4_it,glutamatergic_neuron
+l5etinglutamatergicneuron,1,layer5_et_within_excitatory (1),1,0.1,gated,l5_et,glutamatergic_neuron
+l5itinglutamatergicneuron,1,layer5_it_within_excitatory (1),1,0.1,gated,l5_it,glutamatergic_neuron
+l6binglutamatergicneuron,1,layer6b_subplate_within_excitatory (1),1,0.1,gated,l6b,glutamatergic_neuron
+l6ctinglutamatergicneuron,1,layer6_ct_within_excitatory (1),1,0.1,gated,l6_ct,glutamatergic_neuron
+lamp5ingabaergicneuron,1,lamp5_within_gabaergic (1),1,0.1,gated,lamp5,gabaergic_neuron
+microgliavsmacrophage,1,microglia_vs_border_macrophage (1),1,0.1,contrast,microglia,
+muralvsendothelial,1,vascular_mural_vs_endothelial (1),1,0.1,contrast,mural,
+myelinprogram,1,myelin_maturation_program (1),1,0.1,gated,myelin_program,mature_oligodendrocyte
+newlyformedoligodendrocyte,1,differentiating_oligodendrocyte_window (1),1,0.1,gated,newly_formed_oligodendrocyte,opc
+nonneuronal,1,non_neuronal_enrichment (1),1,0.1,plain,non_neuronal,
+panneuronalvsglia,1,neuronal_vs_glial (1),1,0.1,contrast,pan_neuronal,
+pericytevsendothelial,1,pericyte_vs_endothelial (1),1,0.1,contrast,pericyte,
+pericytevssmoothmuscle,1,pericyte_vs_smooth_muscle (1),1,0.1,contrast,pericyte,
+pvalbingabaergicneuron,1,pvalb_within_gabaergic (1),1,0.1,gated,pvalb,gabaergic_neuron
+sstingabaergicneuron,1,sst_within_gabaergic (1),1,0.1,gated,sst,gabaergic_neuron
+vipingabaergicneuron,1,vip_within_gabaergic (1),1,0.1,gated,vip,gabaergic_neuron

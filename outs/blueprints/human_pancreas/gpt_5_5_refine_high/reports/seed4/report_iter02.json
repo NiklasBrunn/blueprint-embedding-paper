@@ -1,0 +1,41 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers healthy human pancreas but needs targeted cleanup of a few markers, labels, and one arbitrary contrast axis.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:lymphatic_endothelial",
+      "description": "The module is mostly canonical for lymphatic endothelium, but TFF3 is an epithelial/ductal trefoil marker rather than a lymphatic endothelial marker, risking ductal signal in the lymphatic axis.",
+      "suggested_fix": "Replace TFF3 with a more canonical lymphatic/endothelial gene such as NRP2, RELN, TBX1, FOXC2, or another literature-supported lymphatic marker.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:leukocyte_common",
+      "description": "HLA-DRA is not a pan-leukocyte marker and biases the common leukocyte gate toward antigen-presenting cells, overlapping with dendritic and B-cell modules.",
+      "suggested_fix": "Swap HLA-DRA for a broader leukocyte marker such as CD53, LAPTM5, DOCK2, RAC2, or another supported pan-immune gene.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "gene-set-hygiene",
+      "where": "module:t_nk_cell / axis:t_nk_within_leukocyte and module:b_plasma_cell / axis:b_plasma_within_leukocyte",
+      "description": "The module and axis names are misleading: t_nk_cell is a T-cell module despite a separate NK module, and b_plasma_cell is a B-cell module despite a separate plasma-cell module.",
+      "suggested_fix": "Rename or relabel these in place as T-cell and B-cell modules/axes, or adjust the gene lists if the intent is genuinely combined T/NK or B/plasma programs. No deletion is needed.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:mural_contractile_vs_endothelial",
+      "description": "Smooth muscle/contractile mural cells and endothelial cells are distinct vascular-associated compartments, but they are not a clear biological opposition; an endothelial axis already exists.",
+      "suggested_fix": "Convert this in place to a plain smooth muscle/contractile mural axis, or gate it within a vascular/stromal context if supported by existing modules.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "Epsilon cells and adipocytes are rare or sampling-dependent in many adult human pancreas datasets, but they are still within the broad human pancreas scenario and do not require removal."
+  ]
+}

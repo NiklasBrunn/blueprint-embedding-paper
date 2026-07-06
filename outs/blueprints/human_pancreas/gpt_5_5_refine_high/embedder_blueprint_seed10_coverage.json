@@ -1,0 +1,447 @@
+{
+  "h5ad_path": "data/preprocessed/human_pancreas_pp.h5ad",
+  "layer": null,
+  "n_cells": 16382,
+  "n_vars": 18268,
+  "n_min_genes": 0,
+  "clip": 4.0,
+  "modules": [
+    {
+      "name": "pancreatic_epithelium",
+      "n_genes": 6,
+      "n_genes_present": 6,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.934928580148944
+    },
+    {
+      "name": "endocrine_core",
+      "n_genes": 8,
+      "n_genes_present": 8,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.8730313759003785
+    },
+    {
+      "name": "acinar_digestive",
+      "n_genes": 14,
+      "n_genes_present": 13,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "PRSS2"
+      ],
+      "fraction_nonzero_cells": 0.7504578195580516
+    },
+    {
+      "name": "ductal_bicarbonate_mucin",
+      "n_genes": 10,
+      "n_genes_present": 10,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.6931388108900012
+    },
+    {
+      "name": "mesothelial_capsular",
+      "n_genes": 6,
+      "n_genes_present": 6,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.30423635697717005
+    },
+    {
+      "name": "beta_cell",
+      "n_genes": 8,
+      "n_genes_present": 7,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "NKX6-1"
+      ],
+      "fraction_nonzero_cells": 0.9655109266267855
+    },
+    {
+      "name": "beta_mature_secretory",
+      "n_genes": 5,
+      "n_genes_present": 5,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.685569527530216
+    },
+    {
+      "name": "alpha_cell",
+      "n_genes": 9,
+      "n_genes_present": 9,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.9514711268465389
+    },
+    {
+      "name": "delta_cell",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.871688438530094
+    },
+    {
+      "name": "gamma_pp_cell",
+      "n_genes": 5,
+      "n_genes_present": 5,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.9108777926993041
+    },
+    {
+      "name": "epsilon_ghrelin_cell",
+      "n_genes": 4,
+      "n_genes_present": 4,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.6186057868392137
+    },
+    {
+      "name": "endothelial_core",
+      "n_genes": 9,
+      "n_genes_present": 9,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.1860578683921377
+    },
+    {
+      "name": "islet_endothelial",
+      "n_genes": 11,
+      "n_genes_present": 11,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.40233182761567576
+    },
+    {
+      "name": "acinar_endothelial",
+      "n_genes": 6,
+      "n_genes_present": 5,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "GPIHBP1"
+      ],
+      "fraction_nonzero_cells": 0.4003784641679893
+    },
+    {
+      "name": "lymphatic_endothelial",
+      "n_genes": 6,
+      "n_genes_present": 6,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.3489805884507386
+    },
+    {
+      "name": "fibroblast_stellate_ecm",
+      "n_genes": 9,
+      "n_genes_present": 9,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.4221706751312416
+    },
+    {
+      "name": "mural_pericyte_smooth_muscle",
+      "n_genes": 8,
+      "n_genes_present": 8,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.30429739958491026
+    },
+    {
+      "name": "non_epithelial_pancreas",
+      "n_genes": 10,
+      "n_genes_present": 10,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.3912831156146991
+    },
+    {
+      "name": "immune_core",
+      "n_genes": 8,
+      "n_genes_present": 8,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.14607496032230496
+    },
+    {
+      "name": "macrophage_monocyte",
+      "n_genes": 10,
+      "n_genes_present": 10,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.4008668050299109
+    },
+    {
+      "name": "t_nk_lymphocyte",
+      "n_genes": 8,
+      "n_genes_present": 7,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "TRBC1"
+      ],
+      "fraction_nonzero_cells": 0.045842998412892196
+    },
+    {
+      "name": "nk_cell",
+      "n_genes": 6,
+      "n_genes_present": 6,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.34080087901355144
+    },
+    {
+      "name": "b_plasma_cell",
+      "n_genes": 8,
+      "n_genes_present": 7,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "JCHAIN"
+      ],
+      "fraction_nonzero_cells": 0.8512391649371261
+    },
+    {
+      "name": "plasma_cell",
+      "n_genes": 6,
+      "n_genes_present": 5,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "JCHAIN"
+      ],
+      "fraction_nonzero_cells": 0.8191917958735198
+    },
+    {
+      "name": "dendritic_cell",
+      "n_genes": 7,
+      "n_genes_present": 6,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "HLA-DRA"
+      ],
+      "fraction_nonzero_cells": 0.0527408130875351
+    },
+    {
+      "name": "mast_cell",
+      "n_genes": 6,
+      "n_genes_present": 6,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.04974972530826517
+    },
+    {
+      "name": "schwann_neural",
+      "n_genes": 6,
+      "n_genes_present": 6,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.45073861555365646
+    },
+    {
+      "name": "cycling_state",
+      "n_genes": 5,
+      "n_genes_present": 5,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.07178610670247833
+    },
+    {
+      "name": "adipocyte",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.12495421804419485
+    }
+  ],
+  "axes": [
+    {
+      "name": "epithelial_vs_non_epithelial",
+      "positive_module": "pancreatic_epithelium",
+      "n_present": 6,
+      "kept": true,
+      "dim": 0
+    },
+    {
+      "name": "endocrine_core",
+      "positive_module": "endocrine_core",
+      "n_present": 8,
+      "kept": true,
+      "dim": 1
+    },
+    {
+      "name": "acinar_vs_ductal_exocrine",
+      "positive_module": "acinar_digestive",
+      "n_present": 13,
+      "kept": true,
+      "dim": 2
+    },
+    {
+      "name": "mesothelial_capsular",
+      "positive_module": "mesothelial_capsular",
+      "n_present": 6,
+      "kept": true,
+      "dim": 3
+    },
+    {
+      "name": "endocrine_beta_identity",
+      "positive_module": "beta_cell",
+      "n_present": 7,
+      "kept": true,
+      "dim": 4
+    },
+    {
+      "name": "endocrine_alpha_identity",
+      "positive_module": "alpha_cell",
+      "n_present": 9,
+      "kept": true,
+      "dim": 5
+    },
+    {
+      "name": "endocrine_delta_identity",
+      "positive_module": "delta_cell",
+      "n_present": 7,
+      "kept": true,
+      "dim": 6
+    },
+    {
+      "name": "endocrine_gamma_pp_identity",
+      "positive_module": "gamma_pp_cell",
+      "n_present": 5,
+      "kept": true,
+      "dim": 7
+    },
+    {
+      "name": "endocrine_epsilon_ghrelin_identity",
+      "positive_module": "epsilon_ghrelin_cell",
+      "n_present": 4,
+      "kept": true,
+      "dim": 8
+    },
+    {
+      "name": "beta_mature_secretory_state",
+      "positive_module": "beta_mature_secretory",
+      "n_present": 5,
+      "kept": true,
+      "dim": 9
+    },
+    {
+      "name": "fibroblast_stellate_ecm",
+      "positive_module": "fibroblast_stellate_ecm",
+      "n_present": 9,
+      "kept": true,
+      "dim": 10
+    },
+    {
+      "name": "mural_vs_fibroblast_stellate",
+      "positive_module": "mural_pericyte_smooth_muscle",
+      "n_present": 8,
+      "kept": true,
+      "dim": 11
+    },
+    {
+      "name": "adipocyte",
+      "positive_module": "adipocyte",
+      "n_present": 7,
+      "kept": true,
+      "dim": 12
+    },
+    {
+      "name": "endothelial_core",
+      "positive_module": "endothelial_core",
+      "n_present": 9,
+      "kept": true,
+      "dim": 13
+    },
+    {
+      "name": "islet_vs_acinar_endothelium",
+      "positive_module": "islet_endothelial",
+      "n_present": 11,
+      "kept": true,
+      "dim": 14
+    },
+    {
+      "name": "acinar_vs_islet_endothelium",
+      "positive_module": "acinar_endothelial",
+      "n_present": 5,
+      "kept": true,
+      "dim": 15
+    },
+    {
+      "name": "lymphatic_endothelium",
+      "positive_module": "lymphatic_endothelial",
+      "n_present": 6,
+      "kept": true,
+      "dim": 16
+    },
+    {
+      "name": "immune_core",
+      "positive_module": "immune_core",
+      "n_present": 8,
+      "kept": true,
+      "dim": 17
+    },
+    {
+      "name": "immune_macrophage_monocyte",
+      "positive_module": "macrophage_monocyte",
+      "n_present": 10,
+      "kept": true,
+      "dim": 18
+    },
+    {
+      "name": "immune_t_nk_lymphocyte",
+      "positive_module": "t_nk_lymphocyte",
+      "n_present": 7,
+      "kept": true,
+      "dim": 19
+    },
+    {
+      "name": "immune_nk_cell",
+      "positive_module": "nk_cell",
+      "n_present": 6,
+      "kept": true,
+      "dim": 20
+    },
+    {
+      "name": "immune_b_plasma_cell",
+      "positive_module": "b_plasma_cell",
+      "n_present": 7,
+      "kept": true,
+      "dim": 21
+    },
+    {
+      "name": "immune_plasma_cell",
+      "positive_module": "plasma_cell",
+      "n_present": 5,
+      "kept": true,
+      "dim": 22
+    },
+    {
+      "name": "immune_dendritic_cell",
+      "positive_module": "dendritic_cell",
+      "n_present": 6,
+      "kept": true,
+      "dim": 23
+    },
+    {
+      "name": "immune_mast_cell",
+      "positive_module": "mast_cell",
+      "n_present": 6,
+      "kept": true,
+      "dim": 24
+    },
+    {
+      "name": "schwann_neural",
+      "positive_module": "schwann_neural",
+      "n_present": 6,
+      "kept": true,
+      "dim": 25
+    },
+    {
+      "name": "cycling_state",
+      "positive_module": "cycling_state",
+      "n_present": 5,
+      "kept": true,
+      "dim": 26
+    }
+  ]
+}

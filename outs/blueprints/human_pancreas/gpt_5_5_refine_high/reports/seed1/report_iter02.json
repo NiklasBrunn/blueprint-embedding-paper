@@ -1,0 +1,41 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint covers the major human pancreatic compartments but needs targeted refinements for stromal, neural, myeloid, and ductal heterogeneity.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "mesenchymal/stromal modules and axes",
+      "description": "The stromal compartment is dominated by fibroblast/ECM markers, while pericytes and vascular smooth muscle are combined in one module. Pancreatic stellate/fibroblast-like cells, pericytes, and smooth muscle cells are expected in human pancreas but are not cleanly separable.",
+      "suggested_fix": "Refine the stromal branch with a broad mesenchymal gate and distinct axes/modules for pancreatic stellate/fibroblast/ECM cells, pericytes, and vascular smooth muscle where supported. Reduce overlap between stromal_core and fibroblast_matrix so the gate is not essentially a duplicate fibroblast program.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "neural_ganglial module / neural_ganglial_compartment axis",
+      "description": "The neural module is mostly Schwann/glial markers with only weak neuronal/ganglionic representation, so autonomic neuronal or ganglionic cells may be missed or collapsed into a glial score.",
+      "suggested_fix": "Either rename/refocus the current module as Schwann/glial and add a separate neuronal/ganglionic module/axis using canonical neuronal/autonomic markers, or add a gated neural contrast separating glial from neuronal/ganglionic identity.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "immune_core gated myeloid/APC axes",
+      "description": "The macrophage module is resident/tissue macrophage-like and dendritic_apc is a broad composite of cDC1, cDC2, and pDC markers. Monocytes and finer dendritic/APC states expected in pancreas atlases are not represented separately.",
+      "suggested_fix": "Add a monocyte/myeloid-inflammatory axis under immune_core if supported. If dimensionality allows, split dendritic_apc into cDC and pDC modules rather than one mixed APC axis.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "ductal_cell module / ductal_exocrine_compartment axis",
+      "description": "The ductal module mixes canonical duct markers with remodeling or activated duct-associated genes such as SPP1 and MMP7, and there is no ductal sub-axis for centroacinar/terminal duct or activated/secretory duct states.",
+      "suggested_fix": "Keep the broad ductal axis, but add one gated ductal refinement if literature support is available, such as canonical/CFTR-high duct versus SPP1/MMP7-high remodeling duct, or a centroacinar/terminal duct program.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "I did not verify paper, atlas, or database citation handles; this review is limited to biological coverage and marker plausibility."
+  ]
+}

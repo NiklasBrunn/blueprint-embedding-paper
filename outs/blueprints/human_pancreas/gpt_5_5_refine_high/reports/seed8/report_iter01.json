@@ -1,0 +1,41 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint is broadly plausible for healthy human pancreas but needs dendritic-cell coverage and a few marker refinements before it is publishable.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "immune branch",
+      "description": "The immune branch lacks a dendritic-cell module or gated axis, so pancreatic DCs would likely be absorbed into broad immune or macrophage/monocyte signals.",
+      "suggested_fix": "Add a dendritic-cell module and dendritic_cell_within_immune gated axis using canonical human DC markers such as FCER1A, CLEC10A, CD1C, CD1E, ITGAX, IRF8, FLT3, CLEC9A, XCR1, or LILRA4 as appropriate; include the new module as a negative sibling in the other immune subtype gated axes.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:epsilon_cell",
+      "description": "The epsilon-cell module is only two genes and includes MLN, which is more characteristic of intestinal/gastric enteroendocrine motilin cells than canonical pancreatic epsilon cells.",
+      "suggested_fix": "Keep the epsilon axis only if supported by the pancreas literature, but make the module more pancreas-specific around GHRL and better-supported endocrine/epsilon-associated markers, or replace MLN with a pancreas-supported marker.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "module:immune_core",
+      "description": "The immune gate is partly driven by antigen-presentation genes that are strong in APC-rich populations but weak in many T and NK cells, which can bias immune-subtype gated axes.",
+      "suggested_fix": "Revise immune_core toward pan-leukocyte markers such as PTPRC, LCP1, CORO1A, ARHGAP15, FYB1, or ITGAL, and reserve HLA/CD74-heavy signal for APC subtype modules.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "gene-set-hygiene",
+      "where": "module:pp_cell",
+      "description": "SLC30A8 is reused from beta_cell and is more endocrine/beta-associated than PP/gamma-cell-specific, weakening the intended PP-vs-beta contrast.",
+      "suggested_fix": "Replace SLC30A8 in pp_cell with a better-supported PP/gamma marker from the cited pancreas atlases while retaining PPY and PYY.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "Paper and atlas DOI correctness was not re-verified because citation verification is outside this Discriminator scope."
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers healthy human pancreas, but targeted vascular, mural/stromal, and ductal marker refinements would make it more biologically complete.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "vascular_endothelial / lymphatic_endothelial_identity / endothelial modules",
+      "description": "Blood endothelial cells are mostly represented as one broad vascular axis plus a lymphatic refinement, so capillary/fenestrated/islet endothelial, arterial, and venous/postcapillary endothelial programs may collapse into one dimension.",
+      "suggested_fix": "Add one or more gated endothelial subtype axes under a pan-endothelial gate, such as capillary/fenestrated/islet endothelial markers PLVAP, EMCN, RAMP2, RGCC, CA4; arterial markers GJA5, SOX17, EFNB2, HEY1; and/or venous/postcapillary markers ACKR1, VWF, SELE, VCAM1.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:pericyte_smooth_muscle_identity",
+      "description": "The pericyte/smooth muscle axis is gated by a fibroblast/ECM-heavy mesenchymal module, which could suppress true mural cells that express RGS5, PDGFRB, CSPG4, NOTCH3, ACTA2, TAGLN, or MYH11 but not strong fibroblast markers.",
+      "suggested_fix": "Use a broader mural/mesenchymal gate, or make the mural program a plain axis/contrast separate from fibroblast-stellate identity. If gated, the gate should include mural-compatible markers rather than only fibroblast ECM markers.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "stellate_matrix_remodeling_state / mesenchymal_fibroblast",
+      "description": "Pancreatic stellate/fibroblast biology is represented mainly by ECM-remodeling genes, which captures activated matrix-producing states but under-resolves quiescent pancreatic stellate and vitamin-A/lipid-associated stellate biology expected in healthy pancreas.",
+      "suggested_fix": "Add or revise a stellate/quiescent module with markers such as RGS5, PDGFRB, DES, LRAT, RBP1, PDPN, and COL15A1 as appropriate, and contrast it against the matrix-remodeling/activated fibroblast program.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:ductal_bicarbonate_mucin",
+      "description": "The ductal module is usable but blends baseline ductal transport markers with TFF1/TFF2 and SPP1, which can emphasize mucinous/metaplastic or injury-associated ductal programs and may bias a healthy baseline ductal identity axis.",
+      "suggested_fix": "Keep core ductal markers such as KRT19, KRT7, SOX9, CFTR, SLC4A4, SLC26A6, MUC1, ANXA4, and HNF1B; move TFF1/TFF2 and possibly high SPP1 emphasis into a separate reactive/mucinous ductal state axis if desired, or replace them with more baseline ductal markers such as KRT17, KRT23, MMP7, ANXA4, or HNF1B.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "Endocrine epsilon cells are rare in adult pancreas, but age is unspecified here, so retaining an epsilon axis is reasonable.",
+    "Immune subtyping is broad but acceptable for a healthy whole-pancreas embedding; deeper immune-state resolution is optional rather than required."
+  ]
+}

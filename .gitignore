@@ -1,0 +1,77 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# Virtual envs
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# Test / tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# Data artifacts (large / regenerable)
+data/
+
+# Agent run outputs
+work/
+
+# Pipeline outputs — ignore the heavy/regenerable ones (embeddings, plots),
+# keep the light published artifacts (authored blueprints, metric CSVs,
+# free-form baseline scripts).
+outs/*
+!outs/blueprints/
+!outs/metrics/
+!outs/blueprint_variability/
+!outs/axis_metrics/
+!outs/temporal_metrics/
+!outs/resource_costs/
+!outs/embedding_reproducibility/
+!outs/freeform_scripts/
+# Per-embedding markdown reports: each just renders one row of the cohort's
+# metrics.csv / axis_metrics.csv (read by nothing).
+outs/metrics/**/*_metrics.md
+outs/axis_metrics/**/*_axis_metrics.md
+
+# Paper writing materials
+paper_overleaf/
+paper_latex/
+
+# Model artifacts (large pretrained checkpoints, trained model weights)
+models/uce/repo/
+models/uce/model_files/
+models/cellxgene_census/
+models/*/scvi/
+models/*/scvi_nobatch/
+models/*/expimap/
+models/*/pca/
+models/*/scvi_transfer_ref/
+models/*/expimap_transfer_ref/
+
+# Stray data artifacts dropped at the repo root by ad-hoc script runs
+# (embeddings, AnnData, and the embedder's per-module coverage sidecars are
+# all regenerable and normally live under outs/ or work/, both ignored above)
+/*.parquet
+/*.h5ad
+/*_coverage.json

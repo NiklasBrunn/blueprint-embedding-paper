@@ -1,0 +1,8 @@
+name_a_can,name_b_can,name_a,name_b,edit_distance,n_runs_a,n_runs_b,co_occurring_runs
+bcell,tcell,b_cell,t_cell,1,3,3,3
+bplasmacell,plasmacell,b_plasma_cell,plasma_cell,1,7,1,0
+nkcell,tnkcell,nk_cell,t_nk_cell,1,1,7,0
+bcell,nkcell,b_cell,nk_cell,2,3,1,1
+betacell,deltacell,beta_cell,delta_cell,2,10,10,10
+nkcell,tcell,nk_cell,t_cell,2,1,3,1
+tcell,tnkcell,t_cell,t_nk_cell,2,3,7,0

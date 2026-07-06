@@ -1,0 +1,237 @@
+{
+  "h5ad_path": "data/preprocessed/human_pancreas_pp.h5ad",
+  "layer": null,
+  "n_cells": 16382,
+  "n_vars": 18268,
+  "modules": [
+    {
+      "name": "endocrine_core",
+      "n_genes": 8,
+      "n_genes_present": 8,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.8655841777560738
+    },
+    {
+      "name": "beta_cells",
+      "n_genes": 10,
+      "n_genes_present": 9,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "NKX6-1"
+      ],
+      "fraction_nonzero_cells": 0.966548650958369
+    },
+    {
+      "name": "alpha_cells",
+      "n_genes": 8,
+      "n_genes_present": 8,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.9387132218288365
+    },
+    {
+      "name": "delta_cells",
+      "n_genes": 6,
+      "n_genes_present": 6,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.9515932120620193
+    },
+    {
+      "name": "pp_cells",
+      "n_genes": 6,
+      "n_genes_present": 6,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.8339030643389086
+    },
+    {
+      "name": "epsilon_cells",
+      "n_genes": 4,
+      "n_genes_present": 4,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.19167378830423637
+    },
+    {
+      "name": "acinar_cells",
+      "n_genes": 9,
+      "n_genes_present": 9,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.7130387010133072
+    },
+    {
+      "name": "ductal_cells",
+      "n_genes": 10,
+      "n_genes_present": 10,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.9342571114638017
+    },
+    {
+      "name": "blood_endothelial",
+      "n_genes": 8,
+      "n_genes_present": 8,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.14876083506287388
+    },
+    {
+      "name": "lymphatic_endothelial",
+      "n_genes": 6,
+      "n_genes_present": 6,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.35062873885972407
+    },
+    {
+      "name": "stromal_core",
+      "n_genes": 14,
+      "n_genes_present": 14,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.41820290562812845
+    },
+    {
+      "name": "fibroblast_stellate",
+      "n_genes": 9,
+      "n_genes_present": 9,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.32291539494567206
+    },
+    {
+      "name": "pericyte_smooth",
+      "n_genes": 8,
+      "n_genes_present": 8,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.4750335734342571
+    },
+    {
+      "name": "myofibroblast",
+      "n_genes": 8,
+      "n_genes_present": 8,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.3979978024661214
+    },
+    {
+      "name": "immune_core",
+      "n_genes": 6,
+      "n_genes_present": 5,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "HLA-DRA"
+      ],
+      "fraction_nonzero_cells": 0.039128311561469904
+    },
+    {
+      "name": "myeloid_macrophage",
+      "n_genes": 9,
+      "n_genes_present": 9,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.5573800512757905
+    },
+    {
+      "name": "dendritic_cells",
+      "n_genes": 7,
+      "n_genes_present": 6,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "HLA-DRA"
+      ],
+      "fraction_nonzero_cells": 0.05402270785007936
+    },
+    {
+      "name": "t_cells",
+      "n_genes": 9,
+      "n_genes_present": 8,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "TRBC1"
+      ],
+      "fraction_nonzero_cells": 0.1309363936027347
+    },
+    {
+      "name": "nk_cells",
+      "n_genes": 8,
+      "n_genes_present": 8,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.1305090953485533
+    },
+    {
+      "name": "b_cells",
+      "n_genes": 8,
+      "n_genes_present": 6,
+      "n_genes_missing": 2,
+      "missing_genes": [
+        "HLA-DPB1",
+        "HLA-DRA"
+      ],
+      "fraction_nonzero_cells": 0.3302405078744964
+    },
+    {
+      "name": "plasma_cells",
+      "n_genes": 8,
+      "n_genes_present": 7,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "JCHAIN"
+      ],
+      "fraction_nonzero_cells": 0.9260774020266146
+    },
+    {
+      "name": "mast_cells",
+      "n_genes": 6,
+      "n_genes_present": 6,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.07282383103406177
+    },
+    {
+      "name": "erythroid",
+      "n_genes": 8,
+      "n_genes_present": 8,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.02160908314003174
+    },
+    {
+      "name": "schwann_glia",
+      "n_genes": 8,
+      "n_genes_present": 8,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.564766206812355
+    },
+    {
+      "name": "neuronal",
+      "n_genes": 8,
+      "n_genes_present": 8,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.843059455499939
+    },
+    {
+      "name": "mesothelial",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.7851300207544867
+    },
+    {
+      "name": "cycling",
+      "n_genes": 9,
+      "n_genes_present": 9,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.27640092784763765
+    }
+  ]
+}

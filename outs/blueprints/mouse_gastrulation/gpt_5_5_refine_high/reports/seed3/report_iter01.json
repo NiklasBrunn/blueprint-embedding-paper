@@ -1,0 +1,57 @@
+{
+  "rating": "minor",
+  "summary": "Broadly plausible E6.5-E8.5 mouse gastrulation tree, but it needs targeted coverage, gating, and marker refinements for extraembryonic, visceral endoderm, neural, paraxial/NMP, and late differentiated branches.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "extraembryonicEctoderm / chorionTrophoblast / allantoisExtraMesoderm branches",
+      "description": "The extraembryonic landscape is under-resolved: one chorion/trophoblast child mixes chorion with EPC/TGC/spongiotrophoblast-like markers, and extraembryonic mesoderm is collapsed mostly into allantois without amnion or yolk-sac mesoderm/mesothelium-like states.",
+      "suggested_fix": "Refine the extraembryonic ectoderm branch into supported trophoblast sibling modules such as chorion and ectoplacental cone/TGC/spongiotrophoblast-like trophoblast, and add supported extraembryonic mesoderm continuations such as amnion/yolk-sac mesoderm/mesothelium under the nascent mesoderm/allantois trajectory.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "visceralEndoderm",
+      "description": "The visceral endoderm branch is too coarse for early gastrulation and lacks anterior/distal visceral endoderm patterning, an important E6.5-E7.5 state.",
+      "suggested_fix": "Add a visceral endoderm refinement for AVE/DVE/anterior visceral endoderm markers if supported, keeping it within the visceral endoderm lineage.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "neuralEctoderm / neuralTube / caudalNeuralNmp",
+      "description": "The neural branch does not preserve much of the E8.0-E8.5 anterior-posterior neural maturation gradient; broad modules mix anterior neural identity with later ventral spinal markers and lack forebrain/midbrain/hindbrain/posterior-neural separation.",
+      "suggested_fix": "Add time-forward neural patterning axes under neural ectoderm or neural tube, for example anterior neural versus posterior/hindbrain-spinal programs, and reserve later DV markers for a refined branch only if stage-appropriate.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "gating-tree",
+      "where": "somite_somiticMesoderm",
+      "description": "The somite axis uses caudalNeuralNmp as a negative even though NMP is an upstream/adjacent bipotent state rather than a sibling of somitic mesoderm under paraxial mesoderm. A presomitic mesoderm maturation state is missing.",
+      "suggested_fix": "Add a presomitic/paraxial maturation module and contrast presomitic versus somitic states under paraxialMesoderm; keep NMP as a separate posterior progenitor branch or use it as a parent only where biologically justified.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "gating-tree",
+      "where": "troph_chorionTrophoblast and cardiac_cardiomyocyte",
+      "description": "These gated axes use negatives that are not true siblings under the gate: chorion/trophoblast is contrasted against visceral endoderm and allantois mesoderm, and cardiomyocyte is contrasted against endothelium and blood progenitor.",
+      "suggested_fix": "Use no negatives for parent-scoped maturation signals or introduce true sibling modules at the same branch point, such as trophoblast subtypes under extraembryonic ectoderm and cardiomyocyte versus pharyngeal/splanchnic/second-heart-field-like mesoderm under cardiac mesoderm if supported.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "somiticMesoderm / myeloid / axialMesendoderm modules",
+      "description": "Some markers are too mature or misplaced for E6.5-E8.5: somiticMesoderm includes later skeletal muscle/dermomyotome markers, myeloid includes granulocyte/adult-like markers, and axialMesendoderm includes Tbx6, which is more paraxial/presomitic than axial node/notochord.",
+      "suggested_fix": "Swap in earlier stage-appropriate somite/presomitic, primitive yolk-sac myeloid/macrophage, and cleaner node/notochord/axial mesendoderm markers.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "I did not verify DOIs or paper-to-gene-list support; citation verification is outside the Discriminator scope."
+  ]
+}

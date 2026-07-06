@@ -1,0 +1,50 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint is broadly plausible for human whole pancreas but needs targeted refinement for redundant acinar/ductal axes, immune subtype resolution, and a few coverage/marker issues.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axes: exocrine_acinar_vs_ductal and ductal_vs_acinar",
+      "description": "The two acinar/ductal contrast axes are exact reciprocals, adding dimensionality without adding biological resolution, and acinar identity is not represented as a clean plain identity axis.",
+      "suggested_fix": "Replace the reciprocal pair with non-redundant epithelial axes, such as a plain acinar_identity axis and a plain or single contrast ductal_identity/ductal_vs_acinar axis. Do not keep both exact inverse contrasts.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "immune_t_nk_refinement and module:t_nk_cell",
+      "description": "T cells and NK cells are collapsed into one mixed module, blurring CD3+ T cells, NK cells, and cytotoxic lymphocyte states that are expected distinguishable populations in whole pancreas.",
+      "suggested_fix": "Split the module into separate T-cell and NK/cytotoxic modules and add separate immune-gated refinement axes, or add an additional gated refinement that separates CD3D/CD3E/TRAC/IL7R from NKG7/GNLY/PRF1/GZMB/KLRD1.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "immune_b_plasma_refinement and module:b_plasma_cell",
+      "description": "B cells and plasma cells are collapsed into one module despite having distinct marker programs and expected roles in whole-tissue immune composition.",
+      "suggested_fix": "Split b_plasma_cell into B-cell and plasma-cell modules and add separate immune-gated refinement axes.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "general: missing adipocyte/lipid stromal axis",
+      "description": "Whole human pancreas samples can include adipocytes or adipose-associated stromal cells, but the blueprint has no adipocyte/lipid-storage module.",
+      "suggested_fix": "Add an adipocyte/lipid module and plain or stromal-gated axis using markers such as ADIPOQ, PLIN1, FABP4, LPL, CIDEA, LIPE, and DGAT2 if fuller whole-tissue coverage is desired.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:centroacinar_ductal",
+      "description": "The centroacinar/ductal module mixes canonical ductal genes with injury or activated ductal markers such as SPP1, MMP7, and REG3A, which may bias the axis toward pancreatitis-like activation rather than healthy centroacinar identity.",
+      "suggested_fix": "Retune the module toward cleaner centroacinar/ductal markers such as KRT7, KRT19, SOX9, CFTR, HNF1B, SLC4A4, ANXA4, and MUC1; represent activated ductal stress separately only if intended.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "The rare endocrine epsilon axis is acceptable because age is unspecified; it would be less important for a strictly adult-only healthy pancreas scenario.",
+    "Generic cycling, interferon, ER stress, and immediate-early axes are reasonable as cross-lineage state dimensions for scRNA-seq data."
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers human pancreas but needs targeted refinements to endothelial gating, stromal/mural separation, and ambiguous progenitor/beta-maturation axes.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:lymphatic_endothelial_identity / module:vascular_endothelial",
+      "description": "The lymphatic endothelial axis is gated by a vascular/blood endothelial module that includes VWF, KDR, EMCN, and PLVAP, which may suppress true lymphatic endothelial cells rather than simply restricting the axis to endothelial cells.",
+      "suggested_fix": "Split a general endothelial_core module from blood/vascular endothelial markers, then gate vascular and lymphatic refinement axes on endothelial_core.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:pericyte_smooth_muscle_vs_fibroblast / module:pericyte_smooth_muscle / module:stellate_myofibroblast",
+      "description": "Mural cells are contrasted against fibroblast matrix, while pericyte/smooth-muscle and stellate/myofibroblast modules share several contractile markers, blurring pericytes, smooth muscle, and activated pancreatic stellate cells.",
+      "suggested_fix": "Separate pericyte and smooth-muscle/contractile emphasis where possible and make mural identity a plain or stromal-gated refinement rather than a direct contrast against fibroblast matrix.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "axis:endocrine_progenitor_like_state / module:endocrine_progenitor_like",
+      "description": "The progenitor-like module mixes ductal/progenitor markers with endocrine-lineage markers. With no age specified, it is ambiguous: it only partially covers developmental pancreas if all ages are intended, but in adult healthy pancreas it may behave like ductal/endocrine mixing or stress.",
+      "suggested_fix": "Retune and name this as a clear rare developmental or immature endocrine program if all ages are meant to be covered; otherwise narrow or de-emphasize it for adult healthy pancreas use.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "gene-set-hygiene",
+      "where": "axis:beta_maturation / module:beta_mature_secretory / module:beta_cell",
+      "description": "The beta_mature_secretory module is mostly a subset of beta_cell, so the beta_maturation axis may duplicate beta identity instead of resolving maturity.",
+      "suggested_fix": "Make the positive module more specifically mature beta and use a negative module representing immature or dedifferentiated beta/endocrine state rather than the broad mixed progenitor-like module.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:pancreatic_epithelial / axis:epithelial_identity",
+      "description": "The pan-epithelial module includes ductal-skewed markers such as KRT19, MUC1, and CLDN4, so it may not be a neutral epithelial gate across acinar, ductal, and endocrine compartments.",
+      "suggested_fix": "Use a cleaner epithelial/core gate with broadly expressed epithelial junction or cytokeratin genes, or reduce reliance on this module as the common gate for all epithelial refinements.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "The generic stress-state axes are plausible but dataset-dependent; keeping all of them is not inherently wrong for a broad pancreas embedding."
+  ]
+}

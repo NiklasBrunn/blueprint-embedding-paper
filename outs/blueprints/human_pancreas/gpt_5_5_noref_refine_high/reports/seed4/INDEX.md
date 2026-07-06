@@ -1,0 +1,3 @@
+- iter 01 — minor — The blueprint is broadly plausible for human pancreas but needs targeted refinement of vascular and immune coverage, removal or repurposing of an out-of-scope developmental progenitor axis, and severa
+- iter 02 — minor — The blueprint broadly covers healthy human pancreas, but needs targeted refinement of acinar gating, compressed stromal/mural axes, and mixed acinar/ductal adaptive-state markers.
+- iter 03 — minor — The blueprint broadly covers human pancreas biology, but it should refine myeloid, dendritic, stellate/fibroblast, and venous endothelial state resolution before being considered complete.

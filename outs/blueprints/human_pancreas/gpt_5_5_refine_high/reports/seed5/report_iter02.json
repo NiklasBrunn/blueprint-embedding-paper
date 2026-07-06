@@ -1,0 +1,62 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers healthy human pancreas but needs targeted marker and axis-design cleanup before it is publishable as-is.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:acinar_secretory",
+      "description": "The acinar module is plausible but omits canonical pancreatic acinar amylase markers, while REG1A/REG1B are more injury/regeneration-associated than ideal core acinar discriminators.",
+      "suggested_fix": "Add or substitute canonical acinar markers such as AMY2A, AMY2B, CELA3A, and/or CELA3B while retaining strong existing digestive-enzyme markers.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:lymphatic_endothelial",
+      "description": "TFF3 is not a canonical lymphatic endothelial marker and is better known as an epithelial/secretory marker.",
+      "suggested_fix": "Replace TFF3 with a more plausible lymphatic endothelial marker such as NRP2, FOXC2, SOX18, MAF, or ACKR4.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:lymphatic_endothelial_within_endothelium",
+      "description": "The axis gates on endothelial cells but subtracts pericyte/smooth muscle, which is not the biological sibling population for lymphatic endothelial cells.",
+      "suggested_fix": "Either make this a state-scoped gated axis without negatives, or add a blood/vascular endothelial sibling module and use that as the negative module.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:contractile_stellate_myofibroblast",
+      "description": "The contractile stellate/myofibroblast axis subtracts endothelial cells, which is not the relevant sibling state for activated stellate/fibroblast biology.",
+      "suggested_fix": "Remove the endothelial negative and treat the contractile program as a gated state, or add a quiescent stellate/fibroblast sibling module for the negative side.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:pericyte_smooth_muscle_vs_endothelium",
+      "description": "The axis name implies a contrast against endothelium, but the implementation is a plain pericyte/smooth muscle axis.",
+      "suggested_fix": "Rename it to pericyte_smooth_muscle, or convert it to an actual contrast axis against endothelial if mural-vs-endothelial is intended.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "gene-set-hygiene",
+      "where": "axis:t_nk_within_leukocytes and axis:b_plasma_within_leukocytes",
+      "description": "The combined T/NK and B/plasma axes are redundant with the separate T, NK, B, and plasma cell axes, and their negative sets mix coarse modules with fine sibling modules.",
+      "suggested_fix": "Prefer deleting the combined coarse immune modules/axes, or rework the immune section into a coherent two-level tree with parent lymphoid/B-lineage axes followed by gated fine subtypes.",
+      "remove": [
+        "axis:t_nk_within_leukocytes",
+        "module:t_nk_cell",
+        "axis:b_plasma_within_leukocytes",
+        "module:b_plasma_cell"
+      ]
+    }
+  ],
+  "out_of_scope": [
+    "Citation DOI verification was not assessed, per the discriminator scope."
+  ]
+}

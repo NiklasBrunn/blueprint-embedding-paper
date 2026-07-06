@@ -1,0 +1,58 @@
+{
+  "rating": "minor",
+  "summary": "Broad human pancreas coverage is plausible, but targeted refinements are needed for merged mural cells, missing mesothelial/capsular cells, ductal substructure, and weak rare endocrine semantics.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "axis:mural_perivascular_identity / module:vascular_mural",
+      "description": "Pericytes and vascular smooth muscle are collapsed into one mural axis/module despite being distinct normal pancreatic vascular support populations.",
+      "suggested_fix": "Split into separate pericyte and vascular smooth muscle modules/axes, or add a gated/contrast refinement axis within the mural compartment.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "general coverage",
+      "description": "Mesothelial/capsular surface cells are not represented, although all-cell human pancreas preparations can contain this population.",
+      "suggested_fix": "Add a mesothelial module and plain axis using markers such as MSLN, WT1, UPK3B, KRT19, KRT8, KRT18, and/or PDPN as appropriate.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:ductal_centroacinar_terminal_state / module:ductal_epithelial",
+      "description": "Ductal cells are mostly represented by one broad identity plus a centroacinar/terminal duct refinement, missing useful normal ductal heterogeneity such as ion/fluid transport versus mucin/SPP1-high ductal programs.",
+      "suggested_fix": "Add a ductal refinement axis for bicarbonate/ion-transport ducts versus mucin or SPP1/KRT17-high ductal states, or sharpen the existing ductal modules accordingly.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:endocrine_enterochromaffin_serotonin_cell / module:enterochromaffin_serotonin_cell",
+      "description": "A separate pancreatic enterochromaffin/serotonin endocrine cell axis is over-specific for baseline human pancreas and risks importing a gut enterochromaffin identity rather than a canonical pancreatic cell type.",
+      "suggested_fix": "Recast this as a rare endocrine serotonergic state, keep it lower priority, or fold it into a broader rare endocrine-state axis with careful endocrine sibling negatives.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:epsilon_ghrelin_cell",
+      "description": "The epsilon/ghrelin module includes weak or shared markers such as MLN, IAPP, SCG2, and PAX6; IAPP is strongly beta-associated and broad endocrine genes reduce specificity.",
+      "suggested_fix": "Strengthen the module around ghrelin-cell markers and remove or downweight beta/common endocrine genes, especially IAPP.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "gene-set-hygiene",
+      "where": "axis:immune_b_plasma_cell / module:b_plasma_cell",
+      "description": "The module name implies B/plasma coverage, but the marker set is conventional B-cell identity while plasma cells are already represented separately.",
+      "suggested_fix": "Rename or reinterpret this as a B-cell module/axis and keep plasma_cell as the antibody-secreting cell module.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "The global cycling, interferon, immediate-early stress, and ER-load axes are reasonable generic state axes for dissociation and secretory tissue context.",
+    "The 32-axis dimensionality is somewhat high but defensible for an all-cell human pancreas embedding with immune and stromal subtyping."
+  ]
+}

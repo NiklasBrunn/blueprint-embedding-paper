@@ -1,0 +1,60 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint is broadly plausible for human pancreas but needs targeted refinement of vascular and immune coverage, removal or repurposing of an out-of-scope developmental progenitor axis, and several marker-hygiene fixes.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "vascular axes",
+      "description": "Blood endothelium is represented as one coarse compartment plus lymphatic, but whole human pancreas should resolve arterial, venous, and capillary endothelial subtypes.",
+      "suggested_fix": "Add gated endothelial subtype axes/modules for arterial endothelium (for example GJA5, EFNB2, SOX17, HEY1/HEY2), venous endothelium (for example ACKR1, NR2F2, VWF, VCAM1 where appropriate), and capillary endothelium (for example RGCC, PLVAP, EMCN, CA4/RAMP2), while retaining lymphatic as separate.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "immune compartment",
+      "description": "The immune coverage misses dendritic-cell/APC subtypes, immune_core is biased toward myeloid/APC markers, and the t_cell module is skewed toward naive/IL7R T cells.",
+      "suggested_fix": "Broaden immune_core to pan-leukocyte markers such as PTPRC, LAPTM5, LCP1, CORO1A, CD53, ARHGAP15, RAC2; add a dendritic/APC axis using markers such as CD1C, FCER1A, CLEC10A, ITGAX, LILRA4, IRF7 as appropriate; and expand T-cell markers with CD2, CD247, CD8A, CD8B or split helper/cytotoxic T if adding one extra axis is acceptable.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "epithelial_pancreatic_progenitor_state / pancreatic_progenitor",
+      "description": "A fetal/developmental pancreatic progenitor program is not expected as a generic healthy human pancreas axis when age and developmental notes are unspecified, and it risks conflating normal ductal SOX9/HNF1B signal with true developmental progenitors.",
+      "suggested_fix": "Remove the developmental progenitor axis/module, or replace it with an in-scope mature ductal/centroacinar refinement if additional epithelial resolution is desired.",
+      "remove": [
+        "axis:epithelial_pancreatic_progenitor_state",
+        "module:pancreatic_progenitor"
+      ]
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "epithelial_endocrine_vs_exocrine",
+      "description": "The axis name says endocrine versus exocrine, but the negative side is only acinar_cell; ductal epithelium is also exocrine and is not represented in the contrast.",
+      "suggested_fix": "Either rename/reframe this as endocrine versus acinar, or add/use an exocrine module that includes both acinar and ductal programs as the negative side.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "lymphatic_endothelial, ductal_bicarbonate_mucin, mesothelial, autonomic_neuronal",
+      "description": "Several modules contain confounding markers: lymphatic_endothelial includes epithelial TFF3; ductal_bicarbonate_mucin includes less canonical or confounding normal-duct choices such as SLC26A3, MUC5B, TFF1, AQP1; mesothelial includes fibroblast-associated LUM; and autonomic_neuronal includes developmental ASCL1.",
+      "suggested_fix": "Replace TFF3 with lymphatic markers such as NRP2, RELN, TBX1, or additional CCL21-adjacent lymphatic genes; sharpen ductal transport markers toward CFTR, SLC4A4, SLC26A6, CA2, KRT7, KRT19, SOX9; swap mesothelial LUM for CALB2, ITLN1, C3, or another mesothelial marker; and replace neuronal ASCL1 with adult autonomic markers such as TH, DBH, SLC18A3, VIP, or NOS1.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "gene-set-hygiene",
+      "where": "acinar_cell / acinar_zymogen_mature / acinar_adaptive_reg",
+      "description": "acinar_zymogen_mature is largely a duplicate of acinar_cell, while acinar_cell includes REG1A, which is also used in the adaptive/stress module. This blurs identity versus state.",
+      "suggested_fix": "Keep the acinar identity module focused on constitutive acinar enzymes/transcriptional identity, make the mature/zymogen state more distinct with markers such as RBPJL, SYCN, CEL, GP2, CELA2A, CPB1, and reserve REG1A/REG1B/REG3A/SPINK1 for the adaptive/stress axis.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "No citation/resource audit was performed; this report only judges biological coverage and marker plausibility."
+  ]
+}

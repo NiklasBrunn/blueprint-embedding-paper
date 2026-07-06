@@ -1,0 +1,33 @@
+resource_id,standardized_name,notes
+10.1016/j.cell.2018.06.021,,
+10.1016/j.cell.2018.07.028,,
+10.1016/j.cell.2021.04.021,,
+10.1016/j.immuni.2018.11.004,,
+10.1016/j.neuron.2018.04.001,,
+10.1038/nature05453,,
+10.1038/nature25739,,
+10.1038/nn.3599,,
+10.1038/nn.4216,,
+10.1038/s41586-018-0654-5,,
+10.1038/s41586-021-03500-8,,
+10.1038/s41593-017-0029-5,,
+10.1126/science.aaa1934,,
+10.1126/science.aaf6463,,
+key:goangiogenesis,go_angiogenesis,GO angiogenesis kept distinct from MSigDB-GO version (different gene sets)
+key:gocellcycle,go_cell_cycle,
+key:gochemicalsynaptictransmission,go_chemical_synaptic_transmission,
+key:gogabaergicsynaptictransmission,go_gabaergic_synaptic_transmission,
+key:goglutamatergicsynaptictransmission,go_glutamatergic_synaptic_transmission,
+key:goimmuneresponse,go_immune_response,GO immune response kept distinct from MSigDB-GO version
+key:gomyelination,go_myelination,GO myelination kept distinct from MSigDB-GO version
+key:gomyelinsheath,go_myelin_sheath,
+key:goresponsetostimulus,go_response_to_stimulus,
+key:gosynapse,go_synapse,
+key:govasculaturedevelopment,go_vasculature_development,
+key:msigdbgoangiogenesis,msigdb_go_angiogenesis,MSigDB C5 GO:BP angiogenesis; distinct from key:goangiogenesis
+key:msigdbgoecm,msigdb_go_ecm,
+key:msigdbgoimmuneresponse,msigdb_go_immune_response,MSigDB C5 GO:BP immune response; distinct from key:goimmuneresponse
+key:msigdbgomyelination,msigdb_go_myelination,MSigDB C5 GO:BP myelination; distinct from key:gomyelination
+key:msigdbgosmoothmusclecontraction,msigdb_go_smooth_muscle_contraction,
+key:msigdbgosynapticsignaling,msigdb_go_synaptic_signaling,
+key:reactomechemicalsynapses,reactome_chemical_synapses,

@@ -1,0 +1,43 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers healthy human pancreas but needs targeted fixes for a redundant acinar/ductal mirror axis, mural-cell gating, and a few marker/name refinements.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:ductal_vs_acinar",
+      "description": "This axis is the exact reciprocal of axis:exocrine_acinar_vs_ductal and therefore adds a padded mirror dimension rather than new pancreatic biology.",
+      "suggested_fix": "Delete axis:ductal_vs_acinar and keep one acinar/ductal contrast axis, or replace the dimension with a non-duplicative exocrine refinement/state axis.",
+      "remove": [
+        "axis:ductal_vs_acinar"
+      ]
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:stromal_pericyte_smooth_muscle_refinement",
+      "description": "The pericyte/smooth-muscle program is gated by a fibroblast/ECM-heavy mesenchymal_matrix module, which can suppress expected pancreatic mural cells that express RGS5, PDGFRB, CSPG4, MCAM, NOTCH3, ACTA2, TAGLN, or MYH11 without strong fibroblast matrix identity.",
+      "suggested_fix": "Represent mural cells with an ungated plain axis or create a broader stromal/mural gate that includes mural markers, while keeping fibroblast/stellate and myofibroblast programs as separate refinements.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:epsilon_cell / axis:endocrine_epsilon_refinement",
+      "description": "The epsilon/ghrelin-cell module is biologically thin for healthy human pancreas: GHRL is appropriate, but MLN is more typical of intestinal enteroendocrine motilin cells, and SLC18A2 and PCSK1 are shared endocrine markers.",
+      "suggested_fix": "Make this a conservative rare endocrine/ghrelin axis with stronger pancreatic epsilon specificity and remove MLN, or de-emphasize it if focusing on common adult pancreatic cell types.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "gene-set-hygiene",
+      "where": "module:t_nk_cell / axis:immune_t_nk_refinement",
+      "description": "The module name says T/NK, but its markers are essentially T-cell markers, while NK/cytotoxic identity is already handled by nk_cytotoxic_cell.",
+      "suggested_fix": "Rename or reinterpret this as a T-cell axis, or deliberately broaden the marker set if a combined lymphoid axis is intended; keep NK/cytotoxic cells separated by the existing NK module.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "Disease-specific axes such as acinar-to-ductal metaplasia or activated inflammatory fibrosis are not required for this healthy/baseline scenario, though generic stress axes are reasonable for scRNA-seq state capture."
+  ]
+}

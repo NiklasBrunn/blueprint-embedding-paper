@@ -1,0 +1,5 @@
+model,run,seed,n_axes,n_roots,n_branches,max_depth,n_cells_used,pooled_depth_stage_spearman,mean_branch_spearman,monotonic_frac
+blueprint_gpt_5_5_refine_high,blueprint_gpt_5_5_refine_high_mouse_gastrulation_seed3,3,40,5,27,5,108857,0.45334788327399667,0.9789473684210527,0.9452054794520548
+blueprint_gpt_5_5_unrefined_high,blueprint_gpt_5_5_unrefined_high_mouse_gastrulation_seed1,1,36,4,25,4,108857,0.5779887745515851,1.0,0.95
+blueprint_gpt_5_5_unrefined_high,blueprint_gpt_5_5_unrefined_high_mouse_gastrulation_seed2,2,37,5,21,6,108857,0.4724346543662096,0.8875000000000001,0.8135593220338984
+blueprint_gpt_5_5_unrefined_high,blueprint_gpt_5_5_unrefined_high_mouse_gastrulation_seed3,3,31,5,20,5,108857,0.43152025201164396,0.9928571428571429,0.96

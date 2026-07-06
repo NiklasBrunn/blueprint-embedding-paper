@@ -1,0 +1,47 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers healthy human pancreas but needs targeted refinement for mesothelial coverage, endothelial substructure, and several marker-specificity issues.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "general coverage / epithelial-stromal interface",
+      "description": "A whole human pancreas embedding can reasonably encounter mesothelial or capsular cells, but there is no module or axis for this compartment, so these cells may be absorbed into ductal or stromal dimensions.",
+      "suggested_fix": "Add a mesothelial/capsular module and plain identity axis using human mesothelial markers such as MSLN, WT1, UPK3B, CALB2, KRT8, and KRT18 while avoiding excessive ductal overlap.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "vascular endothelial_identity / pan_endothelial / vascular_lymphatic_bias",
+      "description": "The endothelial branch separates blood and lymphatic endothelium but lacks blood-endothelial subtype resolution, especially fenestrated/islet capillary versus arterial or venous programs expected in pancreas.",
+      "suggested_fix": "Add one or two pan-endothelial-gated blood-endothelial refinement axes, prioritizing a fenestrated/capillary-islet endothelial module with PLVAP, RAMP2, RGCC, EMCN-like markers and optionally arterial/venous bias modules if dimensionality remains reasonable.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "gamma_pp_cell and epsilon_ghrelin_cell modules",
+      "description": "The PP/gamma and epsilon endocrine subtype modules are padded with generic endocrine genes shared across islet cells, weakening subtype discrimination under an endocrine gate.",
+      "suggested_fix": "Reduce generic CHGA/CHGB/SCG/SYP content in these subtype modules and add defensible subtype-enriched human markers while retaining PPY/PYY for PP/gamma cells and GHRL/MBOAT4 for epsilon cells.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "quiescent_pancreatic_stellate module",
+      "description": "The quiescent stellate module includes mural/pericyte-associated markers such as RGS5, PDGFRB, and DES despite a separate mural/pericyte branch, risking stellate-pericyte conflation.",
+      "suggested_fix": "Rebalance the module toward retinoid/lipid-storage and resting stromal markers such as LRAT, RBP1, APOD, DCN, LUM, and CXCL14-like genes, and reduce mural-heavy markers or counterweight them more explicitly.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "beta_maturity_within_islets / immature_stressed_beta_cell",
+      "description": "The negative module mixes immaturity, dedifferentiation, glycolytic shift, ER stress, heat-shock, and oxidative stress genes into one broad concept, which is plausible but imprecise for a healthy pancreas scenario.",
+      "suggested_fix": "Either rename and recast the module as beta stress/dedifferentiation or split maturity and stress into separate beta-gated axes if higher state resolution is desired.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": []
+}

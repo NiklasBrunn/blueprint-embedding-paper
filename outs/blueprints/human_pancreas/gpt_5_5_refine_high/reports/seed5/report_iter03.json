@@ -1,0 +1,41 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers human pancreas but needs targeted refinements for mural vascular resolution, reactive ductal/epithelial state handling, granulocyte coverage, and epsilon-cell marker specificity.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "pericyte_smooth_muscle module / pericyte_smooth_muscle_vs_endothelium axis",
+      "description": "Pericytes and vascular smooth muscle cells are merged into one mural module and contrasted against endothelial cells, although these are neighboring support and vascular lineages rather than biologically opposing programs. The marker set mixes pericyte markers with smooth muscle/myofibroblast markers and loses resolution for expected human pancreas vascular-stromal subcompartments.",
+      "suggested_fix": "Split mural support into separate pericyte and vascular smooth muscle modules/axes, or at minimum convert the existing contrast into a plain mural-support axis and add a separate contractile vessel-wall axis. Keep endothelial and mural programs as separate axes rather than an endothelial-vs-mural contrast.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "ductal/epithelial axes",
+      "description": "The ductal compartment has general ductal, ion-transport, and centroacinar-like axes, but does not clearly represent common reactive/regenerative ductal or acinar-to-ductal epithelial programs seen in human pancreas single-cell data. The current centroacinar module partly overlaps this biology but is framed narrowly as centroacinar.",
+      "suggested_fix": "Either rename/refocus the centroacinar axis as a reactive/centroacinar ductal state with a clearer marker set, or add a scoped reactive epithelial/ductal-state axis using pancreas-supported markers such as CLU, SPP1, KRT19, MMP7, REG-family or stress/acute-phase markers.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "leukocyte gated axes",
+      "description": "The immune tree lacks a neutrophil/granulocyte axis. Granulocytes are not dominant in healthy pancreas but can occur in human pancreas atlases or tissue suspensions and are a biologically expected immune compartment/contaminant.",
+      "suggested_fix": "Add a neutrophil/granulocyte module and leukocyte-gated axis if supported by the blueprint's pancreas resources, using markers such as S100A8, S100A9, FCGR3B, CXCR2, CSF3R, MNDA, LST1, and/or NAMPT while avoiding excessive monocyte overlap.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "epsilon_cell module",
+      "description": "The epsilon-cell marker set is thin and includes MLN, which is more characteristic of intestinal/enteroendocrine programs than a canonical adult pancreatic epsilon-cell identity. GHRL anchors the module, but MLN may reduce specificity.",
+      "suggested_fix": "Tighten the epsilon module around pancreas-supported ghrelin-cell markers and remove or replace MLN unless the cited human pancreas sources explicitly support it for pancreatic epsilon cells.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "DOI and citation-title verification was not performed because it is outside the discriminator scope."
+  ]
+}

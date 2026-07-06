@@ -1,0 +1,184 @@
+{
+  "h5ad_path": "data/preprocessed/mouse_cortex_pp.h5ad",
+  "layer": null,
+  "n_cells": 42778,
+  "n_vars": 23408,
+  "modules": [
+    {
+      "name": "pan_neuronal",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.9973350787788116
+    },
+    {
+      "name": "non_neuronal_core",
+      "n_genes": 9,
+      "n_genes_present": 9,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.8520267427182197
+    },
+    {
+      "name": "glutamatergic_projection",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.844382626583758
+    },
+    {
+      "name": "gabaergic_interneuron",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.5469400158960214
+    },
+    {
+      "name": "l23_it",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.8038711487213054
+    },
+    {
+      "name": "l4_it",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.8378839590443686
+    },
+    {
+      "name": "l5_it",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.7295572490532517
+    },
+    {
+      "name": "l5_et_pt",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.8281359577352845
+    },
+    {
+      "name": "l6_ct",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.8307541259525925
+    },
+    {
+      "name": "l6b_subplate",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.7778764785637478
+    },
+    {
+      "name": "lamp5_reln_interneuron",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.7422740661087475
+    },
+    {
+      "name": "vip_interneuron",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.46862873439618496
+    },
+    {
+      "name": "sst_interneuron",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.5572023002477909
+    },
+    {
+      "name": "pvalb_interneuron",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.7929309458132685
+    },
+    {
+      "name": "astrocyte",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.8865538360839684
+    },
+    {
+      "name": "opc",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.556360746177942
+    },
+    {
+      "name": "myelinating_oligodendrocyte",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.6509186965262518
+    },
+    {
+      "name": "microglia_homeostatic",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.4896909626443499
+    },
+    {
+      "name": "endothelial",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.06342044976389732
+    },
+    {
+      "name": "mural_pericyte_smooth_muscle",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.2636401888821357
+    },
+    {
+      "name": "vlmc_fibroblast",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.05923605591659264
+    },
+    {
+      "name": "neuronal_activity_ieg",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.8021412875777268
+    }
+  ]
+}

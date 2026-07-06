@@ -1,0 +1,349 @@
+{
+  "h5ad_path": "data/preprocessed/human_immune_pp.h5ad",
+  "layer": null,
+  "n_cells": 33506,
+  "n_vars": 12303,
+  "modules": [
+    {
+      "name": "hsc_mpp_stemness",
+      "n_genes": 8,
+      "n_genes_present": 6,
+      "n_genes_missing": 2,
+      "missing_genes": [
+        "ADGRG6",
+        "AVP"
+      ],
+      "fraction_nonzero_cells": 0.7998865874768698
+    },
+    {
+      "name": "erythroid_megakaryocyte_priming",
+      "n_genes": 8,
+      "n_genes_present": 7,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "CA1"
+      ],
+      "fraction_nonzero_cells": 0.4341013549811974
+    },
+    {
+      "name": "myeloid_granulocyte_priming",
+      "n_genes": 8,
+      "n_genes_present": 7,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "PRTN3"
+      ],
+      "fraction_nonzero_cells": 0.6369605443801111
+    },
+    {
+      "name": "lymphoid_priming",
+      "n_genes": 8,
+      "n_genes_present": 7,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "RAG2"
+      ],
+      "fraction_nonzero_cells": 0.214110905509461
+    },
+    {
+      "name": "erythroid_mature",
+      "n_genes": 9,
+      "n_genes_present": 5,
+      "n_genes_missing": 4,
+      "missing_genes": [
+        "ALAS2",
+        "GYPA",
+        "HBD",
+        "SLC4A1"
+      ],
+      "fraction_nonzero_cells": 0.749895541097117
+    },
+    {
+      "name": "megakaryocyte_platelet",
+      "n_genes": 8,
+      "n_genes_present": 8,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.2406434668417597
+    },
+    {
+      "name": "granulocyte_neutrophil",
+      "n_genes": 8,
+      "n_genes_present": 7,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "LTF"
+      ],
+      "fraction_nonzero_cells": 0.7927833820808213
+    },
+    {
+      "name": "classical_monocyte",
+      "n_genes": 8,
+      "n_genes_present": 8,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.9330567659523668
+    },
+    {
+      "name": "nonclassical_monocyte",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.8419686026383334
+    },
+    {
+      "name": "conventional_dendritic",
+      "n_genes": 8,
+      "n_genes_present": 7,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "XCR1"
+      ],
+      "fraction_nonzero_cells": 0.6113233450725243
+    },
+    {
+      "name": "plasmacytoid_dendritic",
+      "n_genes": 8,
+      "n_genes_present": 8,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.42953500865516625
+    },
+    {
+      "name": "basophil_mast",
+      "n_genes": 8,
+      "n_genes_present": 5,
+      "n_genes_missing": 3,
+      "missing_genes": [
+        "MS4A2",
+        "TPSAB1",
+        "TPSB2"
+      ],
+      "fraction_nonzero_cells": 0.04148510714498896
+    },
+    {
+      "name": "eosinophil",
+      "n_genes": 7,
+      "n_genes_present": 4,
+      "n_genes_missing": 3,
+      "missing_genes": [
+        "EPX",
+        "PRG2",
+        "SIGLEC8"
+      ],
+      "fraction_nonzero_cells": 0.10150420820151615
+    },
+    {
+      "name": "b_cell",
+      "n_genes": 8,
+      "n_genes_present": 8,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.9692293917507312
+    },
+    {
+      "name": "plasma_cell",
+      "n_genes": 8,
+      "n_genes_present": 4,
+      "n_genes_missing": 4,
+      "missing_genes": [
+        "IGHG1",
+        "IGKC",
+        "JCHAIN",
+        "SDC1"
+      ],
+      "fraction_nonzero_cells": 0.5091028472512386
+    },
+    {
+      "name": "t_cell",
+      "n_genes": 8,
+      "n_genes_present": 6,
+      "n_genes_missing": 2,
+      "missing_genes": [
+        "TRAC",
+        "TRBC1"
+      ],
+      "fraction_nonzero_cells": 0.7224676177401063
+    },
+    {
+      "name": "cd4_naive_memory_t",
+      "n_genes": 8,
+      "n_genes_present": 8,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.9131498836029368
+    },
+    {
+      "name": "cd8_cytotoxic_t",
+      "n_genes": 8,
+      "n_genes_present": 8,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.5911180087148571
+    },
+    {
+      "name": "regulatory_t",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.15340536023398793
+    },
+    {
+      "name": "mait_gamma_delta_t",
+      "n_genes": 7,
+      "n_genes_present": 4,
+      "n_genes_missing": 3,
+      "missing_genes": [
+        "TRAV1-2",
+        "TRDC",
+        "TRGC1"
+      ],
+      "fraction_nonzero_cells": 0.29287291828329254
+    },
+    {
+      "name": "nk_cell",
+      "n_genes": 8,
+      "n_genes_present": 8,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.7003521757297201
+    },
+    {
+      "name": "t_activation",
+      "n_genes": 8,
+      "n_genes_present": 6,
+      "n_genes_missing": 2,
+      "missing_genes": [
+        "IL2",
+        "LIF"
+      ],
+      "fraction_nonzero_cells": 0.6554348474900018
+    },
+    {
+      "name": "interferon_response",
+      "n_genes": 9,
+      "n_genes_present": 9,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.6391094132394198
+    },
+    {
+      "name": "inflammatory_myeloid",
+      "n_genes": 8,
+      "n_genes_present": 7,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "CXCL8"
+      ],
+      "fraction_nonzero_cells": 0.9606637617143198
+    },
+    {
+      "name": "cycling",
+      "n_genes": 9,
+      "n_genes_present": 9,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.9569032412105295
+    },
+    {
+      "name": "mesenchymal_stromal",
+      "n_genes": 7,
+      "n_genes_present": 3,
+      "n_genes_missing": 4,
+      "missing_genes": [
+        "CXCL12",
+        "FOXC1",
+        "MCAM",
+        "PDGFRA"
+      ],
+      "fraction_nonzero_cells": 0.019608428341192623
+    },
+    {
+      "name": "adipo_msc",
+      "n_genes": 6,
+      "n_genes_present": 3,
+      "n_genes_missing": 3,
+      "missing_genes": [
+        "CXCL12",
+        "LPL",
+        "PPARG"
+      ],
+      "fraction_nonzero_cells": 0.1403629200740166
+    },
+    {
+      "name": "osteo_lineage",
+      "n_genes": 7,
+      "n_genes_present": 4,
+      "n_genes_missing": 3,
+      "missing_genes": [
+        "COL1A2",
+        "IBSP",
+        "SPP1"
+      ],
+      "fraction_nonzero_cells": 0.09637079925983406
+    },
+    {
+      "name": "fibro_msc",
+      "n_genes": 6,
+      "n_genes_present": 1,
+      "n_genes_missing": 5,
+      "missing_genes": [
+        "COL3A1",
+        "CSPG4",
+        "DCN",
+        "DPT",
+        "PDPN"
+      ],
+      "fraction_nonzero_cells": 0.0020891780576613142
+    },
+    {
+      "name": "endothelial",
+      "n_genes": 6,
+      "n_genes_present": 2,
+      "n_genes_missing": 4,
+      "missing_genes": [
+        "CDH5",
+        "EMCN",
+        "KDR",
+        "PECAM1"
+      ],
+      "fraction_nonzero_cells": 0.07395690324121053
+    },
+    {
+      "name": "arterial_endothelial",
+      "n_genes": 6,
+      "n_genes_present": 3,
+      "n_genes_missing": 3,
+      "missing_genes": [
+        "CXCL12",
+        "GJA4",
+        "HEY1"
+      ],
+      "fraction_nonzero_cells": 0.2904852862173939
+    },
+    {
+      "name": "sinusoidal_endothelial",
+      "n_genes": 6,
+      "n_genes_present": 3,
+      "n_genes_missing": 3,
+      "missing_genes": [
+        "LYVE1",
+        "STAB2",
+        "VCAM1"
+      ],
+      "fraction_nonzero_cells": 0.08804393243001253
+    },
+    {
+      "name": "vascular_smooth_muscle",
+      "n_genes": 6,
+      "n_genes_present": 5,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "MCAM"
+      ],
+      "fraction_nonzero_cells": 0.09887781292902764
+    }
+  ]
+}

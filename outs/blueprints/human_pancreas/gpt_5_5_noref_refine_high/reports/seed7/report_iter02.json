@@ -1,0 +1,42 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint is broadly plausible for human pancreas but needs targeted improvements to immune subtype resolution, endothelial identity coverage, and a few axis-design clarifications.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "t_nk_cell, b_plasma_cell, t_nk_within_immune, b_plasma_within_immune",
+      "description": "T cells and NK cells are collapsed into one module/axis, and B cells and plasma cells are collapsed into one module/axis. These are distinct expected immune populations in a full human pancreas embedding and should not be the only resolution available.",
+      "suggested_fix": "Split or supplement with separate immune-gated axes for T cells, NK cells, B cells, and plasma cells using canonical markers such as CD3D/CD3E/TRAC/CD2/IL7R, NKG7/GNLY/PRF1/KLRD1/FCGR3A, MS4A1/CD79A/CD79B/BANK1/CD74, and MZB1/XBP1/JCHAIN/SDC1/IGKC. Add pDC only if dimensionality allows.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "endothelial_core and vascular/lymphatic endothelial axes",
+      "description": "Endothelial cells are represented only through gated vascular and lymphatic subtype axes. A full pancreas embedding should include a plain pan-endothelial identity dimension so endothelial cells with weaker subtype marker expression are still captured.",
+      "suggested_fix": "Add a plain endothelial_identity axis using endothelial_core, then keep vascular_endothelial_identity and lymphatic_endothelial_identity as gated subtype refinements. Optional arterial/venous/capillary or islet/acinar endothelial refinements should be added only with canonical markers and if not over-padding the embedding.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "endocrine_progenitor_like_state and immature_beta_like",
+      "description": "The NEUROG3/PAX4/SOX9/HES1-centered programs are biologically plausible for developmental or dedifferentiation-like biology, but the scenario has no developmental or disease note. Their current framing can over-emphasize rare or context-dependent progenitor-like states in a baseline human pancreas embedding.",
+      "suggested_fix": "Keep the axis only as a scoped endocrine plasticity/dedifferentiation or adult immaturity/stress dimension, retuning markers if needed, and ensure it remains secondary to core adult endocrine subtype axes.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "pericyte_smooth_muscle_vs_fibroblast",
+      "description": "The axis name implies a contrast against fibroblasts, but the implementation is a plain pericyte/smooth muscle module. The markers are mostly plausible, but the axis type and name do not match the biological interpretation.",
+      "suggested_fix": "Rename it to a plain pericyte/mural identity axis or convert it into an actual contrast/gated refinement against fibroblast/stromal modules while keeping contractile smooth muscle as a separate mural state.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "The broad stress axes are acceptable for scRNA-seq pancreas data, but they should remain secondary to lineage coverage in downstream interpretation.",
+    "Some marker overlap is expected in pancreas modules, especially KRT8/KRT18 in epithelial and mesothelial contexts and matrix genes across stromal states."
+  ]
+}

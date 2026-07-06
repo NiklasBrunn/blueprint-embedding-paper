@@ -1,0 +1,3 @@
+- iter 01 — minor — The blueprint covers the major pancreatic epithelial and endocrine landscape but needs targeted additions for lymphatic endothelium, mural cells, and finer immune subsets, plus modest marker cleanup.
+- iter 02 — minor — The blueprint broadly covers healthy human pancreas but needs targeted refinements for ductal/centroacinar coverage, lymphatic marker purity, and redundant stromal/stellate modules.
+- iter 03 — minor — The blueprint is broadly plausible for healthy human pancreas but needs targeted completeness and marker-design refinements.

@@ -1,0 +1,45 @@
+resource_id,n_runs,n_cohorts,cohorts,citation,kind,doi,standardized_resolved
+10.1016/j.cell.2024.04.013,8,1,gpt_5_5_unrefined_high_human_immune,Bandyopadhyay 2024 Cell,atlas,10.1016/j.cell.2024.04.013,10.1016/j.cell.2024.04.013
+10.1038/ncomms14049,7,1,gpt_5_5_unrefined_high_human_immune,Zheng et al. 2017 Nature Communications,paper,10.1038/ncomms14049,10.1038/ncomms14049
+10.1038/ncb3493,6,1,gpt_5_5_unrefined_high_human_immune,Velten 2017 Nature Cell Biology,paper,10.1038/ncb3493,10.1038/ncb3493
+10.1038/s41590-021-01059-0,6,1,gpt_5_5_unrefined_high_human_immune,Triana 2021 Nature Immunology,atlas,10.1038/s41590-021-01059-0,10.1038/s41590-021-01059-0
+10.1126/science.aah4573,6,1,gpt_5_5_unrefined_high_human_immune,Villani et al. 2017 Science,paper,10.1126/science.aah4573,10.1126/science.aah4573
+10.1126/science.abl4896,6,1,gpt_5_5_unrefined_high_human_immune,Tabula Sapiens Consortium 2022 Science,atlas,10.1126/science.abl4896,10.1126/science.abl4896
+10.1038/s41467-019-10291-0,5,1,gpt_5_5_unrefined_high_human_immune,Pellin et al. 2019 Nature Communications,paper,10.1038/s41467-019-10291-0,10.1038/s41467-019-10291-0
+key:reactomeneutrophildegranulation,5,1,gpt_5_5_unrefined_high_human_immune,Reactome R-HSA-6798695 Neutrophil degranulation,database,,key:reactomeneutrophildegranulation
+10.1038/s41586-020-2157-4,3,1,gpt_5_5_unrefined_high_human_immune,Han 2020 Nature,atlas,10.1038/s41586-020-2157-4,10.1038/s41586-020-2157-4
+10.1093/nsr/nwaa180,3,1,gpt_5_5_unrefined_high_human_immune,Xie et al. 2021 National Science Review,atlas,10.1093/nsr/nwaa180,10.1093/nsr/nwaa180
+key:msigdbg2m,3,1,gpt_5_5_unrefined_high_human_immune,MSigDB HALLMARK_G2M_CHECKPOINT,database,,key:msigdbg2m
+key:msigdbg2mcheckpoint,3,1,gpt_5_5_unrefined_high_human_immune,MSigDB HALLMARK_G2M_CHECKPOINT,database,,key:msigdbg2mcheckpoint
+key:msigdbhallmarkg2m,3,1,gpt_5_5_unrefined_high_human_immune,MSigDB HALLMARK_G2M_CHECKPOINT,database,,key:msigdbhallmarkg2m
+key:msigdbifnalpha,3,1,gpt_5_5_unrefined_high_human_immune,MSigDB HALLMARK_INTERFERON_ALPHA_RESPONSE,database,,key:msigdbifnalpha
+key:msigdbinterferonalpha,3,1,gpt_5_5_unrefined_high_human_immune,MSigDB HALLMARK_INTERFERON_ALPHA_RESPONSE,database,,key:msigdbinterferonalpha
+key:msigdbtnfanfkb,3,1,gpt_5_5_unrefined_high_human_immune,MSigDB HALLMARK_TNFA_SIGNALING_VIA_NFKB,database,,key:msigdbtnfanfkb
+key:reactomeplateletactivation,3,1,gpt_5_5_unrefined_high_human_immune,"Reactome R-HSA-76002 Platelet activation, signaling and aggregation",database,,key:reactomeplateletactivation
+10.1038/s41467-019-12464-3,2,1,gpt_5_5_unrefined_high_human_immune,Szabo 2019 Nature Communications,paper,10.1038/s41467-019-12464-3,10.1038/s41467-019-12464-3
+10.1038/s41590-024-01782-4,2,1,gpt_5_5_unrefined_high_human_immune,Zhang 2024 Nature Immunology,atlas,10.1038/s41590-024-01782-4,10.1038/s41590-024-01782-4
+10.1016/j.cell.2019.01.031,1,1,gpt_5_5_unrefined_high_human_immune,van Galen 2019 Cell,paper,10.1016/j.cell.2019.01.031,10.1016/j.cell.2019.01.031
+10.1016/j.cell.2019.04.040,1,1,gpt_5_5_unrefined_high_human_immune,Baryawno 2019 Cell,paper,10.1016/j.cell.2019.04.040,10.1016/j.cell.2019.04.040
+10.1016/j.cell.2021.04.048,1,1,gpt_5_5_unrefined_high_human_immune,Hao 2021 Cell multimodal human PBMC atlas,atlas,10.1016/j.cell.2021.04.048,10.1016/j.cell.2021.04.048
+10.1038/ni.2615,1,1,gpt_5_5_unrefined_high_human_immune,Laurenti 2013 Nature Immunology,paper,10.1038/ni.2615,10.1038/ni.2615
+10.1038/s41556-019-0439-6,1,1,gpt_5_5_unrefined_high_human_immune,Baccin 2020 Nature Cell Biology,paper,10.1038/s41556-019-0439-6,10.1038/s41556-019-0439-6
+10.1038/s41590-018-0051-0,1,1,gpt_5_5_unrefined_high_human_immune,Zemmour 2018 Nature Immunology,paper,10.1038/s41590-018-0051-0,10.1038/s41590-018-0051-0
+key:goantigenprocessing,1,1,gpt_5_5_unrefined_high_human_immune,GO:0019882 antigen processing and presentation,database,,key:goantigenprocessing
+key:gocellcycle,1,1,gpt_5_5_unrefined_high_human_immune,GO:0007049 cell cycle,database,,key:gocellcycle
+key:goerythrocytedifferentiation,1,1,gpt_5_5_unrefined_high_human_immune,GO:0030218 erythrocyte differentiation,database,,key:goerythrocytedifferentiation
+key:goossification,1,1,gpt_5_5_unrefined_high_human_immune,GO:0001503 ossification,database,,key:goossification
+key:kegghsa04640,1,1,gpt_5_5_unrefined_high_human_immune,KEGG hsa04640 Hematopoietic cell lineage,database,,key:kegghsa04640
+key:msigdbe2ftargets,1,1,gpt_5_5_unrefined_high_human_immune,MSigDB HALLMARK_E2F_TARGETS,database,,key:msigdbe2ftargets
+key:msigdbhallmarkadipogenesis,1,1,gpt_5_5_unrefined_high_human_immune,MSigDB HALLMARK_ADIPOGENESIS,database,,key:msigdbhallmarkadipogenesis
+key:msigdbhallmarkangiogenesis,1,1,gpt_5_5_unrefined_high_human_immune,MSigDB HALLMARK_ANGIOGENESIS,database,,key:msigdbhallmarkangiogenesis
+key:msigdbhallmarkcomplement,1,1,gpt_5_5_unrefined_high_human_immune,MSigDB HALLMARK_COMPLEMENT,database,,key:msigdbhallmarkcomplement
+key:msigdbhallmarkheme,1,1,gpt_5_5_unrefined_high_human_immune,MSigDB HALLMARK_HEME_METABOLISM,database,,key:msigdbhallmarkheme
+key:msigdbhallmarkifna,1,1,gpt_5_5_unrefined_high_human_immune,MSigDB HALLMARK_INTERFERON_ALPHA_RESPONSE,database,,key:msigdbhallmarkifna
+key:msigdbhallmarkinterferonalpha,1,1,gpt_5_5_unrefined_high_human_immune,MSigDB HALLMARK_INTERFERON_ALPHA_RESPONSE,database,,key:msigdbhallmarkinterferonalpha
+key:msigdbheme,1,1,gpt_5_5_unrefined_high_human_immune,MSigDB HALLMARK_HEME_METABOLISM,database,,key:msigdbheme
+key:msigdbil2stat5,1,1,gpt_5_5_unrefined_high_human_immune,MSigDB HALLMARK_IL2_STAT5_SIGNALING,database,,key:msigdbil2stat5
+key:msigdbinflammatory,1,1,gpt_5_5_unrefined_high_human_immune,MSigDB HALLMARK_INFLAMMATORY_RESPONSE,database,,key:msigdbinflammatory
+key:msigdbinflammatoryresponse,1,1,gpt_5_5_unrefined_high_human_immune,MSigDB HALLMARK_INFLAMMATORY_RESPONSE,database,,key:msigdbinflammatoryresponse
+key:reactomeinterferonalphabeta,1,1,gpt_5_5_unrefined_high_human_immune,Reactome R-HSA-909733 Interferon alpha/beta signaling,database,,key:reactomeinterferonalphabeta
+key:reactomemhcii,1,1,gpt_5_5_unrefined_high_human_immune,Reactome R-HSA-2132295 MHC class II antigen presentation,database,,key:reactomemhcii
+key:reactomeplateletdegranulation,1,1,gpt_5_5_unrefined_high_human_immune,Reactome R-HSA-114608 Platelet degranulation,database,,key:reactomeplateletdegranulation

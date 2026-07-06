@@ -1,0 +1,41 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint is broadly plausible for healthy human pancreas but needs targeted additions for missing resident neural/glial and possibly mesothelial/capsular populations plus small marker refinements.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "general axes",
+      "description": "No axis captures pancreatic neural/glial cells, especially Schwann/peripheral glial populations that can appear in whole-pancreas atlases.",
+      "suggested_fix": "Add a grounded Schwann/peripheral glial module and plain axis with markers such as SOX10, S100B, PLP1, MPZ, GFRA3, NGFR, and/or GAP43.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "general axes",
+      "description": "No axis represents mesothelial/capsular serosal cells, a small but distinct whole-pancreas population not well captured by ductal or fibroblast axes.",
+      "suggested_fix": "Add a mesothelial/capsular epithelial module and plain axis if supportable from qualifying literature, using markers such as MSLN, WT1, UPK3B, KRT19, KRT8, KRT18, and CALB2.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "ductal_epithelial",
+      "description": "The single broad ductal axis may blur ductal/centroacinar bicarbonate-transport programs and larger-duct mucinous programs in whole-pancreas data.",
+      "suggested_fix": "Either enrich the existing ductal module with stronger duct/centroacinar functional markers such as CFTR, SLC4A4, SLC26A6, ANXA4, TFF1, or MUC1 where supported, or add a separate centroacinar/ductal-refinement axis if literature support is strong.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "epsilon_cell",
+      "description": "The epsilon module is very small and includes generic endocrine genes, so it may mostly reflect endocrine-core signal plus GHRL rather than specifically resolving rare ghrelin/epsilon cells.",
+      "suggested_fix": "Strengthen the module with additional supported ghrelin/epsilon markers if available, or reduce generic endocrine genes in favor of more specific markers while retaining the axis.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "Citation and DOI verification were not reassessed; this report judges biological plausibility and coverage only."
+  ]
+}

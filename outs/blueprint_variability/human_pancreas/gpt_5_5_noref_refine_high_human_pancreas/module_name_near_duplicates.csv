@@ -1,0 +1,10 @@
+name_a_can,name_b_can,name_a,name_b,edit_distance,n_runs_a,n_runs_b,co_occurring_runs
+bcell,tcell,b_cell,t_cell,1,7,8,7
+bplasmacell,plasmacell,b_plasma_cell,plasma_cell,1,6,10,6
+cdc1,cdc2,cdc1,cdc2,1,1,1,1
+nkcell,tnkcell,nk_cell,t_nk_cell,1,10,5,5
+bcell,nkcell,b_cell,nk_cell,2,7,10,7
+betacell,deltacell,beta_cell,delta_cell,2,10,10,10
+betaimmature,betamature,beta_immature,beta_mature,2,2,5,2
+nkcell,tcell,nk_cell,t_cell,2,10,8,8
+tcell,tnkcell,t_cell,t_nk_cell,2,8,5,3

@@ -1,0 +1,149 @@
+// Per-dataset alias overrides for axis_metrics' module-name → label-value
+// resolution. Auto-matching (bidirectional token-subset rule, defined in
+// scripts/axis_metrics/metrics.py:auto_match) handles the easy cases; this
+// file overrides only when the algorithm misses or is ambiguous.
+//
+// Schema: { dataset: { label_col: { module_name_lowercased: label_value_exact } } }
+//
+// The `module_name_lowercased` key is matched against the lowercased
+// module name (from summary.json's blueprint.modules[].name) AND against
+// the lowercased axis name as a fallback. The `label_value_exact` is the
+// string that appears verbatim in adata.obs[label_col].
+//
+// Modules that have no corresponding label in the dataset (e.g. dendritic,
+// plasma, NK, pericyte, lymphatic_endo in human_pancreas which only labels
+// macrophage / mast / t_cell as immune/stromal) are intentionally absent;
+// they fall through to the unmapped log.
+{
+  "human_pancreas": {
+    "celltype": {
+      // centroacinar cells are the duct-adjacent acinar subpopulation;
+      // there's no separate centroacinar label, so they roll up to acinar.
+      "centroacinar": "acinar",
+      // "stellate" module conflates activated + quiescent states; the
+      // typical Stage-A marker list (ACTA2, COL1A1, PDGFRB) leans
+      // activated/myofibroblastic. Both alpha (`stellate`) and the
+      // explicit `quiescent_stellate` exist as labels; this alias picks
+      // the more pathology-relevant activated form.
+      "stellate": "activated_stellate",
+      "stellate_fibroblast": "activated_stellate",
+      // tokenization mismatch — "t_cell" → {t, cell}; "tcell" → {tcell}.
+      "tcell": "t_cell",
+      // PP cells (pancreatic-polypeptide) ≡ gamma cells in standard taxonomy.
+      "pp_cell": "gamma",
+      // Pancreas's myeloid label is macrophage (the only myeloid celltype value).
+      "myeloid_cell": "macrophage"
+      // Modules without a matching label (no entries): bcell, plasma,
+      // plasma_cell, nk, nk_cell, dendritic, dendritic_cell, b_plasma_cell,
+      // pericyte, lymphatic_endo, endothelial_lymphatic, panendocrine,
+      // endocrine, endocrine_core, immune, immune_core,
+      // pericyte_smooth_muscle, pancreatic_ganglial_neuron, cycling,
+      // er_stress_ucpr, incretin_response. These fall through to the
+      // unmapped log as expected.
+    }
+  },
+  "mouse_brain": {
+    "broad_type": {
+      // 3-token broad-type labels that single-token modules can't reach
+      // via auto-match.
+      "opc": "Oligodendrocyte Precursor Cell",
+      "endothelial": "Endothelial Cell",
+      // BAM / PVM / border_macrophage are brain-resident macrophage
+      // populations; Tasic 2016 labels them as Microglia at the broad level.
+      "bam": "Microglia",
+      "pvm": "Microglia",
+      "border_macrophage": "Microglia",
+      // Class umbrellas that span subclasses but resolve to one
+      // broad_type group.
+      "excitatory":         "Glutamatergic Neuron",
+      "pan_excitatory":     "Glutamatergic Neuron",
+      "excitatory_neuron":  "Glutamatergic Neuron",
+      "glutamatergic":      "Glutamatergic Neuron",
+      "inhibitory":         "GABA-ergic Neuron",
+      "pan_inhibitory":     "GABA-ergic Neuron",
+      "inhibitory_neuron":  "GABA-ergic Neuron",
+      "gabaergic":          "GABA-ergic Neuron",
+      // `inh_<subtype>` and `<subtype>_interneuron` naming variants
+      // — all GABA-ergic interneurons.
+      "inh_pvalb":  "GABA-ergic Neuron",
+      "inh_sst":    "GABA-ergic Neuron",
+      "inh_vip":    "GABA-ergic Neuron",
+      "inh_sncg":   "GABA-ergic Neuron",
+      "inh_lamp5":  "GABA-ergic Neuron",
+      "pvalb_interneuron":      "GABA-ergic Neuron",
+      "sst_interneuron":        "GABA-ergic Neuron",
+      "vip_interneuron":        "GABA-ergic Neuron",
+      "sncg_interneuron":       "GABA-ergic Neuron",
+      "serpinf1_interneuron":   "GABA-ergic Neuron",
+      "lamp5_ndnf_interneuron": "GABA-ergic Neuron",
+      // Layer-IT / NP / PT / CT / ET projection types are all glutamatergic.
+      // Both `l*` (Tasic 2018 shorthand) and `layer*` (descriptive) variants
+      // appear across runs.
+      "l23_it":     "Glutamatergic Neuron",
+      "l4_it":      "Glutamatergic Neuron",
+      "l5_it":      "Glutamatergic Neuron",
+      "l5_np":      "Glutamatergic Neuron",
+      "l5_pt":      "Glutamatergic Neuron",
+      "l5_et":      "Glutamatergic Neuron",
+      "l6_it":      "Glutamatergic Neuron",
+      "l6_it_car3": "Glutamatergic Neuron",
+      "l6_ct":      "Glutamatergic Neuron",
+      "l6b":        "Glutamatergic Neuron",
+      "upper_layer_it":         "Glutamatergic Neuron",
+      "layer4_it":              "Glutamatergic Neuron",
+      "layer5_it":              "Glutamatergic Neuron",
+      "layer5_et_pt":           "Glutamatergic Neuron",
+      "layer5_6_np":            "Glutamatergic Neuron",
+      "layer5_corticofugal":    "Glutamatergic Neuron",
+      "layer6_it":              "Glutamatergic Neuron",
+      "layer6_corticothalamic": "Glutamatergic Neuron",
+      "layer6b":                "Glutamatergic Neuron",
+      // Cortical inhibitory subclasses are all GABA-ergic.
+      "pvalb":     "GABA-ergic Neuron",
+      "sst":       "GABA-ergic Neuron",
+      "vip":       "GABA-ergic Neuron",
+      "sncg":      "GABA-ergic Neuron",
+      "lamp5":     "GABA-ergic Neuron"
+    },
+    "subclass": {
+      // Spelled-out cell-class names → abbreviated subclass labels.
+      "microglia":       "Micro",
+      "astrocyte":       "Astro",
+      "oligodendrocyte": "Oligo",
+      "endothelial":     "Endo",
+      // "L2/3" tokenizes to {l2, 3} via the auto-matcher's separator
+      // handling and doesn't auto-match `l23_it` ({l23, it}).
+      "l23_it":     "L2/3",
+      // L6 IT, L6 CT, and L6 IT Car3 all map back to L6a at the
+      // Tasic-2016 subclass granularity.
+      "l6_it":      "L6a",
+      "l6_ct":      "L6a",
+      "l6_it_car3": "L6a",
+      // Layer-named variants from runs that spell out "layer*".
+      "layer4_it":              "L4",
+      "layer5_it":              "L5",
+      "layer5_et_pt":           "L5b",
+      "layer5_6_np":            "L5",
+      "layer6_it":              "L6a",
+      "layer6b":                "L6b",
+      // Tasic 2016 lumps Lamp5+ neurogliaform cells under the Ndnf subclass.
+      "lamp5": "Ndnf",
+      // Interneuron-suffix naming variants → matching abbreviated subclass.
+      "pvalb_interneuron": "Pvalb",
+      "sst_interneuron":   "Sst",
+      "vip_interneuron":   "Vip",
+      "sncg_interneuron":  "Sncg"
+      // Pvalb / Sst / Vip / Sncg / L4 / L5 / L5a / L5b / L6a / L6b / OPC
+      // already auto-match. layer5_corticofugal, layer6_corticothalamic,
+      // l5_et intentionally skipped (Tasic 2016 subclasses don't separate
+      // ET / CT from L5/L6).
+    },
+    "primary_type": {
+      // primary_type values are too granular (50 unique values like
+      // "Pvalb Cpne5", "L4 Ctxn3") to map blueprint module names onto.
+      // Auto-match handles the rare cases where a module token uniquely
+      // identifies a primary_type prefix; everything else falls through
+      // to the unmapped log.
+    }
+  }
+}

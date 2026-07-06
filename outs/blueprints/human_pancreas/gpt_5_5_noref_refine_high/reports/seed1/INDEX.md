@@ -1,0 +1,3 @@
+- iter 01 — minor — The blueprint broadly covers healthy human pancreas cell types, but targeted marker and gate fixes are needed for immune, mesothelial, and neural compartments.
+- iter 02 — minor — The blueprint broadly covers healthy human pancreas but needs targeted refinement of progenitor-state scoping and a few endocrine/endothelial marker choices.
+- iter 03 — minor — The blueprint broadly covers healthy human pancreas cell types, but targeted cleanup is needed for over-emphasized progenitor/rare endocrine programs, a mixed neural module, and a few marker choices.

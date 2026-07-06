@@ -1,0 +1,1826 @@
+{
+  "run_id": "260603_blueprint_run08",
+  "extracted_at": "2026-06-19T08:32:46+00:00",
+  "scenario": {
+    "species": [
+      "human"
+    ],
+    "tissue": [
+      "pancreas"
+    ],
+    "celltype": null,
+    "age": null,
+    "sex": null,
+    "condition": null,
+    "notes": null
+  },
+  "blueprint": {
+    "name": "extract",
+    "clip": 4.0,
+    "n_modules": 27,
+    "n_axes": 29,
+    "n_axes_by_kind": {
+      "plain": 9,
+      "contrast": 2,
+      "gated": 18
+    },
+    "n_resources": 11,
+    "n_resources_by_kind": {
+      "paper": 4,
+      "atlas": 2,
+      "database": 5
+    },
+    "n_dois_unique": 6,
+    "n_total_genes": 190,
+    "n_unique_genes": 168,
+    "modules": [
+      {
+        "name": "endocrine_core",
+        "genes": [
+          "CHGA",
+          "CHGB",
+          "SCG2",
+          "PCSK1N",
+          "SCGN",
+          "ISL1",
+          "NEUROD1"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "baron2016_pancreas",
+          "muraro2016_pancreas",
+          "segerstolpe2016_islets",
+          "enge2017_pancreas"
+        ],
+        "n_resource_keys": 4,
+        "used_in_axes": [
+          {
+            "axis": "endocrine_core_identity",
+            "role": "positive"
+          },
+          {
+            "axis": "beta_within_endocrine",
+            "role": "gate"
+          },
+          {
+            "axis": "alpha_within_endocrine",
+            "role": "gate"
+          },
+          {
+            "axis": "delta_within_endocrine",
+            "role": "gate"
+          },
+          {
+            "axis": "pp_within_endocrine",
+            "role": "gate"
+          },
+          {
+            "axis": "epsilon_within_endocrine",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 6,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.8822488096691491
+      },
+      {
+        "name": "beta_cell",
+        "genes": [
+          "INS",
+          "IAPP",
+          "MAFA",
+          "PDX1",
+          "SLC30A8",
+          "PCSK1",
+          "NKX6-1"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "segerstolpe2016_islets",
+          "enge2017_pancreas",
+          "kegg_insulin_secretion"
+        ],
+        "n_resource_keys": 3,
+        "used_in_axes": [
+          {
+            "axis": "beta_within_endocrine",
+            "role": "positive"
+          },
+          {
+            "axis": "alpha_within_endocrine",
+            "role": "negative"
+          },
+          {
+            "axis": "delta_within_endocrine",
+            "role": "negative"
+          },
+          {
+            "axis": "pp_within_endocrine",
+            "role": "negative"
+          },
+          {
+            "axis": "epsilon_within_endocrine",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 5,
+        "n_genes_present": 6,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "NKX6-1"
+        ],
+        "fraction_nonzero_cells": 0.9642900744719815
+      },
+      {
+        "name": "alpha_cell",
+        "genes": [
+          "GCG",
+          "ARX",
+          "IRX2",
+          "TTR",
+          "PCSK2",
+          "TM4SF4",
+          "FEV"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "baron2016_pancreas",
+          "muraro2016_pancreas",
+          "segerstolpe2016_islets"
+        ],
+        "n_resource_keys": 3,
+        "used_in_axes": [
+          {
+            "axis": "beta_within_endocrine",
+            "role": "negative"
+          },
+          {
+            "axis": "alpha_within_endocrine",
+            "role": "positive"
+          },
+          {
+            "axis": "delta_within_endocrine",
+            "role": "negative"
+          },
+          {
+            "axis": "pp_within_endocrine",
+            "role": "negative"
+          },
+          {
+            "axis": "epsilon_within_endocrine",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 5,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.9415211817848859
+      },
+      {
+        "name": "delta_cell",
+        "genes": [
+          "SST",
+          "RBP4",
+          "HHEX",
+          "LEPR",
+          "GHSR"
+        ],
+        "n_genes": 5,
+        "resource_keys": [
+          "baron2016_pancreas",
+          "muraro2016_pancreas",
+          "segerstolpe2016_islets"
+        ],
+        "n_resource_keys": 3,
+        "used_in_axes": [
+          {
+            "axis": "beta_within_endocrine",
+            "role": "negative"
+          },
+          {
+            "axis": "alpha_within_endocrine",
+            "role": "negative"
+          },
+          {
+            "axis": "delta_within_endocrine",
+            "role": "positive"
+          },
+          {
+            "axis": "pp_within_endocrine",
+            "role": "negative"
+          },
+          {
+            "axis": "epsilon_within_endocrine",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 5,
+        "n_genes_present": 5,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.8342082773776096
+      },
+      {
+        "name": "pp_cell",
+        "genes": [
+          "PPY",
+          "PYY",
+          "FEV",
+          "TTR"
+        ],
+        "n_genes": 4,
+        "resource_keys": [
+          "baron2016_pancreas",
+          "muraro2016_pancreas",
+          "segerstolpe2016_islets"
+        ],
+        "n_resource_keys": 3,
+        "used_in_axes": [
+          {
+            "axis": "beta_within_endocrine",
+            "role": "negative"
+          },
+          {
+            "axis": "alpha_within_endocrine",
+            "role": "negative"
+          },
+          {
+            "axis": "delta_within_endocrine",
+            "role": "negative"
+          },
+          {
+            "axis": "pp_within_endocrine",
+            "role": "positive"
+          },
+          {
+            "axis": "epsilon_within_endocrine",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 5,
+        "n_genes_present": 4,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.8799902331827616
+      },
+      {
+        "name": "epsilon_cell",
+        "genes": [
+          "GHRL",
+          "MLN"
+        ],
+        "n_genes": 2,
+        "resource_keys": [
+          "baron2016_pancreas",
+          "muraro2016_pancreas",
+          "segerstolpe2016_islets"
+        ],
+        "n_resource_keys": 3,
+        "used_in_axes": [
+          {
+            "axis": "beta_within_endocrine",
+            "role": "negative"
+          },
+          {
+            "axis": "alpha_within_endocrine",
+            "role": "negative"
+          },
+          {
+            "axis": "delta_within_endocrine",
+            "role": "negative"
+          },
+          {
+            "axis": "pp_within_endocrine",
+            "role": "negative"
+          },
+          {
+            "axis": "epsilon_within_endocrine",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 5,
+        "n_genes_present": 2,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.03284092296422903
+      },
+      {
+        "name": "acinar_core",
+        "genes": [
+          "PRSS1",
+          "PRSS2",
+          "CPA1",
+          "CPA2",
+          "CTRB1",
+          "CTRB2",
+          "CELA3A",
+          "CLPS",
+          "PNLIP",
+          "AMY2A",
+          "REG1A"
+        ],
+        "n_genes": 11,
+        "resource_keys": [
+          "baron2016_pancreas",
+          "muraro2016_pancreas",
+          "enge2017_pancreas",
+          "kegg_pancreatic_secretion"
+        ],
+        "n_resource_keys": 4,
+        "used_in_axes": [
+          {
+            "axis": "acinar_identity",
+            "role": "positive"
+          },
+          {
+            "axis": "acinar_vs_ductal_exocrine_branch",
+            "role": "positive"
+          },
+          {
+            "axis": "reg_positive_acinar_state",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 10,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "PRSS2"
+        ],
+        "fraction_nonzero_cells": 0.7143205957758515
+      },
+      {
+        "name": "reg_positive_acinar",
+        "genes": [
+          "REG1A",
+          "REG1B",
+          "REG3A",
+          "SPINK1"
+        ],
+        "n_genes": 4,
+        "resource_keys": [
+          "muraro2016_pancreas",
+          "enge2017_pancreas",
+          "kegg_pancreatic_secretion"
+        ],
+        "n_resource_keys": 3,
+        "used_in_axes": [
+          {
+            "axis": "reg_positive_acinar_state",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 4,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.7270785007935539
+      },
+      {
+        "name": "ductal_core",
+        "genes": [
+          "KRT19",
+          "KRT7",
+          "SOX9",
+          "MUC1",
+          "SPP1",
+          "CFTR",
+          "SLC4A4",
+          "CLDN10",
+          "ANXA4",
+          "HNF1B"
+        ],
+        "n_genes": 10,
+        "resource_keys": [
+          "baron2016_pancreas",
+          "muraro2016_pancreas",
+          "enge2017_pancreas",
+          "kegg_pancreatic_secretion"
+        ],
+        "n_resource_keys": 4,
+        "used_in_axes": [
+          {
+            "axis": "ductal_identity",
+            "role": "positive"
+          },
+          {
+            "axis": "acinar_vs_ductal_exocrine_branch",
+            "role": "negative"
+          },
+          {
+            "axis": "reg_positive_acinar_state",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 10,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.6961298986692711
+      },
+      {
+        "name": "stellate_fibroblast",
+        "genes": [
+          "COL1A1",
+          "COL1A2",
+          "COL3A1",
+          "COL6A1",
+          "COL6A2",
+          "DCN",
+          "LUM",
+          "DPT",
+          "MMP2",
+          "PDGFRA"
+        ],
+        "n_genes": 10,
+        "resource_keys": [
+          "baron2016_pancreas",
+          "enge2017_pancreas",
+          "tabula_sapiens2022",
+          "msigdb_hallmark_emt"
+        ],
+        "n_resource_keys": 4,
+        "used_in_axes": [
+          {
+            "axis": "stellate_fibroblast_identity",
+            "role": "positive"
+          },
+          {
+            "axis": "mural_vs_fibroblast_stroma_branch",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 2,
+        "n_genes_present": 10,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.42021731168355514
+      },
+      {
+        "name": "mural_cell",
+        "genes": [
+          "RGS5",
+          "PDGFRB",
+          "CSPG4",
+          "MCAM",
+          "NOTCH3",
+          "ACTA2",
+          "TAGLN",
+          "MYH11"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "baron2016_pancreas",
+          "tabula_sapiens2022"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "mural_identity",
+            "role": "positive"
+          },
+          {
+            "axis": "mural_vs_fibroblast_stroma_branch",
+            "role": "positive"
+          },
+          {
+            "axis": "pericyte_within_mural",
+            "role": "gate"
+          },
+          {
+            "axis": "vascular_smooth_muscle_within_mural",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 4,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.30429739958491026
+      },
+      {
+        "name": "pericyte",
+        "genes": [
+          "RGS5",
+          "PDGFRB",
+          "CSPG4",
+          "NOTCH3",
+          "ABCC9",
+          "KCNJ8"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "baron2016_pancreas",
+          "tabula_sapiens2022"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "pericyte_within_mural",
+            "role": "positive"
+          },
+          {
+            "axis": "vascular_smooth_muscle_within_mural",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 2,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.4471371016969845
+      },
+      {
+        "name": "vascular_smooth_muscle",
+        "genes": [
+          "ACTA2",
+          "TAGLN",
+          "MYH11",
+          "CNN1",
+          "MYL9",
+          "TPM2"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "baron2016_pancreas",
+          "tabula_sapiens2022"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "pericyte_within_mural",
+            "role": "negative"
+          },
+          {
+            "axis": "vascular_smooth_muscle_within_mural",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 2,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.23336588939079478
+      },
+      {
+        "name": "blood_endothelial",
+        "genes": [
+          "PECAM1",
+          "VWF",
+          "KDR",
+          "FLT1",
+          "ENG",
+          "ESAM",
+          "PLVAP",
+          "RAMP2",
+          "EMCN"
+        ],
+        "n_genes": 9,
+        "resource_keys": [
+          "baron2016_pancreas",
+          "enge2017_pancreas",
+          "tabula_sapiens2022"
+        ],
+        "n_resource_keys": 3,
+        "used_in_axes": [
+          {
+            "axis": "blood_endothelial_identity",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 9,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.23208399462825052
+      },
+      {
+        "name": "lymphatic_endothelial",
+        "genes": [
+          "PROX1",
+          "PDPN",
+          "LYVE1",
+          "CCL21",
+          "FLT4"
+        ],
+        "n_genes": 5,
+        "resource_keys": [
+          "tabula_sapiens2022"
+        ],
+        "n_resource_keys": 1,
+        "used_in_axes": [
+          {
+            "axis": "lymphatic_endothelial_identity",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 5,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.35038456842876325
+      },
+      {
+        "name": "immune_core",
+        "genes": [
+          "PTPRC",
+          "LCP1",
+          "CORO1A",
+          "ARHGAP15",
+          "FYB1",
+          "ITGAL",
+          "CD53",
+          "LAPTM5",
+          "CXCR4"
+        ],
+        "n_genes": 9,
+        "resource_keys": [
+          "baron2016_pancreas",
+          "tabula_sapiens2022",
+          "dominguez_conde2022_immune",
+          "kegg_antigen_processing"
+        ],
+        "n_resource_keys": 4,
+        "used_in_axes": [
+          {
+            "axis": "immune_identity",
+            "role": "positive"
+          },
+          {
+            "axis": "macrophage_within_immune",
+            "role": "gate"
+          },
+          {
+            "axis": "dendritic_cell_within_immune",
+            "role": "gate"
+          },
+          {
+            "axis": "cdc1_dendritic_within_immune",
+            "role": "gate"
+          },
+          {
+            "axis": "cdc2_dendritic_within_immune",
+            "role": "gate"
+          },
+          {
+            "axis": "plasmacytoid_dendritic_within_immune",
+            "role": "gate"
+          },
+          {
+            "axis": "t_cell_within_immune",
+            "role": "gate"
+          },
+          {
+            "axis": "nk_cell_within_immune",
+            "role": "gate"
+          },
+          {
+            "axis": "b_cell_within_immune",
+            "role": "gate"
+          },
+          {
+            "axis": "plasma_cell_within_immune",
+            "role": "gate"
+          },
+          {
+            "axis": "mast_cell_within_immune",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 11,
+        "n_genes_present": 8,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "FYB1"
+        ],
+        "fraction_nonzero_cells": 0.11738493468440972
+      },
+      {
+        "name": "macrophage_monocyte",
+        "genes": [
+          "LST1",
+          "AIF1",
+          "C1QA",
+          "C1QB",
+          "C1QC",
+          "FCER1G",
+          "CSF1R",
+          "CD68",
+          "TYROBP",
+          "MSR1"
+        ],
+        "n_genes": 10,
+        "resource_keys": [
+          "baron2016_pancreas",
+          "tabula_sapiens2022",
+          "dominguez_conde2022_immune"
+        ],
+        "n_resource_keys": 3,
+        "used_in_axes": [
+          {
+            "axis": "macrophage_within_immune",
+            "role": "positive"
+          },
+          {
+            "axis": "dendritic_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "cdc1_dendritic_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "cdc2_dendritic_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "plasmacytoid_dendritic_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "t_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "nk_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "b_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "plasma_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "mast_cell_within_immune",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 10,
+        "n_genes_present": 10,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.39329752167012577
+      },
+      {
+        "name": "dendritic_cell",
+        "genes": [
+          "FCER1A",
+          "CLEC10A",
+          "CD1C",
+          "CD1E",
+          "ITGAX",
+          "IRF8",
+          "FLT3",
+          "CLEC9A",
+          "XCR1",
+          "LILRA4",
+          "HLA-DRA",
+          "CD74"
+        ],
+        "n_genes": 12,
+        "resource_keys": [
+          "tabula_sapiens2022",
+          "dominguez_conde2022_immune",
+          "kegg_antigen_processing"
+        ],
+        "n_resource_keys": 3,
+        "used_in_axes": [
+          {
+            "axis": "macrophage_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "dendritic_cell_within_immune",
+            "role": "positive"
+          },
+          {
+            "axis": "t_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "nk_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "b_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "plasma_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "mast_cell_within_immune",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 7,
+        "n_genes_present": 11,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "HLA-DRA"
+        ],
+        "fraction_nonzero_cells": 0.3370772799413991
+      },
+      {
+        "name": "cdc1_dendritic_cell",
+        "genes": [
+          "CLEC9A",
+          "XCR1",
+          "BATF3",
+          "CADM1",
+          "IRF8",
+          "FLT3"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "tabula_sapiens2022",
+          "dominguez_conde2022_immune"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "cdc1_dendritic_within_immune",
+            "role": "positive"
+          },
+          {
+            "axis": "cdc2_dendritic_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "plasmacytoid_dendritic_within_immune",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.5438896349652057
+      },
+      {
+        "name": "cdc2_dendritic_cell",
+        "genes": [
+          "CD1C",
+          "FCER1A",
+          "CLEC10A",
+          "CD1E",
+          "FCGR2B",
+          "IRF4"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "tabula_sapiens2022",
+          "dominguez_conde2022_immune"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "cdc1_dendritic_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "cdc2_dendritic_within_immune",
+            "role": "positive"
+          },
+          {
+            "axis": "plasmacytoid_dendritic_within_immune",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.012452691979001344
+      },
+      {
+        "name": "plasmacytoid_dendritic_cell",
+        "genes": [
+          "LILRA4",
+          "IL3RA",
+          "CLEC4C",
+          "TCF4",
+          "IRF7",
+          "GZMB"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "tabula_sapiens2022",
+          "dominguez_conde2022_immune"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "cdc1_dendritic_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "cdc2_dendritic_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "plasmacytoid_dendritic_within_immune",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.3353680869246734
+      },
+      {
+        "name": "t_cell",
+        "genes": [
+          "CD3D",
+          "CD3E",
+          "CD3G",
+          "TRAC",
+          "IL7R",
+          "LTB",
+          "CCR7"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "baron2016_pancreas",
+          "tabula_sapiens2022",
+          "dominguez_conde2022_immune",
+          "go_t_cell_activation"
+        ],
+        "n_resource_keys": 4,
+        "used_in_axes": [
+          {
+            "axis": "macrophage_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "dendritic_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "cdc1_dendritic_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "cdc2_dendritic_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "plasmacytoid_dendritic_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "t_cell_within_immune",
+            "role": "positive"
+          },
+          {
+            "axis": "nk_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "b_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "plasma_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "mast_cell_within_immune",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 10,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.10133072884873642
+      },
+      {
+        "name": "nk_cell",
+        "genes": [
+          "NKG7",
+          "GNLY",
+          "PRF1",
+          "GZMB",
+          "KLRD1",
+          "KLRF1",
+          "FGFBP2"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "tabula_sapiens2022",
+          "dominguez_conde2022_immune"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "macrophage_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "dendritic_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "cdc1_dendritic_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "cdc2_dendritic_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "plasmacytoid_dendritic_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "t_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "nk_cell_within_immune",
+            "role": "positive"
+          },
+          {
+            "axis": "b_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "plasma_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "mast_cell_within_immune",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 10,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.13209620314979856
+      },
+      {
+        "name": "b_cell",
+        "genes": [
+          "MS4A1",
+          "CD79A",
+          "CD79B",
+          "BANK1",
+          "CD74",
+          "HLA-DRA"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "tabula_sapiens2022",
+          "dominguez_conde2022_immune",
+          "kegg_antigen_processing"
+        ],
+        "n_resource_keys": 3,
+        "used_in_axes": [
+          {
+            "axis": "macrophage_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "dendritic_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "cdc1_dendritic_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "cdc2_dendritic_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "plasmacytoid_dendritic_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "t_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "nk_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "b_cell_within_immune",
+            "role": "positive"
+          },
+          {
+            "axis": "plasma_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "mast_cell_within_immune",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 10,
+        "n_genes_present": 5,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "HLA-DRA"
+        ],
+        "fraction_nonzero_cells": 0.3290196557196923
+      },
+      {
+        "name": "plasma_cell",
+        "genes": [
+          "MZB1",
+          "JCHAIN",
+          "XBP1",
+          "IGKC",
+          "IGHG1",
+          "DERL3"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "tabula_sapiens2022",
+          "dominguez_conde2022_immune"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "macrophage_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "dendritic_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "cdc1_dendritic_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "cdc2_dendritic_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "plasmacytoid_dendritic_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "t_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "nk_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "b_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "plasma_cell_within_immune",
+            "role": "positive"
+          },
+          {
+            "axis": "mast_cell_within_immune",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 10,
+        "n_genes_present": 5,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "JCHAIN"
+        ],
+        "fraction_nonzero_cells": 0.806311805640337
+      },
+      {
+        "name": "mast_cell",
+        "genes": [
+          "TPSAB1",
+          "TPSB2",
+          "CPA3",
+          "KIT",
+          "MS4A2",
+          "HDC"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "baron2016_pancreas",
+          "tabula_sapiens2022",
+          "dominguez_conde2022_immune"
+        ],
+        "n_resource_keys": 3,
+        "used_in_axes": [
+          {
+            "axis": "macrophage_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "dendritic_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "cdc1_dendritic_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "cdc2_dendritic_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "plasmacytoid_dendritic_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "t_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "nk_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "b_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "plasma_cell_within_immune",
+            "role": "negative"
+          },
+          {
+            "axis": "mast_cell_within_immune",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 10,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.04974972530826517
+      },
+      {
+        "name": "schwann_neural",
+        "genes": [
+          "SOX10",
+          "PLP1",
+          "MPZ",
+          "S100B",
+          "MBP",
+          "PMP22",
+          "GFRA3",
+          "NGFR"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "baron2016_pancreas",
+          "tabula_sapiens2022"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "schwann_neural_identity",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.4811988768160176
+      }
+    ],
+    "axes": [
+      {
+        "name": "endocrine_core_identity",
+        "kind": "plain",
+        "positive": "endocrine_core",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "acinar_identity",
+        "kind": "plain",
+        "positive": "acinar_core",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "ductal_identity",
+        "kind": "plain",
+        "positive": "ductal_core",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "stellate_fibroblast_identity",
+        "kind": "plain",
+        "positive": "stellate_fibroblast",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "mural_identity",
+        "kind": "plain",
+        "positive": "mural_cell",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "blood_endothelial_identity",
+        "kind": "plain",
+        "positive": "blood_endothelial",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "immune_identity",
+        "kind": "plain",
+        "positive": "immune_core",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "schwann_neural_identity",
+        "kind": "plain",
+        "positive": "schwann_neural",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "acinar_vs_ductal_exocrine_branch",
+        "kind": "contrast",
+        "positive": "acinar_core",
+        "negatives": [
+          "ductal_core"
+        ],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "mural_vs_fibroblast_stroma_branch",
+        "kind": "contrast",
+        "positive": "mural_cell",
+        "negatives": [
+          "stellate_fibroblast"
+        ],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "pericyte_within_mural",
+        "kind": "gated",
+        "positive": "pericyte",
+        "negatives": [
+          "vascular_smooth_muscle"
+        ],
+        "negative_weight": 0.45,
+        "gate": "mural_cell"
+      },
+      {
+        "name": "vascular_smooth_muscle_within_mural",
+        "kind": "gated",
+        "positive": "vascular_smooth_muscle",
+        "negatives": [
+          "pericyte"
+        ],
+        "negative_weight": 0.45,
+        "gate": "mural_cell"
+      },
+      {
+        "name": "beta_within_endocrine",
+        "kind": "gated",
+        "positive": "beta_cell",
+        "negatives": [
+          "alpha_cell",
+          "delta_cell",
+          "pp_cell",
+          "epsilon_cell"
+        ],
+        "negative_weight": 0.35,
+        "gate": "endocrine_core"
+      },
+      {
+        "name": "alpha_within_endocrine",
+        "kind": "gated",
+        "positive": "alpha_cell",
+        "negatives": [
+          "beta_cell",
+          "delta_cell",
+          "pp_cell",
+          "epsilon_cell"
+        ],
+        "negative_weight": 0.35,
+        "gate": "endocrine_core"
+      },
+      {
+        "name": "delta_within_endocrine",
+        "kind": "gated",
+        "positive": "delta_cell",
+        "negatives": [
+          "beta_cell",
+          "alpha_cell",
+          "pp_cell",
+          "epsilon_cell"
+        ],
+        "negative_weight": 0.35,
+        "gate": "endocrine_core"
+      },
+      {
+        "name": "pp_within_endocrine",
+        "kind": "gated",
+        "positive": "pp_cell",
+        "negatives": [
+          "beta_cell",
+          "alpha_cell",
+          "delta_cell",
+          "epsilon_cell"
+        ],
+        "negative_weight": 0.35,
+        "gate": "endocrine_core"
+      },
+      {
+        "name": "epsilon_within_endocrine",
+        "kind": "gated",
+        "positive": "epsilon_cell",
+        "negatives": [
+          "beta_cell",
+          "alpha_cell",
+          "delta_cell",
+          "pp_cell"
+        ],
+        "negative_weight": 0.35,
+        "gate": "endocrine_core"
+      },
+      {
+        "name": "reg_positive_acinar_state",
+        "kind": "gated",
+        "positive": "reg_positive_acinar",
+        "negatives": [
+          "ductal_core"
+        ],
+        "negative_weight": 0.25,
+        "gate": "acinar_core"
+      },
+      {
+        "name": "lymphatic_endothelial_identity",
+        "kind": "plain",
+        "positive": "lymphatic_endothelial",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "macrophage_within_immune",
+        "kind": "gated",
+        "positive": "macrophage_monocyte",
+        "negatives": [
+          "dendritic_cell",
+          "t_cell",
+          "nk_cell",
+          "b_cell",
+          "plasma_cell",
+          "mast_cell"
+        ],
+        "negative_weight": 0.35,
+        "gate": "immune_core"
+      },
+      {
+        "name": "dendritic_cell_within_immune",
+        "kind": "gated",
+        "positive": "dendritic_cell",
+        "negatives": [
+          "macrophage_monocyte",
+          "t_cell",
+          "nk_cell",
+          "b_cell",
+          "plasma_cell",
+          "mast_cell"
+        ],
+        "negative_weight": 0.35,
+        "gate": "immune_core"
+      },
+      {
+        "name": "cdc1_dendritic_within_immune",
+        "kind": "gated",
+        "positive": "cdc1_dendritic_cell",
+        "negatives": [
+          "cdc2_dendritic_cell",
+          "plasmacytoid_dendritic_cell",
+          "macrophage_monocyte",
+          "t_cell",
+          "nk_cell",
+          "b_cell",
+          "plasma_cell",
+          "mast_cell"
+        ],
+        "negative_weight": 0.4,
+        "gate": "immune_core"
+      },
+      {
+        "name": "cdc2_dendritic_within_immune",
+        "kind": "gated",
+        "positive": "cdc2_dendritic_cell",
+        "negatives": [
+          "cdc1_dendritic_cell",
+          "plasmacytoid_dendritic_cell",
+          "macrophage_monocyte",
+          "t_cell",
+          "nk_cell",
+          "b_cell",
+          "plasma_cell",
+          "mast_cell"
+        ],
+        "negative_weight": 0.4,
+        "gate": "immune_core"
+      },
+      {
+        "name": "plasmacytoid_dendritic_within_immune",
+        "kind": "gated",
+        "positive": "plasmacytoid_dendritic_cell",
+        "negatives": [
+          "cdc1_dendritic_cell",
+          "cdc2_dendritic_cell",
+          "macrophage_monocyte",
+          "t_cell",
+          "nk_cell",
+          "b_cell",
+          "plasma_cell",
+          "mast_cell"
+        ],
+        "negative_weight": 0.4,
+        "gate": "immune_core"
+      },
+      {
+        "name": "t_cell_within_immune",
+        "kind": "gated",
+        "positive": "t_cell",
+        "negatives": [
+          "macrophage_monocyte",
+          "dendritic_cell",
+          "nk_cell",
+          "b_cell",
+          "plasma_cell",
+          "mast_cell"
+        ],
+        "negative_weight": 0.35,
+        "gate": "immune_core"
+      },
+      {
+        "name": "nk_cell_within_immune",
+        "kind": "gated",
+        "positive": "nk_cell",
+        "negatives": [
+          "macrophage_monocyte",
+          "dendritic_cell",
+          "t_cell",
+          "b_cell",
+          "plasma_cell",
+          "mast_cell"
+        ],
+        "negative_weight": 0.35,
+        "gate": "immune_core"
+      },
+      {
+        "name": "b_cell_within_immune",
+        "kind": "gated",
+        "positive": "b_cell",
+        "negatives": [
+          "macrophage_monocyte",
+          "dendritic_cell",
+          "t_cell",
+          "nk_cell",
+          "plasma_cell",
+          "mast_cell"
+        ],
+        "negative_weight": 0.35,
+        "gate": "immune_core"
+      },
+      {
+        "name": "plasma_cell_within_immune",
+        "kind": "gated",
+        "positive": "plasma_cell",
+        "negatives": [
+          "macrophage_monocyte",
+          "dendritic_cell",
+          "t_cell",
+          "nk_cell",
+          "b_cell",
+          "mast_cell"
+        ],
+        "negative_weight": 0.35,
+        "gate": "immune_core"
+      },
+      {
+        "name": "mast_cell_within_immune",
+        "kind": "gated",
+        "positive": "mast_cell",
+        "negatives": [
+          "macrophage_monocyte",
+          "dendritic_cell",
+          "t_cell",
+          "nk_cell",
+          "b_cell",
+          "plasma_cell"
+        ],
+        "negative_weight": 0.35,
+        "gate": "immune_core"
+      }
+    ],
+    "resources": [
+      {
+        "key": "baron2016_pancreas",
+        "kind": "paper",
+        "citation": "Baron 2016 Cell Systems",
+        "doi": "10.1016/j.cels.2016.08.011",
+        "used_in_modules": [
+          "acinar_core",
+          "alpha_cell",
+          "blood_endothelial",
+          "delta_cell",
+          "ductal_core",
+          "endocrine_core",
+          "epsilon_cell",
+          "immune_core",
+          "macrophage_monocyte",
+          "mast_cell",
+          "mural_cell",
+          "pericyte",
+          "pp_cell",
+          "schwann_neural",
+          "stellate_fibroblast",
+          "t_cell",
+          "vascular_smooth_muscle"
+        ]
+      },
+      {
+        "key": "muraro2016_pancreas",
+        "kind": "paper",
+        "citation": "Muraro 2016 Cell Systems",
+        "doi": "10.1016/j.cels.2016.09.002",
+        "used_in_modules": [
+          "acinar_core",
+          "alpha_cell",
+          "delta_cell",
+          "ductal_core",
+          "endocrine_core",
+          "epsilon_cell",
+          "pp_cell",
+          "reg_positive_acinar"
+        ]
+      },
+      {
+        "key": "segerstolpe2016_islets",
+        "kind": "paper",
+        "citation": "Segerstolpe 2016 Cell Metabolism",
+        "doi": "10.1016/j.cmet.2016.08.020",
+        "used_in_modules": [
+          "alpha_cell",
+          "beta_cell",
+          "delta_cell",
+          "endocrine_core",
+          "epsilon_cell",
+          "pp_cell"
+        ]
+      },
+      {
+        "key": "enge2017_pancreas",
+        "kind": "paper",
+        "citation": "Enge 2017 Cell",
+        "doi": "10.1016/j.cell.2017.09.004",
+        "used_in_modules": [
+          "acinar_core",
+          "beta_cell",
+          "blood_endothelial",
+          "ductal_core",
+          "endocrine_core",
+          "reg_positive_acinar",
+          "stellate_fibroblast"
+        ]
+      },
+      {
+        "key": "tabula_sapiens2022",
+        "kind": "atlas",
+        "citation": "Tabula Sapiens Consortium 2022 Science",
+        "doi": "10.1126/science.abl4896",
+        "used_in_modules": [
+          "b_cell",
+          "blood_endothelial",
+          "cdc1_dendritic_cell",
+          "cdc2_dendritic_cell",
+          "dendritic_cell",
+          "immune_core",
+          "lymphatic_endothelial",
+          "macrophage_monocyte",
+          "mast_cell",
+          "mural_cell",
+          "nk_cell",
+          "pericyte",
+          "plasma_cell",
+          "plasmacytoid_dendritic_cell",
+          "schwann_neural",
+          "stellate_fibroblast",
+          "t_cell",
+          "vascular_smooth_muscle"
+        ]
+      },
+      {
+        "key": "dominguez_conde2022_immune",
+        "kind": "atlas",
+        "citation": "Dominguez Conde 2022 Science",
+        "doi": "10.1126/science.abl5197",
+        "used_in_modules": [
+          "b_cell",
+          "cdc1_dendritic_cell",
+          "cdc2_dendritic_cell",
+          "dendritic_cell",
+          "immune_core",
+          "macrophage_monocyte",
+          "mast_cell",
+          "nk_cell",
+          "plasma_cell",
+          "plasmacytoid_dendritic_cell",
+          "t_cell"
+        ]
+      },
+      {
+        "key": "kegg_pancreatic_secretion",
+        "kind": "database",
+        "citation": "KEGG hsa04972 PANCREATIC_SECRETION",
+        "doi": null,
+        "used_in_modules": [
+          "acinar_core",
+          "ductal_core",
+          "reg_positive_acinar"
+        ]
+      },
+      {
+        "key": "kegg_insulin_secretion",
+        "kind": "database",
+        "citation": "KEGG hsa04911 INSULIN_SECRETION",
+        "doi": null,
+        "used_in_modules": [
+          "beta_cell"
+        ]
+      },
+      {
+        "key": "kegg_antigen_processing",
+        "kind": "database",
+        "citation": "KEGG hsa04612 ANTIGEN_PROCESSING_AND_PRESENTATION",
+        "doi": null,
+        "used_in_modules": [
+          "b_cell",
+          "dendritic_cell",
+          "immune_core"
+        ]
+      },
+      {
+        "key": "msigdb_hallmark_emt",
+        "kind": "database",
+        "citation": "MSigDB HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION",
+        "doi": null,
+        "used_in_modules": [
+          "stellate_fibroblast"
+        ]
+      },
+      {
+        "key": "go_t_cell_activation",
+        "kind": "database",
+        "citation": "GO:0042110 T cell activation",
+        "doi": null,
+        "used_in_modules": [
+          "t_cell"
+        ]
+      }
+    ],
+    "n_min_genes": 0
+  },
+  "sanity": {
+    "placeholder_strings_present": false,
+    "orphaned_modules": [],
+    "modules_missing_resources": [],
+    "unused_resources": [],
+    "set_clip_overridden": false
+  },
+  "dataset_coverage": {
+    "h5ad_path": "data/preprocessed/human_pancreas_pp.h5ad",
+    "layer": null,
+    "n_cells": 16382,
+    "n_vars": 18268
+  }
+}

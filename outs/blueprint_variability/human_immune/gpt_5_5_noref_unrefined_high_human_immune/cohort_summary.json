@@ -1,0 +1,285 @@
+{
+  "cohort": "gpt_5_5_noref_unrefined_high_human_immune",
+  "model": "gpt_5_5_noref_unrefined",
+  "reasoning": "high",
+  "dataset": "human_immune",
+  "n_runs": 10,
+  "scenario": {
+    "species": "human",
+    "tissue": "peripheral blood|bone marrow",
+    "celltype": null
+  },
+  "run_ids": [
+    "260606_blueprint_run01",
+    "260606_blueprint_run02",
+    "260606_blueprint_run03",
+    "260606_blueprint_run04",
+    "260606_blueprint_run05",
+    "260606_blueprint_run06",
+    "260606_blueprint_run07",
+    "260606_blueprint_run08",
+    "260606_blueprint_run09",
+    "260606_blueprint_run10"
+  ],
+  "size": {
+    "n_modules": {
+      "mean": 39.2,
+      "std": 4.366539438350084,
+      "min": 35.0,
+      "max": 49.0,
+      "cv": 0.11139131220280825
+    },
+    "n_axes": {
+      "mean": 38.1,
+      "std": 4.840798832148815,
+      "min": 32.0,
+      "max": 45.0,
+      "cv": 0.12705508745797414
+    },
+    "n_unique_genes": {
+      "mean": 249.1,
+      "std": 15.066150433633965,
+      "min": 221.0,
+      "max": 267.0,
+      "cv": 0.060482338151882635
+    },
+    "n_resources": {
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "cv": NaN
+    },
+    "n_dois_unique": {
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "cv": NaN
+    },
+    "gene_redundancy": {
+      "mean": 1.2390792068838405,
+      "std": 0.08470901596285478,
+      "min": 1.1528925619834711,
+      "max": 1.3895131086142323,
+      "cv": 0.06836448831700552
+    },
+    "mean_genes_per_module": {
+      "mean": 7.903776825606094,
+      "std": 0.566793824231406,
+      "min": 7.170731707317073,
+      "max": 8.88888888888889,
+      "cv": 0.07171176979531452
+    }
+  },
+  "jaccard": {
+    "genes": {
+      "mean": 0.6402399466850858,
+      "ci_lo": 0.6335393928710716,
+      "ci_hi": 0.6477740089073123,
+      "min": 0.5825242718446602,
+      "max": 0.7105263157894737
+    },
+    "dois": {
+      "mean": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "resources": {
+      "mean": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "modnames": {
+      "mean": 0.29839061422650515,
+      "ci_lo": 0.2863800705670144,
+      "ci_hi": 0.30871120373822497,
+      "min": 0.1875,
+      "max": 0.44
+    },
+    "axisnames": {
+      "mean": 0.04835848828650895,
+      "ci_lo": 0.038751240820634955,
+      "ci_hi": 0.05908558762260484,
+      "min": 0.0,
+      "max": 0.16393442622950818
+    }
+  },
+  "structural_consistency": {
+    "mean_kind_agreement": 0.9634892086330936,
+    "mean_role_agreement": 0.8616865079365079,
+    "mean_within_module_geneset_jaccard": 0.6610564486249417,
+    "mean_axis_positive_agreement": 0.9724820143884892,
+    "mean_axis_gate_agreement": 0.918525179856115,
+    "mean_axis_negatives_jaccard": 0.49239316239316233
+  },
+  "recurrence": {
+    "modules": {
+      "frac_in_ge80pct": 0.08571428571428572,
+      "gini": 0.44008746355685135,
+      "n_universal": 8,
+      "n_majority": 28,
+      "n_singleton": 67,
+      "n_unique_total": 140
+    },
+    "axes": {
+      "frac_in_ge80pct": 0.0,
+      "gini": 0.22250231311014182,
+      "n_universal": 0,
+      "n_majority": 3,
+      "n_singleton": 213,
+      "n_unique_total": 278
+    },
+    "genes": {
+      "frac_in_ge80pct": 0.4245939675174014,
+      "gini": 0.3498012799675118,
+      "n_universal": 123,
+      "n_majority": 251,
+      "n_singleton": 85,
+      "n_unique_total": 431
+    },
+    "resources": {
+      "frac_in_ge80pct": 0.0,
+      "gini": NaN,
+      "n_universal": 0,
+      "n_majority": 0,
+      "n_singleton": 0,
+      "n_unique_total": 0
+    }
+  },
+  "saturation_slope_at_N": {
+    "genes": 8.810000000000002,
+    "modules": 6.449999999999989,
+    "dois": 0.0
+  },
+  "coverage": {
+    "n_unique_modules": 140,
+    "n_unique_axes": 278,
+    "n_unique_genes": 431,
+    "n_unique_resources": 0
+  },
+  "resource_kind_composition": {
+    "frac_paper": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "frac_atlas": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "frac_database": {
+      "mean": 0.0,
+      "std": 0.0
+    }
+  },
+  "top_hubs": {
+    "top_positives": [
+      {
+        "module": "plasma_cell",
+        "module_can": "plasmacell",
+        "n_axes_using": 11
+      },
+      {
+        "module": "megakaryocyte_platelet",
+        "module_can": "megakaryocyteplatelet",
+        "n_axes_using": 10
+      },
+      {
+        "module": "nk_cell",
+        "module_can": "nkcell",
+        "n_axes_using": 10
+      },
+      {
+        "module": "classical_monocyte",
+        "module_can": "classicalmonocyte",
+        "n_axes_using": 10
+      },
+      {
+        "module": "eosinophil",
+        "module_can": "eosinophil",
+        "n_axes_using": 10
+      }
+    ],
+    "top_gates": [
+      {
+        "module": "myeloid_core",
+        "module_can": "myeloidcore",
+        "n_axes_using": 26
+      },
+      {
+        "module": "t_cell",
+        "module_can": "tcell",
+        "n_axes_using": 21
+      },
+      {
+        "module": "hematopoietic_core",
+        "module_can": "hematopoieticcore",
+        "n_axes_using": 14
+      },
+      {
+        "module": "hematopoietic_stem_progenitor",
+        "module_can": "hematopoieticstemprogenitor",
+        "n_axes_using": 10
+      },
+      {
+        "module": "t_cell_core",
+        "module_can": "tcellcore",
+        "n_axes_using": 10
+      }
+    ],
+    "top_negatives": [
+      {
+        "module": "cDC2",
+        "module_can": "cdc2",
+        "n_axes_using": 19
+      },
+      {
+        "module": "cDC1",
+        "module_can": "cdc1",
+        "n_axes_using": 18
+      },
+      {
+        "module": "classical_monocyte",
+        "module_can": "classicalmonocyte",
+        "n_axes_using": 17
+      },
+      {
+        "module": "plasma_cell",
+        "module_can": "plasmacell",
+        "n_axes_using": 16
+      },
+      {
+        "module": "mature_neutrophil",
+        "module_can": "matureneutrophil",
+        "n_axes_using": 15
+      }
+    ]
+  },
+  "top_resources": [],
+  "stability_composite": 0.7328907900824372,
+  "stability_weights": {
+    "jaccard_genes_off_diag": 1.0,
+    "jaccard_modnames_off_diag": 1.0,
+    "mean_kind_agreement": 1.0,
+    "mean_role_agreement": 1.0,
+    "mean_within_module_geneset_jaccard": 1.0,
+    "mean_axis_positive_agreement": 1.0
+  },
+  "sanity": {
+    "frac_with_placeholders": 0.0,
+    "mean_orphaned_modules": 0.0,
+    "mean_modules_missing_resources": 39.2,
+    "mean_unused_resources": 0.0,
+    "frac_clip_overridden": 0.0,
+    "n_modules_merged_by_canonicalization": 3,
+    "n_axes_merged_by_canonicalization": 3,
+    "n_genes_merged_by_canonicalization": 0,
+    "n_module_name_drift_candidates": 2,
+    "n_module_name_near_duplicates": 19,
+    "doi_kind_agreement": NaN
+  }
+}

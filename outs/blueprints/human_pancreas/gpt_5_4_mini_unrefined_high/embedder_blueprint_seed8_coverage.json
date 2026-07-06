@@ -1,0 +1,181 @@
+{
+  "h5ad_path": "data/preprocessed/human_pancreas_pp.h5ad",
+  "layer": null,
+  "n_cells": 16382,
+  "n_vars": 18268,
+  "modules": [
+    {
+      "name": "endocrine_core",
+      "n_genes": 10,
+      "n_genes_present": 10,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.8751068245635454
+    },
+    {
+      "name": "beta_mature",
+      "n_genes": 12,
+      "n_genes_present": 11,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "NKX6-1"
+      ],
+      "fraction_nonzero_cells": 0.9742400195336345
+    },
+    {
+      "name": "alpha_identity",
+      "n_genes": 9,
+      "n_genes_present": 9,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.9450616530338176
+    },
+    {
+      "name": "delta_identity",
+      "n_genes": 8,
+      "n_genes_present": 8,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.9279086802588207
+    },
+    {
+      "name": "pp_identity",
+      "n_genes": 8,
+      "n_genes_present": 8,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.8482480771578562
+    },
+    {
+      "name": "acinar_identity",
+      "n_genes": 14,
+      "n_genes_present": 13,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "PRSS2"
+      ],
+      "fraction_nonzero_cells": 0.787632767671835
+    },
+    {
+      "name": "ductal_identity",
+      "n_genes": 13,
+      "n_genes_present": 13,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.9398730313759004
+    },
+    {
+      "name": "endothelial_identity",
+      "n_genes": 10,
+      "n_genes_present": 10,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.2887315346111586
+    },
+    {
+      "name": "fibroblast_stellate",
+      "n_genes": 12,
+      "n_genes_present": 12,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.3465999267488707
+    },
+    {
+      "name": "pericyte_vsmc",
+      "n_genes": 10,
+      "n_genes_present": 10,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.3071053595409596
+    },
+    {
+      "name": "myeloid",
+      "n_genes": 12,
+      "n_genes_present": 12,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.9370650714198511
+    },
+    {
+      "name": "t_nk",
+      "n_genes": 10,
+      "n_genes_present": 9,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "TRBC1"
+      ],
+      "fraction_nonzero_cells": 0.08997680380905872
+    },
+    {
+      "name": "b_cell",
+      "n_genes": 10,
+      "n_genes_present": 9,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "HLA-DRA"
+      ],
+      "fraction_nonzero_cells": 0.3519106336222683
+    },
+    {
+      "name": "plasma",
+      "n_genes": 10,
+      "n_genes_present": 8,
+      "n_genes_missing": 2,
+      "missing_genes": [
+        "IGLC2",
+        "JCHAIN"
+      ],
+      "fraction_nonzero_cells": 0.8194970089122208
+    },
+    {
+      "name": "neuronal",
+      "n_genes": 10,
+      "n_genes_present": 10,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.8413502624832133
+    },
+    {
+      "name": "schwann_glia",
+      "n_genes": 10,
+      "n_genes_present": 10,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.5693444023928702
+    },
+    {
+      "name": "cell_cycle",
+      "n_genes": 12,
+      "n_genes_present": 12,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.5003662556464412
+    },
+    {
+      "name": "upr_stress",
+      "n_genes": 10,
+      "n_genes_present": 9,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "ERO1L"
+      ],
+      "fraction_nonzero_cells": 0.9929190575021365
+    },
+    {
+      "name": "interferon_response",
+      "n_genes": 12,
+      "n_genes_present": 12,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.7695031131729948
+    },
+    {
+      "name": "hypoxia",
+      "n_genes": 10,
+      "n_genes_present": 10,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.968074716151874
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers healthy human pancreas but needs targeted additions/refinements for mesothelial cells, coarse lymphoid resolution, and a redundant beta maturation axis.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "general coverage / axes",
+      "description": "Whole-pancreas human atlases can include mesothelial or capsular surface cells, but the blueprint has no mesothelial module or axis, so these cells would likely map to ductal, generic epithelial, or stromal space.",
+      "suggested_fix": "Add a mesothelial/capsular module with canonical human markers such as MSLN, WT1, UPK3B, CALB2, KRT19, and PDPN, grounded in an appropriate human atlas or pancreas resource, and add a plain or biologically appropriate contrast axis.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "immune_t_nk_lymphocyte and immune_b_plasma_cell",
+      "description": "The immune compartment merges T cells with NK cells and B cells with plasma cells, although these are distinct expected lymphoid identities or states with separable marker programs.",
+      "suggested_fix": "Split the combined lymphocyte modules into separate T-cell, NK-cell, B-cell, and plasma-cell modules and add gated immune axes for each, or at minimum split T/NK and B/plasma into paired gated axes.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "gene-set-hygiene",
+      "where": "beta_mature_secretory / beta_mature_secretory_state",
+      "description": "The beta maturation/secretory module mostly duplicates the beta_cell module and therefore the gated state axis will mostly recapitulate beta identity rather than capture an independent mature or functional state.",
+      "suggested_fix": "Refine beta_mature_secretory to emphasize maturity/function markers beyond the beta identity module, such as UCN3 plus supported functional markers like ABCC8, KCNJ11, SLC2A2, or SYT13 if supported by the declared literature, or rename it if it is intended as beta secretory identity rather than a distinct state.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "epsilon_ghrelin_cell",
+      "description": "The epsilon/ghrelin module contains only GHRL and MLN; MLN is more typical of gastrointestinal enteroendocrine programs than a canonical adult pancreatic epsilon-cell marker, so the two-gene module is fragile.",
+      "suggested_fix": "Keep GHRL but replace or supplement MLN with better-supported pancreatic epsilon/ghrelin-cell markers from the cited islet literature, unless the cited resources clearly support MLN in human pancreatic epsilon cells.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "epithelial_vs_non_epithelial",
+      "description": "The axis name implies epithelial versus all non-epithelial cells, but the negative module is only immune_core, leaving endothelial, stromal/mural, and neural cells unopposed.",
+      "suggested_fix": "Rename the axis to reflect epithelial versus immune contrast, or add a broader non-epithelial module/axis design if supported by the API and resources.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "DOI/citation verification was not re-run; this review only judged biological plausibility and coverage."
+  ]
+}

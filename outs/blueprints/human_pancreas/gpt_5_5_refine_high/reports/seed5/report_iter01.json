@@ -1,0 +1,49 @@
+{
+  "rating": "minor",
+  "summary": "Broad human pancreas coverage is plausible, but expected mast-cell and lymphatic-endothelial populations are missing and the immune gate is too myeloid/APC-biased.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "immune axes / missing mast_cell module",
+      "description": "Mast cells are an expected resident immune population in human pancreas atlases, but the blueprint only resolves macrophage/monocyte, dendritic/APC, T/NK, and B/plasma immune compartments.",
+      "suggested_fix": "Add a mast-cell gene module with canonical markers such as KIT, TPSAB1, TPSB2, CPA3, MS4A2, HDC, GATA2, and add a leukocyte-gated mast-cell axis.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "endothelial / vascular axes",
+      "description": "The endothelial module is blood-vascular biased and does not resolve lymphatic endothelium, which belongs in the healthy pancreas tissue landscape.",
+      "suggested_fix": "Add a lymphatic endothelial module/axis, preferably gated by broad endothelial identity, using markers such as PROX1, PDPN, LYVE1, FLT4, CCL21, MMRN1, and TFF3 where supported.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:leukocyte_common",
+      "description": "leukocyte_common is not truly pan-leukocyte: LST1, HLA class II genes, CD74, and TYROBP bias the gate toward myeloid/APC/B cells and can under-score T, NK, and mast cells.",
+      "suggested_fix": "Replace the gate genes with pan-leukocyte markers such as PTPRC, LCP1, CORO1A, LAPTM5, CD52, CD53, RAC2; keep HLA/TYROBP markers in macrophage or dendritic/APC modules.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:pericyte_smooth_muscle_vs_endothelium",
+      "description": "Pericytes/smooth muscle and endothelial cells are neighboring vascular compartments rather than opposing programs, and endothelial identity already has its own plain axis.",
+      "suggested_fix": "Change this to a plain pericyte_smooth_muscle axis, or gate a mural-cell axis by a broad vascular/stromal context instead of contrasting directly against endothelium.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "modules:t_nk_cell and b_plasma_cell",
+      "description": "The current lymphoid modules combine distinct T versus NK and B versus plasma populations, reducing resolution for expected immune subtypes in human pancreas.",
+      "suggested_fix": "If dimensionality permits, split into separate T-cell, NK-cell, B-cell, and plasma-cell modules/axes; otherwise keep broad lymphoid axes but make the aggregation explicit and avoid marker mixtures that blur the score.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "DOI correctness and exact citation-to-marker verification were not checked in this discriminator pass."
+  ]
+}

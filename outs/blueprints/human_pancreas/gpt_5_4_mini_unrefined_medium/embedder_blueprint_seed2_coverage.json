@@ -1,0 +1,142 @@
+{
+  "h5ad_path": "data/preprocessed/human_pancreas_pp.h5ad",
+  "layer": null,
+  "n_cells": 16382,
+  "n_vars": 18268,
+  "modules": [
+    {
+      "name": "islet_core",
+      "n_genes": 10,
+      "n_genes_present": 10,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.9134415822243926
+    },
+    {
+      "name": "beta_program",
+      "n_genes": 12,
+      "n_genes_present": 11,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "NKX6-1"
+      ],
+      "fraction_nonzero_cells": 0.9750335734342571
+    },
+    {
+      "name": "alpha_program",
+      "n_genes": 10,
+      "n_genes_present": 10,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.9576974728360396
+    },
+    {
+      "name": "delta_program",
+      "n_genes": 6,
+      "n_genes_present": 6,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.8790745940666586
+    },
+    {
+      "name": "pp_program",
+      "n_genes": 6,
+      "n_genes_present": 6,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.90660481015749
+    },
+    {
+      "name": "epsilon_program",
+      "n_genes": 6,
+      "n_genes_present": 6,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.6270296667073617
+    },
+    {
+      "name": "acinar_program",
+      "n_genes": 16,
+      "n_genes_present": 15,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "PRSS2"
+      ],
+      "fraction_nonzero_cells": 0.7597362959345624
+    },
+    {
+      "name": "ductal_program",
+      "n_genes": 14,
+      "n_genes_present": 14,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.9453668660725186
+    },
+    {
+      "name": "quiescent_stellate_program",
+      "n_genes": 10,
+      "n_genes_present": 10,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.7836649981687218
+    },
+    {
+      "name": "activated_stellate_program",
+      "n_genes": 10,
+      "n_genes_present": 10,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.3917104138688805
+    },
+    {
+      "name": "endothelial_program",
+      "n_genes": 10,
+      "n_genes_present": 10,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.2632157245757539
+    },
+    {
+      "name": "pericyte_program",
+      "n_genes": 10,
+      "n_genes_present": 10,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.44799169820534734
+    },
+    {
+      "name": "immune_program",
+      "n_genes": 11,
+      "n_genes_present": 10,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "HLA-DRA"
+      ],
+      "fraction_nonzero_cells": 0.229214992064461
+    },
+    {
+      "name": "cycling_program",
+      "n_genes": 12,
+      "n_genes_present": 12,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.42040043950677575
+    },
+    {
+      "name": "stress_upr_program",
+      "n_genes": 10,
+      "n_genes_present": 10,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.9930411427176169
+    },
+    {
+      "name": "interferon_response_program",
+      "n_genes": 10,
+      "n_genes_present": 10,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.6510194115492614
+    }
+  ]
+}

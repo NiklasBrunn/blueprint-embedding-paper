@@ -1,0 +1,628 @@
+/* ==========================================================================
+   Blueprint web app — "Kaplan–Meier explorer" visual language.
+   Calm, clean: soft background wash, rounded cards, pill tabs, accent ring.
+   Tokens mirror webapp/theme.py (no CSS-var pipeline yet — literal hex here).
+   ========================================================================== */
+
+:root {
+  --accent: #2558d4;
+  --bg: #f6f7fb;
+  --ink: #172033;
+  --muted: #5f6b7a;
+  --line: #d9dee8;
+  --green: #117a37;
+  --red: #c4222c;
+
+  /* Okabe–Ito role colors (blueprint gene chips / legends). */
+  --role-positive: #0072B2;
+  --role-gate: #CC79A7;
+  --role-negative: #E69F00;
+
+  --shadow: 0 18px 50px rgba(23, 32, 51, 0.12);
+  --radius: 22px;
+
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(37, 88, 212, 0.14), transparent 36rem),
+    linear-gradient(180deg, #fff 0%, var(--bg) 38%);
+  background-attachment: fixed;
+  line-height: 1.45;
+}
+
+/* Layout shell ----------------------------------------------------------- */
+
+header, .wrap { max-width: 1180px; margin: 0 auto; }
+header { padding: 42px 20px 22px; }
+.wrap { padding: 0 20px 48px; }
+
+/* Hero header ------------------------------------------------------------ */
+
+.eyebrow {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.86rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 24px;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+h1 {
+  max-width: 920px;
+  margin: 16px 0 12px;
+  font-size: clamp(2rem, 4vw, 4.2rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+header p {
+  max-width: 860px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+/* Cards ------------------------------------------------------------------ */
+
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(217, 222, 232, 0.9);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 22px;
+  margin-bottom: 18px;
+}
+
+.card h2 { margin: 0 0 12px; font-size: 1.25rem; letter-spacing: -0.02em; }
+
+.hint { margin: 7px 0 0; color: var(--muted); font-size: 0.88rem; }
+
+/* Pill tab buttons ------------------------------------------------------- */
+
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.tab-button {
+  border: 1px solid #dbe6ff;
+  border-radius: 18px;
+  padding: 15px 16px;
+  background: #eef3ff;
+  color: var(--accent);
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  text-align: left;
+}
+
+.tab-button span {
+  display: block;
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-top: 3px;
+}
+
+.tab-button.active {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(37, 88, 212, 0.22);
+}
+
+.tab-button.active span { color: rgba(255, 255, 255, 0.82); }
+
+/* Metric tiles ----------------------------------------------------------- */
+
+.grid-2 { display: grid; grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr); gap: 20px; align-items: start; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+
+.metric {
+  padding: 15px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+}
+
+.metric span { display: block; color: var(--muted); font-size: 0.83rem; margin-bottom: 6px; }
+.metric strong { font-size: 1.22rem; letter-spacing: -0.02em; }
+
+/* Buttons ---------------------------------------------------------------- */
+
+button.primary, button.secondary {
+  border: 0;
+  border-radius: 999px;
+  padding: 11px 15px;
+  font: inherit;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+button.primary { background: var(--accent); color: #fff; box-shadow: 0 10px 20px rgba(37, 88, 212, 0.22); }
+button.secondary { color: var(--accent); background: #eef3ff; }
+button.danger { color: #fff; background: var(--red); padding: 7px 10px; border: 0; border-radius: 999px; font: inherit; font-weight: 750; cursor: pointer; }
+.button-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+
+/* Inputs + accent focus ring --------------------------------------------- */
+
+input[type="number"], input[type="text"], select {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 8px 9px;
+  font: inherit;
+  color: var(--ink);
+  background: #fff;
+  outline: none;
+}
+
+input[type="number"] { text-align: right; }
+input[type="range"] { width: 100%; accent-color: var(--accent); }
+input:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 4px rgba(37, 88, 212, 0.12); }
+
+label { display: block; font-weight: 750; font-size: 0.93rem; margin-bottom: 7px; }
+
+/* ==========================================================================
+   EXPLORE TAB — mimics the standalone interactive UMAP HTML.
+   Structure + exp- ids/class names are a binding contract (other tasks
+   target them). Borders/accents harmonized to the KM look.
+   ========================================================================== */
+
+.controls {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+/* Reset KM label styling inside explore controls (inline label rows). */
+.controls label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+.controls select {
+  font-family: var(--mono);
+  font-size: 11px;
+  width: auto;
+}
+
+#exp-mode { min-width: 220px; padding: 3px 6px; border-radius: 8px; }
+#exp-branch { min-width: 380px; padding: 3px 6px; border-radius: 8px; }
+#exp-palette { padding: 3px 6px; border-radius: 8px; }
+
+/* Branch-scrubber slider — fully custom so it's always visible regardless of
+   theme/browser resets (a bare appearance:none range with no thumb renders as
+   nothing, which is why the element existed but the slider was invisible). */
+#exp-time {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 360px;
+  max-width: 100%;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--line);
+  outline: none;
+  cursor: pointer;
+  vertical-align: middle;
+}
+#exp-time::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgba(23, 32, 51, 0.35);
+  cursor: pointer;
+}
+#exp-time::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+#exp-time::-moz-range-track {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--line);
+}
+
+.control-group { display: flex; align-items: center; gap: 8px; }
+.control-group.hidden { display: none; }
+
+#exp-ticks {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
+#exp-ticks.hidden { display: none; }
+
+.tick {
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: #eef0f4;
+  color: #444;
+  cursor: pointer;
+  transition: background-color 50ms linear, color 50ms linear, border-color 50ms linear;
+  user-select: none;
+  border: 1px solid transparent;
+}
+.tick:hover { border-color: #888; }
+.tick-arrow { color: #999; padding: 0 1px; }
+
+#exp-stateline {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: #333;
+  min-width: 360px;
+}
+
+#exp-catlegend {
+  display: none;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  margin: 6px 0 4px 0;
+  font-size: 11px;
+  font-family: var(--mono);
+}
+#exp-catlegend.visible { display: flex; }
+
+.cat-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: #f4f5f8;
+}
+.cat-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+#exp-cattitle {
+  font-size: 11px;
+  color: var(--muted);
+  margin: 8px 0 2px 0;
+  font-family: var(--mono);
+  display: none;
+}
+#exp-cattitle.visible { display: block; }
+
+#exp-graph {
+  width: 100%;
+  height: calc(100vh - 320px);
+  min-height: 420px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.note { font-size: 11px; color: #666; }
+
+/* Explore shell: plot column + blueprint sidebar. */
+.exp-app { display: flex; gap: 14px; align-items: stretch; }
+.exp-main { flex: 1; min-width: 0; }
+
+#exp-sidebar {
+  flex: 0 0 320px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 14px;
+  max-height: calc(100vh - 320px);
+  overflow-y: auto;
+  font-size: 11.5px;
+  line-height: 1.45;
+}
+
+#exp-sidebar h2 {
+  font-size: 12.5px;
+  margin: 0 0 4px 0;
+  font-family: var(--mono);
+  word-break: break-all;
+}
+
+#exp-sidebar .kind-badge {
+  display: inline-block;
+  font-size: 10px;
+  padding: 1px 6px;
+  border-radius: 8px;
+  background: #eef0f4;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 12px;
+}
+
+/* Pickers (mode / branch search lists in the sidebar). */
+.picker-title {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--muted);
+  margin: 0 0 6px 0;
+}
+
+.picker { display: flex; flex-direction: column; gap: 2px; margin-bottom: 12px; }
+
+.picker-search {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 6px;
+  padding: 4px 8px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
+.picker-item {
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: #222;
+  border-left: 3px solid transparent;
+  background: #fafbfc;
+  transition: background-color 60ms linear, border-color 60ms linear;
+  word-break: break-all;
+}
+.picker-item:hover { background: #eef3f9; }
+.picker-item.selected {
+  background: #e6f0fb;
+  border-left-color: var(--accent);
+  font-weight: 600;
+}
+
+.picker-divider { border-top: 1px solid var(--line); margin: 8px 0 10px 0; }
+
+/* Blueprint roles + gene chips. */
+.role { margin-bottom: 14px; }
+.role-heading {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 4px;
+}
+.role-mod {
+  font-size: 11.5px;
+  font-family: var(--mono);
+  margin: 4px 0 5px 0;
+  color: #222;
+}
+
+.gene-chips { display: flex; flex-wrap: wrap; gap: 3px; margin-bottom: 8px; }
+.gene-chip {
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: #f4f5f8;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  color: #222;
+  border-left: 2px solid;
+}
+
+.role.positive .role-heading { color: var(--role-positive); }
+.role.positive .gene-chip { border-left-color: var(--role-positive); }
+.role.gate     .role-heading { color: var(--role-gate); }
+.role.gate     .gene-chip { border-left-color: var(--role-gate); }
+.role.negative .role-heading { color: var(--role-negative); }
+.role.negative .gene-chip { border-left-color: var(--role-negative); }
+
+/* clickable role gene chips: click to recolor the UMAP by that gene */
+.gene-chip[data-gene] { cursor: pointer; transition: background-color 60ms linear; }
+.gene-chip[data-gene]:hover { background: #e6f0fb; }
+.gene-chip.gene-chip-on {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* "currently showing: dataset · blueprint" line above the explore controls */
+.exp-current {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 8px;
+  min-height: 16px;
+}
+.exp-current strong { color: var(--ink); }
+
+.no-genes { font-size: 10.5px; color: #999; font-style: italic; padding: 2px 0; }
+
+.sidebar-note { font-size: 10px; color: #999; margin-top: 18px; line-height: 1.4; }
+
+#exp-footnote { font-size: 10px; color: var(--muted); margin-top: 8px; line-height: 1.4; }
+
+/* ==========================================================================
+   SHELL — hero header, pill tabs, Generate-tab stepper / log / chip.
+   These reuse the legacy ukf-* class names (callbacks/tests depend on them)
+   but are restyled to the KM visual language.
+   ========================================================================== */
+
+/* Hero header (div.ukf-header, not the <header> element) ------------------ */
+
+.ukf-header {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 42px 20px 22px;
+}
+
+.ukf-header .eyebrow { margin-bottom: 4px; }
+
+.ukf-title {
+  max-width: 920px;
+  margin: 16px 0 12px;
+  font-size: clamp(2rem, 4vw, 4.2rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  font-weight: 800;
+}
+
+.ukf-subtitle {
+  max-width: 860px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+/* Pill tabs (dcc.Tabs) --------------------------------------------------- */
+
+.ukf-tabs-bar {
+  display: flex;
+  gap: 10px;
+  border: 0;
+  margin-bottom: 18px;
+}
+
+.ukf-tab {
+  flex: 0 1 auto;
+  border: 1px solid #dbe6ff !important;
+  border-radius: 18px !important;
+  padding: 12px 22px !important;
+  background: #eef3ff !important;
+  color: var(--accent) !important;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background-color 120ms ease, color 120ms ease,
+              box-shadow 120ms ease;
+}
+
+.ukf-tab:hover { background: #e2ebff !important; }
+
+.ukf-tab--active {
+  background: var(--accent) !important;
+  color: #fff !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 10px 20px rgba(37, 88, 212, 0.22) !important;
+}
+
+/* Generate stepper ------------------------------------------------------- */
+
+.ukf-stepper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.ukf-step {
+  position: relative;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.ukf-step.done {
+  border-color: var(--green);
+  background: rgba(17, 122, 55, 0.1);
+  color: var(--green);
+}
+
+.ukf-step.done::before {
+  content: "✓ ";
+  font-weight: 800;
+}
+
+.ukf-step.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(37, 88, 212, 0.08);
+  box-shadow: 0 0 0 0 rgba(37, 88, 212, 0.35);
+  animation: ukf-pulse 1.6s ease-out infinite;
+}
+
+@keyframes ukf-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(37, 88, 212, 0.35); }
+  70%  { box-shadow: 0 0 0 8px rgba(37, 88, 212, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 88, 212, 0); }
+}
+
+/* Generate log panel ----------------------------------------------------- */
+
+.ukf-log {
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--ink);
+  background: #f8fafc;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+  max-height: 360px;
+  min-height: 120px;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0;
+}
+
+/* Status chip ------------------------------------------------------------ */
+
+.ukf-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  background: rgba(17, 122, 55, 0.12);
+  color: var(--green);
+  border: 1px solid rgba(17, 122, 55, 0.35);
+}
+
+/* Responsive shell ------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .tabs, .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .exp-app { flex-direction: column; }
+  #exp-sidebar { flex-basis: auto; max-height: none; }
+  .ukf-tabs-bar { flex-wrap: wrap; }
+}

@@ -1,0 +1,3 @@
+- iter 01 — minor — The blueprint broadly covers human pancreas but needs targeted additions and splits for lymphatic endothelium, dendritic cells, mural subtypes, immune subtypes, and epsilon-cell marker specificity.
+- iter 02 — minor — The blueprint broadly covers healthy human pancreas but needs targeted cleanup of a few markers, labels, and one arbitrary contrast axis.
+- iter 03 — minor — The blueprint broadly covers healthy human pancreas but needs targeted cleanup of immune lineage modules, rare endocrine coverage, and endothelial contrast design.

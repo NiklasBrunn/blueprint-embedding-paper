@@ -1,0 +1,321 @@
+{
+  "cohort": "gpt_5_5_unrefined_high_human_immune",
+  "model": "gpt_5_5_unrefined",
+  "reasoning": "high",
+  "dataset": "human_immune",
+  "n_runs": 10,
+  "scenario": {
+    "species": "human",
+    "tissue": "peripheral blood|bone marrow",
+    "celltype": null
+  },
+  "run_ids": [
+    "260605_blueprint_run01",
+    "260605_blueprint_run02",
+    "260605_blueprint_run03",
+    "260605_blueprint_run04",
+    "260605_blueprint_run05",
+    "260605_blueprint_run06",
+    "260605_blueprint_run07",
+    "260605_blueprint_run08",
+    "260605_blueprint_run09",
+    "260605_blueprint_run10"
+  ],
+  "size": {
+    "n_modules": {
+      "mean": 31.0,
+      "std": 2.8674417556808756,
+      "min": 27.0,
+      "max": 36.0,
+      "cv": 0.09249812115099598
+    },
+    "n_axes": {
+      "mean": 29.5,
+      "std": 3.3082388735465345,
+      "min": 25.0,
+      "max": 34.0,
+      "cv": 0.11214369062869609
+    },
+    "n_unique_genes": {
+      "mean": 200.9,
+      "std": 19.90784323381672,
+      "min": 173.0,
+      "max": 224.0,
+      "cv": 0.09909329633557352
+    },
+    "n_resources": {
+      "mean": 10.5,
+      "std": 1.8408935028645435,
+      "min": 9.0,
+      "max": 14.0,
+      "cv": 0.17532319074900413
+    },
+    "n_dois_unique": {
+      "mean": 6.0,
+      "std": 1.247219128924647,
+      "min": 4.0,
+      "max": 8.0,
+      "cv": 0.2078698548207745
+    },
+    "gene_redundancy": {
+      "mean": 1.136933170898534,
+      "std": 0.05690773045191806,
+      "min": 1.0404624277456647,
+      "max": 1.2408376963350785,
+      "cv": 0.05005371635603093
+    },
+    "mean_genes_per_module": {
+      "mean": 7.374944218889903,
+      "std": 0.5696914845970648,
+      "min": 6.583333333333333,
+      "max": 8.333333333333334,
+      "cv": 0.07724688725616101
+    }
+  },
+  "jaccard": {
+    "genes": {
+      "mean": 0.5573682669774519,
+      "ci_lo": 0.5448291235648963,
+      "ci_hi": 0.5677652455041746,
+      "min": 0.43636363636363634,
+      "max": 0.6746411483253588
+    },
+    "dois": {
+      "mean": 0.32075196408529744,
+      "ci_lo": 0.2842211600128267,
+      "ci_hi": 0.3584631032547699,
+      "min": 0.0,
+      "max": 0.6666666666666666
+    },
+    "resources": {
+      "mean": 0.208695771224151,
+      "ci_lo": 0.18695536110919236,
+      "ci_hi": 0.23118796593103222,
+      "min": 0.0,
+      "max": 0.42857142857142855
+    },
+    "modnames": {
+      "mean": 0.19823975091045354,
+      "ci_lo": 0.1812385622911682,
+      "ci_hi": 0.2154264798358657,
+      "min": 0.07142857142857142,
+      "max": 0.38
+    },
+    "axisnames": {
+      "mean": 0.02484654724223273,
+      "ci_lo": 0.017591155411155412,
+      "ci_hi": 0.03205635716646184,
+      "min": 0.0,
+      "max": 0.1206896551724138
+    }
+  },
+  "structural_consistency": {
+    "mean_kind_agreement": 0.9721088435374149,
+    "mean_role_agreement": 0.8992270982467061,
+    "mean_within_module_geneset_jaccard": 0.6156044306493346,
+    "mean_axis_positive_agreement": 0.9782312925170068,
+    "mean_axis_gate_agreement": 0.9571428571428572,
+    "mean_axis_negatives_jaccard": 0.5042735042735043
+  },
+  "recurrence": {
+    "modules": {
+      "frac_in_ge80pct": 0.0457516339869281,
+      "gini": 0.3984819734345351,
+      "n_universal": 1,
+      "n_majority": 14,
+      "n_singleton": 96,
+      "n_unique_total": 153
+    },
+    "axes": {
+      "frac_in_ge80pct": 0.0,
+      "gini": 0.14704946385333795,
+      "n_universal": 0,
+      "n_majority": 0,
+      "n_singleton": 206,
+      "n_unique_total": 245
+    },
+    "genes": {
+      "frac_in_ge80pct": 0.31155778894472363,
+      "gini": 0.38745619586233804,
+      "n_universal": 74,
+      "n_majority": 200,
+      "n_singleton": 101,
+      "n_unique_total": 398
+    },
+    "resources": {
+      "frac_in_ge80pct": 0.022727272727272728,
+      "gini": 0.4036796536796537,
+      "n_universal": 0,
+      "n_majority": 8,
+      "n_singleton": 25,
+      "n_unique_total": 44
+    }
+  },
+  "saturation_slope_at_N": {
+    "genes": 11.089999999999975,
+    "modules": 9.474999999999994,
+    "dois": 0.6149999999999984
+  },
+  "coverage": {
+    "n_unique_modules": 153,
+    "n_unique_axes": 245,
+    "n_unique_genes": 398,
+    "n_unique_resources": 44
+  },
+  "resource_kind_composition": {
+    "frac_paper": {
+      "mean": 0.2781379731379731,
+      "std": 0.16840302360067233
+    },
+    "frac_atlas": {
+      "mean": 0.2979242979242979,
+      "std": 0.12910926673918044
+    },
+    "frac_database": {
+      "mean": 0.42393772893772896,
+      "std": 0.10745808331269473
+    }
+  },
+  "top_hubs": {
+    "top_positives": [
+      {
+        "module": "megakaryocyte_platelet",
+        "module_can": "megakaryocyteplatelet",
+        "n_axes_using": 10
+      },
+      {
+        "module": "plasma_cell",
+        "module_can": "plasmacell",
+        "n_axes_using": 10
+      },
+      {
+        "module": "classical_monocyte",
+        "module_can": "classicalmonocyte",
+        "n_axes_using": 9
+      },
+      {
+        "module": "interferon_response",
+        "module_can": "interferonresponse",
+        "n_axes_using": 8
+      },
+      {
+        "module": "eosinophil",
+        "module_can": "eosinophil",
+        "n_axes_using": 8
+      }
+    ],
+    "top_gates": [
+      {
+        "module": "hematopoietic_cd45",
+        "module_can": "hematopoieticcd45",
+        "n_axes_using": 17
+      },
+      {
+        "module": "t_cell",
+        "module_can": "tcell",
+        "n_axes_using": 17
+      },
+      {
+        "module": "myeloid_lineage",
+        "module_can": "myeloidlineage",
+        "n_axes_using": 9
+      },
+      {
+        "module": "t_cell_core",
+        "module_can": "tcellcore",
+        "n_axes_using": 7
+      },
+      {
+        "module": "immune_leukocyte",
+        "module_can": "immuneleukocyte",
+        "n_axes_using": 7
+      }
+    ],
+    "top_negatives": [
+      {
+        "module": "classical_monocyte",
+        "module_can": "classicalmonocyte",
+        "n_axes_using": 25
+      },
+      {
+        "module": "cDC2",
+        "module_can": "cdc2",
+        "n_axes_using": 17
+      },
+      {
+        "module": "megakaryocyte_platelet",
+        "module_can": "megakaryocyteplatelet",
+        "n_axes_using": 14
+      },
+      {
+        "module": "nk_cell",
+        "module_can": "nkcell",
+        "n_axes_using": 11
+      },
+      {
+        "module": "cDC1",
+        "module_can": "cdc1",
+        "n_axes_using": 11
+      }
+    ]
+  },
+  "top_resources": [
+    {
+      "doi": "10.1016/j.cell.2024.04.013",
+      "citation": "Bandyopadhyay 2024 Cell",
+      "kind": "atlas",
+      "n_runs": 8,
+      "fraction_runs": 0.8
+    },
+    {
+      "doi": "10.1038/ncomms14049",
+      "citation": "Zheng et al. 2017 Nature Communications",
+      "kind": "paper",
+      "n_runs": 7,
+      "fraction_runs": 0.7
+    },
+    {
+      "doi": "10.1038/ncb3493",
+      "citation": "Velten 2017 Nature Cell Biology",
+      "kind": "paper",
+      "n_runs": 6,
+      "fraction_runs": 0.6
+    },
+    {
+      "doi": "10.1038/s41590-021-01059-0",
+      "citation": "Triana 2021 Nature Immunology",
+      "kind": "atlas",
+      "n_runs": 6,
+      "fraction_runs": 0.6
+    },
+    {
+      "doi": "10.1126/science.aah4573",
+      "citation": "Villani et al. 2017 Science",
+      "kind": "paper",
+      "n_runs": 6,
+      "fraction_runs": 0.6
+    }
+  ],
+  "stability_composite": 0.7034632804730614,
+  "stability_weights": {
+    "jaccard_genes_off_diag": 1.0,
+    "jaccard_modnames_off_diag": 1.0,
+    "mean_kind_agreement": 1.0,
+    "mean_role_agreement": 1.0,
+    "mean_within_module_geneset_jaccard": 1.0,
+    "mean_axis_positive_agreement": 1.0
+  },
+  "sanity": {
+    "frac_with_placeholders": 0.0,
+    "mean_orphaned_modules": 0.0,
+    "mean_modules_missing_resources": 0.0,
+    "mean_unused_resources": 0.0,
+    "frac_clip_overridden": 0.0,
+    "n_modules_merged_by_canonicalization": 9,
+    "n_axes_merged_by_canonicalization": 2,
+    "n_genes_merged_by_canonicalization": 0,
+    "n_module_name_drift_candidates": 11,
+    "n_module_name_near_duplicates": 20,
+    "doi_kind_agreement": 0.9915966386554622
+  }
+}

@@ -1,0 +1,3 @@
+- iter 01 — minor — The blueprint broadly covers human pancreas but needs targeted refinements for merged immune, mural, and neural populations plus a less redundant acinar state axis.
+- iter 02 — minor — Broad human pancreas coverage is plausible, but several state axes need targeted biological cleanup for healthy baseline pancreas.
+- iter 03 — minor — The blueprint is broadly plausible for healthy human pancreas but needs targeted additions for missing adipocyte and granulocyte coverage plus cleanup of the progenitor/maturation axis design.

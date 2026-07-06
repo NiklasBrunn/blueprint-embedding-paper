@@ -1,0 +1,39 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers healthy human pancreas but needs targeted refinement of immune resolution, lymphatic endothelial markers, and stromal/perivascular separation.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "immune_core, t_nk_cell, b_plasma_cell, immune gated axes",
+      "description": "The immune compartment is under-resolved for whole human pancreas and the immune gate is biased toward myeloid/APC/inflammatory expression. T and NK cells are merged, B and plasma cells are merged, dendritic/APC cells are missing, and immune_core includes markers such as LST1, LYZ, CD74, HLA-DRA, and CXCL8 that will gate myeloid/APC cells more strongly than T/NK cells.",
+      "suggested_fix": "Revise immune_core to a broader pan-leukocyte module such as PTPRC, CD52, LCP1, CORO1A, CD53, SRGN, LAPTM5. Replace merged T/NK and B/plasma modules with separate T-cell, NK-cell, B-cell, and plasma-cell modules/axes, and add a dendritic-cell/APC axis with canonical markers supported by the cited atlas or pancreas resource.",
+      "remove": [
+        "module:t_nk_cell",
+        "axis:t_nk_lymphoid_identity",
+        "module:b_plasma_cell",
+        "axis:b_plasma_lymphoid_identity"
+      ]
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "lymphatic_endothelial",
+      "description": "The lymphatic endothelial module includes PROX1 and PDPN but omits highly canonical lymphatic endothelial genes such as LYVE1, FLT4, CCL21, and MMRN1. NTS, NRG3, and SEMA3D are weaker niche markers, and NRG3 overlaps with the neural/ganglial module.",
+      "suggested_fix": "Strengthen the module with core lymphatic endothelial markers such as PROX1, PDPN, LYVE1, FLT4, CCL21, and MMRN1, and remove or de-emphasize weaker niche markers unless directly supported by the cited pancreas endothelial resource.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "stromal_core / fibroblast_matrix / mural_pericyte_smooth_muscle",
+      "description": "The stromal branch captures mesenchymal and perivascular cells, but it does not cleanly distinguish pancreatic fibroblast/stellate biology from vascular mural cells. stromal_core mixes fibroblast matrix genes with pericyte markers, and mural_pericyte_smooth_muscle combines pericytes and smooth muscle into one axis.",
+      "suggested_fix": "If supported by the cited pancreas atlas, add or refine a pancreatic stellate/fibroblast module and keep mural/pericyte/smooth-muscle markers as a cleaner perivascular axis. Avoid adding disease-activated fibrosis programs for this healthy baseline scenario.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "I did not verify DOI/title matches or impact-factor eligibility; that is outside this discriminator pass.",
+    "The endothelial niche split into islet/acinar/arterial/venous/lymphatic is more detailed than many pancreas embeddings, but it is not outside scope if the cited pancreas endothelial resource supports those modules."
+  ]
+}

@@ -1,0 +1,3 @@
+- iter 01 — minor — The blueprint broadly covers human pancreas but needs targeted fixes for immune resolution, mural-cell gating, and acinar endothelial marker specificity.
+- iter 02 — minor — The blueprint broadly covers human pancreas but needs targeted refinement for plasma cells, activated stellate/myofibroblast state, and several noisy marker modules.
+- iter 03 — minor — The blueprint is broadly plausible for human whole pancreas but needs targeted additions and gate/module refinements, especially adipocyte coverage and broader immune and mesenchymal gates.

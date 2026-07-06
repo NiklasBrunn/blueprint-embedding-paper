@@ -1,0 +1,51 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers human pancreas cell classes but needs targeted refinement for quiescent stellate cells, cytotoxic T cells, and several vascular/neural/myeloid marker choices.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "stromal / fibroblast_stellate / pericyte / adipocyte axes",
+      "description": "Healthy human pancreas commonly contains quiescent pancreatic stellate cells, which are not cleanly represented; current stromal markers emphasize generic ECM fibroblast/activated matrix, while quiescent stellate/lipid-storage markers are split across pericyte and adipocyte modules.",
+      "suggested_fix": "Add or refocus a quiescent pancreatic stellate module/axis with markers such as RGS5, ADIRF, GPX3, IGFBP4, FABP4, C11orf96, and CSRP2, while retaining matrix_remodeling_within_stellate_fibroblast for activated/remodeling state."
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:lymphatic_endothelial",
+      "description": "TFF3 is an epithelial/secretory marker and is out of place in a lymphatic endothelial module.",
+      "suggested_fix": "Replace TFF3 with a canonical lymphatic endothelial marker such as RELN, FOXC2, or NRP2."
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:venous_capillary_endothelial",
+      "description": "SELE and ICAM1 are endothelial activation/inflammation markers rather than stable baseline venous/capillary identity markers, making the subtype axis partly state-driven in a healthy/null-condition scenario.",
+      "suggested_fix": "Replace SELE and ICAM1 with more stable capillary/venous endothelial markers such as CA4, EDNRB, APLNR, ENG, or GNG11."
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "T/NK lymphocyte axes",
+      "description": "The blueprint separates T cells and NK cells but does not explicitly capture cytotoxic T cells; cytotoxic genes are concentrated in nk_cell while t_cell is biased toward general/naive-like T markers.",
+      "suggested_fix": "Add a cytotoxic_t_cell gated axis under T cells using markers such as CD8A, CD8B, GZMK, GZMA, CCL5, NKG7, and/or TRAC, contrasted against NK markers where appropriate."
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "neural_glial / neuron_within_neural axes",
+      "description": "The neuron axis is gated by a glial/Schwann module, so true neuronal cells may score weakly if they do not coexpress enough glial markers; neural_glial also includes NRXN1, which is more neuronal than glial.",
+      "suggested_fix": "Either make neuron a plain axis alongside a cleaned Schwann/glial axis, or add a broader neural gate that contains both Schwann/glial and neuronal markers before applying the neuron refinement."
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "myeloid_core / dendritic_cell modules",
+      "description": "myeloid_core is somewhat macrophage-skewed because of C1QA, C1QB, and C1QC, and dendritic_cell collapses cDC1, cDC2, and pDC markers into one module.",
+      "suggested_fix": "Make the core myeloid gate less macrophage-specific by emphasizing shared markers such as LYZ, AIF1, TYROBP, FCER1G, LST1, HLA-DRA, and ITGAM; optionally split dendritic cells into cDC1/cDC2/pDC if additional dimensions are acceptable."
+    }
+  ],
+  "out_of_scope": [
+    "The inclusion of rare endocrine epsilon cells, mesothelial cells, adipocytes, cycling cells, interferon response, and secretory/ER load is defensible for an all-cell human pancreas embedding and does not require deletion."
+  ]
+}

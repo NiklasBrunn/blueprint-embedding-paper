@@ -1,0 +1,41 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint covers the major healthy human pancreas compartments, but needs targeted refinement of immune gating, dendritic/APC coverage, stromal activation specificity, and rare epsilon-cell markers.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:immune_core / immune gated axes",
+      "description": "The immune gate mixes pan-leukocyte markers with myeloid/APC markers such as LST1, TYROBP, CD74, HLA-DRA, and HLA-DPA1, which can attenuate T-cell and NK-cell axes because those lineages may only strongly contribute PTPRC and CORO1A from the gate.",
+      "suggested_fix": "Rebuild immune_core as a cleaner pan-leukocyte module emphasizing broadly hematopoietic genes such as PTPRC, CORO1A, LCP1, LAPTM5, CD52, CD53, and ARHGDIB; keep antigen-presentation genes in lineage-specific modules or a separate APC module.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "immune compartment",
+      "description": "Resident dendritic/APC populations are not explicitly represented, and the macrophage_monocyte module does not capture conventional dendritic cell markers.",
+      "suggested_fix": "Add a dendritic/APC gene module and an immune-gated axis if supported by the cited pancreas or atlas resources, using markers such as FCER1A, CD1C, CLEC10A, CLEC9A, XCR1, LILRA4, or IRF8 as appropriate to the supported DC subtype.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:mesenchymal_stellate_myofibroblast_activation / module:stellate_myofibroblast_activation",
+      "description": "The stellate activation axis is interpretable, but in a baseline healthy pancreas scenario it risks reading as a disease-like fibrosis program and overlaps with pericyte_smooth_muscle through contractile mural-cell genes such as ACTA2, TAGLN, MYL9, and TPM2.",
+      "suggested_fix": "Reframe the axis as a stromal matrix-remodeling or activated pancreatic stellate cell state with less mural-cell overlap, or balance it with clearer quiescent stellate/fibroblast markers. Keep matrix genes such as POSTN, FN1, SPARC, and collagens where justified, but reduce reliance on contractile markers that also define mural identities.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:epsilon_cell / axis:endocrine_epsilon_identity",
+      "description": "Epsilon/ghrelin cells are rare and age-dependent in human pancreas; keeping an epsilon axis is acceptable with unspecified age, but MLN and DEFB1 are less convincing as pancreatic epsilon identity markers than GHRL and may pull toward enteroendocrine or ductal programs.",
+      "suggested_fix": "Keep the epsilon axis only if the cited pancreas literature supports enough epsilon markers; otherwise tighten the module around canonical ghrelin-cell/endocrine markers and remove less specific genes from the module.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "DOI validation and exact citation-to-gene-list verification were not performed because they are outside this Discriminator pass."
+  ]
+}

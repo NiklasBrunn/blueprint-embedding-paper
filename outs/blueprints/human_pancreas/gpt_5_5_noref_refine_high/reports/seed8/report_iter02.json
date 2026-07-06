@@ -1,0 +1,57 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint covers the major healthy human pancreas compartments but needs targeted cleanup of developmental/off-scope axes, redundant endothelial structure, and several broad or conflated marker modules.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "axis:endocrine_precursor_state; axis:multipotent_pancreatic_epithelial_state; module:endocrine_precursor; module:multipotent_pancreatic_epithelium",
+      "description": "Dedicated endocrine precursor and multipotent pancreatic epithelial progenitor programs are developmentally oriented and are not expected to shape a baseline healthy pancreas embedding when no developmental age or notes are specified.",
+      "suggested_fix": "Remove these two developmental axes and their now-orphan modules, or replace them with mature pancreas-relevant state axes only if biologically justified for healthy baseline data.",
+      "remove": [
+        "axis:endocrine_precursor_state",
+        "axis:multipotent_pancreatic_epithelial_state",
+        "module:endocrine_precursor",
+        "module:multipotent_pancreatic_epithelium"
+      ]
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:vascular_endothelial; axis:pan_endothelial_identity; module:pan_endothelial",
+      "description": "The vascular_endothelial and pan_endothelial_identity axes are near-duplicate plain endothelial dimensions, while pan_endothelial is also used as a lymphatic gate despite being mostly blood-endothelial markers.",
+      "suggested_fix": "Keep one plain endothelial identity axis, delete or repurpose the redundant plain axis, and retune lymphatic detection as a direct endothelial/lymphatic contrast or with a broader endothelial gate.",
+      "remove": [
+        "axis:pan_endothelial_identity"
+      ]
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:stellate_matrix_remodeling; axis:stellate_matrix_remodeling_state; axis:pericyte_smooth_muscle_identity",
+      "description": "The stellate/remodeling module heavily overlaps mural and smooth-muscle biology, which may blur pancreatic stellate/fibroblast identity, activated myofibroblast-like state, pericytes, and vascular smooth muscle.",
+      "suggested_fix": "Retune the stellate/fibroblast module toward ECM/fibroblast or quiescent pancreatic stellate markers, reserve canonical mural genes for pericyte/smooth muscle, and add an activated myofibroblast state only if expected in the baseline data.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:immune_leukocyte",
+      "description": "The leukocyte gate mixes pan-leukocyte markers with myeloid/APC-heavy genes, which can bias gated immune subtype axes away from T, NK, B, plasma, and mast cells.",
+      "suggested_fix": "Make the gate more pan-leukocyte using broad immune markers and leave HLA/TYROBP/LST1 biology to myeloid or antigen-presenting modules.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "endocrine subtype modules",
+      "description": "Endocrine subtype coverage is present, but some rare-subtype modules rely heavily on shared endocrine transcription factors and processing genes, and DLK1 in the beta-cell module is more fetal/immature than canonical mature beta identity.",
+      "suggested_fix": "Keep the endocrine subtype axes, but tighten markers around subtype-specific hormone and mature identity genes and remove fetal or immaturity-skewing markers unless an immaturity axis is intentionally added.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "The blueprint does not need a disease, fibrosis, inflammation, or development gating tree because the scenario notes and condition do not request one.",
+    "Rare circulating granulocytes/neutrophils are not essential for a healthy resident pancreas embedding unless the downstream dataset is known to contain many blood contaminants."
+  ]
+}

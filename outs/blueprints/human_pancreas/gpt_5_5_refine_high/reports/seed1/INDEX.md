@@ -1,0 +1,3 @@
+- iter 01 — minor — The blueprint broadly covers healthy human pancreas but needs targeted refinement of immune resolution, lymphatic endothelial markers, and stromal/perivascular separation.
+- iter 02 — minor — The blueprint covers the major human pancreatic compartments but needs targeted refinements for stromal, neural, myeloid, and ductal heterogeneity.
+- iter 03 — minor — The blueprint broadly covers human pancreas but needs targeted refinement of ductal, immune, neural, and redundant stromal axes.

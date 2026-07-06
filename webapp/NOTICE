@@ -1,0 +1,62 @@
+Blueprint Pipeline Web App
+Copyright (c) 2026 Niklas Brunn
+Licensed under the MIT License (see LICENSE).
+
+This product includes third-party software. Their respective licenses and
+copyright notices are listed below. All bundled and required components are
+under permissive licenses (MIT / BSD-3-Clause / Apache-2.0) compatible with
+redistribution.
+
+================================================================================
+BUNDLED IN THIS REPOSITORY (redistributed as files)
+================================================================================
+
+- Plotly.js v2.35.2  —  webapp/assets/plotly.min.js
+    MIT License. Copyright (c) 2012-2024 Plotly, Inc.
+    https://github.com/plotly/plotly.js
+    (The MIT license header is retained at the top of the minified file.)
+
+================================================================================
+REQUIRED PYTHON PACKAGES (installed via pip from webapp/requirements.txt;
+not redistributed here — listed for attribution)
+================================================================================
+
+- dash                       MIT License            (c) Plotly, Inc.
+- dash-bootstrap-components   Apache License 2.0     (c) Faculty Science Ltd.
+- dash-bootstrap-templates    MIT License            (c) AnnMarie Ward
+- dash-ace                    MIT License            (c) Roman Reznikov / contributors
+- plotly (plotly.py)          MIT License            (c) Plotly, Inc.
+- kaleido                     MIT License            (c) Plotly, Inc.
+- anndata                     BSD 3-Clause License   (c) anndata developers
+- scanpy                      BSD 3-Clause License   (c) scanpy developers
+- umap-learn                  BSD 3-Clause License   (c) Leland McInnes
+- pandas                      BSD 3-Clause License   (c) pandas development team / AQR Capital
+- pyarrow (Apache Arrow)      Apache License 2.0     (c) The Apache Software Foundation
+- pytest                      MIT License            (c) Holger Krekel and others
+
+Full license texts are distributed inside each package (e.g. its
+*.dist-info/ directory in the virtual environment) and are available from the
+projects' homepages.
+
+================================================================================
+EXTERNAL TOOLS AND SERVICES (invoked at runtime; NOT distributed with this app)
+================================================================================
+
+- OpenAI Codex CLI  —  https://github.com/openai/codex
+    Apache License 2.0. The "Generate" feature shells out to a `codex` binary
+    that the end user installs separately; no Codex source or binary is bundled
+    in or redistributed by this repository.
+
+- OpenAI API
+    Accessed by Codex CLI under each end user's own OpenAI account and API key.
+    Use of the API is governed by OpenAI's Terms of Use and usage policies
+    (https://openai.com/policies). This project embeds no API key and grants no
+    access to OpenAI services; users must supply their own.
+
+================================================================================
+DATA
+================================================================================
+
+This application bundles no single-cell datasets. Any datasets a user loads or
+downloads (e.g. via the parent pipeline) are governed by their own original
+licenses and terms, independent of this software's MIT license.

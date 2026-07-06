@@ -1,0 +1,49 @@
+{
+  "rating": "minor",
+  "summary": "Broad human pancreas coverage is biologically plausible, but targeted refinements are needed for ductal/centroacinar resolution, stellate state structure, DC gating hierarchy, and a few marker-set hygiene issues.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "ductal_core / epithelial axes",
+      "description": "The blueprint has generic acinar and ductal axes plus a REG-positive acinar state, but it does not separately resolve the centroacinar/intercalated-duct/ion-transport end of the ductal tree. The current ductal_core mixes broad ductal markers with CFTR/SLC4A4/ANXA4/SPP1-like transport or terminal features.",
+      "suggested_fix": "Add a ductal-gated axis for a centroacinar/intercalated duct or ductal ion-transport program if literature support is available, using markers such as CFTR, SLC4A4, SLC26A6, ANXA4, SPP1, and related ductal transport markers, while keeping ductal_core more generic.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "stellate_fibroblast_identity / stellate_fibroblast",
+      "description": "The stromal module is weighted toward ECM-producing fibroblast or activated stellate biology and does not clearly represent quiescent pancreatic stellate cells. Healthy pancreas contains stellate/fibroblast-like cells spanning quiescent periacinar stellate and activated matrix programs.",
+      "suggested_fix": "Add a stromal/stellate-gated refinement axis that separates quiescent stellate features from activated matrix/myofibroblast features, or split the current module into a generic fibroblast/stellate identity plus an activated matrix state without adding disease-only CAF programs.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "gating-tree",
+      "where": "cdc1_dendritic_within_immune / cdc2_dendritic_within_immune / plasmacytoid_dendritic_within_immune",
+      "description": "The cDC1, cDC2, and pDC axes are gated only by immune_core, while the generic dendritic_cell module is itself a mixture of subtype-specific markers. This is partially functional but not the cleanest dendritic-cell hierarchy.",
+      "suggested_fix": "Make dendritic_cell a cleaner pan-DC/APC gate, then gate cDC1/cDC2/pDC subtype axes through dendritic_cell rather than directly through immune_core, or otherwise reduce subtype-marker mixing in the pan-DC module.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "gene-set-hygiene",
+      "where": "acinar_core / reg_positive_acinar",
+      "description": "REG1A appears in both acinar_core and reg_positive_acinar, which blurs the intended REG-positive acinar state axis and makes it less independent from baseline acinar identity.",
+      "suggested_fix": "Replace REG1A in acinar_core with a non-REG canonical acinar marker such as CPB1, CELA2A, CELA2B, SYCN, or GP2, leaving REG1A/REG1B/REG3A/SPINK1 concentrated in reg_positive_acinar.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "epsilon_cell",
+      "description": "The epsilon/gastric-ghrelin module is very sparse and MLN is less canonical for pancreatic epsilon cells than GHRL; it may behave more like a generic gut endocrine marker than a pancreas epsilon marker.",
+      "suggested_fix": "Keep the rare epsilon axis, but replace or supplement MLN with better-supported ghrelin-cell markers if available, such as MBOAT4 or other pancreas-endocrine epsilon-associated genes grounded in the cited sources.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "I did not verify DOIs or citation venue/impact-factor details; that is outside this Discriminator scope."
+  ]
+}

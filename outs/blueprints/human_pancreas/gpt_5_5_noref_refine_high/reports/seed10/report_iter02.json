@@ -1,0 +1,55 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint covers the major healthy human pancreas compartments but needs targeted refinements for mixed immune modules, vascular subtype resolution, and a few specificity issues.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "axis:immune_t_nk_cell / module:t_nk_cell",
+      "description": "T cells and NK cells are represented as one mixed module containing both TCR/CD3 genes and cytotoxic/NK genes, even though they are distinct expected immune populations in human pancreas scRNA-seq.",
+      "suggested_fix": "Replace the mixed T/NK representation with separate immune-gated T-cell and NK-cell axes using T-cell markers such as CD3D, CD3E, TRAC, IL7R, CCR7, CD2 or CD247, and NK/cytotoxic markers such as NKG7, GNLY, PRF1, GZMB, KLRD1, FCGR3A or NCR1.",
+      "remove": [
+        "axis:immune_t_nk_cell",
+        "module:t_nk_cell"
+      ]
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "axis:immune_b_plasma_cell / module:b_plasma_cell",
+      "description": "B cells and plasma cells are collapsed into one module combining MS4A1/CD79A/CD79B with MZB1/JCHAIN/XBP1/immunoglobulin genes, losing resolution between lymphoid B cells and antibody-secreting plasma cells.",
+      "suggested_fix": "Replace the mixed B/plasma representation with separate immune-gated B-cell and plasma-cell axes using MS4A1, CD79A, CD79B, BANK1, CD74 or HLA-DRA for B cells and MZB1, JCHAIN, XBP1, IGKC, IGHG1 or SDC1 for plasma cells.",
+      "remove": [
+        "axis:immune_b_plasma_cell",
+        "module:b_plasma_cell"
+      ]
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "vascular_blood_endothelium / module:endothelial_blood",
+      "description": "The blood endothelial module mixes capillary/general endothelial, venous, and arterial markers into a single axis, so expected artery/capillary/venous resolution is lost.",
+      "suggested_fix": "Keep broad endothelial identity if desired, but add endothelial-core-gated subtype axes for capillary/fenestrated endothelium, arterial endothelium, and venous/postcapillary endothelium with appropriate subtype markers.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "mural_pericyte_vs_smooth_muscle",
+      "description": "Vascular smooth muscle is only represented as the negative pole of a pericyte-positive gated axis, rather than as a directly interpretable positive population axis.",
+      "suggested_fix": "Add a smooth-muscle-positive gated axis under vascular_mural, or replace the current single contrast-style gated axis with two sibling gated axes for pericytes and smooth muscle.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:epsilon_cell",
+      "description": "The epsilon/ghrelin module includes GHRL and MBOAT4 but otherwise relies heavily on broad endocrine transcriptional markers shared with other endocrine lineages.",
+      "suggested_fix": "Retain GHRL and MBOAT4, improve specificity with additional ghrelin/epsilon-associated markers where available, and reduce reliance on pan-endocrine transcription factors already represented by the endocrine gate or sibling modules.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "The blueprint does not explicitly model disease, regeneration, fibrosis, or developmental trajectories, which is appropriate because the scenario gives no condition, age, or notes requiring those states."
+  ]
+}

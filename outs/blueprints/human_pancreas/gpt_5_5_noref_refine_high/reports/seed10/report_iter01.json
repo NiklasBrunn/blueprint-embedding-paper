@@ -1,0 +1,67 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers healthy human pancreas but needs targeted additions for adipocyte/DC coverage, removal of a redundant inverse stromal axis, and several marker cleanups.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "general; immune_core/myeloid_macrophage",
+      "description": "Broad human pancreas tissue commonly includes adipocyte/fat-associated signal and dendritic/APC diversity beyond C1Q macrophages, but the blueprint has no adipocyte axis and collapses DC-like APCs into a macrophage module.",
+      "suggested_fix": "Add an adipocyte module/axis with markers such as ADIPOQ, PLIN1, FABP4, LPL, LEP, CIDEC. Add a dendritic-cell/APC immune refinement or split myeloid into macrophage and DC modules using markers such as FCER1A, CD1C, CLEC10A, CLEC9A, XCR1, CCR7, LAMP3 as appropriate.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:stromal_fibroblast_vs_mural; axis:mural_contractile_vs_matrix_stroma",
+      "description": "The two stromal contrast axes are exact inverses, creating a redundant dimension rather than new biological resolution.",
+      "suggested_fix": "Remove mural_contractile_vs_matrix_stroma. If another stromal dimension is needed, replace it with a non-redundant pericyte/smooth-muscle refinement or a plain mural identity axis.",
+      "remove": [
+        "axis:mural_contractile_vs_matrix_stroma"
+      ]
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "module:vascular_mural; stromal/mural axes",
+      "description": "The vascular_mural module combines pericyte markers and vascular smooth muscle/contractile markers, which are related but separable vascular support populations in pancreas.",
+      "suggested_fix": "Consider splitting into pericyte and smooth_muscle_contractile modules and adding a gated or contrast refinement after removing the duplicate inverse stromal axis.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:endothelial_lymphatic",
+      "description": "TFF3 is not a canonical lymphatic endothelial marker and reads more epithelial/ductal or mucosal than lymphatic.",
+      "suggested_fix": "Replace TFF3 with a stronger lymphatic marker such as RELN, TBX1, FOXC2, or another accepted lymphatic endothelial gene not already overused.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:immune_core",
+      "description": "HLA-DRA is an APC marker rather than a pan-leukocyte core marker, so it can bias the general immune axis toward macrophage/DC/B-cell populations.",
+      "suggested_fix": "Replace HLA-DRA in immune_core with a broader leukocyte marker such as RAC2, ARHGAP15, FYB1, or ITGAL, and reserve HLA-DRA for APC/DC/myeloid modules.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "gene-set-hygiene",
+      "where": "module:beta_cell; module:delta_cell",
+      "description": "RBP4 appears in both beta_cell and delta_cell, weakening endocrine subtype discrimination; it is not among the strongest canonical beta-cell markers.",
+      "suggested_fix": "Remove or replace RBP4 in beta_cell with a more beta-selective marker such as UCN3, DLK1, NPTX2, HADH, or ABCC8 while keeping delta focused on SST, HHEX, RGS4, LEPR, and BCHE.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:epsilon_cell",
+      "description": "GHSR is a ghrelin receptor rather than the defining secretory product marker, and MLN is not a core pancreatic epsilon-cell marker, making this rare-cell axis potentially noisy.",
+      "suggested_fix": "Keep GHRL and endocrine-context genes, but replace GHSR and MLN with stronger epsilon/ghrelin-cell-associated markers where available, or reduce the module to a conservative rare-cell signature rather than padding it.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "No citations are required by the blueprint contract, so literature-source validation was not assessed."
+  ]
+}

@@ -1,0 +1,182 @@
+raw_name,canonical,n_runs,n_cohorts,cohorts,top_genes,standardized_resolved
+astrocyte,astrocyte,20,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Aqp4, Slc1a3, Aldh1l1, Gja1, Slc1a2, Glul, Gfap, Sparcl1",astrocyte
+endothelial,endothelial,18,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Pecam1, Cldn5, Kdr, Flt1, Slco1a4, Ly6c1, Esam, Tek",endothelial
+opc,opc,18,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Pdgfra, Cspg4, Olig1, Olig2, Sox10, Vcan, Ptprz1, Bcan",opc
+pvalb_interneuron,pvalbinterneuron,18,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Pvalb, Tac1, Kcnc1, Syt2, Pthlh, Erbb4, Gabrg1, Gabra1",pvalb
+sst_interneuron,sstinterneuron,18,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Sst, Nos1, Npy, Chrna2, Chodl, Gpr149, Th, Hpse",sst
+vip_interneuron,vipinterneuron,18,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Vip, Igf1, Crh, Calb2, Htr3a, Cck, Tac2, Chat",vip
+microglia,microglia,15,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","P2ry12, Cx3cr1, Tmem119, Hexb, Aif1, Csf1r, C1qa, C1qb",microglia
+sncg_interneuron,sncginterneuron,14,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Sncg, Cxcl14, Cck, Npy2r, Htr3a, Vip, Crh, Calb2",sncg
+oligodendrocyte,oligodendrocyte,12,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Mog, Mbp, Plp1, Mag, Mobp, Opalin, Mal, Cldn11",matureoligodendrocyte
+pericyte,pericyte,12,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Pdgfrb, Rgs5, Kcnj8, Abcc9, Des, Notch3, Vtn, Cspg4",pericyte
+lamp5_interneuron,lamp5interneuron,11,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Lamp5, Reln, Ndnf, Npy, Lhx6, Cplx3, Nos1, Kit",lamp5
+pan_neuronal,panneuronal,11,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Snap25, Syt1, Rbfox3, Tubb3, Elavl3, Map2, Stmn2, Syp",panneuronal
+vlmc_fibroblast,vlmcfibroblast,11,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Col1a1, Col1a2, Dcn, Lum, Slc6a13, Aldh1a2, Foxc1, Col3a1",vlmc
+l4_it,l4it,9,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Rorb, Scnn1a, Rspo1, Cux2, Unc5d, Cdh13, Nrn1, Kcnh5",l4it
+l5_it,l5it,9,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Deptor, Hsd11b1, Slc30a3, Bcl6, Tcap, Satb2, Rspo2, Tshz2",l5it
+l6_ct,l6ct,9,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Tle4, Foxp2, Syt6, Ntsr1, Cplx3, Crhr2, Crim1, Pcp4",l6ct
+vascular_smooth_muscle,vascularsmoothmuscle,9,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Acta2, Tagln, Myh11, Myl9, Cnn1, Mustn1, Des, Actg2",smoothmuscle
+glutamatergic_neuron,glutamatergicneuron,8,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Slc17a7, Neurod6, Camk2a, Satb2, Tbr1, Slc17a6, Emx1, Sla",glutamatergicneuron
+l23_it,l23it,8,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Cux2, Calb1, Cux1, Satb2, Lingo2, Lpl, Rorb, Pou3f2",l23it
+l6b,l6b,8,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Ctgf, Cplx3, Nxph4, Cdh9, Tmem163, Car3, Trh, Sulf1",l6b
+pan_neuron,panneuron,8,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Snap25, Syt1, Rbfox3, Tubb3, Map2, Elavl3, Stmn2, Elavl4",panneuronal
+border_macrophage,bordermacrophage,7,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Mrc1, Pf4, Lyve1, Cd163, Ms4a7, C1qa, C1qb, Lyz2",macrophage
+gabaergic_neuron,gabaergicneuron,7,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Gad1, Gad2, Slc32a1, Dlx1, Dlx2, Dlx5, Erbb4, Lhx6",gabaergicneuron
+l5_et,l5et,7,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Bcl11b, Fezf2, Crym, Fam84b, Etv1, Pcp4, Slco2a1, Sulf2",l5et
+lamp5_reln_interneuron,lamp5relninterneuron,7,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Lamp5, Reln, Ndnf, Npy, Nos1, Lhx1, Htr3a, Lhx6",lamp5
+neuronal_activity,neuronalactivity,7,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Fos, Egr1, Arc, Npas4, Nr4a1, Junb, Jun, Egr2",neuronalactivityieg
+neuronal_activity_ieg,neuronalactivityieg,7,1,gpt_5_5_unrefined_high_mouse_cortex,"Fos, Egr1, Arc, Npas4, Nr4a1, Junb, Egr2, Dusp1",neuronalactivityieg
+meis2_interneuron,meis2interneuron,6,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Meis2, Sp8, Pax6, Gad1, Gad2, Slc32a1, Tnfaip8l3, Prox1",meis2
+non_neuronal,nonneuronal,6,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Pdgfra, Pdgfrb, Col1a1, Pecam1, Cldn5, Aldh1l1, P2ry12, Mbp",nonneuronal
+mature_oligodendrocyte,matureoligodendrocyte,5,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Plp1, Mbp, Mog, Mag, Opalin, Mobp, Cldn11, Mal",matureoligodendrocyte
+microglia_homeostatic,microgliahomeostatic,5,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Cx3cr1, P2ry12, Tmem119, Hexb, Sall1, Aif1, C1qa, C1qb",microglia
+vascular_leptomeningeal_fibroblast,vascularleptomeningealfibroblast,5,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Col1a1, Col1a2, Dcn, Lum, Col3a1, Pdgfra, Slc6a13, Tbx18",vlmc
+arterial_endothelium,arterialendothelium,4,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Gja5, Bmx, Efnb2, Sox17, Hey1, Dll4, Cxcl12, Alpl",arterialendothelial
+cell_cycle,cellcycle,4,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Mki67, Top2a, Ube2c, Cdk1, Pcna, Mcm5, Ccnb1, Birc5",cellcycle
+gabaergic_interneuron,gabaergicinterneuron,4,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Gad1, Gad2, Slc32a1, Dlx1, Dlx2, Erbb4, Lhx6, Htr3a",gabaergicneuron
+l6_it_car3,l6itcar3,4,1,gpt_5_5_unrefined_high_mouse_cortex,"Car3, Sla, Cdh9, Col6a1, Slc30a3, Sema3c, C1ql3, Cdh13",l6itcar3
+mural_pericyte_smooth_muscle,muralpericytesmoothmuscle,4,1,gpt_5_5_unrefined_high_mouse_cortex,"Pdgfrb, Rgs5, Kcnj8, Abcc9, Acta2, Tagln, Myh11, Myl9",mural
+smooth_muscle,smoothmuscle,4,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Acta2, Tagln, Myh11, Myl9, Mustn1, Cnn1, Des, Tpm2",smoothmuscle
+venous_endothelium,venousendothelium,4,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Vwf, Nr2f2, Ackr1, Vcam1, Slc38a5, Plvap, Ephb4, Selp",venousendothelial
+committed_oligodendrocyte_precursor,committedoligodendrocyteprecursor,3,1,gpt_5_5_unrefined_high_mouse_cortex,"Bcas1, Enpp6, Gpr17, Tcf7l2, Nkx2-2, Sox10, Neu4, Olig1",committedoligoprecursor
+cortical_excitatory,corticalexcitatory,3,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Slc17a7, Camk2a, Neurod6, Satb2, Tbr1, Emx1, Slc17a6, Nrgn",glutamatergicneuron
+excitatory_l4_it,excitatoryl4it,3,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Rorb, Scnn1a, Cux2, Rspo1, Cd24a, Kcnh7, Sema3e, Unc5d",l4it
+excitatory_l5_it,excitatoryl5it,3,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Cdh13, Deptor, Hsd11b1, Slc30a3, Pld5, Bcl11b, Tshz2, Lypd1",l5it
+excitatory_l6_ct,excitatoryl6ct,3,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Foxp2, Tle4, Syt6, Pcp4, Ntsr1, Tbr1, Nxph4, Gpr6",l6ct
+excitatory_l6b,excitatoryl6b,3,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Ctgf, Car3, Cplx3, Nxph4, Crh, Trh, Cck, Tmem163",l6b
+excitatory_neuron,excitatoryneuron,3,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Slc17a7, Slc17a6, Camk2a, Neurod6, Tbr1, Satb2, Bhlhe22, Syt6",glutamatergicneuron
+l56_np,l56np,3,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Tshz2, Slc17a8, Cdh13, Tmem163, Nxph4, Sulf1, Col24a1, Fam19a1",l56np
+layer4_it,layer4it,3,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Rorb, Scnn1a, Rspo1, Cux2, Wfs1, Nr4a2, Plch1, Dkk3",l4it
+layer5_it,layer5it,3,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Deptor, Cdh13, Etv1, Parm1, Satb2, Hsd11b1, Bcl6, Pld5",l5it
+layer6_ct,layer6ct,3,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Foxp2, Tle4, Ntsr1, Syt6, Pcp4, Nfia, Col24a1, Bcl11b",l6ct
+mural,mural,3,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Pdgfrb, Rgs5, Kcnj8, Abcc9, Notch3, Des, Acta2, Vtn",mural
+non_neuronal_core,nonneuronalcore,3,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Pdgfra, Cx3cr1, Pdgfrb, Col1a1, Aldh1l1, Plp1, Mbp, Cldn5",nonneuronal
+serpinf1_interneuron,serpinf1interneuron,3,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Serpinf1, Htr3a, Reln, Vipr2, Npy2r, Ndnf, Pde1a, Igf1",sncg
+vlmc,vlmc,3,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Col1a1, Col1a2, Dcn, Lum, Pdgfra, Aldh1a2, Col3a1, Foxc1",vlmc
+activity_ieg,activityieg,2,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Fos, Jun, Junb, Egr1, Egr2, Npas4, Arc, Nr4a1",neuronalactivityieg
+border_associated_macrophage,borderassociatedmacrophage,2,1,gpt_5_5_unrefined_high_mouse_cortex,"Mrc1, Pf4, Lyve1, Cd163, Ms4a7, C1qa, Cbr2",macrophage
+capillary_endothelium,capillaryendothelium,2,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Mfsd2a, Slc2a1, Abcb1a, Car4, Klf2, Spock2, Slco1a4, Cldn5",capillaryendothelial
+chandelier_interneuron,chandelierinterneuron,2,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Pvalb, Pthlh, Vipr2, Unc5b, Erbb4, Gad1, Lgi2, Sox6",pvalb
+committed_oligodendrocyte,committedoligodendrocyte,2,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Tcf7l2, Bcas1, Enpp6, Gpr17, Sox10, Olig1, Olig2, Neu4",committedoligoprecursor
+cortical_inhibitory,corticalinhibitory,2,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Gad1, Gad2, Slc32a1, Dlx1, Dlx2, Dlx5, Arx, Lhx6",gabaergicneuron
+excitatory_glutamatergic,excitatoryglutamatergic,2,1,gpt_5_5_unrefined_high_mouse_cortex,"Slc17a7, Slc17a6, Camk2a, Neurod6, Satb2, Tbr1, Bcl11b",glutamatergicneuron
+excitatory_l23_it,excitatoryl23it,2,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Cux1, Cux2, Lhx2, Rorb, Unc5d, Rspo1, Lingo2, Rasgrf2",l23it
+excitatory_l5_et,excitatoryl5et,2,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Bcl11b, Fezf2, Fam84b, Crym, Tle4, Sim1, Ldb2, Bcl6",l5et
+inhibitory_gabaergic,inhibitorygabaergic,2,1,gpt_5_5_unrefined_high_mouse_cortex,"Gad1, Gad2, Slc32a1, Dlx1, Dlx2, Lhx6, Slc6a1",gabaergicneuron
+inhibitory_neuron,inhibitoryneuron,2,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Gad1, Gad2, Slc32a1, Dlx1, Dlx2, Dlx5, Arx, Lhx6",gabaergicneuron
+l5_et_pt,l5etpt,2,1,gpt_5_5_unrefined_high_mouse_cortex,"Bcl11b, Fezf2, Crym, Fam84b, Slco2a1, Pcp4, Sema3e, Sulf2",l5et
+l6b_subplate,l6bsubplate,2,1,gpt_5_5_unrefined_high_mouse_cortex,"Ctgf, Cplx3, Nxph4, Cdh13, Tle4, Pde1a, Car3, Tmem163",l6b
+layer5_et,layer5et,2,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Fezf2, Bcl11b, Crym, Fam84b, Pcp4, Ldb2, Crim1, Sulf1",l5et
+layer6_it_car3,layer6itcar3,2,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Car3, Oprk1, Cdh9, Hsd17b2, Rxfp1, Cplx3, Slc17a7, Tbr1",l6itcar3
+layer6b_subplate,layer6bsubplate,2,2,"gpt_5_5_noref_unrefined_high_mouse_cortex, gpt_5_5_unrefined_high_mouse_cortex","Ctgf, Cplx3, Nxph4, Tmem163, Rxfp1, Mup5, Sema3e, Tle4",l6b
+oligodendrocyte_precursor,oligodendrocyteprecursor,2,1,gpt_5_5_unrefined_high_mouse_cortex,"Pdgfra, Cspg4, Olig1, Olig2, Sox10, Vcan, Bcan",opc
+pericyte_smooth_muscle,pericytesmoothmuscle,2,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Pdgfrb, Rgs5, Kcnj8, Abcc9, Acta2, Tagln, Myh11, Myl9",mural
+perivascular_macrophage,perivascularmacrophage,2,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Mrc1, Lyve1, Pf4, Cd163, Msr1, Cbr2, C1qa, Aif1",macrophage
+sncg_serpinf1_interneuron,sncgserpinf1interneuron,2,1,gpt_5_5_unrefined_high_mouse_cortex,"Sncg, Serpinf1, Npy2r, Meis2, Adamts19, Kit, Cxcl14, Car4",sncg
+vascular_endothelial,vascularendothelial,2,1,gpt_5_5_unrefined_high_mouse_cortex,"Cldn5, Pecam1, Flt1, Kdr, Slco1a4, Ly6c1, Abcb1a, Esam",endothelial
+vascular_mesenchymal,vascularmesenchymal,2,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Pecam1, Cldn5, Kdr, Pdgfrb, Rgs5, Acta2, Col1a1, Dcn",vlmc
+activity_immediate_early,activityimmediateearly,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Fos, Junb, Egr1, Arc, Npas4, Nr4a1, Dusp1, Ier2",neuronalactivityieg
+arterial_endothelial,arterialendothelial,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Gja5, Bmx, Efnb2, Sox17, Hey1, Jag1, Cxcl12",arterialendothelial
+astrocyte_endfoot_homeostatic,astrocyteendfoothomeostatic,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Aqp4, Mlc1, Slc4a4, Kcnj10, Gja1, Hepacam, Fgfr3, Sparcl1",astrocyte
+capillary_endothelial,capillaryendothelial,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Mfsd2a, Slco1a4, Klf2, Car4, Cldn5, Flt1, Pglyrp1",capillaryendothelial
+car3_it_excitatory,car3itexcitatory,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Car3, Chodl, Colgalt2, Nxph4, Lypd1, Tle4, Cdh13",l6itcar3
+car3_np,car3np,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Car3, Otof, Tmem163, Cdh9, Trh, Pcp4, Slc30a3",l6itcar3
+committed_oligo_precursor,committedoligoprecursor,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Bcas1, Enpp6, Tcf7l2, Sox10, Olig2, Gpr17, Myrf, Nkx2-2",committedoligoprecursor
+cortical_gabaergic,corticalgabaergic,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Gad1, Gad2, Slc32a1, Dlx1, Dlx2, Dlx5, Arx, Erbb4",gabaergicneuron
+cortical_glutamatergic,corticalglutamatergic,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Slc17a7, Slc17a6, Camk2a, Neurod6, Tbr1, Satb2, Bcl11b, Foxp2",glutamatergicneuron
+ct_l6,ctl6,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Foxp2, Tle4, Syt6, Ntsr1, Nxph4, Crhr2, Kctd16",l6ct
+deep_it_excitatory,deepitexcitatory,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Rspo2, Deptor, Hsd11b1, Slc30a3, Whrn, Cdh13",deeplayerit
+differentiating_oligodendrocyte,differentiatingoligodendrocyte,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Bcas1, Tcf7l2, Enpp6, Gpr17, Myrf, Sox10",newlyformedoligodendrocyte
+et_l5,etl5,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Bcl11b, Fezf2, Crym, Fam84b, Sulf2, Igfbp4, Pcp4",l5et
+ex_l23_it,exl23it,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Cux1, Cux2, Lhx2, Satb2, Calb1, Rorb, Sla, Rasgrf2",l23it
+ex_l4_it,exl4it,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Rorb, Scnn1a, Unc5d, Rspo1, Cux2, Nrn1, Dkk3, Pcp4",l4it
+ex_l5_et,exl5et,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Bcl11b, Fezf2, Fam84b, Crym, Syt6, Sema3e, Pcp4, Cntn6",l5et
+ex_l5_it,exl5it,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Deptor, Hsd11b1, Rspo1, Slc30a3, Parm1, Cdh13, Etv1, Pde1a",l5it
+ex_l6_ct,exl6ct,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Foxp2, Tle4, Ntsr1, Syt6, Cplx3, Crim1, Tbr1, Grp",l6ct
+ex_l6_it,exl6it,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Car3, Syt6, Tle4, Col6a1, Crim1, Foxp2, Ctgf, Cplx3",l6it
+ex_l6b,exl6b,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Ctgf, Cplx3, Nxph4, Lypd1, Reln, Trh, Gpr6, Sulf1",l6b
+exc_l23_it,excl23it,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Cux1, Cux2, Lpl, Rrad, Calb1, Cdh13",l23it
+exc_l4_it,excl4it,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Rorb, Scnn1a, Cux2, Lypd1, Cdh13, Tshz2",l4it
+exc_l5_et,excl5et,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Bcl11b, Fezf2, Crym, Fam84b, Slco2a1, Pcp4, Igfbp4",l5et
+exc_l5_it,excl5it,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Deptor, Rorb, Satb2, Bcl6, Tcap, Parm1",l5it
+exc_l6_ct,excl6ct,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Foxp2, Tle4, Syt6, Gpr139, Cplx3, Tbr1",l6ct
+exc_l6b,excl6b,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Ctgf, Nxph4, Cplx3, Car3, Kcnip1, Tnmd",l6b
+excitatory_core,excitatorycore,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Slc17a7, Slc17a6, Satb2, Neurod6, Tbr1, Camk2a, Gria2, Bhlhe22",glutamatergicneuron
+excitatory_l2_3_it,excitatoryl23it,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Cux1, Cux2, Lingo2, Calb1, Cdh13, Rorb",l23it
+excitatory_l5_et_pt,excitatoryl5etpt,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Bcl11b, Fezf2, Crym, Fam84b, Bcl6, Syt6",l5et
+glial_lineage,gliallineage,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Aldh1l1, Aqp4, Sox10, Olig1, Olig2, Pdgfra, P2ry12, Tmem119",glia
+glial_nonvascular,glialnonvascular,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Sox10, Olig1, Olig2, Aldh1l1, Aqp4, Csf1r, Cx3cr1",glia
+glutamatergic_cortical,glutamatergiccortical,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Slc17a7, Slc17a6, Satb2, Tbr1, Neurod6, Camk2a",glutamatergicneuron
+glutamatergic_projection,glutamatergicprojection,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Slc17a7, Satb2, Tbr1, Neurod6, Camk2a, Emx1, Bhlhe22",glutamatergicneuron
+homeostatic_astrocyte,homeostaticastrocyte,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Slc1a2, Slc1a3, Glul, Aqp4, Gja1, Aldoc, Sparcl1, Ndrg2",astrocyte
+homeostatic_microglia,homeostaticmicroglia,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"P2ry12, Tmem119, Sall1, Siglech, Cx3cr1, Hexb, Fcrls",microglia
+immediate_early,immediateearly,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Fos, Jun, Junb, Egr1, Egr2, Arc, Npas4, Nr4a1",neuronalactivityieg
+immune_myeloid,immunemyeloid,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Ptprc, C1qa, Csf1r, Tyrobp, Laptm5, Aif1, Itgam",myeloid
+in_chandelier,inchandelier,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Vipr2, Pthlh, Unc5b, Sema3e, Cacna2d2, Pvalb, Erbb4, Gpr149",pvalb
+in_lamp5,inlamp5,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Lamp5, Reln, Ndnf, Npy, Nos1, Cpne5, Kit, Lsp1",lamp5
+in_pvalb,inpvalb,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Pvalb, Kcnc1, Tac1, Syt2, Gabra1, Pthlh, Gabrg1, Kcna1",pvalb
+in_sncg,insncg,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Sncg, Pax6, Npy2r, Cxcl14, Adarb2, Car4, Crh, Cplx3",sncg
+in_sst,insst,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Sst, Sstr2, Nos1, Npas1, Chrna2, Grin3a, Satb1, Hpse",sst
+in_vip,invip,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Vip, Htr3a, Calb2, Cck, Crh, Igf1, Prox1, Adarb2",vip
+inh_lamp5_reln,inhlamp5reln,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Lamp5, Reln, Ndnf, Lhx6, Pax6, Sema3c, Npy",lamp5
+inh_pvalb,inhpvalb,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Pvalb, Tac1, Kcnc1, Gabrg1, Erbb4, Syt2",pvalb
+inh_sncg_serpinf1,inhsncgserpinf1,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Sncg, Serpinf1, Cxcl14, Vip, Npy2r, Lypd6",sncg
+inh_sst,inhsst,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Sst, Npy, Nos1, Chodl, Chrna2, Calb2, Th",sst
+inh_vip,inhvip,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Vip, Htr3a, Crh, Calb2, Igf1, Cck, Reln",vip
+inhibitory_core,inhibitorycore,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Gad1, Gad2, Slc32a1, Dlx1, Dlx2, Dlx5, Dlx6, Erbb4",gabaergicneuron
+inhibitory_interneuron,inhibitoryinterneuron,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Gad1, Gad2, Slc32a1, Dlx1, Dlx2, Dlx5, Dlx6, Lhx6",gabaergicneuron
+it_l2_3,itl23,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Cux2, Cux1, Lhx2, Satb2, Calb1, Rasgrf2, Pou3f1",l23it
+it_l4,itl4,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Rorb, Scnn1a, Unc5d, Rspo1, Cdh13, Grik3, Nrn1",l4it
+it_l5,itl5,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Deptor, Hsd11b1, Tshz2, Slc30a3, Kcnh5, Rorb, Parm1",l5it
+l23_it_excitatory,l23itexcitatory,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Cux1, Cux2, Lpl, Calb1, Rorb, Satb2, Cdh13, Sema3c",l23it
+l2_3_it,l23it,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Cux1, Cux2, Lpl, Calb1, Rorb, Adamts2, Plxnd1, Lmo4",l23it
+l4_it_excitatory,l4itexcitatory,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Rorb, Scnn1a, Cux2, Cux1, Cnih3, Rspo1, Unc5d, Whrn",l4it
+l56_np_excitatory,l56npexcitatory,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Tshz2, Sema3e, Cplx3, Fezf2, Reln, Kcnk2, Colgalt2, Nfib",l56np
+l5_6_np,l56np,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Tshz2, Trhr, Kcnip1, Cntn5, Sema3e, Cdh13",l56np
+l5_et_excitatory,l5etexcitatory,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Bcl11b, Fezf2, Etv1, Fam84b, Kcnk2, Crym, Chrna6, Sim1",l5et
+l5_it_excitatory,l5itexcitatory,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Deptor, Bcl11b, Hsd11b1, Tmem163, Cdh13, Satb2, Rorb, Pld5",l5it
+l6_ct_excitatory,l6ctexcitatory,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Foxp2, Tle4, Syt6, Ntsr1, Pcp4, Grik3, Nxph4, Kcnip1",l6ct
+l6b_excitatory,l6bexcitatory,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Ctgf, Ccn2, Cplx3, Nxph4, Lypd1, Car3, Tmem163, Syt6",l6b
+layer23_it,layer23it,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Cux1, Cux2, Lhx2, Calb1, Rasgrf2, Rorb, Mef2c, Satb2",l23it
+layer4_it_excitatory,layer4itexcitatory,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Rorb, Scnn1a, Kcnh5, Unc5d, Rspo1, Htr1b",l4it
+layer5_et_excitatory,layer5etexcitatory,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Bcl11b, Fezf2, Etv1, Crym, Fam84b, Bcl6",l5et
+layer5_et_pt,layer5etpt,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Bcl11b, Fezf2, Crym, Fam84b, Sulf2, Cpne7, Ldb2, Galnt14",l5et
+layer6_ct_excitatory,layer6ctexcitatory,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Foxp2, Tle4, Ntsr1, Syt6, Crim1, Pcp4",l6ct
+layer6b,layer6b,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Ctgf, Cplx3, Nxph4, Car3, Rprm, Tnnt2, Col5a2, Tle4",l6b
+layer6b_excitatory,layer6bexcitatory,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Ctgf, Cplx3, Nxph4, Trh, Tnmd, Nos1, Cdh9",l6b
+mature_oligodendrocyte_myelin,matureoligodendrocytemyelin,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Mbp, Plp1, Mog, Mag, Cnp, Mobp, Opalin, Mal",matureoligodendrocyte
+mononuclear_phagocyte,mononuclearphagocyte,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Csf1r, Aif1, Tyrobp, Ctss, Lyz2, Fcgr3, C1qa, C1qb",myeloid
+mural_pericyte,muralpericyte,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Pdgfrb, Rgs5, Kcnj8, Abcc9, Des, Cspg4, Notch3",pericyte
+myelin_program,myelinprogram,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Mbp, Plp1, Mog, Mag, Mobp, Cnp, Myrf",myelinprogram
+myelinating_oligo_mature,myelinatingoligomature,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Mog, Mobp, Mag, Cldn11, Opalin, Mal, Myrf, Fa2h",matureoligodendrocyte
+myelinating_oligodendrocyte,myelinatingoligodendrocyte,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Mbp, Plp1, Mog, Mag, Cnp, Mobp, Mal",matureoligodendrocyte
+myelination_mature,myelinationmature,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Mbp, Mog, Mobp, Plp1, Mag, Mal, Ugt8a, Fa2h",myelinprogram
+myeloid_core,myeloidcore,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Cx3cr1, Aif1, Tyrobp, Hexb, C1qa, C1qb, C1qc, Trem2",myeloid
+myeloid_pan,myeloidpan,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Csf1r, Cx3cr1, Aif1, Tyrobp, Laptm5, Ctss",myeloid
+neuronal_activity_immediate_early,neuronalactivityimmediateearly,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Fos, Junb, Egr1, Arc, Npas4, Nr4a1, Bdnf, Homer1",neuronalactivityieg
+neuronal_activity_response,neuronalactivityresponse,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Fos, Junb, Egr1, Arc, Npas4, Nr4a1",neuronalactivityieg
+neuronal_synaptic,neuronalsynaptic,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Snap25, Syt1, Syp, Rbfox3, Tubb3, Map2",panneuronal
+newly_formed_oligodendrocyte,newlyformedoligodendrocyte,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Gpr17, Bcas1, Tcf7l2, Enpp6, Itpr2, Sox10, Cnp, Olig2",newlyformedoligodendrocyte
+non_neural,nonneural,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Aldh1l1, Plp1, Pdgfra, Cx3cr1, Cldn5, Pecam1, Rgs5, Col1a2",nonneuronal
+non_neuronal_resident,nonneuronalresident,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Aldh1l1, Sox10, Plp1, C1qa, Cldn5, Pdgfrb, Col1a1, Pdgfra",nonneuronal
+non_neuronal_support,nonneuronalsupport,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Aldh1l1, Aqp4, Plp1, Mbp, Pdgfra, Cspg4, P2ry12, Cldn5",nonneuronal
+oligo_precursor_transition,oligoprecursortransition,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Bcas1, Enpp6, Tcf7l2, Gpr17, Neu4, Nkx2-2, Sema5a",committedoligoprecursor
+oligodendrocyte_lineage,oligodendrocytelineage,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Sox10, Olig1, Olig2, Nkx2-2, Pdgfra, Mbp",oligodendrocytelineage
+oligodendrocyte_myelin,oligodendrocytemyelin,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Mbp, Plp1, Mog, Mag, Cnp, Mobp, Mal, Opalin",matureoligodendrocyte
+opc_cell_cycle,opccellcycle,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Mki67, Top2a, Ccnb1, Cenpf, Ube2c, Pclaf, Hmgb2, Tubb5",opccellcycle
+opc_cell_cycle_gate,opccellcyclegate,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Pdgfra, Cspg4, Olig1, Olig2, Ptprz1, Mki67, Top2a",opccellcycle
+pan_non_neuronal,pannonneuronal,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Aldh1l1, Aqp4, Slc1a3, Sox10, Pdgfra, Cspg4, Mog, Mbp",nonneuronal
+parenchymal_glia_immune,parenchymalgliaimmune,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Aldh1l1, Aqp4, Plp1, Mbp, Pdgfra, Cspg4, Cx3cr1, P2ry12",glia
+pre_oligodendrocyte,preoligodendrocyte,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Gpr17, Bcas1, Enpp6, Tcf7l2, Nkx2-2, Neu4, Sox10, Olig2",committedoligoprecursor
+proliferation,proliferation,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Mki67, Top2a, Ccnb1, Cdk1, Pcna, Mcm5, Ube2c, Cenpf",cellcycle
+reactive_microglia,reactivemicroglia,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Apoe, Lpl, Cst7, Clec7a, Itgax, Spp1, Lgals3",microglia
+sncg_pax6_interneuron,sncgpax6interneuron,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Sncg, Pax6, Cxcl14, Cplx3, Calb2, Vip, Npy, Htr3a",sncg
+sst_chodl_long_range,sstchodllongrange,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Chodl, Nos1, Sst, Chrna2, Npy, Tacr1, Calb2",sstchodl
+upper_it_excitatory,upperitexcitatory,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Cux1, Cux2, Satb2, Calb1, Lingo2, Rasgrf2",upperlayerit
+upper_it_l23,upperitl23,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Cux1, Cux2, Lhx2, Satb2, Calb1, Rasgrf2",l23it
+upper_layer_it,upperlayerit,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Cux1, Cux2, Satb2, Lingo2, Calb1, Mdga1, Rorb, Sema3c",upperlayerit
+vascular_arterial,vasculararterial,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Bmx, Efnb2, Gja5, Sox17, Hey1, Dll4, Fbln5",arterialendothelial
+vascular_associated,vascularassociated,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Pecam1, Cldn5, Pdgfrb, Rgs5, Col1a1, Acta2",vascular
+vascular_venous,vascularvenous,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Nr2f2, Slc38a5, Vwf, Ackr1, Selp, Emcn, Plvap",venousendothelial
+venous_endothelial,venousendothelial,1,1,gpt_5_5_noref_unrefined_high_mouse_cortex,"Nr2f2, Slc38a5, Vwf, Ackr1, Mmrn1, Selp, Plvap",venousendothelial
+vlmc_fibroblast_like,vlmcfibroblastlike,1,1,gpt_5_5_unrefined_high_mouse_cortex,"Col1a1, Col1a2, Dcn, Lum, Mfap4, Slc6a13, Pdgfra",vlmc

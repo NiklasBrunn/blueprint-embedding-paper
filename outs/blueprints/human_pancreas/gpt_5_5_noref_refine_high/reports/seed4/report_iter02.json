@@ -1,0 +1,49 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers healthy human pancreas, but needs targeted refinement of acinar gating, compressed stromal/mural axes, and mixed acinar/ductal adaptive-state markers.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:epithelial_acinar_identity / module:pancreatic_epithelial_core",
+      "description": "The acinar identity axis is gated by a pancreatic epithelial core containing ductal-enriched markers such as KRT19, CLDN4, and MUC1, which may dampen bona fide acinar cells whose signal is dominated by digestive enzyme and zymogen genes.",
+      "suggested_fix": "Modify the acinar identity axis to use a plain acinar score, an acinar/exocrine-appropriate gate, or a revised epithelial gate that is not ductal-biased.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "axis:pericyte_smooth_muscle_vs_fibroblast / module:pericyte_smooth_muscle",
+      "description": "Pericytes and vascular smooth muscle are expected in human pancreas but are merged into one mural-cell module and one contrast axis, losing a real vascular/stromal distinction.",
+      "suggested_fix": "Split pericyte and smooth-muscle programs into separate modules/axes, or add a smooth-muscle refinement axis within the mural compartment.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "module:mesenchymal_fibroblast_stellate / axis:fibroblast_stellate_identity",
+      "description": "Fibroblast and pancreatic stellate programs are represented only as one ECM-heavy module, so quiescent stellate-like cells are not resolved from fibroblast/ECM states.",
+      "suggested_fix": "Add a stellate or quiescent-stellate refinement module/axis, or split the current module into fibroblast/ECM and stellate-biased programs with pancreas-appropriate markers.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:acinar_adaptive_reg / axis:acinar_adaptive_reg_state",
+      "description": "The REG/SPINK1 core is plausible, but AGR2, MUC1, and TFF1 can pull the module toward ductal, mucinous, or metaplastic programs rather than a clean healthy acinar adaptive state.",
+      "suggested_fix": "Either explicitly redesign this as an acinar injury/metaplastic/dissociation-adaptive axis with appropriate contrast, or replace the ductal/mucinous genes with cleaner acinar stress/adaptive markers.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "ductal_cell / ductal_bicarbonate_mucin_state",
+      "description": "Ductal coverage is coarse and does not resolve centroacinar/intercalated ductal programs versus larger duct or activated SPP1/MMP7 states.",
+      "suggested_fix": "Add a ductal refinement axis if dimensionality allows, and keep injury-associated markers from dominating the main ductal identity module.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "Reference context checked: Human Protein Atlas pancreas overview (https://v23.proteinatlas.org/humanproteome/tissue%2Bcell%2Btype/pancreas) and a recent human pancreas single-cell atlas summary (https://pmc.ncbi.nlm.nih.gov/articles/PMC11802906/)."
+  ]
+}

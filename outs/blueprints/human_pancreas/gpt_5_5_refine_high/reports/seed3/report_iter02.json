@@ -1,0 +1,34 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers healthy human pancreas but needs targeted refinements for ductal/centroacinar coverage, lymphatic marker purity, and redundant stromal/stellate modules.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "ductal_core / ductal_mucin_substate / axes",
+      "description": "The blueprint has broad ductal and mucin-like ductal programs but does not explicitly resolve centroacinar or terminal duct cells expected in whole human pancreas.",
+      "suggested_fix": "Add or recast a ductal refinement axis for centroacinar/terminal duct identity using atlas-supported markers such as SPP1, CLDN10, KRT19, SOX9, CFTR, ANXA4, and related supported ductal subtype genes.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:endothelial_lymphatic",
+      "description": "TFF3 is not a canonical lymphatic endothelial marker and may introduce epithelial or ductal mucin signal into the lymphatic-vs-vascular axis.",
+      "suggested_fix": "Remove TFF3 from endothelial_lymphatic and replace it with a better-supported lymphatic endothelial marker from the cited human pancreas atlases, such as ACKR4, RELN, TBX1, CCL21, or another supported lymphatic marker.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "gene-set-hygiene",
+      "where": "module:stellate_quiescent; axis:stellate_matrix_compartment; axis:stellate_activation_state",
+      "description": "stellate_quiescent heavily overlaps stromal_fibroblast and includes FAP, making the stellate_matrix_compartment axis look redundant with fibroblast rather than a distinct quiescent stellate program.",
+      "suggested_fix": "Rework stellate_quiescent toward a supported pancreatic stellate/quiescent or perivascular-stellate program, dropping activation-biased markers such as FAP and using better-supported quiescent/stellate markers where available. Then gate or contrast the activated stellate/myofibroblast state against that refined quiescent module.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "Citation verification was not repeated, per task scope.",
+    "The immune compartment could be subdivided further, but the current broad immune axes are acceptable for a pancreas-wide embedding unless higher immune resolution is requested."
+  ]
+}

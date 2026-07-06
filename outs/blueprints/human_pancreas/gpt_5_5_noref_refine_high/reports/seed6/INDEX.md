@@ -1,0 +1,3 @@
+- iter 01 — minor — The blueprint is broadly plausible for human whole pancreas but needs targeted refinement for redundant acinar/ductal axes, immune subtype resolution, and a few coverage/marker issues.
+- iter 02 — minor — The blueprint broadly covers healthy human pancreas but needs targeted additions for mesothelial/rare epithelial coverage and cleanup of ductal, lymphatic, immune-gate, and acinar-axis marker design.
+- iter 03 — minor — The blueprint broadly covers healthy human pancreas but needs targeted fixes for a redundant acinar/ductal mirror axis, mural-cell gating, and a few marker/name refinements.

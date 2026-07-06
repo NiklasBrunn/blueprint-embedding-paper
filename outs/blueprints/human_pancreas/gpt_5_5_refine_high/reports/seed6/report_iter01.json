@@ -1,0 +1,39 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers healthy human pancreas but needs targeted refinement of mixed lymphoid axes and modest stromal/rare-endocrine marker cleanup.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "immune_t_nk_identity / t_nk_cell and immune_b_plasma_identity / b_plasma_cell",
+      "description": "The blueprint merges biologically distinct lymphoid populations into two mixed modules: T cells with NK/cytotoxic cells, and B cells with plasma cells. For an all-cell human pancreas embedding, these should be represented as separate immune identities rather than forced onto combined axes.",
+      "suggested_fix": "Replace the broad lymphoid modules and axes with separate immune-gated modules/axes for T cells, NK/cytotoxic cells, B cells, and plasma cells, reusing the current markers split into coherent sets and adding canonical markers such as XBP1 or PRDM1 for plasma cells if supported.",
+      "remove": [
+        "axis:immune_t_nk_identity",
+        "axis:immune_b_plasma_identity",
+        "module:t_nk_cell",
+        "module:b_plasma_cell"
+      ]
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "mesenchymal_fibroblast_stellate_identity / fibroblast_stellate",
+      "description": "The fibroblast_stellate module largely reflects ECM-producing fibroblast or activated stellate signal and does not clearly distinguish pancreatic fibroblasts from stellate or activated-stellate biology.",
+      "suggested_fix": "Add or revise mesenchymal gated axes to separate fibroblast/ECM identity from stellate or myofibroblast/activated-stellate state, while retaining the existing mural/pericyte resolution.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "gene-set-hygiene",
+      "where": "gamma_pp_cell and epsilon_cell",
+      "description": "The PP/gamma and epsilon modules include several broadly endocrine or overlapping markers such as IAPP, PCSK1, ISL1, and RBP4, which may reduce subtype specificity against beta, delta, and endocrine-core axes.",
+      "suggested_fix": "Trim or replace the least specific overlapping genes with more subtype-selective markers from the cited pancreas atlases, while retaining enough markers for robust rare-cell scoring.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "Citation and DOI verification was not reassessed.",
+    "The epithelial_ductal_bias axis is somewhat redundant but not biologically wrong."
+  ]
+}

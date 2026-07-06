@@ -1,0 +1,42 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers healthy human pancreas but needs targeted vascular/stromal refinement and minor module-label hygiene.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "endothelial axes",
+      "description": "Blood endothelium is represented only as a module and as the negative side of the lymphatic endothelial axis; there is no positive axis directly resolving blood or fenestrated pancreatic endothelial identity.",
+      "suggested_fix": "Add a gated endothelial_blood_identity or endothelial_fenestrated_capillary axis using endothelial as the gate, with blood_endothelial or a refined capillary/fenestrated module as the positive module and lymphatic_endothelial as a negative module.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "gene-set-hygiene",
+      "where": "module:fibroblast_stellate",
+      "description": "The fibroblast_stellate module includes RGS5, a strong mural/pericyte marker already used in vascular_mural, which can blur stromal and perivascular axes.",
+      "suggested_fix": "Replace RGS5 in fibroblast_stellate with a fibroblast/stellate-enriched marker such as FBLN1, COL15A1, C7, MFAP5, MMP2, CXCL14, or a quiescent stellate/retinoid-associated marker.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "fibroblast/stellate state axes",
+      "description": "The stromal branch has broad fibroblast/stellate identity and activated myofibroblast axes, but does not clearly resolve quiescent pancreatic stellate cells, an expected healthy-pancreas stromal state.",
+      "suggested_fix": "Refine fibroblast_stellate to better represent quiescent stellate biology, or add a gated quiescent stellate/retinoid-storage axis under fibroblast_stellate using markers such as RBP1, LRAT, PDGFRB, COL6A1, VIM, and matrix fibroblast markers, contrasted against activated_stellate_myofibroblast.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "gene-set-hygiene",
+      "where": "module:b_plasma_cell and axis:immune_b_plasma_cell",
+      "description": "The b_plasma_cell module contains canonical B-cell genes and is separate from the plasma_cell module, so the current label implies a mixed B/plasma program that the markers do not actually encode.",
+      "suggested_fix": "Keep the biological content but adjust labels/names in place if possible to b_cell and immune_b_cell, while retaining the separate plasma_cell module and axis.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "Further subdivision of T cells into CD4, CD8, and regulatory T cells would be useful for an immune-focused atlas but is not required for this broad healthy-pancreas embedding.",
+    "Rare inflammatory granulocytes are not essential for a baseline healthy pancreas blueprint unless downstream datasets are expected to contain substantial blood or inflamed tissue."
+  ]
+}

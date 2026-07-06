@@ -1,0 +1,109 @@
+axis_name_canonical,n_raw_spellings,raw_spellings,n_runs,fraction_runs,modal_kind,modal_positive,modal_gate
+endothelial,7,vascular_endothelial_identity (3) | endothelial_identity (3) | blood_endothelial_identity (2) | vascular_endothelium (1) | endothelial (1) | vascular_endothelial (1) | vascular_endothelium_identity (1),12,1.2,plain,endothelial,endothelial
+lymphaticendothelialinendothelial,7,lymphatic_endothelial_identity (5) | lymphatic_endothelium (1) | endothelial_lymphatic_identity (1) | lymphatic_endothelial_within_vascular (1) | endothelial_lymphatic_refinement (1) | vascular_lymphatic_bias (1) | vascular_lymphatic_endothelium (1),11,1.1,gated,lymphatic_endothelial,endothelial
+alphacellinendocrinecore,6,endocrine_alpha_cell (3) | endocrine_alpha_refinement (2) | alpha_within_endocrine (2) | alpha_endocrine_subtype (1) | endocrine_alpha_identity (1) | endocrine_alpha_bias (1),10,1.0,gated,alpha_cell,endocrine_core
+betacellinendocrinecore,6,endocrine_beta_cell (3) | endocrine_beta_refinement (2) | beta_within_endocrine (2) | beta_endocrine_subtype (1) | endocrine_beta_identity (1) | endocrine_beta_bias (1),10,1.0,gated,beta_cell,endocrine_core
+deltacellinendocrinecore,6,endocrine_delta_cell (3) | endocrine_delta_refinement (2) | delta_within_endocrine (2) | delta_endocrine_subtype (1) | endocrine_delta_identity (1) | endocrine_delta_bias (1),10,1.0,gated,delta_cell,endocrine_core
+epsiloncellinendocrinecore,7,endocrine_epsilon_refinement (2) | epsilon_within_endocrine (2) | endocrine_epsilon_cell (2) | epsilon_ghrelin_endocrine_subtype (1) | endocrine_epsilon_ghrelin_cell (1) | endocrine_epsilon_identity (1) | endocrine_epsilon_ghrelin_bias (1),10,1.0,gated,epsilon_cell,endocrine_core
+ppgammacellinendocrinecore,9,endocrine_gamma_pp_cell (2) | gamma_pp_endocrine_subtype (1) | endocrine_gamma_pp_refinement (1) | endocrine_pp_identity (1) | pp_within_endocrine (1) | endocrine_pp_refinement (1) | gamma_pp_within_endocrine (1) | endocrine_pp_cell (1) | endocrine_gamma_pp_bias (1),10,1.0,gated,pp_gamma_cell,endocrine_core
+immunecore,4,immune_identity (5) | immune_leukocyte (2) | immune_leukocyte_identity (1) | immune_common (1),9,0.9,plain,immune_core,
+adipocyte,5,adipocyte_identity (4) | adipocyte_lipid_storage (1) | adipocyte (1) | adipocyte_lipid_identity (1) | adipocyte_lipid_stromal (1),8,0.8,plain,adipocyte,
+cellcycle,5,cycling_state (4) | cell_cycle_state (1) | global_cycling_state (1) | cell_cycle (1) | cell_cycle_proliferation_state (1),8,0.8,plain,cell_cycle,
+centroacinarcellinductalcell,7,centroacinar_within_ductal (2) | ductal_bicarbonate_centroacinar_refinement (1) | ductal_centroacinar_terminal_state (1) | ductal_centroacinar_intercalated_vs_larger_duct (1) | centroacinar_bicarbonate_within_ductal (1) | ductal_centroacinar_refinement (1) | ductal_centroacinar_bias (1),8,0.8,gated,centroacinar_cell,ductal_cell
+dendriticcellinimmunecore,7,immune_dendritic_antigen_presenting (2) | dendritic_cell_immune (1) | immune_dendritic_apc_identity (1) | immune_dendritic_refinement (1) | dendritic_within_immune (1) | immune_dendritic_apc_bias (1) | immune_dendritic_apc (1),8,0.8,gated,dendritic_cell,immune_core
+fibroblaststellate,5,fibroblast_stellate_identity (3) | stromal_matrix_identity (2) | fibroblast_stellate (1) | mesenchymal_matrix_identity (1) | stromal_mesenchymal (1),8,0.8,plain,fibroblast_stellate,
+macrophageinimmunecore,7,immune_macrophage_monocyte (2) | macrophage_monocyte_immune (1) | immune_myeloid_macrophage_identity (1) | immune_macrophage_refinement (1) | macrophage_myeloid_within_immune (1) | immune_macrophage_bias (1) | immune_myeloid_macrophage (1),8,0.8,gated,macrophage,immune_core
+mastcellinimmunecore,6,immune_mast_cell (3) | mast_cell_immune (1) | immune_mast_cell_identity (1) | immune_mast_refinement (1) | mast_within_immune (1) | immune_mast_bias (1),8,0.8,gated,mast_cell,immune_core
+mesothelial,6,mesothelial_identity (3) | mesothelial_surface_epithelium (1) | mesothelial_capsular_identity (1) | mesothelial (1) | mesothelial_serosal_capsule (1) | mesothelial_surface_identity (1),8,0.8,plain,mesothelial,
+schwanncell,6,schwann_neural_identity (3) | neural_schwann_associated (1) | neural_glial (1) | neural_glial_identity (1) | schwann_neural (1) | neural_schwann_identity (1),8,0.8,plain,schwann_cell,
+nkcellinimmunecore,6,immune_nk_cell (2) | nk_cell_immune (1) | immune_nk_cytotoxic (1) | immune_nk_cell_identity (1) | immune_nk_cytotoxic_refinement (1) | nk_cell_within_immune (1),7,0.7,gated,nk_cell,immune_core
+plasmacellinimmunecore,5,immune_plasma_cell (3) | plasma_cell_immune (1) | immune_plasma_cell_identity (1) | immune_plasma_refinement (1) | plasma_cell_within_immune (1),7,0.7,gated,plasma_cell,immune_core
+acinarcellvsductalcell,4,acinar_vs_ductal_epithelium (2) | exocrine_acinar_vs_ductal (2) | acinar_over_ductal (1) | acinar_vs_ductal_exocrine (1),6,0.6,contrast,acinar_cell,
+betamatureinbetacell,5,mature_beta_secretory_metabolic_state (1) | beta_mature_function_state (1) | beta_mature_secretory_state (1) | beta_maturation (1) | beta_maturity_within_islets (1),5,0.5,gated,beta_mature,beta_cell
+bplasmacellinimmunecore,4,immune_b_plasma_cell (2) | immune_b_plasma_refinement (1) | b_plasma_within_immune (1) | immune_b_plasma_bias (1),5,0.5,gated,b_plasma_cell,immune_core
+endocrinecorevsacinarcell,5,endocrine_vs_exocrine_acinar (1) | endocrine_over_exocrine (1) | endocrine_vs_exocrine (1) | endocrine_vs_exocrine_epithelium (1) | endocrine_vs_acinar (1),5,0.5,contrast,endocrine_core,
+endothelialarterialinendothelial,5,arterial_endothelium (1) | arterial_endothelial_refinement (1) | arterial_endothelial_identity (1) | arterial_endothelial_within_vascular (1) | vascular_arterial_endothelium (1),5,0.5,gated,endothelial_arterial,endothelial
+pancreaticepithelial,3,epithelial_identity (3) | epithelial_common (1) | pancreatic_epithelial_identity (1),5,0.5,plain,pancreatic_epithelial,
+pericyte,4,pericyte_smooth_muscle_identity (2) | mural_perivascular_identity (1) | pericyte (1) | mural_cell_identity (1),5,0.5,plain,pericyte,fibroblast_stellate
+tcellinimmunecore,4,immune_t_cell (2) | t_cell_immune (1) | immune_t_cell_identity (1) | t_cell_within_immune (1),5,0.5,gated,t_cell,immune_core
+bcellinimmunecore,4,b_cell_immune (1) | immune_b_cell_identity (1) | b_cell_within_immune (1) | immune_b_cell (1),4,0.4,gated,b_cell,immune_core
+ductalcell,3,ductal_identity (2) | ductal_epithelial_identity (1) | ductal_epithelial (1),4,0.4,plain,ductal_cell,
+endocrinecore,2,endocrine_identity (3) | endocrine_islet_identity (1),4,0.4,plain,endocrine_core,
+endothelialcapillaryinendothelial,4,capillary_endothelium (1) | capillary_endothelial_refinement (1) | capillary_endothelial_identity (1) | vascular_capillary_fenestrated_endothelium (1),4,0.4,gated,endothelial_capillary,endothelial
+endothelialvenousinendothelial,4,venous_endothelium (1) | venous_endothelial_refinement (1) | venous_endothelial_identity (1) | vascular_venous_postcapillary_endothelium (1),4,0.4,gated,endothelial_venous,endothelial
+interferonresponse,3,interferon_response_state (2) | global_interferon_response (1) | interferon_response (1),4,0.4,plain,interferon_response,
+pericyteinpericyte,4,pericyte_within_mural (1) | pericyte_identity (1) | mural_cell_bias (1) | mural_pericyte_vs_smooth_muscle (1),4,0.4,gated,pericyte,pericyte
+smoothmuscle,2,vascular_smooth_muscle_identity (3) | smooth_muscle_contractile_state (1),4,0.4,plain,smooth_muscle,pericyte
+tnkcellinimmunecore,4,immune_t_nk_refinement (1) | t_nk_within_immune (1) | immune_t_nk_cell (1) | immune_t_nk_bias (1),4,0.4,gated,t_nk_cell,immune_core
+acinarcell,3,exocrine_acinar (1) | acinar_identity (1) | acinar_digestive_identity (1),3,0.3,plain,acinar_cell,
+dendriticcellinmyeloidcore,2,dendritic_within_myeloid (2) | cdc_within_myeloid (1),3,0.3,gated,dendritic_cell,myeloid_core
+ductalbicarbonateinductalcell,3,ductal_transport_mucin_state (1) | ductal_ion_transport_vs_mucin_spp1_state (1) | ductal_bicarbonate_mucin_state (1),3,0.3,gated,ductal_bicarbonate,ductal_cell
+ductalcellinpancreaticepithelial,2,epithelial_ductal_identity (2) | ductal_within_epithelium (1),3,0.3,gated,ductal_cell,pancreatic_epithelial
+enterochromaffincellinendocrinecore,3,enterochromaffin_like_endocrine_subtype (1) | endocrine_enterochromaffin_refinement (1) | endocrine_enterochromaffin_serotonin_cell (1),3,0.3,gated,enterochromaffin_cell,endocrine_core
+fibroblaststellateinfibroblaststellate,2,fibroblast_matrix_stroma (2) | stromal_fibroblast_refinement (1),3,0.3,gated,fibroblast_stellate,fibroblast_stellate
+neuron,3,neuronal_fiber_within_neural_compartment (1) | intrinsic_neuron_identity (1) | neuronal_identity (1),3,0.3,plain,neuron,
+schwanncellinpanneural,2,schwann_glial_identity (2) | neural_glial_within_neural (1),3,0.3,gated,schwann_cell,pan_neural
+stellateactivatedinfibroblaststellate,3,stromal_activated_stellate_myofibroblast (1) | stromal_myofibroblast_state (1) | stellate_activation_state (1),3,0.3,gated,stellate_activated,fibroblast_stellate
+stellatequiescentinfibroblaststellate,3,stellate_quiescent_vs_fibroblast_ecm (1) | quiescent_stellate_within_stromal (1) | stellate_quiescence_state (1),3,0.3,gated,stellate_quiescent,fibroblast_stellate
+acinarcellinpancreaticepithelial,1,epithelial_acinar_identity (2),2,0.2,gated,acinar_cell,acinar_exocrine_gate
+acinarregenerativeinacinarcell,2,acinar_adaptive_reg_state (1) | acinar_regenerative_secretory_state (1),2,0.2,gated,acinar_regenerative,acinar_cell
+acinarzymogeninacinarcell,2,acinar_zymogen_load (1) | acinar_mature_zymogen_state (1),2,0.2,gated,acinar_zymogen,acinar_cell
+bcellinbplasmacell,2,b_cell_within_b_plasma (1) | immune_b_cell_bias (1),2,0.2,gated,b_cell,b_plasma_cell
+centroacinarcellinpancreaticepithelial,2,centroacinar_terminal_duct_state (1) | ductal_centroacinar_terminal (1),2,0.2,gated,centroacinar_cell,pancreatic_epithelial
+endocrinecorevsexocrineepithelial,1,epithelial_endocrine_vs_exocrine (2),2,0.2,contrast,endocrine_core,
+endothelialinendothelial,2,endothelial_blood_refinement (1) | vascular_blood_endothelium (1),2,0.2,gated,endothelial,endothelial
+erstress,2,secretory_er_load (1) | secretory_er_stress_state (1),2,0.2,plain,er_stress,
+erstressinpancreaticepithelial,2,epithelial_secretory_er_load (1) | epithelial_er_stress_state (1),2,0.2,gated,er_stress,pancreatic_epithelial
+immediateearly,2,global_immediate_early_stress (1) | immediate_early_response_state (1),2,0.2,plain,immediate_early,
+macrophageinmyeloidcore,1,macrophage_within_myeloid (2),2,0.2,gated,macrophage,myeloid_core
+mastcell,2,mast_cell_identity (1) | mast_cell (1),2,0.2,plain,mast_cell,
+matrixremodelinginfibroblaststellate,2,matrix_remodeling_within_stellate_fibroblast (1) | stellate_matrix_remodeling_state (1),2,0.2,gated,matrix_remodeling,fibroblast_stellate
+monocyteinmyeloidcore,2,monocyte_within_myeloid (1) | monocyte_inflammatory_within_myeloid (1),2,0.2,gated,monocyte,myeloid_core
+myeloidcore,2,myeloid_identity (1) | myeloid_core (1),2,0.2,plain,myeloid_core,
+neuroninpanneural,2,autonomic_neuronal_identity (1) | neuron_within_neural (1),2,0.2,gated,neuron,pan_neural
+nkcellintnkcell,2,nk_cell_within_t_nk (1) | immune_nk_cytotoxic_bias (1),2,0.2,gated,nk_cell,t_nk_cell
+pancreaticepithelialvsfibroblaststellate,2,epithelial_vs_mesenchymal_stromal (1) | epithelial_vs_mesenchymal (1),2,0.2,contrast,pancreatic_epithelial,
+pericyteinfibroblaststellate,2,pericyte_mural_stroma (1) | stromal_pericyte_smooth_muscle_refinement (1),2,0.2,gated,pericyte,fibroblast_stellate
+pericytevsfibroblaststellate,1,pericyte_smooth_muscle_vs_fibroblast (2),2,0.2,contrast,pericyte,
+plasmacellinbplasmacell,2,plasma_cell_within_b_plasma (1) | immune_plasma_cell_bias (1),2,0.2,gated,plasma_cell,b_plasma_cell
+plasmacytoiddendriticcellindendriticcell,2,pdc_within_myeloid (1) | pDC_within_dendritic (1),2,0.2,gated,plasmacytoid_dendritic_cell,dendritic_cell
+plasmacytoiddendriticcellinimmunecore,2,plasmacytoid_dendritic_immune (1) | immune_plasmacytoid_dendritic (1),2,0.2,gated,plasmacytoid_dendritic_cell,immune_core
+smoothmuscleinpericyte,2,smooth_muscle_within_mural (1) | mural_smooth_muscle_contractile (1),2,0.2,gated,smooth_muscle,pericyte
+tcellintnkcell,2,t_cell_within_t_nk (1) | immune_t_cell_bias (1),2,0.2,gated,t_cell,t_nk_cell
+acinarzymogenvsductalcell,1,epithelial_acinar_vs_ductal (1),1,0.1,contrast,acinar_zymogen,
+bcell,1,b_cell (1),1,0.1,plain,b_cell,
+bplasmacell,1,b_plasma_identity (1),1,0.1,plain,b_plasma_cell,
+cdc1indendriticcell,1,cDC1_within_dendritic (1),1,0.1,gated,cdc1,dendritic_cell
+cdc2indendriticcell,1,cDC2_within_dendritic (1),1,0.1,gated,cdc2,dendritic_cell
+cellcycleinfibroblaststellate,1,mesenchymal_proliferation_state (1),1,0.1,gated,cell_cycle,fibroblast_stellate
+cellcycleinimmunecore,1,immune_proliferation_state (1),1,0.1,gated,cell_cycle,immune_core
+cellcycleinpancreaticepithelial,1,epithelial_proliferation_state (1),1,0.1,gated,cell_cycle,pancreatic_epithelial
+contractilemesenchymalinfibroblaststellate,1,contractile_stellate_state (1),1,0.1,gated,contractile_mesenchymal,fibroblast_stellate
+cytotoxiclymphocyteintnkcell,1,cytotoxic_t_nk_state (1),1,0.1,gated,cytotoxic_lymphocyte,t_nk_cell
+cytotoxictcellintcell,1,cytotoxic_t_cell_within_t_cells (1),1,0.1,gated,cytotoxic_t_cell,t_cell
+ductalbicarbonate,1,ductal_bicarbonate_identity (1),1,0.1,plain,ductal_bicarbonate,
+ductalcellvsacinarcell,1,ductal_vs_acinar (1),1,0.1,contrast,ductal_cell,
+ductalmucinousinductalcell,1,ductal_secretory_mucin_within_ductal (1),1,0.1,gated,ductal_mucinous,ductal_cell
+endocrinematurationinendocrinecore,1,endocrine_maturation_gradient (1),1,0.1,gated,endocrine_maturation,endocrine_core
+endocrineprogenitorinpancreaticepithelial,1,neurogenin_endocrine_progenitor_state (1),1,0.1,gated,endocrine_progenitor,pancreatic_epithelial
+endocrineprogenitorlikeinendocrinecore,1,endocrine_progenitor_like_state (1),1,0.1,gated,endocrine_progenitor_like,endocrine_core
+erstressinacinarzymogen,1,acinar_secretory_er_load (1),1,0.1,gated,er_stress,acinar_zymogen
+fibroblaststellatevspericyte,1,stromal_fibroblast_vs_mural (1),1,0.1,contrast,fibroblast_stellate,
+hypoxia,1,hypoxia_glycolysis_state (1),1,0.1,plain,hypoxia,
+inflammatoryresponseinmacrophage,1,myeloid_inflammatory_state (1),1,0.1,gated,inflammatory_response,macrophage
+macrophageantigenpresentationinmacrophage,1,macrophage_antigen_presentation_state (1),1,0.1,gated,macrophage_antigen_presentation,macrophage
+mesothelialvsfibroblaststellate,1,mesothelial_vs_fibroblast (1),1,0.1,contrast,mesothelial,
+nkcellvstcell,1,nk_vs_t_cytotoxic_lymphocyte (1),1,0.1,contrast,nk_cell,
+oxidativestress,1,oxidative_stress_state (1),1,0.1,plain,oxidative_stress,
+pancreaticepithelialprogenitorinpancreaticepithelial,1,pancreatic_epithelial_progenitor_state (1),1,0.1,gated,pancreatic_epithelial_progenitor,pancreatic_epithelial
+pancreaticprogenitorinpancreaticepithelial,1,pancreatic_progenitor_to_mature_endocrine (1),1,0.1,gated,pancreatic_progenitor,pancreatic_epithelial
+panneural,1,pan_neural (1),1,0.1,plain,pan_neural,
+plasmacellvsbcell,1,plasma_vs_b_cell (1),1,0.1,contrast,plasma_cell,
+senescence,1,senescence_stress_state (1),1,0.1,plain,senescence,
+smoothmuscleinfibroblaststellate,1,smooth_muscle_mural_stroma (1),1,0.1,gated,smooth_muscle,fibroblast_stellate
+smoothmusclevspericyte,1,smooth_muscle_vs_pericyte (1),1,0.1,contrast,smooth_muscle,
+stellateactivatedvsfibroblaststellate,1,myofibroblast_vs_matrix_fibroblast (1),1,0.1,contrast,stellate_activated,
+tcell,1,t_cell (1),1,0.1,plain,t_cell,
+tnkcell,1,t_nk_identity (1),1,0.1,plain,t_nk_cell,
+tuftcellinductalcell,1,ductal_tuft_like_refinement (1),1,0.1,gated,tuft_cell,ductal_cell
+venouscapillaryendothelialinendothelial,1,venous_capillary_endothelial_within_vascular (1),1,0.1,gated,venous_capillary_endothelial,endothelial

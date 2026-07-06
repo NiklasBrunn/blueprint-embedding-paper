@@ -1,0 +1,49 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers human pancreas but needs targeted additions and splits for lymphatic endothelium, dendritic cells, mural subtypes, immune subtypes, and epsilon-cell marker specificity.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "vascular compartment / endothelial module and axes",
+      "description": "The blueprint has a generic blood endothelial axis but no lymphatic endothelial representation, an expected minor vascular population in human pancreas atlases.",
+      "suggested_fix": "Add a lymphatic endothelial module and axis using markers such as PROX1, LYVE1, PDPN, FLT4, CCL21, MMRN1, and/or TFF3, ideally contrasted or gated against the existing blood endothelial module.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "pericyte_smooth_muscle / mural axes",
+      "description": "The mural module mixes pericyte markers with vascular smooth muscle markers, so the current axis cannot resolve two separable pancreas mural populations.",
+      "suggested_fix": "Split the current mural program into pericyte and smooth-muscle/contractile modules, and add an axis that distinguishes them while preserving a broad mural-vs-endothelial signal if desired.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "immune subtype coverage",
+      "description": "The leukocyte branch lacks dendritic-cell representation; macrophage-heavy C1Q/LST1 myeloid scoring does not adequately capture classical dendritic or antigen-presenting myeloid cells.",
+      "suggested_fix": "Add a dendritic-cell module and gated leukocyte axis using supported markers such as CD1C, FCER1A, CLEC10A, CLEC9A, LILRA4, IRF8, ITGAX, and HLA-DRA.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "t_nk_cell and b_plasma_cell modules / leukocyte gated axes",
+      "description": "The T/NK and B/plasma modules each merge biologically distinct leukocyte populations, causing the gated axes to blur cell identity.",
+      "suggested_fix": "Split T from NK/cytotoxic and B from plasma into separate modules and gated axes under leukocyte_common; retain broad immune axes only if they serve a separate coarse-grained purpose.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "epsilon_cell module",
+      "description": "The epsilon-cell module relies heavily on generic endocrine markers and includes MLN, which is more classically enteroendocrine/intestinal than a canonical pancreatic epsilon marker.",
+      "suggested_fix": "Keep epsilon only if the cited human pancreas resources support it for the age-unspecified scenario, but make the module more pancreas-specific around GHRL and supported co-markers; replace or drop questionable MLN if unsupported.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "I did not verify DOI/resource correctness; this report only judges biological coverage and marker plausibility."
+  ]
+}

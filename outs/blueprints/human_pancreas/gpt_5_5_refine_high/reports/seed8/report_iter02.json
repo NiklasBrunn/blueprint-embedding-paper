@@ -1,0 +1,41 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers human pancreas cell types but needs targeted refinement for mural-cell and dendritic-cell resolution plus a few marker-specificity issues.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "mural_cell / mural_identity",
+      "description": "The mural module merges pericyte markers with vascular smooth muscle markers, so the embedding cannot separate two expected human pancreas stromal populations.",
+      "suggested_fix": "Split mural representation into pericyte and vascular smooth-muscle modules/axes, or keep a mural core and add gated subtype axes using pericyte markers such as RGS5, PDGFRB, CSPG4, NOTCH3, ABCC9, KCNJ8 versus smooth-muscle markers such as ACTA2, TAGLN, MYH11, CNN1, MYL9, TPM2.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "dendritic_cell / dendritic_cell_within_immune",
+      "description": "The dendritic module combines cDC2, cDC1, and pDC-associated markers into one axis, under-resolving expected antigen-presenting immune subsets for an all-cell pancreas embedding.",
+      "suggested_fix": "Either rename/reshape this as a broad dendritic/APC axis and add cDC1, cDC2, and pDC gated immune subaxes, or split the current module into separate dendritic subtype modules with sibling negative modules under immune_core.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "immune_core",
+      "description": "B2M is broadly expressed across nucleated human cells and weakens leukocyte specificity in a pan-immune module; CXCR4 is also broad but less severe.",
+      "suggested_fix": "Remove B2M from immune_core and replace it with a more leukocyte-enriched immune atlas-supported marker such as CD53 or LAPTM5 while retaining PTPRC, LCP1, and CORO1A-type genes.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "epsilon_cell / epsilon_within_endocrine",
+      "description": "The epsilon module has one highly specific marker, GHRL, plus broad endocrine/prohormone genes shared with other endocrine modules, so the axis may be noisy for rare ghrelin-positive epsilon cells.",
+      "suggested_fix": "If supported by the cited human pancreas literature, add additional ghrelin-cell markers and reduce reliance on CHGA, CHGB, PCSK1, and PCSK2; otherwise keep the axis but make it explicitly GHRL-centered rather than equally resolved with major endocrine subtypes.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "Citation DOI verification was not performed because it is outside the discriminator scope; python3 embedder_blueprint.py --describe succeeded."
+  ]
+}

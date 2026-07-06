@@ -1,0 +1,3 @@
+- iter 01 — minor — Broadly plausible E6.5-E8.5 mouse gastrulation tree, but it needs targeted coverage, gating, and marker refinements for extraembryonic, visceral endoderm, neural, paraxial/NMP, and late differentiated
+- iter 02 — minor — The blueprint is broadly plausible and well structured, but needs targeted refinement for endoderm convergence and early hematopoietic resolution plus a few marker cleanups.
+- iter 03 — minor — The blueprint is broadly plausible for mouse E6.5-E8.5 gastrulation, but needs targeted refinement of trophoblast giant-cell coverage, endoderm trajectory specificity, blood-branch negatives, and a fe

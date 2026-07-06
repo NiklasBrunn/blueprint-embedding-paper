@@ -1,0 +1,687 @@
+{
+  "run_id": "260610_blueprint_run09",
+  "extracted_at": "2026-06-10T08:39:49+00:00",
+  "scenario": {
+    "species": [
+      "human"
+    ],
+    "tissue": [
+      "pancreas"
+    ],
+    "celltype": null,
+    "age": null,
+    "sex": null,
+    "condition": null,
+    "notes": null
+  },
+  "blueprint": {
+    "name": "extract",
+    "clip": 4.0,
+    "n_modules": 16,
+    "n_axes": 10,
+    "n_axes_by_kind": {
+      "plain": 3,
+      "contrast": 4,
+      "gated": 3
+    },
+    "n_resources": 0,
+    "n_resources_by_kind": {
+      "paper": 0,
+      "atlas": 0,
+      "database": 0
+    },
+    "n_dois_unique": 0,
+    "n_total_genes": 145,
+    "n_unique_genes": 125,
+    "modules": [
+      {
+        "name": "endocrine_core",
+        "genes": [
+          "CHGA",
+          "CHGB",
+          "ISL1",
+          "NEUROD1",
+          "PAX6",
+          "PCSK1",
+          "PCSK2",
+          "SLC30A8",
+          "IAPP"
+        ],
+        "n_genes": 9,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "endocrine_vs_exocrine",
+            "role": "positive"
+          },
+          {
+            "axis": "beta_vs_alpha_endocrine",
+            "role": "gate"
+          },
+          {
+            "axis": "delta_vs_pp_endocrine",
+            "role": "gate"
+          },
+          {
+            "axis": "epsilon_vs_other_endocrine",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 4,
+        "n_genes_present": 9,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.9073373214503724
+      },
+      {
+        "name": "exocrine_core",
+        "genes": [
+          "PRSS1",
+          "PRSS2",
+          "CPA1",
+          "CPB1",
+          "CTRC",
+          "CLPS",
+          "PNLIP",
+          "KRT19",
+          "KRT8",
+          "KRT18",
+          "EPCAM",
+          "SOX9",
+          "CFTR",
+          "SLC4A4",
+          "MUC1"
+        ],
+        "n_genes": 15,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "endocrine_vs_exocrine",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 14,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "PRSS2"
+        ],
+        "fraction_nonzero_cells": 0.9519594677084605
+      },
+      {
+        "name": "beta_core",
+        "genes": [
+          "INS",
+          "IAPP",
+          "PDX1",
+          "MAFA",
+          "NKX6-1",
+          "UCN3",
+          "SLC30A8",
+          "ABCC8",
+          "G6PC2"
+        ],
+        "n_genes": 9,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "beta_vs_alpha_endocrine",
+            "role": "positive"
+          },
+          {
+            "axis": "delta_vs_pp_endocrine",
+            "role": "negative"
+          },
+          {
+            "axis": "epsilon_vs_other_endocrine",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 8,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "NKX6-1"
+        ],
+        "fraction_nonzero_cells": 0.967769503113173
+      },
+      {
+        "name": "alpha_core",
+        "genes": [
+          "GCG",
+          "ARX",
+          "MAFB",
+          "IRX2",
+          "TTR",
+          "TM4SF4",
+          "SLC7A2",
+          "FFAR4"
+        ],
+        "n_genes": 8,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "beta_vs_alpha_endocrine",
+            "role": "negative"
+          },
+          {
+            "axis": "delta_vs_pp_endocrine",
+            "role": "negative"
+          },
+          {
+            "axis": "epsilon_vs_other_endocrine",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.9576974728360396
+      },
+      {
+        "name": "delta_core",
+        "genes": [
+          "SST",
+          "HHEX",
+          "RORB",
+          "DPP4",
+          "HOPX",
+          "PAX6"
+        ],
+        "n_genes": 6,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "beta_vs_alpha_endocrine",
+            "role": "negative"
+          },
+          {
+            "axis": "delta_vs_pp_endocrine",
+            "role": "positive"
+          },
+          {
+            "axis": "epsilon_vs_other_endocrine",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.9178366499816872
+      },
+      {
+        "name": "pp_core",
+        "genes": [
+          "PPY",
+          "PYY",
+          "NPY",
+          "CCK",
+          "PDX1",
+          "PAX6"
+        ],
+        "n_genes": 6,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "beta_vs_alpha_endocrine",
+            "role": "negative"
+          },
+          {
+            "axis": "delta_vs_pp_endocrine",
+            "role": "negative"
+          },
+          {
+            "axis": "epsilon_vs_other_endocrine",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.7940422414845563
+      },
+      {
+        "name": "epsilon_core",
+        "genes": [
+          "GHRL",
+          "GHSR",
+          "MBOAT4",
+          "CCKBR"
+        ],
+        "n_genes": 4,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "beta_vs_alpha_endocrine",
+            "role": "negative"
+          },
+          {
+            "axis": "delta_vs_pp_endocrine",
+            "role": "negative"
+          },
+          {
+            "axis": "epsilon_vs_other_endocrine",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 4,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.2106580393114394
+      },
+      {
+        "name": "acinar_core",
+        "genes": [
+          "PRSS1",
+          "PRSS2",
+          "CPA1",
+          "CPB1",
+          "CTRC",
+          "CTRB1",
+          "CELA3A",
+          "CLPS",
+          "PNLIP",
+          "REG1A",
+          "REG1B"
+        ],
+        "n_genes": 11,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "acinar_vs_ductal",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 10,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "PRSS2"
+        ],
+        "fraction_nonzero_cells": 0.7469173483091197
+      },
+      {
+        "name": "ductal_core",
+        "genes": [
+          "KRT19",
+          "KRT8",
+          "KRT18",
+          "EPCAM",
+          "SOX9",
+          "CFTR",
+          "SLC4A4",
+          "MUC1",
+          "TACSTD2",
+          "ANXA4",
+          "KRT7"
+        ],
+        "n_genes": 11,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "acinar_vs_ductal",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 11,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.9357221340495666
+      },
+      {
+        "name": "endothelial_core",
+        "genes": [
+          "PECAM1",
+          "VWF",
+          "CDH5",
+          "KDR",
+          "EMCN",
+          "RAMP2",
+          "CLDN5",
+          "ESAM"
+        ],
+        "n_genes": 8,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "endothelial_identity",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.146685386399707
+      },
+      {
+        "name": "myeloid_core",
+        "genes": [
+          "LYZ",
+          "TYROBP",
+          "LST1",
+          "FCER1G",
+          "C1QA",
+          "C1QB",
+          "C1QC",
+          "APOE",
+          "AIF1",
+          "SPI1"
+        ],
+        "n_genes": 10,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "myeloid_vs_lymphoid",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 10,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.2758515443779758
+      },
+      {
+        "name": "lymphoid_core",
+        "genes": [
+          "CD3D",
+          "CD3E",
+          "TRAC",
+          "TRBC1",
+          "IL7R",
+          "LTB",
+          "CCR7",
+          "MS4A1",
+          "CD79A",
+          "CD74",
+          "BANK1",
+          "HLA-DRA"
+        ],
+        "n_genes": 12,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "myeloid_vs_lymphoid",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 10,
+        "n_genes_missing": 2,
+        "missing_genes": [
+          "HLA-DRA",
+          "TRBC1"
+        ],
+        "fraction_nonzero_cells": 0.36894152118178486
+      },
+      {
+        "name": "plasma_core",
+        "genes": [
+          "MZB1",
+          "XBP1",
+          "JCHAIN",
+          "SDC1",
+          "IGKC",
+          "IGHG1",
+          "IRF4",
+          "TNFRSF17"
+        ],
+        "n_genes": 8,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "plasma_identity",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 7,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "JCHAIN"
+        ],
+        "fraction_nonzero_cells": 0.8176657306800147
+      },
+      {
+        "name": "fibroblast_core",
+        "genes": [
+          "COL1A1",
+          "COL1A2",
+          "DCN",
+          "LUM",
+          "COL3A1",
+          "COL6A1",
+          "COL6A2",
+          "C7",
+          "CFD",
+          "PI16"
+        ],
+        "n_genes": 10,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "fibroblast_vs_pericyte",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 10,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.4329752167012575
+      },
+      {
+        "name": "pericyte_core",
+        "genes": [
+          "RGS5",
+          "CSPG4",
+          "MCAM",
+          "PDGFRB",
+          "NOTCH3",
+          "DES",
+          "ACTA2",
+          "TAGLN",
+          "MYH11",
+          "CNN1"
+        ],
+        "n_genes": 10,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "fibroblast_vs_pericyte",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 10,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.3071053595409596
+      },
+      {
+        "name": "schwann_core",
+        "genes": [
+          "SOX10",
+          "S100B",
+          "PLP1",
+          "MPZ",
+          "PMP22",
+          "NCAM1",
+          "GFAP",
+          "ERBB3"
+        ],
+        "n_genes": 8,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "schwann_identity",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.47991698205347333
+      }
+    ],
+    "axes": [
+      {
+        "name": "endocrine_vs_exocrine",
+        "kind": "contrast",
+        "positive": "endocrine_core",
+        "negatives": [
+          "exocrine_core"
+        ],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "beta_vs_alpha_endocrine",
+        "kind": "gated",
+        "positive": "beta_core",
+        "negatives": [
+          "alpha_core",
+          "delta_core",
+          "pp_core",
+          "epsilon_core"
+        ],
+        "negative_weight": 0.5,
+        "gate": "endocrine_core"
+      },
+      {
+        "name": "delta_vs_pp_endocrine",
+        "kind": "gated",
+        "positive": "delta_core",
+        "negatives": [
+          "pp_core",
+          "alpha_core",
+          "beta_core",
+          "epsilon_core"
+        ],
+        "negative_weight": 0.5,
+        "gate": "endocrine_core"
+      },
+      {
+        "name": "epsilon_vs_other_endocrine",
+        "kind": "gated",
+        "positive": "epsilon_core",
+        "negatives": [
+          "beta_core",
+          "alpha_core",
+          "delta_core",
+          "pp_core"
+        ],
+        "negative_weight": 0.5,
+        "gate": "endocrine_core"
+      },
+      {
+        "name": "acinar_vs_ductal",
+        "kind": "contrast",
+        "positive": "acinar_core",
+        "negatives": [
+          "ductal_core"
+        ],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "endothelial_identity",
+        "kind": "plain",
+        "positive": "endothelial_core",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "myeloid_vs_lymphoid",
+        "kind": "contrast",
+        "positive": "myeloid_core",
+        "negatives": [
+          "lymphoid_core"
+        ],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "plasma_identity",
+        "kind": "plain",
+        "positive": "plasma_core",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "fibroblast_vs_pericyte",
+        "kind": "contrast",
+        "positive": "fibroblast_core",
+        "negatives": [
+          "pericyte_core"
+        ],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "schwann_identity",
+        "kind": "plain",
+        "positive": "schwann_core",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      }
+    ],
+    "resources": []
+  },
+  "sanity": {
+    "placeholder_strings_present": false,
+    "orphaned_modules": [],
+    "modules_missing_resources": [
+      "endocrine_core",
+      "exocrine_core",
+      "beta_core",
+      "alpha_core",
+      "delta_core",
+      "pp_core",
+      "epsilon_core",
+      "acinar_core",
+      "ductal_core",
+      "endothelial_core",
+      "myeloid_core",
+      "lymphoid_core",
+      "plasma_core",
+      "fibroblast_core",
+      "pericyte_core",
+      "schwann_core"
+    ],
+    "unused_resources": [],
+    "set_clip_overridden": false
+  },
+  "dataset_coverage": {
+    "h5ad_path": "data/preprocessed/human_pancreas_pp.h5ad",
+    "layer": null,
+    "n_cells": 16382,
+    "n_vars": 18268
+  }
+}

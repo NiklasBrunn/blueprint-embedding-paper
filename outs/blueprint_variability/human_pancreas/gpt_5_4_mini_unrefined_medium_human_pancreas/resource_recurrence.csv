@@ -1,0 +1,41 @@
+resource_id,n_runs,fraction_runs,run_ids,citation,kind,doi
+10.1016/j.cmet.2016.08.020,9,0.9,260610_blueprint_run01|260610_blueprint_run02|260610_blueprint_run03|260610_blueprint_run04|260610_blueprint_run05|260610_blueprint_run06|260610_blueprint_run07|260610_blueprint_run08|260610_blueprint_run10,Segerstolpe et al. 2016 Cell Metabolism,paper,10.1016/j.cmet.2016.08.020
+10.1126/science.abl4896,7,0.7,260610_blueprint_run01|260610_blueprint_run02|260610_blueprint_run03|260610_blueprint_run04|260610_blueprint_run05|260610_blueprint_run06|260610_blueprint_run08,The Tabula Sapiens Consortium et al. 2022 Science,atlas,10.1126/science.abl4896
+10.1016/j.cmet.2016.04.002,4,0.4,260610_blueprint_run03|260610_blueprint_run04|260610_blueprint_run09|260610_blueprint_run10,Arda et al. 2016 Cell Metabolism,paper,10.1016/j.cmet.2016.04.002
+goimmuneresponse,4,0.4,260610_blueprint_run01|260610_blueprint_run05|260610_blueprint_run06|260610_blueprint_run10,GO:0006955 immune response,database,
+keggpancreaticsecretion,4,0.4,260610_blueprint_run01|260610_blueprint_run05|260610_blueprint_run08|260610_blueprint_run09,KEGG hsa04972 Pancreatic secretion,database,
+key:goecmorganization,4,0.4,260610_blueprint_run01|260610_blueprint_run05|260610_blueprint_run08|260610_blueprint_run10,GO:0030198 extracellular matrix organization,database,
+10.1016/j.cels.2016.08.011,2,0.2,260610_blueprint_run05|260610_blueprint_run10,Baron et al. 2016 Cell Systems,paper,10.1016/j.cels.2016.08.011
+10.1016/j.cels.2018.07.007,2,0.2,260610_blueprint_run03|260610_blueprint_run10,Arda et al. 2018 Cell Systems,paper,10.1016/j.cels.2018.07.007
+10.1126/science.1260419,2,0.2,260610_blueprint_run02|260610_blueprint_run09,Uhlen et al. 2015 Science,atlas,10.1126/science.1260419
+goangiogenesis,2,0.2,260610_blueprint_run08|260610_blueprint_run10,GO:0001525 angiogenesis,database,
+kegginsulinsecretion,2,0.2,260610_blueprint_run01|260610_blueprint_run05,KEGG hsa04911 Insulin secretion,database,
+key:hallmarkg2mcheckpoint,2,0.2,260610_blueprint_run01|260610_blueprint_run02,HALLMARK_G2M_CHECKPOINT,database,
+10.1016/j.cell.2014.09.040,1,0.1,260610_blueprint_run05,Pagliuca et al. 2014 Cell,paper,10.1016/j.cell.2014.09.040
+10.1016/j.cell.2017.09.004,1,0.1,260610_blueprint_run07,Enge et al. 2017 Cell,atlas,10.1016/j.cell.2017.09.004
+10.1016/j.cels.2016.09.002,1,0.1,260610_blueprint_run06,Muraro et al. 2016 Cell Systems,atlas,10.1016/j.cels.2016.09.002
+10.1016/j.cmet.2016.09.007,1,0.1,260610_blueprint_run07,Wang et al. 2016 Cell Metabolism,paper,10.1016/j.cmet.2016.09.007
+10.1016/j.cmet.2017.12.017,1,0.1,260610_blueprint_run09,Gandasi et al. 2018 Cell Metabolism,paper,10.1016/j.cmet.2017.12.017
+10.1016/j.cmet.2022.08.014,1,0.1,260610_blueprint_run04,Su et al. 2022 Cell Metabolism,paper,10.1016/j.cmet.2022.08.014
+10.1038/nbt.2141,1,0.1,260610_blueprint_run09,Blum et al. 2012 Nature Biotechnology,paper,10.1038/nbt.2141
+10.1038/s41467-024-55415-3,1,0.1,260610_blueprint_run07,Craig-Schapiro et al. 2024 Nature Communications,atlas,10.1038/s41467-024-55415-3
+gobcellactivation,1,0.1,260610_blueprint_run10,GO:0042113 B cell activation,database,
+gotcellactivation,1,0.1,260610_blueprint_run10,GO:0042110 T cell activation,database,
+key:goepithelialcelldifferentiation,1,0.1,260610_blueprint_run10,GO:0030855 epithelial cell differentiation,database,
+key:goextracellularmatrixorganization,1,0.1,260610_blueprint_run06,GO:0030198 extracellular matrix organization,database,
+key:goimmunesystemprocess,1,0.1,260610_blueprint_run08,GO:0002376 immune system process,database,
+key:gomusclecontraction,1,0.1,260610_blueprint_run01,GO:0006935 muscle contraction,database,
+key:gomyelination,1,0.1,260610_blueprint_run05,GO:0042552 myelination,database,
+key:govasculaturedevelopment,1,0.1,260610_blueprint_run01,GO:0001944 vasculature development,database,
+key:hallmarke2ftargets,1,0.1,260610_blueprint_run02,MSigDB HALLMARK_E2F_TARGETS,database,
+key:hallmarkepithelialmesenchymaltransition,1,0.1,260610_blueprint_run02,MSigDB HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION,database,
+key:hallmarkinterferonalpharesponse,1,0.1,260610_blueprint_run02,MSigDB HALLMARK_INTERFERON_ALPHA_RESPONSE,database,
+key:hallmarkinterferongammaresponse,1,0.1,260610_blueprint_run02,MSigDB HALLMARK_INTERFERON_GAMMA_RESPONSE,database,
+key:hallmarkunfoldedproteinresponse,1,0.1,260610_blueprint_run02,MSigDB HALLMARK_UNFOLDED_PROTEIN_RESPONSE,database,
+key:msigdbg2mcheckpoint,1,0.1,260610_blueprint_run09,MSigDB HALLMARK_G2M_CHECKPOINT,database,
+key:msigdbhallmarke2ftargets,1,0.1,260610_blueprint_run07,MSigDB HALLMARK_E2F_TARGETS,database,
+key:msigdbhallmarkg2mcheckpoint,1,0.1,260610_blueprint_run07,MSigDB HALLMARK_G2M_CHECKPOINT,database,
+key:msigdbhallmarkunfoldedproteinresponse,1,0.1,260610_blueprint_run07,MSigDB HALLMARK_UNFOLDED_PROTEIN_RESPONSE,database,
+key:msigdbunfoldedproteinresponse,1,0.1,260610_blueprint_run09,MSigDB HALLMARK_UNFOLDED_PROTEIN_RESPONSE,database,
+key:reactomeinsulinsecretion,1,0.1,260610_blueprint_run09,Reactome R-HSA-6871271 INSULIN SECRETION,database,
+msigdbhallmarkangiogenesis,1,0.1,260610_blueprint_run06,MSigDB HALLMARK_ANGIOGENESIS,database,

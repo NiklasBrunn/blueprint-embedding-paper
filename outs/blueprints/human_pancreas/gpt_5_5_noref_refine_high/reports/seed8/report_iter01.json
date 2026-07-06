@@ -1,0 +1,52 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers human pancreas but needs targeted coverage additions and marker/axis cleanup before it is publishable as-is.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "general coverage",
+      "description": "Whole-pancreas coverage is missing mesothelial/serosal capsule cells and adipocyte/lipid-rich stromal cells, which are plausible constituents of human pancreas tissue when age is unspecified and celltype is null.",
+      "suggested_fix": "Add modules and axes for mesothelial cells, for example MSLN, WT1, UPK3B, CALB2, KRT8, KRT18, PDPN, and adipocytes/lipid stromal cells, for example ADIPOQ, PLIN1, FABP4, LPL, CIDEA, LEP, CFD, PPARG.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "axis:endocrine_enterochromaffin_like_cell / module:enterochromaffin_serotonin",
+      "description": "A distinct enterochromaffin-like endocrine cell axis is not a standard expected population for healthy human pancreas and currently presents serotonergic/gut-like biology as a core pancreatic endocrine cell type.",
+      "suggested_fix": "Delete this module and axis unless recast as a clearly scoped rare serotonergic endocrine state; prefer using the freed dimension for missing whole-tissue coverage or stronger immune/stromal resolution.",
+      "remove": [
+        "axis:endocrine_enterochromaffin_like_cell",
+        "module:enterochromaffin_serotonin"
+      ]
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:lymphatic_endothelial_identity / module:lymphatic_endothelial",
+      "description": "The lymphatic axis is gated by a blood vascular endothelial module, which can suppress bona fide lymphatic endothelial cells, and the lymphatic marker set includes TFF3, an epithelial/secretory gene rather than a lymphatic endothelial marker.",
+      "suggested_fix": "Use a pan-endothelial gate or broaden the gate with pan-endothelial genes such as PECAM1, CDH5, CLDN5, ESAM, RAMP2; keep blood-vessel markers separate if needed. Replace TFF3 with a lymphatic endothelial marker such as TBX1, FOXC2, CCL21, or another accepted human lymphatic marker.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:ductal_bicarbonate_mucin",
+      "description": "SLC26A3 is more characteristic of intestinal/colonic chloride-bicarbonate exchange than pancreatic duct identity, while pancreatic duct bicarbonate biology is better represented by CFTR, SLC4A4, and SLC26A6.",
+      "suggested_fix": "Replace SLC26A3 with SLC26A6 or another accepted pancreatic ductal marker.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "immune subtype axes",
+      "description": "The current t_cell_nk_cell and b_cell_plasma_cell modules merge biologically distinct immune populations, leaving expected whole-pancreas immune structure underresolved.",
+      "suggested_fix": "Split T vs NK with CD3D/CD3E/TRAC/IL7R/CCR7 versus NKG7/GNLY/KLRD1/PRF1/GZMB, and split B vs plasma with MS4A1/CD79A/CD79B/BANK1 versus MZB1/JCHAIN/SDC1/IGHG1/IGKC if adding dimensions.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "The developmental/progenitor axes are not automatically wrong because age is unspecified, but they should not dominate the design unless a future scenario explicitly requests fetal/developmental ordering."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers human pancreas biology, but it should refine myeloid, dendritic, stellate/fibroblast, and venous endothelial state resolution before being considered complete.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "immune myeloid compartment",
+      "description": "The current myeloid representation is biased toward resident/C1Q macrophages and MHC-II state, with no separate monocyte or inflammatory myeloid axis.",
+      "suggested_fix": "Add a monocyte/inflammatory myeloid gene module and an immune- or myeloid-gated axis contrasting it against resident macrophage and dendritic APC modules.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:dendritic_apc and axis:immune_dendritic_apc_identity",
+      "description": "The dendritic_apc module mixes cDC2, cDC1, pDC, and generic antigen-presentation markers, so it under-resolves biologically distinct dendritic subsets.",
+      "suggested_fix": "Split into cDC2, cDC1, and pDC modules with separate immune-gated axes, or keep the broad APC module while adding subtype-refinement axes.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:stellate_quiescent_vs_fibroblast_ecm",
+      "description": "Fibroblast/ECM or activated stellate signal is represented mainly as the negative end of a quiescent-stellate axis, making the activated/ECM-producing state less directly interpretable.",
+      "suggested_fix": "Add a positive mesenchymal-gated ECM remodeling or activated stellate-fibroblast state axis while retaining the quiescent stellate axis.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:venous_endothelial",
+      "description": "VCAM1, SELE, and SELP can mark endothelial activation or post-capillary inflammatory phenotype as much as steady venous identity, which is not ideal for a baseline healthy pancreas scenario.",
+      "suggested_fix": "Bias the venous identity module toward steadier venous markers and move VCAM1, SELE, and SELP into a separate endothelial activation state axis if that state should be represented.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "Rare ductal tuft/chemosensory cells and pancreas-region-specific endothelial states could be useful in a more exhaustive atlas embedding, but they are not required for the next refinement."
+  ]
+}

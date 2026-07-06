@@ -1,0 +1,33 @@
+resource_id,n_runs,n_cohorts,cohorts,citation,kind,doi,standardized_resolved
+10.1016/j.cell.2018.07.028,10,1,gpt_5_5_unrefined_high_mouse_cortex,Saunders 2018 Cell molecular diversity and specializations among cells of the adult mouse brain,atlas,10.1016/j.cell.2018.07.028,10.1016/j.cell.2018.07.028
+10.1038/s41586-018-0654-5,10,1,gpt_5_5_unrefined_high_mouse_cortex,Tasic 2018 Nature shared and distinct transcriptomic cell types across mouse neocortical areas,atlas,10.1038/s41586-018-0654-5,10.1038/s41586-018-0654-5
+10.1016/j.cell.2021.04.021,9,1,gpt_5_5_unrefined_high_mouse_cortex,Yao 2021 Cell taxonomy of transcriptomic cell types across adult mouse isocortex and hippocampal formation,atlas,10.1016/j.cell.2021.04.021,10.1016/j.cell.2021.04.021
+10.1038/nn.4216,8,1,gpt_5_5_unrefined_high_mouse_cortex,Tasic 2016 Nature Neuroscience adult mouse cortical cell taxonomy,atlas,10.1038/nn.4216,10.1038/nn.4216
+10.1038/s41593-017-0029-5,8,1,gpt_5_5_unrefined_high_mouse_cortex,Hrvatin 2018 Nature Neuroscience experience-dependent transcriptomic states in mouse visual cortex,paper,10.1038/s41593-017-0029-5,10.1038/s41593-017-0029-5
+10.1038/nature25739,7,1,gpt_5_5_unrefined_high_mouse_cortex,Vanlandewijck 2018 Nature,atlas,10.1038/nature25739,10.1038/nature25739
+10.1126/science.aaa1934,7,1,gpt_5_5_unrefined_high_mouse_cortex,Zeisel 2015 Science cell types in mouse cortex and hippocampus revealed by single-cell RNA-seq,atlas,10.1126/science.aaa1934,10.1126/science.aaa1934
+key:gomyelination,6,1,gpt_5_5_unrefined_high_mouse_cortex,Gene Ontology GO:0042552 myelination,database,,gomyelination
+10.1126/science.aaf6463,5,1,gpt_5_5_unrefined_high_mouse_cortex,Marques 2016 Science oligodendrocyte heterogeneity in mouse juvenile and adult CNS,paper,10.1126/science.aaf6463,10.1126/science.aaf6463
+10.1016/j.cell.2018.06.021,4,1,gpt_5_5_unrefined_high_mouse_cortex,Zeisel 2018 Cell molecular architecture of the mouse nervous system,atlas,10.1016/j.cell.2018.06.021,10.1016/j.cell.2018.06.021
+10.1016/j.neuron.2018.04.001,2,1,gpt_5_5_unrefined_high_mouse_cortex,Tyssowski 2018 Neuron different neuronal activity patterns induce different gene expression programs,paper,10.1016/j.neuron.2018.04.001,10.1016/j.neuron.2018.04.001
+key:goimmuneresponse,2,1,gpt_5_5_unrefined_high_mouse_cortex,Gene Ontology GO:0006955 immune response,database,,goimmuneresponse
+key:gomyelinsheath,2,1,gpt_5_5_unrefined_high_mouse_cortex,GO:0043209 myelin sheath,database,,gomyelinsheath
+key:msigdbgomyelination,2,1,gpt_5_5_unrefined_high_mouse_cortex,MSigDB C5 GO:0042552 MYELINATION,database,,msigdbgomyelination
+10.1016/j.immuni.2018.11.004,1,1,gpt_5_5_unrefined_high_mouse_cortex,Hammond 2019 Immunity,paper,10.1016/j.immuni.2018.11.004,10.1016/j.immuni.2018.11.004
+10.1038/nature05453,1,1,gpt_5_5_unrefined_high_mouse_cortex,Lein 2007 Nature Allen Mouse Brain Atlas,atlas,10.1038/nature05453,10.1038/nature05453
+10.1038/nn.3599,1,1,gpt_5_5_unrefined_high_mouse_cortex,Butovsky 2014 Nature Neuroscience,paper,10.1038/nn.3599,10.1038/nn.3599
+10.1038/s41586-021-03500-8,1,1,gpt_5_5_unrefined_high_mouse_cortex,Yao 2021 Nature,atlas,10.1038/s41586-021-03500-8,10.1038/s41586-021-03500-8
+key:goangiogenesis,1,1,gpt_5_5_unrefined_high_mouse_cortex,Gene Ontology GO:0001525 angiogenesis,database,,goangiogenesis
+key:gocellcycle,1,1,gpt_5_5_unrefined_high_mouse_cortex,Gene Ontology GO:0007049 cell cycle,database,,gocellcycle
+key:gochemicalsynaptictransmission,1,1,gpt_5_5_unrefined_high_mouse_cortex,GO:0007268 chemical synaptic transmission,database,,gochemicalsynaptictransmission
+key:gogabaergicsynaptictransmission,1,1,gpt_5_5_unrefined_high_mouse_cortex,GO:0051932 GABAergic synaptic transmission,database,,gogabaergicsynaptictransmission
+key:goglutamatergicsynaptictransmission,1,1,gpt_5_5_unrefined_high_mouse_cortex,GO:0035249 glutamatergic synaptic transmission,database,,goglutamatergicsynaptictransmission
+key:goresponsetostimulus,1,1,gpt_5_5_unrefined_high_mouse_cortex,Gene Ontology GO:0050896 response to stimulus,database,,goresponsetostimulus
+key:gosynapse,1,1,gpt_5_5_unrefined_high_mouse_cortex,Gene Ontology GO:0045202 synapse,database,,gosynapse
+key:govasculaturedevelopment,1,1,gpt_5_5_unrefined_high_mouse_cortex,GO:0001944 vasculature development,database,,govasculaturedevelopment
+key:msigdbgoangiogenesis,1,1,gpt_5_5_unrefined_high_mouse_cortex,MSigDB GOBP_ANGIOGENESIS (GO:0001525),database,,msigdbgoangiogenesis
+key:msigdbgoecm,1,1,gpt_5_5_unrefined_high_mouse_cortex,MSigDB C5 GO:0030198 EXTRACELLULAR_MATRIX_ORGANIZATION,database,,msigdbgoecm
+key:msigdbgoimmuneresponse,1,1,gpt_5_5_unrefined_high_mouse_cortex,MSigDB GOBP_IMMUNE_RESPONSE (GO:0006955),database,,msigdbgoimmuneresponse
+key:msigdbgosmoothmusclecontraction,1,1,gpt_5_5_unrefined_high_mouse_cortex,MSigDB C5 GO:0006939 SMOOTH_MUSCLE_CONTRACTION,database,,msigdbgosmoothmusclecontraction
+key:msigdbgosynapticsignaling,1,1,gpt_5_5_unrefined_high_mouse_cortex,MSigDB GOBP_CHEMICAL_SYNAPTIC_TRANSMISSION (GO:0007268),database,,msigdbgosynapticsignaling
+key:reactomechemicalsynapses,1,1,gpt_5_5_unrefined_high_mouse_cortex,Reactome R-MMU-112315 Transmission across Chemical Synapses,database,,reactomechemicalsynapses

@@ -1,0 +1,41 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers human pancreas but needs targeted refinement for plasma cells, activated stellate/myofibroblast state, and several noisy marker modules.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "immune compartment",
+      "description": "The immune tree lacks a plasma-cell or antibody-secreting B-lineage axis; the existing b_cell module captures conventional B cells rather than MZB1/JCHAIN/XBP1/immunoglobulin-high plasma cells.",
+      "suggested_fix": "Add a plasma_cell or antibody_secreting_cell module with supported markers such as MZB1, JCHAIN, XBP1, SDC1, IGHG1, IGKC, and IGLC2 as appropriate, add an immune-gated plasma axis, and include it among sibling negatives for other immune subtype axes if retained.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "stromal compartment",
+      "description": "The stromal branch lacks an explicit activated stellate/myofibroblast state and may blur that biology into the pericyte_smooth_muscle module because ACTA2, TAGLN, and MYL9 are contractile but not exclusive to mural cells.",
+      "suggested_fix": "Add an activated_stellate or myofibroblast module gated by stromal_matrix using supported markers such as ACTA2, TAGLN, COL1A1, COL3A1, POSTN, THY1, MMP2, or COL11A1, and tighten the mural module or gating so activated stellate and mural identities are separable.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "epsilon_cell, gamma_pp_cell, alpha_cell",
+      "description": "Rare endocrine modules include some noisy or overlapping markers: epsilon_cell includes DEFB1 and MLN, and TTR is repeated in alpha_cell and gamma_pp_cell, which may reduce subtype specificity.",
+      "suggested_fix": "Keep strong pancreas-supported endocrine markers, especially GHRL for epsilon cells, and replace weak epithelial/off-lineage genes with better-supported ghrelin-cell markers if the cited human pancreas atlases support them; reduce unnecessary TTR overlap unless explicitly source-supported.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "lymphatic_endothelium",
+      "description": "The lymphatic module has canonical anchors PROX1, PDPN, and LYVE1 but depends partly on less canonical genes while omitting common lymphatic endothelial markers such as FLT4, CCL21, or MMRN1 where source support exists.",
+      "suggested_fix": "Keep the canonical lymphatic anchors and add or substitute additional well-supported lymphatic endothelial markers from the cited pancreas endothelial resource so the axis is less dependent on noncanonical genes.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "Citation verification was not assessed; this report only judges biological plausibility, marker fit, and coverage."
+  ]
+}

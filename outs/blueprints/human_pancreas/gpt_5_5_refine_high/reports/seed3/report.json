@@ -1,0 +1,26 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint is broadly plausible for healthy human pancreas but needs targeted completeness and marker-design refinements.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "missing adipocyte and mesothelial/serosal axes",
+      "description": "The blueprint covers the major pancreatic parenchymal, vascular, stromal, neural, and immune compartments, but it does not represent adipocytes or mesothelial/serosal cells, which can be expected in unrestricted human pancreas tissue preparations and atlases.",
+      "suggested_fix": "Add literature-grounded plain axes and modules for adipocytes and mesothelial/serosal cells if supported by the declared IF>10 pancreas/HCA atlas sources. Use canonical adipocyte markers such as ADIPOQ, PLIN1, FABP4, LPL, CFD, and appropriate mesothelial markers such as MSLN, WT1, UPK3B, KRT8/KRT19, PRG4, and PDPN, adjusted to the supporting source.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:dendritic_cell / axis:dendritic_cell_antigen_presenting",
+      "description": "The dendritic-cell module combines cDC2 markers, cDC1 markers, and pDC-associated LILRA4 into one gene set. These programs are biologically distinct, so a single mixed module may dilute subtype-specific dendritic-cell signal.",
+      "suggested_fix": "Split dendritic representation into cDC2, cDC1, and pDC modules/axes if supported by pancreas atlas resources, or narrow the existing module to a coherent broad conventional-DC/APC marker set and add a separate pDC axis only if pDCs are supported.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "The blueprint passes python3 embedder_blueprint.py --describe with no structural placeholder or orphan-module issue observed.",
+    "DOI and impact-factor verification were not repeated because citation verification is outside discriminator scope."
+  ]
+}

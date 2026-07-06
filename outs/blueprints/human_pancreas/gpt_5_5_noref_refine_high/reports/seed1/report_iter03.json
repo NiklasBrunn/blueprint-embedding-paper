@@ -1,0 +1,50 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers healthy human pancreas cell types, but targeted cleanup is needed for over-emphasized progenitor/rare endocrine programs, a mixed neural module, and a few marker choices.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "pancreatic_epithelial_progenitor_state and neurogenin_endocrine_progenitor_state",
+      "description": "These axes emphasize developmental/progenitor programs in a baseline human pancreas scenario with no developmental note. Age is unspecified, so rare immaturity signals are not impossible, but two full progenitor axes may over-weight populations that are not expected as major components of most healthy human pancreas datasets.",
+      "suggested_fix": "Either narrow these to rare epithelial/endocrine immaturity states with conservative labels and markers, or reduce to one scoped rare-progenitor/immaturity axis. Avoid making developmental progenitors look like a major branch unless the scenario explicitly calls for developmental ordering.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:neuron_neuroendocrine_fiber / axis:neuronal_fiber_within_neural_compartment",
+      "description": "The module mixes peripheral neuronal/axon markers with neuroendocrine or developmental transcription factors. ASCL1 can overlap endocrine progenitor/neuroendocrine programs, while CHAT and TH imply specific autonomic subtypes rather than a general pancreas neural-fiber compartment.",
+      "suggested_fix": "Refocus this module as a general peripheral neuron/axon signal using pan-neuronal/synaptic markers such as TUBB3, ELAVL3, ELAVL4, SNAP25, SYT1, NEFL, NEFM, RET, and PHOX2B where appropriate. If autonomic subtype resolution is desired, split sympathetic/cholinergic markers into separate gated axes rather than mixing them in the core neural module.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:alpha_cell",
+      "description": "Most alpha-cell markers are plausible, but GC is not a canonical alpha-cell marker and may introduce hepatic/plasma-protein-like signal. TTR is reported in alpha cells but is also broadly secretory/context-dependent.",
+      "suggested_fix": "Replace GC with a more pancreas alpha-cell-specific marker such as LOXL4, TM4SF4, CRYBA2, or TMEM176B. Keep TTR only if the intent is to capture a known alpha-cell expression program rather than a strict subtype marker.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:enterochromaffin_like_endocrine_subtype",
+      "description": "Serotonergic/enterochromaffin-like endocrine cells are rare and more context-dependent than alpha, beta, delta, and PP cells. As a full sibling endocrine subtype axis, this may be over-resolved for a general healthy pancreas embedding.",
+      "suggested_fix": "Re-label and tune it as a rare serotonergic endocrine state, or merge it conceptually with a rare endocrine-state axis. Keep TPH1, DDC, and SLC18A1 if retaining the axis, but do not make it equivalent in expected prevalence to the main islet endocrine subtypes.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "mesenchymal_stroma / fibroblast_matrix",
+      "description": "The stromal compartment captures generic fibroblast matrix genes, pericytes, smooth muscle, and adipocytes, but it does not explicitly resolve resident pancreatic stellate-like fibroblasts, which are a common non-epithelial pancreas population.",
+      "suggested_fix": "Add or rename a fibroblast/stellate axis with pancreatic stromal markers such as PDGFRA, DCN, LUM, COL1A1, COL1A2, COL3A1, RGS4, MMP2, and CXCL12 as appropriate, while keeping pericyte and smooth muscle separate.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "The number of axes is on the high side but defensible for an all-cell human pancreas embedding because the blueprint resolves endocrine, vascular, immune, stromal, and neural compartments separately.",
+    "No structural placeholders or orphan module problems were evident from python3 embedder_blueprint.py --describe."
+  ]
+}

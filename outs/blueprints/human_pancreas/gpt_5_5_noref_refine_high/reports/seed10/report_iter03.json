@@ -1,0 +1,41 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers healthy human pancreas but needs targeted refinements to ductal/centroacinar specificity, stromal stellate versus mural separation, and a few marker modules.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:ductal_centroacinar_terminal / module:centroacinar_terminal_duct",
+      "description": "The centroacinar/terminal duct module substantially overlaps the general ductal module and the gated axis contrasts it only against acinar and endocrine programs, so it mostly reiterates ductal epithelial identity rather than resolving centroacinar/terminal duct from broader ductal cells.",
+      "suggested_fix": "Make the axis explicitly discriminate terminal duct/centroacinar from general ductal cells, for example by adding ductal_bicarbonate as a negative module or narrowing/renaming the module to a ductal-continuum state. Keep canonical terminal duct/centroacinar markers such as CFTR, CLDN10, AQP1/AQP5, ANXA4, and SOX9 while reducing duplication with the general ductal module where possible.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "axis:stromal_fibroblast_vs_mural / modules:fibroblast_stellate, vascular_mural",
+      "description": "Pancreatic stellate cells are important pancreatic stromal cells and can share markers with pericyte/mural programs. The current stromal module is mostly extracellular matrix fibroblast markers, while the mural module contains genes that can also score stellate or perivascular stromal cells, making stellate identity too coarse.",
+      "suggested_fix": "Refine stromal representation by adding or modifying a pancreatic stellate/perivascular stromal module with PSC-relevant markers such as LRAT, RBP1, PDGFRB, RGS5, COL1A1/COL3A1, DCN/LUM, and optionally ACTA2/DES for activated stellate/myofibroblast signal. Use gated stromal axes to separate fibroblast/stellate from true vascular mural cells rather than relying only on a broad contrast.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:epsilon_cell",
+      "description": "The epsilon module includes strong ghrelin-cell markers, but several genes in the list are not specific canonical epsilon markers and may pull the axis toward ductal/epithelial or general endocrine receptor programs. Because epsilon cells are rare in human pancreas, marker specificity matters.",
+      "suggested_fix": "Keep GHRL and MBOAT4 and replace less-specific genes such as TM4SF4, TM4SF5, HES4, SSTR1, and SSTR2 with more defensible epsilon/ghrelin-cell markers where available, or keep the module compact rather than padded.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:endothelial_venous_postcapillary",
+      "description": "ACKR1 and NR2F2 are plausible venous/postcapillary endothelial markers, but SELE and VCAM1 can indicate endothelial activation or inflammation. In a healthy baseline pancreas scenario, this can make the axis partly reflect activation rather than venous subtype identity.",
+      "suggested_fix": "Rebalance this module toward venous/postcapillary identity markers and, if endothelial activation is worth preserving, represent it as a separate gated endothelial state rather than mixing it into venous subtype identity.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "No citations are required or expected for this blueprint variant."
+  ]
+}

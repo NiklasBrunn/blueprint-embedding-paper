@@ -1,0 +1,42 @@
+{
+  "rating": "minor",
+  "summary": "Broad human pancreas coverage is plausible, but several state axes need targeted biological cleanup for healthy baseline pancreas.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "axis:acinar_zymogen_load / module:acinar_zymogen_high",
+      "description": "The module is labeled as zymogen load but is dominated by unfolded-protein-response and ER-stress genes rather than acinar digestive enzyme or zymogen markers.",
+      "suggested_fix": "Rename/reframe this as an acinar secretory-stress/UPR state, or replace the gene list and axis name with a nonredundant healthy acinar subtype/state if a true zymogen-load axis is intended.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "axis:ductal_transport_mucin_state / module:ductal_transport_mucin",
+      "description": "The module mixes healthy ductal ion/fluid transport genes with TFF/mucinous markers that are more suggestive of gastric/metaplastic or pathological ductal programs than healthy baseline pancreas.",
+      "suggested_fix": "Retune the module toward healthy ductal and centroacinar transport/secretion markers, keeping transport genes such as CFTR, SLC4A4, and AQP1 while avoiding TFF/metaplastic markers unless the axis is explicitly renamed as a metaplastic or stress state.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "gating-tree",
+      "where": "axis:pdc_within_myeloid / module:plasmacytoid_dendritic_cell",
+      "description": "Canonical pDCs may not score strongly on the monocyte/macrophage-biased myeloid_core gate, so the current gated axis can suppress a biologically valid pancreatic immune subtype.",
+      "suggested_fix": "Use a dendritic/APC gate that includes HLA/FLT3/IRF8/CST3 or add a separate pDC identity axis, while keeping pDC markers contrasted against cDC and monocyte/macrophage modules within an appropriate immune compartment.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:pancreatic_progenitor_to_mature_endocrine / module:pancreatic_progenitor_bias",
+      "description": "The ungated progenitor-to-mature-endocrine contrast uses genes shared by adult ductal/centroacinar and beta-cell programs, so without a developmental note it may not represent a clean expected healthy-pancreas axis.",
+      "suggested_fix": "Gate the axis to pancreatic epithelium and make the contrast explicitly immature/progenitor-like versus mature epithelial programs if broad age coverage is intended; otherwise retune it into a ductal/centroacinar progenitor-like state or replace it with mature compartment resolution.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "Adipocytes, neutrophils, and rare endocrine subtypes are not heavily represented, but this is acceptable unless the downstream dataset is known to include substantial peripancreatic fat or blood contamination.",
+    "Some overlap between marker modules is acceptable and not a structural issue by itself."
+  ]
+}

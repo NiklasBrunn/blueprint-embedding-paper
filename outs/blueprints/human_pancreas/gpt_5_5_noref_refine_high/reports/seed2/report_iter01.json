@@ -1,0 +1,58 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers human pancreas but needs targeted refinements for merged immune, mural, and neural populations plus a less redundant acinar state axis.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "t_nk_cell / cytotoxic_t_nk_state axes",
+      "description": "T cells and NK cells are merged into one identity module containing both CD3/TRAC markers and NK cytotoxic markers, so the embedding cannot resolve canonical T-cell versus NK-cell populations expected in human pancreas immune content.",
+      "suggested_fix": "Add separate t_cell and nk_cell modules and gated or contrast refinement axes within a lymphoid gate, using T markers such as CD3D, CD3E, TRAC, IL7R and NK markers such as NKG7, GNLY, KLRD1, KLRF1, FCGR3A, while keeping a cytotoxic state if desired.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "b_plasma_cell axis",
+      "description": "B cells and plasma cells are combined in one module containing MS4A1/CD79A alongside MZB1/JCHAIN/immunoglobulin genes, but these are distinct lymphoid states/cell types in pancreas single-cell data.",
+      "suggested_fix": "Split or refine into B-cell and plasma-cell axes, for example B-cell markers MS4A1, CD79A, CD79B, BANK1, CD74 and plasma-cell markers MZB1, JCHAIN, XBP1, SDC1, immunoglobulin genes.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "pericyte_smooth_muscle_identity",
+      "description": "Pericytes and vascular smooth muscle cells are merged into one mural-cell module. The markers are plausible, but pancreas vasculature commonly needs pericyte versus smooth-muscle resolution.",
+      "suggested_fix": "Add gated refinement axes under the existing mural identity, separating pericyte markers such as RGS5, PDGFRB, CSPG4, MCAM, KCNJ8 from smooth-muscle markers such as ACTA2, MYH11, TAGLN, CNN1, MYL9.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "schwann_neural_identity",
+      "description": "The module mixes Schwann/glial markers with a neuronal marker and does not separately capture intrinsic/autonomic neurons. Neural populations are rare but biologically expected in human pancreas.",
+      "suggested_fix": "Keep or retune a Schwann/glial axis and add a separate neuronal refinement/identity module with markers such as PRPH, TUBB3, ELAVL3, ELAVL4, PHOX2B, RET, CHAT where appropriate.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "gene-set-hygiene",
+      "where": "acinar_zymogen_load",
+      "description": "acinar_zymogen_high strongly duplicates exocrine_acinar, reusing many of the same digestive enzyme genes. As a gated axis it mostly recapitulates acinar abundance rather than a distinct acinar state.",
+      "suggested_fix": "Replace the module contents with a more distinct acinar state if intended, such as stress/regenerative/secretory-load markers that do not simply duplicate the identity module, or otherwise de-emphasize this axis.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "dendritic_cell",
+      "description": "The dendritic module combines cDC2 markers with pDC markers into a single myeloid refinement, so it cannot distinguish these plausible immune populations.",
+      "suggested_fix": "Add separate cDC and pDC refinements within the myeloid gate if immune resolution is desired, while preserving the broader myeloid/macrophage/monocyte layout.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "Endocrine rare-cell coverage is somewhat generous, including epsilon and enterochromaffin-like axes; this is acceptable for an age-unspecified human pancreas scenario and does not require deletion.",
+    "pancreatic_progenitor_to_mature_endocrine is acceptable given unspecified age, but it should not be expanded into a full developmental tree unless the scenario notes request developmental ordering."
+  ]
+}

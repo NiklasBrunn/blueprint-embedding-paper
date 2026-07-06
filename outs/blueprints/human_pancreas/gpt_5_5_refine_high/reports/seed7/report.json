@@ -1,0 +1,50 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint is broadly plausible for human whole pancreas but needs targeted additions and gate/module refinements, especially adipocyte coverage and broader immune and mesenchymal gates.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "general / missing adipocyte axis",
+      "description": "Whole human pancreas commonly includes intrapancreatic adipose/adipocytes, especially in adult tissue, but the blueprint has no adipocyte lipid-storage/metabolic module or axis.",
+      "suggested_fix": "Add an adipocyte/adipose axis with canonical human adipocyte markers such as ADIPOQ, PLIN1, FABP4, LPL, LEP, CFD, CIDEA, PPARG, and/or DGAT2, grounded in a pancreas atlas or broad human cell atlas/resource.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "module:immune_leukocyte and immune_* gated axes",
+      "description": "The leukocyte gate is biased toward myeloid/APC and inflammatory expression through LST1, TYROBP, CD74, HLA-DRA/HLA-DPA1, and CXCL8, which can suppress T, NK, and some B-cell subtype axes.",
+      "suggested_fix": "Refactor immune_leukocyte into a broader pan-leukocyte gate using markers such as PTPRC, CORO1A, LAPTM5, LCP1, CD52, IL2RG, and/or RAC2, and keep HLA/TYROBP/LST1/CXCL8 in myeloid/APC/inflammatory modules where appropriate.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "module:stromal_matrix and axis:stromal_pericyte_smooth_muscle_identity",
+      "description": "Pericytes and vascular smooth muscle are gated by a fibroblast/ECM-heavy stromal_matrix module containing COL1A1/COL1A2/COL3A1/DCN/LUM/PDGFRA, which may under-score mural cells that do not strongly express fibroblast ECM or PDGFRA.",
+      "suggested_fix": "Use a broader mesenchymal/mural-compatible gate, add a separate mesenchymal_core gate, or make the pericyte/smooth-muscle identity a plain axis while retaining stellate/myofibroblast refinements under an ECM/stellate gate.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "module:cytotoxic_nk_cell and axes:immune_t_cell_identity / immune_cytotoxic_nk_identity",
+      "description": "The cytotoxic_nk_cell module merges NK-cell markers with generic cytotoxic effector genes while the T-cell module contains CD8A, so the blueprint captures cytotoxic lymphocytes but does not cleanly separate NK cells from cytotoxic CD8 T cells.",
+      "suggested_fix": "Split the current signal into an NK-cell identity module/axis and a T-cell/cytotoxic T state or CD8 T refinement gated by T-cell markers.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:epsilon_cell and axis:endocrine_epsilon_identity",
+      "description": "The epsilon-cell axis is based on GHRL alone. GHRL is canonical, but a one-gene module is fragile for real datasets and may become a near-dropout axis for a rare pancreatic endocrine population.",
+      "suggested_fix": "Add additional literature-supported epsilon/ghrelin-cell markers if available for human pancreas, or keep the module explicitly as a rare single-marker axis only if high-quality literature does not support a broader marker set.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "I did not verify DOI/title matching or IF>10 compliance; that citation gate is outside this Discriminator scope.",
+    "Some modules cite very broad resources or databases, but this report only flags biological coverage and marker/gating plausibility."
+  ]
+}

@@ -1,0 +1,3 @@
+- iter 01 — minor — The blueprint broadly covers healthy human pancreas but needs targeted refinement of mixed lymphoid axes and modest stromal/rare-endocrine marker cleanup.
+- iter 02 — minor — The blueprint covers the major healthy human pancreas compartments, but needs targeted refinement of immune gating, dendritic/APC coverage, stromal activation specificity, and rare epsilon-cell marker
+- iter 03 — minor — The blueprint covers the major healthy human pancreas landscape, but targeted refinements are needed for stromal gating and rare endocrine specificity.

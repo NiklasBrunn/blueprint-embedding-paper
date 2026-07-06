@@ -1,0 +1,1771 @@
+{
+  "run_id": "260605_blueprint_run02",
+  "extracted_at": "2026-06-05T10:20:15+00:00",
+  "scenario": {
+    "species": [
+      "mouse"
+    ],
+    "tissue": [
+      "isocortex"
+    ],
+    "celltype": null,
+    "age": "adult",
+    "sex": null,
+    "condition": null,
+    "notes": null
+  },
+  "blueprint": {
+    "name": "extract",
+    "clip": 4.0,
+    "n_modules": 29,
+    "n_axes": 27,
+    "n_axes_by_kind": {
+      "plain": 6,
+      "contrast": 3,
+      "gated": 18
+    },
+    "n_resources": 8,
+    "n_resources_by_kind": {
+      "paper": 1,
+      "atlas": 4,
+      "database": 3
+    },
+    "n_dois_unique": 5,
+    "n_total_genes": 185,
+    "n_unique_genes": 165,
+    "modules": [
+      {
+        "name": "pan_neuronal",
+        "genes": [
+          "Snap25",
+          "Syt1",
+          "Rbfox3",
+          "Tubb3",
+          "Elavl2",
+          "Elavl3"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "tasic2018_neocortex",
+          "yao2021_isocortex"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "neuronal_identity",
+            "role": "positive"
+          },
+          {
+            "axis": "neuronal_activity_response",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 2,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.994716726618705
+      },
+      {
+        "name": "excitatory_glutamatergic",
+        "genes": [
+          "Slc17a7",
+          "Slc17a6",
+          "Camk2a",
+          "Neurod6",
+          "Satb2",
+          "Tbr1"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "tasic2018_neocortex",
+          "yao2021_isocortex"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "glutamatergic_vs_gabaergic",
+            "role": "positive"
+          },
+          {
+            "axis": "l23_it_program",
+            "role": "gate"
+          },
+          {
+            "axis": "l4_it_program",
+            "role": "gate"
+          },
+          {
+            "axis": "l5_it_program",
+            "role": "gate"
+          },
+          {
+            "axis": "l5_et_pt_program",
+            "role": "gate"
+          },
+          {
+            "axis": "l5_6_np_program",
+            "role": "gate"
+          },
+          {
+            "axis": "l6_ct_program",
+            "role": "gate"
+          },
+          {
+            "axis": "l6_it_car3_program",
+            "role": "gate"
+          },
+          {
+            "axis": "l6b_program",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 9,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.8483138489208633
+      },
+      {
+        "name": "inhibitory_gabaergic",
+        "genes": [
+          "Gad1",
+          "Gad2",
+          "Slc32a1",
+          "Dlx1",
+          "Dlx2",
+          "Lhx6"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "tasic2018_neocortex",
+          "yao2021_isocortex"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "glutamatergic_vs_gabaergic",
+            "role": "negative"
+          },
+          {
+            "axis": "lamp5_program",
+            "role": "gate"
+          },
+          {
+            "axis": "vip_program",
+            "role": "gate"
+          },
+          {
+            "axis": "sncg_program",
+            "role": "gate"
+          },
+          {
+            "axis": "sst_program",
+            "role": "gate"
+          },
+          {
+            "axis": "pvalb_program",
+            "role": "gate"
+          },
+          {
+            "axis": "meis2_program",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 7,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.5136915467625899
+      },
+      {
+        "name": "l23_it",
+        "genes": [
+          "Cux2",
+          "Calb1",
+          "Lpl",
+          "Rasgrf2",
+          "Sema3c",
+          "Rorb"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "tasic2018_neocortex",
+          "yao2021_isocortex"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "l23_it_program",
+            "role": "positive"
+          },
+          {
+            "axis": "l4_it_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l5_it_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l5_et_pt_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l5_6_np_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l6_ct_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l6_it_car3_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l6b_program",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 8,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.7687724820143885
+      },
+      {
+        "name": "l4_it",
+        "genes": [
+          "Rorb",
+          "Scnn1a",
+          "Unc5d",
+          "Rspo1",
+          "Cux2",
+          "Slc30a3"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "tasic2018_neocortex",
+          "yao2021_isocortex"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "l23_it_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l4_it_program",
+            "role": "positive"
+          },
+          {
+            "axis": "l5_it_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l5_et_pt_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l5_6_np_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l6_ct_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l6_it_car3_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l6b_program",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 8,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.6889163669064748
+      },
+      {
+        "name": "l5_it",
+        "genes": [
+          "Deptor",
+          "Bcl6",
+          "Rspo2",
+          "Hsd11b1",
+          "Tox",
+          "Slc30a3"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "tasic2018_neocortex",
+          "yao2021_isocortex"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "l23_it_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l4_it_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l5_it_program",
+            "role": "positive"
+          },
+          {
+            "axis": "l5_et_pt_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l5_6_np_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l6_ct_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l6_it_car3_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l6b_program",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 8,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.6896357913669064
+      },
+      {
+        "name": "l5_et_pt",
+        "genes": [
+          "Bcl11b",
+          "Fezf2",
+          "Crym",
+          "Fam84b",
+          "Sulf2",
+          "Slco2a1"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "tasic2018_neocortex",
+          "yao2021_isocortex"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "l23_it_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l4_it_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l5_it_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l5_et_pt_program",
+            "role": "positive"
+          },
+          {
+            "axis": "l5_6_np_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l6_ct_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l6_it_car3_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l6b_program",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 8,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.7071717625899281
+      },
+      {
+        "name": "l5_6_np",
+        "genes": [
+          "Tshz2",
+          "Trhr",
+          "Kcnip1",
+          "Cntn5",
+          "Sema3e",
+          "Cdh13"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "tasic2018_neocortex",
+          "yao2021_isocortex"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "l23_it_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l4_it_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l5_it_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l5_et_pt_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l5_6_np_program",
+            "role": "positive"
+          },
+          {
+            "axis": "l6_ct_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l6_it_car3_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l6b_program",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 8,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.7473246402877698
+      },
+      {
+        "name": "l6_ct",
+        "genes": [
+          "Foxp2",
+          "Tle4",
+          "Syt6",
+          "Ntsr1",
+          "Cplx3",
+          "Crym"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "tasic2018_neocortex",
+          "yao2021_isocortex"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "l23_it_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l4_it_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l5_it_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l5_et_pt_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l5_6_np_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l6_ct_program",
+            "role": "positive"
+          },
+          {
+            "axis": "l6_it_car3_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l6b_program",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 8,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.6242805755395684
+      },
+      {
+        "name": "l6_it_car3",
+        "genes": [
+          "Car3",
+          "Sla",
+          "Cdh9",
+          "Col6a1",
+          "Slc30a3",
+          "Sema3c"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "tasic2018_neocortex",
+          "yao2021_isocortex"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "l23_it_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l4_it_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l5_it_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l5_et_pt_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l5_6_np_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l6_ct_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l6_it_car3_program",
+            "role": "positive"
+          },
+          {
+            "axis": "l6b_program",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 8,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.7044289568345323
+      },
+      {
+        "name": "l6b",
+        "genes": [
+          "Ctgf",
+          "Cplx3",
+          "Nxph4",
+          "Tmem163",
+          "Cdh9",
+          "Mup5"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "tasic2018_neocortex",
+          "yao2021_isocortex"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "l23_it_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l4_it_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l5_it_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l5_et_pt_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l5_6_np_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l6_ct_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l6_it_car3_program",
+            "role": "negative"
+          },
+          {
+            "axis": "l6b_program",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 8,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.4639163669064748
+      },
+      {
+        "name": "lamp5_interneuron",
+        "genes": [
+          "Lamp5",
+          "Reln",
+          "Ndnf",
+          "Lsp1",
+          "Rxfp1",
+          "Npy"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "tasic2018_neocortex",
+          "yao2021_isocortex"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "lamp5_program",
+            "role": "positive"
+          },
+          {
+            "axis": "vip_program",
+            "role": "negative"
+          },
+          {
+            "axis": "sncg_program",
+            "role": "negative"
+          },
+          {
+            "axis": "sst_program",
+            "role": "negative"
+          },
+          {
+            "axis": "pvalb_program",
+            "role": "negative"
+          },
+          {
+            "axis": "meis2_program",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 6,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.7482688848920863
+      },
+      {
+        "name": "vip_interneuron",
+        "genes": [
+          "Vip",
+          "Calb2",
+          "Cck",
+          "Crh",
+          "Igf1",
+          "Pde1a"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "tasic2018_neocortex",
+          "yao2021_isocortex"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "lamp5_program",
+            "role": "negative"
+          },
+          {
+            "axis": "vip_program",
+            "role": "positive"
+          },
+          {
+            "axis": "sncg_program",
+            "role": "negative"
+          },
+          {
+            "axis": "sst_program",
+            "role": "negative"
+          },
+          {
+            "axis": "pvalb_program",
+            "role": "negative"
+          },
+          {
+            "axis": "meis2_program",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 6,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.9350494604316547
+      },
+      {
+        "name": "sncg_interneuron",
+        "genes": [
+          "Sncg",
+          "Npy2r",
+          "Cxcl14",
+          "Slc17a8",
+          "Calb2",
+          "Vip"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "tasic2018_neocortex",
+          "yao2021_isocortex"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "lamp5_program",
+            "role": "negative"
+          },
+          {
+            "axis": "vip_program",
+            "role": "negative"
+          },
+          {
+            "axis": "sncg_program",
+            "role": "positive"
+          },
+          {
+            "axis": "sst_program",
+            "role": "negative"
+          },
+          {
+            "axis": "pvalb_program",
+            "role": "negative"
+          },
+          {
+            "axis": "meis2_program",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 6,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.43788219424460434
+      },
+      {
+        "name": "sst_interneuron",
+        "genes": [
+          "Sst",
+          "Npy",
+          "Nos1",
+          "Th",
+          "Tac1",
+          "Chrna2"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "tasic2018_neocortex",
+          "yao2021_isocortex"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "lamp5_program",
+            "role": "negative"
+          },
+          {
+            "axis": "vip_program",
+            "role": "negative"
+          },
+          {
+            "axis": "sncg_program",
+            "role": "negative"
+          },
+          {
+            "axis": "sst_program",
+            "role": "positive"
+          },
+          {
+            "axis": "pvalb_program",
+            "role": "negative"
+          },
+          {
+            "axis": "meis2_program",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 6,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.5349370503597123
+      },
+      {
+        "name": "pvalb_interneuron",
+        "genes": [
+          "Pvalb",
+          "Kcnc1",
+          "Tac1",
+          "Gabrg1",
+          "Pthlh",
+          "Cplx1"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "tasic2018_neocortex",
+          "yao2021_isocortex"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "lamp5_program",
+            "role": "negative"
+          },
+          {
+            "axis": "vip_program",
+            "role": "negative"
+          },
+          {
+            "axis": "sncg_program",
+            "role": "negative"
+          },
+          {
+            "axis": "sst_program",
+            "role": "negative"
+          },
+          {
+            "axis": "pvalb_program",
+            "role": "positive"
+          },
+          {
+            "axis": "meis2_program",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 6,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.8840602517985612
+      },
+      {
+        "name": "meis2_interneuron",
+        "genes": [
+          "Meis2",
+          "Pax6",
+          "Sp8",
+          "Pbx3",
+          "Sox6",
+          "Gad1"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "tasic2018_neocortex",
+          "yao2021_isocortex"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "lamp5_program",
+            "role": "negative"
+          },
+          {
+            "axis": "vip_program",
+            "role": "negative"
+          },
+          {
+            "axis": "sncg_program",
+            "role": "negative"
+          },
+          {
+            "axis": "sst_program",
+            "role": "negative"
+          },
+          {
+            "axis": "pvalb_program",
+            "role": "negative"
+          },
+          {
+            "axis": "meis2_program",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 6,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.7296762589928057
+      },
+      {
+        "name": "astrocyte",
+        "genes": [
+          "Aqp4",
+          "Aldh1l1",
+          "Slc1a3",
+          "Slc1a2",
+          "Gja1",
+          "Mfge8",
+          "Gfap"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "saunders2018_brain",
+          "zeisel2018_nervous_system"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "astrocyte_identity",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.7724145683453237
+      },
+      {
+        "name": "opc",
+        "genes": [
+          "Pdgfra",
+          "Cspg4",
+          "Vcan",
+          "Olig1",
+          "Olig2",
+          "Sox10"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "saunders2018_brain",
+          "zeisel2018_nervous_system"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "oligodendrocyte_vs_opc",
+            "role": "negative"
+          },
+          {
+            "axis": "myelin_maturation_program",
+            "role": "negative"
+          },
+          {
+            "axis": "opc_identity",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.1296088129496403
+      },
+      {
+        "name": "oligodendrocyte",
+        "genes": [
+          "Mog",
+          "Mbp",
+          "Plp1",
+          "Cldn11",
+          "Mag",
+          "Mobp",
+          "Mal"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "saunders2018_brain",
+          "zeisel2018_nervous_system",
+          "go_myelination"
+        ],
+        "n_resource_keys": 3,
+        "used_in_axes": [
+          {
+            "axis": "oligodendrocyte_vs_opc",
+            "role": "positive"
+          },
+          {
+            "axis": "myelin_maturation_program",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 2,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.603169964028777
+      },
+      {
+        "name": "myelin_program",
+        "genes": [
+          "Mbp",
+          "Plp1",
+          "Mog",
+          "Mag",
+          "Mobp",
+          "Cnp",
+          "Myrf"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "saunders2018_brain",
+          "zeisel2018_nervous_system",
+          "go_myelination"
+        ],
+        "n_resource_keys": 3,
+        "used_in_axes": [
+          {
+            "axis": "myelin_maturation_program",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.6461555755395684
+      },
+      {
+        "name": "myeloid_pan",
+        "genes": [
+          "Csf1r",
+          "Cx3cr1",
+          "Aif1",
+          "Tyrobp",
+          "Laptm5",
+          "Ctss"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "saunders2018_brain",
+          "zeisel2018_nervous_system",
+          "go_immune_response"
+        ],
+        "n_resource_keys": 3,
+        "used_in_axes": [
+          {
+            "axis": "microglia_homeostatic_program",
+            "role": "gate"
+          },
+          {
+            "axis": "border_macrophage_program",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 2,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.1324640287769784
+      },
+      {
+        "name": "microglia_homeostatic",
+        "genes": [
+          "P2ry12",
+          "Tmem119",
+          "Cx3cr1",
+          "Sall1",
+          "C1qa",
+          "C1qb",
+          "Hexb"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "saunders2018_brain",
+          "zeisel2018_nervous_system",
+          "go_immune_response"
+        ],
+        "n_resource_keys": 3,
+        "used_in_axes": [
+          {
+            "axis": "microglia_homeostatic_program",
+            "role": "positive"
+          },
+          {
+            "axis": "border_macrophage_program",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 2,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.4616456834532374
+      },
+      {
+        "name": "border_macrophage",
+        "genes": [
+          "Mrc1",
+          "Lyve1",
+          "Pf4",
+          "Cd163",
+          "Ms4a7",
+          "Ccl8"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "saunders2018_brain",
+          "zeisel2018_nervous_system",
+          "go_immune_response"
+        ],
+        "n_resource_keys": 3,
+        "used_in_axes": [
+          {
+            "axis": "microglia_homeostatic_program",
+            "role": "negative"
+          },
+          {
+            "axis": "border_macrophage_program",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 2,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.07448291366906475
+      },
+      {
+        "name": "endothelial",
+        "genes": [
+          "Cldn5",
+          "Flt1",
+          "Kdr",
+          "Pecam1",
+          "Ly6c1",
+          "Slco1a4",
+          "Esam",
+          "Icam2"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "saunders2018_brain",
+          "zeisel2018_nervous_system",
+          "go_angiogenesis"
+        ],
+        "n_resource_keys": 3,
+        "used_in_axes": [
+          {
+            "axis": "endothelial_identity",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.14718974820143885
+      },
+      {
+        "name": "pericyte",
+        "genes": [
+          "Pdgfrb",
+          "Rgs5",
+          "Kcnj8",
+          "Abcc9",
+          "Notch3",
+          "Des"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "saunders2018_brain",
+          "zeisel2018_nervous_system"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "pericyte_vs_smooth_muscle",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.2070818345323741
+      },
+      {
+        "name": "smooth_muscle",
+        "genes": [
+          "Acta2",
+          "Tagln",
+          "Myh11",
+          "Myl9",
+          "Mustn1",
+          "Des"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "saunders2018_brain",
+          "zeisel2018_nervous_system"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "pericyte_vs_smooth_muscle",
+            "role": "negative"
+          },
+          {
+            "axis": "smooth_muscle_identity",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 2,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.2239208633093525
+      },
+      {
+        "name": "vlmc_fibroblast",
+        "genes": [
+          "Lum",
+          "Col1a1",
+          "Col1a2",
+          "Dcn",
+          "Pcolce",
+          "Bgn",
+          "Cxcl12",
+          "Slc6a13"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "saunders2018_brain",
+          "zeisel2018_nervous_system"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "vlmc_fibroblast_identity",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.19901079136690647
+      },
+      {
+        "name": "neuronal_activity_ieg",
+        "genes": [
+          "Fos",
+          "Junb",
+          "Egr1",
+          "Egr2",
+          "Npas4",
+          "Arc",
+          "Nr4a1",
+          "Btg2",
+          "Dusp1"
+        ],
+        "n_genes": 9,
+        "resource_keys": [
+          "hrvatin2018_activity"
+        ],
+        "n_resource_keys": 1,
+        "used_in_axes": [
+          {
+            "axis": "neuronal_activity_response",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 9,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.8425134892086331
+      }
+    ],
+    "axes": [
+      {
+        "name": "neuronal_identity",
+        "kind": "plain",
+        "positive": "pan_neuronal",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "glutamatergic_vs_gabaergic",
+        "kind": "contrast",
+        "positive": "excitatory_glutamatergic",
+        "negatives": [
+          "inhibitory_gabaergic"
+        ],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "l23_it_program",
+        "kind": "gated",
+        "positive": "l23_it",
+        "negatives": [
+          "l4_it",
+          "l5_it",
+          "l5_et_pt",
+          "l5_6_np",
+          "l6_ct",
+          "l6_it_car3",
+          "l6b"
+        ],
+        "negative_weight": 0.35,
+        "gate": "excitatory_glutamatergic"
+      },
+      {
+        "name": "l4_it_program",
+        "kind": "gated",
+        "positive": "l4_it",
+        "negatives": [
+          "l23_it",
+          "l5_it",
+          "l5_et_pt",
+          "l5_6_np",
+          "l6_ct",
+          "l6_it_car3",
+          "l6b"
+        ],
+        "negative_weight": 0.35,
+        "gate": "excitatory_glutamatergic"
+      },
+      {
+        "name": "l5_it_program",
+        "kind": "gated",
+        "positive": "l5_it",
+        "negatives": [
+          "l23_it",
+          "l4_it",
+          "l5_et_pt",
+          "l5_6_np",
+          "l6_ct",
+          "l6_it_car3",
+          "l6b"
+        ],
+        "negative_weight": 0.35,
+        "gate": "excitatory_glutamatergic"
+      },
+      {
+        "name": "l5_et_pt_program",
+        "kind": "gated",
+        "positive": "l5_et_pt",
+        "negatives": [
+          "l23_it",
+          "l4_it",
+          "l5_it",
+          "l5_6_np",
+          "l6_ct",
+          "l6_it_car3",
+          "l6b"
+        ],
+        "negative_weight": 0.35,
+        "gate": "excitatory_glutamatergic"
+      },
+      {
+        "name": "l5_6_np_program",
+        "kind": "gated",
+        "positive": "l5_6_np",
+        "negatives": [
+          "l23_it",
+          "l4_it",
+          "l5_it",
+          "l5_et_pt",
+          "l6_ct",
+          "l6_it_car3",
+          "l6b"
+        ],
+        "negative_weight": 0.35,
+        "gate": "excitatory_glutamatergic"
+      },
+      {
+        "name": "l6_ct_program",
+        "kind": "gated",
+        "positive": "l6_ct",
+        "negatives": [
+          "l23_it",
+          "l4_it",
+          "l5_it",
+          "l5_et_pt",
+          "l5_6_np",
+          "l6_it_car3",
+          "l6b"
+        ],
+        "negative_weight": 0.35,
+        "gate": "excitatory_glutamatergic"
+      },
+      {
+        "name": "l6_it_car3_program",
+        "kind": "gated",
+        "positive": "l6_it_car3",
+        "negatives": [
+          "l23_it",
+          "l4_it",
+          "l5_it",
+          "l5_et_pt",
+          "l5_6_np",
+          "l6_ct",
+          "l6b"
+        ],
+        "negative_weight": 0.35,
+        "gate": "excitatory_glutamatergic"
+      },
+      {
+        "name": "l6b_program",
+        "kind": "gated",
+        "positive": "l6b",
+        "negatives": [
+          "l23_it",
+          "l4_it",
+          "l5_it",
+          "l5_et_pt",
+          "l5_6_np",
+          "l6_ct",
+          "l6_it_car3"
+        ],
+        "negative_weight": 0.35,
+        "gate": "excitatory_glutamatergic"
+      },
+      {
+        "name": "lamp5_program",
+        "kind": "gated",
+        "positive": "lamp5_interneuron",
+        "negatives": [
+          "vip_interneuron",
+          "sncg_interneuron",
+          "sst_interneuron",
+          "pvalb_interneuron",
+          "meis2_interneuron"
+        ],
+        "negative_weight": 0.4,
+        "gate": "inhibitory_gabaergic"
+      },
+      {
+        "name": "vip_program",
+        "kind": "gated",
+        "positive": "vip_interneuron",
+        "negatives": [
+          "lamp5_interneuron",
+          "sncg_interneuron",
+          "sst_interneuron",
+          "pvalb_interneuron",
+          "meis2_interneuron"
+        ],
+        "negative_weight": 0.4,
+        "gate": "inhibitory_gabaergic"
+      },
+      {
+        "name": "sncg_program",
+        "kind": "gated",
+        "positive": "sncg_interneuron",
+        "negatives": [
+          "lamp5_interneuron",
+          "vip_interneuron",
+          "sst_interneuron",
+          "pvalb_interneuron",
+          "meis2_interneuron"
+        ],
+        "negative_weight": 0.4,
+        "gate": "inhibitory_gabaergic"
+      },
+      {
+        "name": "sst_program",
+        "kind": "gated",
+        "positive": "sst_interneuron",
+        "negatives": [
+          "lamp5_interneuron",
+          "vip_interneuron",
+          "sncg_interneuron",
+          "pvalb_interneuron",
+          "meis2_interneuron"
+        ],
+        "negative_weight": 0.4,
+        "gate": "inhibitory_gabaergic"
+      },
+      {
+        "name": "pvalb_program",
+        "kind": "gated",
+        "positive": "pvalb_interneuron",
+        "negatives": [
+          "lamp5_interneuron",
+          "vip_interneuron",
+          "sncg_interneuron",
+          "sst_interneuron",
+          "meis2_interneuron"
+        ],
+        "negative_weight": 0.4,
+        "gate": "inhibitory_gabaergic"
+      },
+      {
+        "name": "meis2_program",
+        "kind": "gated",
+        "positive": "meis2_interneuron",
+        "negatives": [
+          "lamp5_interneuron",
+          "vip_interneuron",
+          "sncg_interneuron",
+          "sst_interneuron",
+          "pvalb_interneuron"
+        ],
+        "negative_weight": 0.4,
+        "gate": "inhibitory_gabaergic"
+      },
+      {
+        "name": "astrocyte_identity",
+        "kind": "plain",
+        "positive": "astrocyte",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "oligodendrocyte_vs_opc",
+        "kind": "contrast",
+        "positive": "oligodendrocyte",
+        "negatives": [
+          "opc"
+        ],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "myelin_maturation_program",
+        "kind": "gated",
+        "positive": "myelin_program",
+        "negatives": [
+          "opc"
+        ],
+        "negative_weight": 0.5,
+        "gate": "oligodendrocyte"
+      },
+      {
+        "name": "opc_identity",
+        "kind": "plain",
+        "positive": "opc",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "microglia_homeostatic_program",
+        "kind": "gated",
+        "positive": "microglia_homeostatic",
+        "negatives": [
+          "border_macrophage"
+        ],
+        "negative_weight": 0.6,
+        "gate": "myeloid_pan"
+      },
+      {
+        "name": "border_macrophage_program",
+        "kind": "gated",
+        "positive": "border_macrophage",
+        "negatives": [
+          "microglia_homeostatic"
+        ],
+        "negative_weight": 0.6,
+        "gate": "myeloid_pan"
+      },
+      {
+        "name": "endothelial_identity",
+        "kind": "plain",
+        "positive": "endothelial",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "pericyte_vs_smooth_muscle",
+        "kind": "contrast",
+        "positive": "pericyte",
+        "negatives": [
+          "smooth_muscle"
+        ],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "smooth_muscle_identity",
+        "kind": "plain",
+        "positive": "smooth_muscle",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "vlmc_fibroblast_identity",
+        "kind": "plain",
+        "positive": "vlmc_fibroblast",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "neuronal_activity_response",
+        "kind": "gated",
+        "positive": "neuronal_activity_ieg",
+        "negatives": [],
+        "negative_weight": 0.5,
+        "gate": "pan_neuronal"
+      }
+    ],
+    "resources": [
+      {
+        "key": "tasic2018_neocortex",
+        "kind": "atlas",
+        "citation": "Tasic 2018 Nature adult mouse neocortical transcriptomic taxonomy",
+        "doi": "10.1038/s41586-018-0654-5",
+        "used_in_modules": [
+          "excitatory_glutamatergic",
+          "inhibitory_gabaergic",
+          "l23_it",
+          "l4_it",
+          "l5_6_np",
+          "l5_et_pt",
+          "l5_it",
+          "l6_ct",
+          "l6_it_car3",
+          "l6b",
+          "lamp5_interneuron",
+          "meis2_interneuron",
+          "pan_neuronal",
+          "pvalb_interneuron",
+          "sncg_interneuron",
+          "sst_interneuron",
+          "vip_interneuron"
+        ]
+      },
+      {
+        "key": "yao2021_isocortex",
+        "kind": "atlas",
+        "citation": "Yao 2021 Cell adult mouse isocortex and hippocampal formation transcriptomic taxonomy",
+        "doi": "10.1016/j.cell.2021.04.021",
+        "used_in_modules": [
+          "excitatory_glutamatergic",
+          "inhibitory_gabaergic",
+          "l23_it",
+          "l4_it",
+          "l5_6_np",
+          "l5_et_pt",
+          "l5_it",
+          "l6_ct",
+          "l6_it_car3",
+          "l6b",
+          "lamp5_interneuron",
+          "meis2_interneuron",
+          "pan_neuronal",
+          "pvalb_interneuron",
+          "sncg_interneuron",
+          "sst_interneuron",
+          "vip_interneuron"
+        ]
+      },
+      {
+        "key": "saunders2018_brain",
+        "kind": "atlas",
+        "citation": "Saunders 2018 Cell adult mouse brain molecular diversity atlas",
+        "doi": "10.1016/j.cell.2018.07.028",
+        "used_in_modules": [
+          "astrocyte",
+          "border_macrophage",
+          "endothelial",
+          "microglia_homeostatic",
+          "myelin_program",
+          "myeloid_pan",
+          "oligodendrocyte",
+          "opc",
+          "pericyte",
+          "smooth_muscle",
+          "vlmc_fibroblast"
+        ]
+      },
+      {
+        "key": "zeisel2018_nervous_system",
+        "kind": "atlas",
+        "citation": "Zeisel 2018 Cell molecular architecture of the mouse nervous system",
+        "doi": "10.1016/j.cell.2018.06.021",
+        "used_in_modules": [
+          "astrocyte",
+          "border_macrophage",
+          "endothelial",
+          "microglia_homeostatic",
+          "myelin_program",
+          "myeloid_pan",
+          "oligodendrocyte",
+          "opc",
+          "pericyte",
+          "smooth_muscle",
+          "vlmc_fibroblast"
+        ]
+      },
+      {
+        "key": "hrvatin2018_activity",
+        "kind": "paper",
+        "citation": "Hrvatin 2018 Nature Neuroscience experience-dependent transcriptomic states in mouse visual cortex",
+        "doi": "10.1038/s41593-017-0029-5",
+        "used_in_modules": [
+          "neuronal_activity_ieg"
+        ]
+      },
+      {
+        "key": "go_myelination",
+        "kind": "database",
+        "citation": "Gene Ontology GO:0042552 myelination",
+        "doi": null,
+        "used_in_modules": [
+          "myelin_program",
+          "oligodendrocyte"
+        ]
+      },
+      {
+        "key": "go_immune_response",
+        "kind": "database",
+        "citation": "Gene Ontology GO:0006955 immune response",
+        "doi": null,
+        "used_in_modules": [
+          "border_macrophage",
+          "microglia_homeostatic",
+          "myeloid_pan"
+        ]
+      },
+      {
+        "key": "go_angiogenesis",
+        "kind": "database",
+        "citation": "Gene Ontology GO:0001525 angiogenesis",
+        "doi": null,
+        "used_in_modules": [
+          "endothelial"
+        ]
+      }
+    ]
+  },
+  "sanity": {
+    "placeholder_strings_present": false,
+    "orphaned_modules": [],
+    "modules_missing_resources": [],
+    "unused_resources": [],
+    "set_clip_overridden": false
+  },
+  "dataset_coverage": {
+    "h5ad_path": "data/preprocessed/mouse_cortex_pp.h5ad",
+    "layer": null,
+    "n_cells": 44480,
+    "n_vars": 23415
+  }
+}

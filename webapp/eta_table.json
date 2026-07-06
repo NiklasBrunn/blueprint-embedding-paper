@@ -1,0 +1,22 @@
+{
+  "gpt_5_4_mini|high|0": {
+    "n": 20,
+    "stage_a_s": 352.0,
+    "stage_b_s": null
+  },
+  "gpt_5_4_mini|medium|0": {
+    "n": 20,
+    "stage_a_s": 262.0,
+    "stage_b_s": null
+  },
+  "gpt_5_5|high|0": {
+    "n": 60,
+    "stage_a_s": 254.5,
+    "stage_b_s": null
+  },
+  "gpt_5_5|high|1": {
+    "n": 20,
+    "stage_a_s": 239.0,
+    "stage_b_s": 734.5
+  }
+}

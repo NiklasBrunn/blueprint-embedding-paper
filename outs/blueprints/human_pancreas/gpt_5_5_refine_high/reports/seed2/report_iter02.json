@@ -1,0 +1,50 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers human pancreas but needs targeted refinements for lymphatic endothelium, mural/stromal resolution, and a few marker choices.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "endothelial axis / vascular compartment",
+      "description": "The endothelial module captures blood vascular endothelium but lacks lymphatic endothelial coverage, an expected normal pancreatic support compartment in a broad tissue embedding.",
+      "suggested_fix": "Add a lymphatic endothelial module and either a separate plain axis or an endothelial-gated blood-vs-lymphatic refinement using markers such as LYVE1, PDPN, PROX1, FLT4, and CCL21 where supported.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "mural_pericyte_smooth_muscle",
+      "description": "Pericyte and vascular smooth muscle programs are merged into one axis, blurring related but distinct mural populations.",
+      "suggested_fix": "Split or refine the mural compartment into pericyte-enriched and smooth-muscle-enriched modules/axes, or retain the broad mural axis only if paired with a gated pericyte-vs-smooth-muscle refinement.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "stellate_fibroblast",
+      "description": "The blueprint has only one generic stellate/fibroblast axis and may conflate activated stellate/myofibroblast-like state with vascular smooth muscle because ACTA2/TAGLN are only in the merged mural module.",
+      "suggested_fix": "Add a stromal-gated refinement that separates quiescent pancreatic stellate/fibroblast identity from activated myofibroblast-like activation, using atlas-supported markers.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "epsilon_cell",
+      "description": "The epsilon-cell module contains only GHRL. GHRL is canonical, but one-gene scoring is fragile for a very rare endocrine population.",
+      "suggested_fix": "Add additional literature-supported human pancreas ghrelin/epsilon-enriched markers, or keep GHRL but treat epsilon as a rare endocrine refinement rather than a full-resolution subtype.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "schwann_glial",
+      "description": "NRXN1 is more neuronal/synaptic than a canonical Schwann/glial marker and weakens an otherwise plausible Schwann/glial module.",
+      "suggested_fix": "Replace NRXN1 with a stronger atlas-supported peripheral glial/Schwann marker such as NGFR, ERBB3, MBP, GFRA3, or another supported marker.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "DOI correctness and IF-threshold verification were not re-checked in this Discriminator pass.",
+    "The REG-positive acinar state is acceptable as a healthy-atlas acinar refinement and does not need removal."
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers healthy human pancreas cell types, but needs targeted additions and marker/axis tightening for cycling cells, quiescent stellate cells, beta maturity, rare endocrine subtypes, and redundant immune axes.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "general coverage: cycling/proliferative state",
+      "description": "Healthy human pancreas datasets can contain small cycling populations, but the blueprint has no generic cell-cycle or proliferation axis.",
+      "suggested_fix": "Add a broadly applicable proliferation module and plain or state-scoped axis using canonical markers such as MKI67, TOP2A, PCNA, PCLAF, STMN1, HMGB2, CENPF, UBE2C, MCM5, and TYMS.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "fibroblast_stellate / stellate_activation_state",
+      "description": "Quiescent pancreatic stellate cells are not cleanly represented; the current fibroblast_stellate module is mostly ECM fibroblast markers, while activated_stellate_myofibroblast overlaps with vascular smooth muscle and collagen programs.",
+      "suggested_fix": "Add or retune a quiescent stellate module/axis with markers such as RGS5, PDGFRB, DES, GFAP, LRAT, RBP1, COL6A1, COL6A2, and APOD, and keep activation as a stromal/stellate state with less dependence on smooth-muscle-shared markers.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:beta_maturity_within_islets",
+      "description": "The beta maturity axis is beta-gated but subtracts alpha and delta modules, making it partly a beta-vs-other-endocrine contrast rather than a mature-vs-immature/stressed beta-cell state.",
+      "suggested_fix": "Either remove the alpha/delta negatives from this gated state axis, or define an immature/stressed beta-cell negative module and contrast against that within the beta gate.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "modules:gamma_pp_cell and epsilon_ghrelin_cell",
+      "description": "The rare endocrine subtype modules are directionally plausible but include weakly specific markers: TM4SF4 is not PP-cell defining, RFX6 is broader endocrine/progenitor biology, and GHSR overlaps delta-cell biology.",
+      "suggested_fix": "Strengthen rare endocrine modules around hormone and endocrine secretory markers; keep PPY/PYY for PP/gamma cells and GHRL/MBOAT4/SLC18A2 for epsilon cells, while avoiding broad progenitor or overlapping delta markers as primary discriminators where possible.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "gene-set-hygiene",
+      "where": "immune_t_nk_bias / immune_b_plasma_bias and sibling immune axes",
+      "description": "The immune branch is biologically plausible but redundant: broad T/NK and B/plasma modules are followed by separate T, NK, B, and plasma axes with substantial marker overlap.",
+      "suggested_fix": "Tighten the immune branch so broad lymphoid/B-lineage modules provide coarse context or gating while the T, NK, B, and plasma axes carry the main subtype discrimination; deletion is not required if coarse-to-fine geometry is desired.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "The blueprint does not need a developmental gating tree because the scenario notes are null.",
+    "Rare ductal ionocyte/tuft-like populations and detailed arterial/venous/capillary endothelial zonation would be reasonable optional refinements, but they are not required for this broad healthy pancreas scenario."
+  ]
+}

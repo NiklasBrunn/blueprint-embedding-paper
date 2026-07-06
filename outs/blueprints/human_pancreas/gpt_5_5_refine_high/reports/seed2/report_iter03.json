@@ -1,0 +1,8 @@
+{
+  "rating": "fine",
+  "summary": "The blueprint adequately covers the broad healthy human pancreas cell-type and state landscape with plausible axes and markers.",
+  "issues": [],
+  "out_of_scope": [
+    "Very rare or dataset-dependent populations such as mesothelial cells, autonomic neurons, granulocytes, or adipocyte contamination could be added for a specific dataset, but they are not required for this generic healthy human pancreas scenario."
+  ]
+}

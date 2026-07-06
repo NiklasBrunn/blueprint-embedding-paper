@@ -1,0 +1,3 @@
+- iter 01 — minor — The blueprint broadly covers human pancreas cell classes but needs targeted refinement for quiescent stellate cells, cytotoxic T cells, and several vascular/neural/myeloid marker choices.
+- iter 02 — minor — Broad human pancreas coverage is biologically plausible, but targeted refinements are needed in neural gating, stellate markers, ductal-state emphasis, and optionally pan-immune anchoring.
+- iter 03 — minor — The blueprint is broadly plausible for healthy human pancreas, but should split venous from capillary/fenestrated endothelium and retune the ductal mucin axis away from metaplastic or disease-heavy ma

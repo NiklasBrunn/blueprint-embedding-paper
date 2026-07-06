@@ -1,0 +1,3 @@
+- iter 01 — minor — The blueprint is broadly plausible for healthy human pancreas but needs targeted additions for missing resident neural/glial and possibly mesothelial/capsular populations plus small marker refinements
+- iter 02 — minor — The blueprint is broadly plausible for healthy human pancreas but should better resolve immune subtypes, add adipocyte coverage, and tighten the mesothelial marker set.
+- iter 03 — minor — The blueprint is broadly plausible for healthy human pancreas but needs targeted immune, stromal, and rare endocrine refinements before it is publishable unchanged.

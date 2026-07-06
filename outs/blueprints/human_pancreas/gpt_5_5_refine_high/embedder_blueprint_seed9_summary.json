@@ -1,0 +1,1273 @@
+{
+  "run_id": "260603_blueprint_run09",
+  "extracted_at": "2026-06-19T08:32:46+00:00",
+  "scenario": {
+    "species": [
+      "human"
+    ],
+    "tissue": [
+      "pancreas"
+    ],
+    "celltype": null,
+    "age": null,
+    "sex": null,
+    "condition": null,
+    "notes": null
+  },
+  "blueprint": {
+    "name": "extract",
+    "clip": 4.0,
+    "n_modules": 21,
+    "n_axes": 21,
+    "n_axes_by_kind": {
+      "plain": 16,
+      "contrast": 0,
+      "gated": 5
+    },
+    "n_resources": 18,
+    "n_resources_by_kind": {
+      "paper": 6,
+      "atlas": 4,
+      "database": 8
+    },
+    "n_dois_unique": 10,
+    "n_total_genes": 165,
+    "n_unique_genes": 162,
+    "modules": [
+      {
+        "name": "acinar_digestive_enzyme",
+        "genes": [
+          "PRSS1",
+          "PRSS2",
+          "CTRB1",
+          "CTRB2",
+          "CPA1",
+          "CPA2",
+          "CELA3A",
+          "CELA3B",
+          "PNLIP",
+          "CLPS",
+          "REG1A",
+          "REG1B"
+        ],
+        "n_genes": 12,
+        "resource_keys": [
+          "baron_2016_pancreas_map",
+          "muraro_2016_pancreas_atlas",
+          "enge_2017_pancreas_aging",
+          "tosti_2021_pancreas_topography",
+          "go_digestion"
+        ],
+        "n_resource_keys": 5,
+        "used_in_axes": [
+          {
+            "axis": "acinar_digestive_enzyme",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 11,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "PRSS2"
+        ],
+        "fraction_nonzero_cells": 0.7282383103406177
+      },
+      {
+        "name": "ductal_epithelial",
+        "genes": [
+          "KRT19",
+          "KRT7",
+          "KRT8",
+          "KRT18",
+          "EPCAM",
+          "SOX9",
+          "CFTR",
+          "SLC4A4",
+          "SLC26A6",
+          "ANXA4",
+          "MUC1",
+          "TFF1",
+          "MMP7",
+          "CLDN4"
+        ],
+        "n_genes": 14,
+        "resource_keys": [
+          "baron_2016_pancreas_map",
+          "muraro_2016_pancreas_atlas",
+          "enge_2017_pancreas_aging",
+          "tosti_2021_pancreas_topography"
+        ],
+        "n_resource_keys": 4,
+        "used_in_axes": [
+          {
+            "axis": "ductal_epithelial",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 14,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.9438408008790136
+      },
+      {
+        "name": "endocrine_core",
+        "genes": [
+          "CHGA",
+          "CHGB",
+          "SCG2",
+          "SCG3",
+          "PCSK1N",
+          "NEUROD1",
+          "ISL1",
+          "PAX6"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "baron_2016_pancreas_map",
+          "muraro_2016_pancreas_atlas",
+          "segerstolpe_2016_islet_scrnaseq",
+          "xin_2016_islet_scrnaseq",
+          "tosti_2021_pancreas_topography"
+        ],
+        "n_resource_keys": 5,
+        "used_in_axes": [
+          {
+            "axis": "endocrine_core",
+            "role": "positive"
+          },
+          {
+            "axis": "endocrine_beta_cell",
+            "role": "gate"
+          },
+          {
+            "axis": "endocrine_alpha_cell",
+            "role": "gate"
+          },
+          {
+            "axis": "endocrine_delta_cell",
+            "role": "gate"
+          },
+          {
+            "axis": "endocrine_pp_gamma_cell",
+            "role": "gate"
+          },
+          {
+            "axis": "endocrine_epsilon_cell",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 6,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.8763276767183494
+      },
+      {
+        "name": "beta_cell",
+        "genes": [
+          "INS",
+          "IAPP",
+          "MAFA",
+          "PDX1",
+          "NKX6-1",
+          "PCSK1",
+          "SLC30A8",
+          "G6PC2",
+          "UCN3"
+        ],
+        "n_genes": 9,
+        "resource_keys": [
+          "baron_2016_pancreas_map",
+          "muraro_2016_pancreas_atlas",
+          "segerstolpe_2016_islet_scrnaseq",
+          "xin_2016_islet_scrnaseq",
+          "msigdb_beta_cells",
+          "go_hormone_activity"
+        ],
+        "n_resource_keys": 6,
+        "used_in_axes": [
+          {
+            "axis": "endocrine_beta_cell",
+            "role": "positive"
+          },
+          {
+            "axis": "endocrine_alpha_cell",
+            "role": "negative"
+          },
+          {
+            "axis": "endocrine_delta_cell",
+            "role": "negative"
+          },
+          {
+            "axis": "endocrine_pp_gamma_cell",
+            "role": "negative"
+          },
+          {
+            "axis": "endocrine_epsilon_cell",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 5,
+        "n_genes_present": 8,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "NKX6-1"
+        ],
+        "fraction_nonzero_cells": 0.967769503113173
+      },
+      {
+        "name": "alpha_cell",
+        "genes": [
+          "GCG",
+          "ARX",
+          "IRX2",
+          "PCSK2",
+          "TTR",
+          "LOXL4",
+          "PLCE1",
+          "RGS4"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "baron_2016_pancreas_map",
+          "muraro_2016_pancreas_atlas",
+          "segerstolpe_2016_islet_scrnaseq",
+          "xin_2016_islet_scrnaseq",
+          "go_hormone_activity"
+        ],
+        "n_resource_keys": 5,
+        "used_in_axes": [
+          {
+            "axis": "endocrine_beta_cell",
+            "role": "negative"
+          },
+          {
+            "axis": "endocrine_alpha_cell",
+            "role": "positive"
+          },
+          {
+            "axis": "endocrine_delta_cell",
+            "role": "negative"
+          },
+          {
+            "axis": "endocrine_pp_gamma_cell",
+            "role": "negative"
+          },
+          {
+            "axis": "endocrine_epsilon_cell",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 5,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.9390184348675376
+      },
+      {
+        "name": "delta_cell",
+        "genes": [
+          "SST",
+          "HHEX",
+          "RBP4",
+          "LEPR",
+          "BCHE",
+          "PCSK1",
+          "PAX6"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "baron_2016_pancreas_map",
+          "muraro_2016_pancreas_atlas",
+          "segerstolpe_2016_islet_scrnaseq",
+          "xin_2016_islet_scrnaseq",
+          "go_hormone_activity"
+        ],
+        "n_resource_keys": 5,
+        "used_in_axes": [
+          {
+            "axis": "endocrine_beta_cell",
+            "role": "negative"
+          },
+          {
+            "axis": "endocrine_alpha_cell",
+            "role": "negative"
+          },
+          {
+            "axis": "endocrine_delta_cell",
+            "role": "positive"
+          },
+          {
+            "axis": "endocrine_pp_gamma_cell",
+            "role": "negative"
+          },
+          {
+            "axis": "endocrine_epsilon_cell",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 5,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.9270540837504578
+      },
+      {
+        "name": "pp_gamma_cell",
+        "genes": [
+          "PPY",
+          "PYY",
+          "SERTM1",
+          "STMN2",
+          "ETV1",
+          "FEV",
+          "TPH1",
+          "SLC6A4"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "baron_2016_pancreas_map",
+          "muraro_2016_pancreas_atlas",
+          "segerstolpe_2016_islet_scrnaseq",
+          "xin_2016_islet_scrnaseq",
+          "perez_frances_2021_gamma_cell",
+          "msigdb_gamma_cell",
+          "go_hormone_activity"
+        ],
+        "n_resource_keys": 7,
+        "used_in_axes": [
+          {
+            "axis": "endocrine_beta_cell",
+            "role": "negative"
+          },
+          {
+            "axis": "endocrine_alpha_cell",
+            "role": "negative"
+          },
+          {
+            "axis": "endocrine_delta_cell",
+            "role": "negative"
+          },
+          {
+            "axis": "endocrine_pp_gamma_cell",
+            "role": "positive"
+          },
+          {
+            "axis": "endocrine_epsilon_cell",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 5,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.7281772677328775
+      },
+      {
+        "name": "epsilon_cell",
+        "genes": [
+          "GHRL",
+          "MLN",
+          "MBOAT4",
+          "ACSL1",
+          "FFAR3",
+          "CD320"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "baron_2016_pancreas_map",
+          "muraro_2016_pancreas_atlas",
+          "xin_2016_islet_scrnaseq",
+          "go_hormone_activity"
+        ],
+        "n_resource_keys": 4,
+        "used_in_axes": [
+          {
+            "axis": "endocrine_beta_cell",
+            "role": "negative"
+          },
+          {
+            "axis": "endocrine_alpha_cell",
+            "role": "negative"
+          },
+          {
+            "axis": "endocrine_delta_cell",
+            "role": "negative"
+          },
+          {
+            "axis": "endocrine_pp_gamma_cell",
+            "role": "negative"
+          },
+          {
+            "axis": "endocrine_epsilon_cell",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 5,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.587657184714931
+      },
+      {
+        "name": "stellate_fibroblast_ecm",
+        "genes": [
+          "COL1A1",
+          "COL1A2",
+          "COL3A1",
+          "DCN",
+          "LUM",
+          "PDGFRA",
+          "MMP2",
+          "SPARC",
+          "THY1",
+          "VIM"
+        ],
+        "n_genes": 10,
+        "resource_keys": [
+          "baron_2016_pancreas_map",
+          "muraro_2016_pancreas_atlas",
+          "enge_2017_pancreas_aging",
+          "tosti_2021_pancreas_topography",
+          "reactome_ecm"
+        ],
+        "n_resource_keys": 5,
+        "used_in_axes": [
+          {
+            "axis": "stellate_fibroblast_ecm",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 10,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.586436332560127
+      },
+      {
+        "name": "pericyte_smooth_muscle",
+        "genes": [
+          "RGS5",
+          "PDGFRB",
+          "CSPG4",
+          "MCAM",
+          "ACTA2",
+          "TAGLN",
+          "MYH11",
+          "NOTCH3"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "baron_2016_pancreas_map",
+          "muraro_2016_pancreas_atlas",
+          "tosti_2021_pancreas_topography",
+          "reactome_ecm"
+        ],
+        "n_resource_keys": 4,
+        "used_in_axes": [
+          {
+            "axis": "pericyte_smooth_muscle",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.30429739958491026
+      },
+      {
+        "name": "adipocyte_lipid_storage",
+        "genes": [
+          "ADIPOQ",
+          "PLIN1",
+          "PLIN4",
+          "FABP4",
+          "LPL",
+          "CFD",
+          "PPARG"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "tabula_sapiens_2022_human_atlas",
+          "emont_2022_adipose_atlas",
+          "go_lipid_storage"
+        ],
+        "n_resource_keys": 3,
+        "used_in_axes": [
+          {
+            "axis": "adipocyte_lipid_storage",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 6,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "PLIN4"
+        ],
+        "fraction_nonzero_cells": 0.08710780124526919
+      },
+      {
+        "name": "blood_endothelial",
+        "genes": [
+          "PECAM1",
+          "VWF",
+          "CDH5",
+          "KDR",
+          "EMCN",
+          "ESAM",
+          "FLT1",
+          "RAMP2"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "baron_2016_pancreas_map",
+          "muraro_2016_pancreas_atlas",
+          "enge_2017_pancreas_aging",
+          "tosti_2021_pancreas_topography"
+        ],
+        "n_resource_keys": 4,
+        "used_in_axes": [
+          {
+            "axis": "blood_endothelial",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.1836161640825296
+      },
+      {
+        "name": "lymphatic_endothelial",
+        "genes": [
+          "PROX1",
+          "LYVE1",
+          "PDPN",
+          "FLT4",
+          "CCL21"
+        ],
+        "n_genes": 5,
+        "resource_keys": [
+          "baron_2016_pancreas_map",
+          "muraro_2016_pancreas_atlas",
+          "tosti_2021_pancreas_topography"
+        ],
+        "n_resource_keys": 3,
+        "used_in_axes": [
+          {
+            "axis": "lymphatic_endothelial",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 5,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.35038456842876325
+      },
+      {
+        "name": "myeloid_macrophage",
+        "genes": [
+          "LYZ",
+          "CD68",
+          "CD163",
+          "CSF1R",
+          "C1QA",
+          "C1QB",
+          "MSR1",
+          "AIF1"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "baron_2016_pancreas_map",
+          "muraro_2016_pancreas_atlas",
+          "tosti_2021_pancreas_topography",
+          "kegg_hematopoietic"
+        ],
+        "n_resource_keys": 4,
+        "used_in_axes": [
+          {
+            "axis": "myeloid_macrophage",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.5159321206201929
+      },
+      {
+        "name": "t_nk_lymphocyte",
+        "genes": [
+          "CD3D",
+          "CD3E",
+          "TRAC",
+          "IL7R",
+          "CD2",
+          "TRBC1",
+          "TRBC2",
+          "CCR7"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "baron_2016_pancreas_map",
+          "muraro_2016_pancreas_atlas",
+          "tosti_2021_pancreas_topography",
+          "kegg_hematopoietic"
+        ],
+        "n_resource_keys": 4,
+        "used_in_axes": [
+          {
+            "axis": "t_nk_lymphocyte",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 7,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "TRBC1"
+        ],
+        "fraction_nonzero_cells": 0.03827371505310707
+      },
+      {
+        "name": "nk_cell",
+        "genes": [
+          "NKG7",
+          "GNLY",
+          "KLRD1",
+          "GZMB",
+          "PRF1",
+          "FCGR3A"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "baron_2016_pancreas_map",
+          "muraro_2016_pancreas_atlas",
+          "tosti_2021_pancreas_topography",
+          "kegg_hematopoietic"
+        ],
+        "n_resource_keys": 4,
+        "used_in_axes": [
+          {
+            "axis": "nk_cell",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.12898303015504822
+      },
+      {
+        "name": "b_plasma_cell",
+        "genes": [
+          "MS4A1",
+          "CD79A",
+          "CD79B",
+          "CD74",
+          "BANK1",
+          "CD37",
+          "HLA-DRA"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "baron_2016_pancreas_map",
+          "muraro_2016_pancreas_atlas",
+          "tosti_2021_pancreas_topography",
+          "kegg_hematopoietic"
+        ],
+        "n_resource_keys": 4,
+        "used_in_axes": [
+          {
+            "axis": "b_plasma_cell",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 6,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "HLA-DRA"
+        ],
+        "fraction_nonzero_cells": 0.3513612501526065
+      },
+      {
+        "name": "plasma_cell",
+        "genes": [
+          "MZB1",
+          "JCHAIN",
+          "IGKC",
+          "IGHG1",
+          "XBP1",
+          "SDC1"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "baron_2016_pancreas_map",
+          "muraro_2016_pancreas_atlas",
+          "tosti_2021_pancreas_topography",
+          "kegg_hematopoietic"
+        ],
+        "n_resource_keys": 4,
+        "used_in_axes": [
+          {
+            "axis": "plasma_cell",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 5,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "JCHAIN"
+        ],
+        "fraction_nonzero_cells": 0.8171773898180931
+      },
+      {
+        "name": "mast_cell",
+        "genes": [
+          "KIT",
+          "TPSAB1",
+          "TPSB2",
+          "CPA3",
+          "HDC",
+          "MS4A2"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "baron_2016_pancreas_map",
+          "muraro_2016_pancreas_atlas",
+          "tosti_2021_pancreas_topography",
+          "kegg_hematopoietic"
+        ],
+        "n_resource_keys": 4,
+        "used_in_axes": [
+          {
+            "axis": "mast_cell",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.04974972530826517
+      },
+      {
+        "name": "peripheral_glial_schwann",
+        "genes": [
+          "SOX10",
+          "S100B",
+          "PLP1",
+          "MPZ",
+          "GFRA3",
+          "NGFR",
+          "GAP43"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "tosti_2021_pancreas_topography",
+          "drokhlyansky_2020_enteric_nervous_system",
+          "tabula_sapiens_2022_human_atlas",
+          "reactome_schwann_myelination"
+        ],
+        "n_resource_keys": 4,
+        "used_in_axes": [
+          {
+            "axis": "peripheral_glial_schwann",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.1631668904895617
+      },
+      {
+        "name": "mesothelial_capsular",
+        "genes": [
+          "MSLN",
+          "WT1",
+          "UPK3B",
+          "CALB2",
+          "LRRN4",
+          "PDPN",
+          "CAV1"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "muraro_2016_pancreas_atlas",
+          "tosti_2021_pancreas_topography",
+          "tabula_sapiens_2022_human_atlas"
+        ],
+        "n_resource_keys": 3,
+        "used_in_axes": [
+          {
+            "axis": "mesothelial_capsular",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.1355756317909901
+      }
+    ],
+    "axes": [
+      {
+        "name": "acinar_digestive_enzyme",
+        "kind": "plain",
+        "positive": "acinar_digestive_enzyme",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "ductal_epithelial",
+        "kind": "plain",
+        "positive": "ductal_epithelial",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "endocrine_core",
+        "kind": "plain",
+        "positive": "endocrine_core",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "endocrine_beta_cell",
+        "kind": "gated",
+        "positive": "beta_cell",
+        "negatives": [
+          "alpha_cell",
+          "delta_cell",
+          "pp_gamma_cell",
+          "epsilon_cell"
+        ],
+        "negative_weight": 0.35,
+        "gate": "endocrine_core"
+      },
+      {
+        "name": "endocrine_alpha_cell",
+        "kind": "gated",
+        "positive": "alpha_cell",
+        "negatives": [
+          "beta_cell",
+          "delta_cell",
+          "pp_gamma_cell",
+          "epsilon_cell"
+        ],
+        "negative_weight": 0.35,
+        "gate": "endocrine_core"
+      },
+      {
+        "name": "endocrine_delta_cell",
+        "kind": "gated",
+        "positive": "delta_cell",
+        "negatives": [
+          "beta_cell",
+          "alpha_cell",
+          "pp_gamma_cell",
+          "epsilon_cell"
+        ],
+        "negative_weight": 0.35,
+        "gate": "endocrine_core"
+      },
+      {
+        "name": "endocrine_pp_gamma_cell",
+        "kind": "gated",
+        "positive": "pp_gamma_cell",
+        "negatives": [
+          "beta_cell",
+          "alpha_cell",
+          "delta_cell",
+          "epsilon_cell"
+        ],
+        "negative_weight": 0.35,
+        "gate": "endocrine_core"
+      },
+      {
+        "name": "endocrine_epsilon_cell",
+        "kind": "gated",
+        "positive": "epsilon_cell",
+        "negatives": [
+          "beta_cell",
+          "alpha_cell",
+          "delta_cell",
+          "pp_gamma_cell"
+        ],
+        "negative_weight": 0.35,
+        "gate": "endocrine_core"
+      },
+      {
+        "name": "stellate_fibroblast_ecm",
+        "kind": "plain",
+        "positive": "stellate_fibroblast_ecm",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "pericyte_smooth_muscle",
+        "kind": "plain",
+        "positive": "pericyte_smooth_muscle",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "adipocyte_lipid_storage",
+        "kind": "plain",
+        "positive": "adipocyte_lipid_storage",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "blood_endothelial",
+        "kind": "plain",
+        "positive": "blood_endothelial",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "lymphatic_endothelial",
+        "kind": "plain",
+        "positive": "lymphatic_endothelial",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "myeloid_macrophage",
+        "kind": "plain",
+        "positive": "myeloid_macrophage",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "t_nk_lymphocyte",
+        "kind": "plain",
+        "positive": "t_nk_lymphocyte",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "nk_cell",
+        "kind": "plain",
+        "positive": "nk_cell",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "b_plasma_cell",
+        "kind": "plain",
+        "positive": "b_plasma_cell",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "plasma_cell",
+        "kind": "plain",
+        "positive": "plasma_cell",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "mast_cell",
+        "kind": "plain",
+        "positive": "mast_cell",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "peripheral_glial_schwann",
+        "kind": "plain",
+        "positive": "peripheral_glial_schwann",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "mesothelial_capsular",
+        "kind": "plain",
+        "positive": "mesothelial_capsular",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      }
+    ],
+    "resources": [
+      {
+        "key": "baron_2016_pancreas_map",
+        "kind": "atlas",
+        "citation": "Baron 2016 Cell Systems",
+        "doi": "10.1016/j.cels.2016.08.011",
+        "used_in_modules": [
+          "acinar_digestive_enzyme",
+          "alpha_cell",
+          "b_plasma_cell",
+          "beta_cell",
+          "blood_endothelial",
+          "delta_cell",
+          "ductal_epithelial",
+          "endocrine_core",
+          "epsilon_cell",
+          "lymphatic_endothelial",
+          "mast_cell",
+          "myeloid_macrophage",
+          "nk_cell",
+          "pericyte_smooth_muscle",
+          "plasma_cell",
+          "pp_gamma_cell",
+          "stellate_fibroblast_ecm",
+          "t_nk_lymphocyte"
+        ]
+      },
+      {
+        "key": "muraro_2016_pancreas_atlas",
+        "kind": "atlas",
+        "citation": "Muraro 2016 Cell Systems",
+        "doi": "10.1016/j.cels.2016.09.002",
+        "used_in_modules": [
+          "acinar_digestive_enzyme",
+          "alpha_cell",
+          "b_plasma_cell",
+          "beta_cell",
+          "blood_endothelial",
+          "delta_cell",
+          "ductal_epithelial",
+          "endocrine_core",
+          "epsilon_cell",
+          "lymphatic_endothelial",
+          "mast_cell",
+          "mesothelial_capsular",
+          "myeloid_macrophage",
+          "nk_cell",
+          "pericyte_smooth_muscle",
+          "plasma_cell",
+          "pp_gamma_cell",
+          "stellate_fibroblast_ecm",
+          "t_nk_lymphocyte"
+        ]
+      },
+      {
+        "key": "segerstolpe_2016_islet_scrnaseq",
+        "kind": "paper",
+        "citation": "Segerstolpe 2016 Cell Metabolism",
+        "doi": "10.1016/j.cmet.2016.08.020",
+        "used_in_modules": [
+          "alpha_cell",
+          "beta_cell",
+          "delta_cell",
+          "endocrine_core",
+          "pp_gamma_cell"
+        ]
+      },
+      {
+        "key": "xin_2016_islet_scrnaseq",
+        "kind": "paper",
+        "citation": "Xin 2016 Cell Metabolism",
+        "doi": "10.1016/j.cmet.2016.08.018",
+        "used_in_modules": [
+          "alpha_cell",
+          "beta_cell",
+          "delta_cell",
+          "endocrine_core",
+          "epsilon_cell",
+          "pp_gamma_cell"
+        ]
+      },
+      {
+        "key": "enge_2017_pancreas_aging",
+        "kind": "paper",
+        "citation": "Enge 2017 Cell",
+        "doi": "10.1016/j.cell.2017.09.004",
+        "used_in_modules": [
+          "acinar_digestive_enzyme",
+          "blood_endothelial",
+          "ductal_epithelial",
+          "stellate_fibroblast_ecm"
+        ]
+      },
+      {
+        "key": "tosti_2021_pancreas_topography",
+        "kind": "atlas",
+        "citation": "Tosti 2021 Gastroenterology",
+        "doi": "10.1053/j.gastro.2020.11.010",
+        "used_in_modules": [
+          "acinar_digestive_enzyme",
+          "b_plasma_cell",
+          "blood_endothelial",
+          "ductal_epithelial",
+          "endocrine_core",
+          "lymphatic_endothelial",
+          "mast_cell",
+          "mesothelial_capsular",
+          "myeloid_macrophage",
+          "nk_cell",
+          "pericyte_smooth_muscle",
+          "peripheral_glial_schwann",
+          "plasma_cell",
+          "stellate_fibroblast_ecm",
+          "t_nk_lymphocyte"
+        ]
+      },
+      {
+        "key": "perez_frances_2021_gamma_cell",
+        "kind": "paper",
+        "citation": "Perez-Frances 2021 Nature Communications",
+        "doi": "10.1038/s41467-021-24788-0",
+        "used_in_modules": [
+          "pp_gamma_cell"
+        ]
+      },
+      {
+        "key": "msigdb_beta_cells",
+        "kind": "database",
+        "citation": "MSigDB HALLMARK_PANCREAS_BETA_CELLS",
+        "doi": null,
+        "used_in_modules": [
+          "beta_cell"
+        ]
+      },
+      {
+        "key": "msigdb_gamma_cell",
+        "kind": "database",
+        "citation": "MSigDB VANGURP_PANCREATIC_GAMMA_CELL",
+        "doi": null,
+        "used_in_modules": [
+          "pp_gamma_cell"
+        ]
+      },
+      {
+        "key": "go_hormone_activity",
+        "kind": "database",
+        "citation": "GO:0005179 hormone activity",
+        "doi": null,
+        "used_in_modules": [
+          "alpha_cell",
+          "beta_cell",
+          "delta_cell",
+          "epsilon_cell",
+          "pp_gamma_cell"
+        ]
+      },
+      {
+        "key": "go_digestion",
+        "kind": "database",
+        "citation": "GO:0007586 digestion",
+        "doi": null,
+        "used_in_modules": [
+          "acinar_digestive_enzyme"
+        ]
+      },
+      {
+        "key": "reactome_ecm",
+        "kind": "database",
+        "citation": "Reactome R-HSA-1474244 Extracellular matrix organization",
+        "doi": null,
+        "used_in_modules": [
+          "pericyte_smooth_muscle",
+          "stellate_fibroblast_ecm"
+        ]
+      },
+      {
+        "key": "kegg_hematopoietic",
+        "kind": "database",
+        "citation": "KEGG hsa04640 Hematopoietic cell lineage",
+        "doi": null,
+        "used_in_modules": [
+          "b_plasma_cell",
+          "mast_cell",
+          "myeloid_macrophage",
+          "nk_cell",
+          "plasma_cell",
+          "t_nk_lymphocyte"
+        ]
+      },
+      {
+        "key": "drokhlyansky_2020_enteric_nervous_system",
+        "kind": "paper",
+        "citation": "Drokhlyansky 2020 Cell",
+        "doi": "10.1016/j.cell.2020.08.003",
+        "used_in_modules": [
+          "peripheral_glial_schwann"
+        ]
+      },
+      {
+        "key": "tabula_sapiens_2022_human_atlas",
+        "kind": "atlas",
+        "citation": "Tabula Sapiens Consortium 2022 Science",
+        "doi": "10.1126/science.abl4896",
+        "used_in_modules": [
+          "adipocyte_lipid_storage",
+          "mesothelial_capsular",
+          "peripheral_glial_schwann"
+        ]
+      },
+      {
+        "key": "emont_2022_adipose_atlas",
+        "kind": "paper",
+        "citation": "Emont 2022 Nature",
+        "doi": "10.1038/s41586-022-04518-2",
+        "used_in_modules": [
+          "adipocyte_lipid_storage"
+        ]
+      },
+      {
+        "key": "go_lipid_storage",
+        "kind": "database",
+        "citation": "GO:0019915 lipid storage",
+        "doi": null,
+        "used_in_modules": [
+          "adipocyte_lipid_storage"
+        ]
+      },
+      {
+        "key": "reactome_schwann_myelination",
+        "kind": "database",
+        "citation": "Reactome R-HSA-9619665 EGR2 and SOX10-mediated initiation of Schwann cell myelination",
+        "doi": null,
+        "used_in_modules": [
+          "peripheral_glial_schwann"
+        ]
+      }
+    ],
+    "n_min_genes": 0
+  },
+  "sanity": {
+    "placeholder_strings_present": false,
+    "orphaned_modules": [],
+    "modules_missing_resources": [],
+    "unused_resources": [],
+    "set_clip_overridden": false
+  },
+  "dataset_coverage": {
+    "h5ad_path": "data/preprocessed/human_pancreas_pp.h5ad",
+    "layer": null,
+    "n_cells": 16382,
+    "n_vars": 18268
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint is broadly plausible for mouse E6.5-E8.5 gastrulation, but needs targeted refinement of trophoblast giant-cell coverage, endoderm trajectory specificity, blood-branch negatives, and a few marker modules.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "trophoblast branch: extraembryonicEctoderm / chorionTrophoblast / ectoplacentalConeTrophoblast",
+      "description": "The trophoblast branch lacks a distinct trophoblast giant-cell state expected by E6.5-E8.5, and the ectoplacentalConeTrophoblast module mixes EPC/progenitor genes with differentiated TGC-like prolactin/cathepsin markers.",
+      "suggested_fix": "Add a trophoblast giant-cell module and gated child axis, preferably downstream of a refined EPC/progenitor parent. Move strongly differentiated TGC markers out of the EPC module and into the new child module.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "endoderm branch: posteriorVisceralGutEndoderm / gutTubeEndoderm / foregutEndoderm / hindgutEndoderm",
+      "description": "The blueprint recognizes visceral and definitive endoderm, but posteriorVisceralGutEndoderm conflates general visceral/yolk-sac endoderm, posterior/hindgut patterning, and definitive endoderm markers. This blurs the VE-derived and primitive-streak-derived gut trajectories that are important in this window.",
+      "suggested_fix": "Rework posteriorVisceralGutEndoderm in place into a cleaner posterior/extraembryonic visceral endoderm or VE-to-hindgut-transition module. Keep the definitive-endoderm-derived gutTubeEndoderm to foregut/hindgut path separate and use negatives only for true branch alternatives.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "gating-tree",
+      "where": "blood_erythroid / blood_myeloid / blood_megakaryocyteEmp",
+      "description": "These child axes are gated by bloodProgenitor but include endothelium as a negative. Endothelium is a sibling of bloodProgenitor one level up, not a sibling of erythroid, myeloid, and megakaryocyte fate under bloodProgenitor.",
+      "suggested_fix": "Remove endothelium from the negative_modules lists on the bloodProgenitor child axes. If needed, add a separate hemogenic-endothelium or EMP transition axis between hematoEndothelial and differentiated blood fates.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:parietalEndoderm",
+      "description": "The module includes plausible matrix/parietal endoderm markers but also broad mesenchymal or EMT genes such as Snai1, Vim, and shared Pdgfra, reducing specificity.",
+      "suggested_fix": "Replace the least specific EMT/mesenchymal genes with more canonical parietal endoderm-enriched markers supported in the atlas, such as Gata4, Sox7, Pth1r, Tinagl1, Srgn, or equivalent high-confidence genes.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "module/axis: amnionYolkSacMesoderm / extra_amnionYolkSacMesoderm",
+      "description": "Amnion and yolk-sac/extraembryonic mesoderm are merged into one axis, which is somewhat coarse for the full E6.5-E8.5 landscape.",
+      "suggested_fix": "If the existing literature resources support it, split this into separate amnion and yolk-sac or extraembryonic mesoderm axes under nascentMesoderm, keeping allantois as a separate sibling.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "Resource DOI and impact-factor verification was not performed because citation checking is outside this discriminator pass."
+  ]
+}

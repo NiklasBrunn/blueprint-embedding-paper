@@ -1,0 +1,24 @@
+{
+  // array of strings; e.g. ["mouse"], ["human"], ["mouse", "human"]. >=1 entry.
+  "species": [
+    "mouse"
+  ],
+  // array of tissues/regions. null if unspecified.
+  "tissue": [
+    "gastrulating embryo"
+  ],
+  // array of cell types. null if unspecified. This is optional. If null, the embedding should cover all cell types in the given tissue.
+  "celltype": null,
+  // free-form: "adult", "P15-P20", "E8-E16". null if unspecified.
+  "age": "E6.5-E8.5",
+  // "male" | "female" | "mixed" | null.
+  "sex": "mixed",
+  // array of conditions (knockouts, treatments, diseases). null = wild-type / healthy.
+  "condition": null,
+  // free-form string. Optional design focus the agent MUST respect
+  // when building the embedding — e.g. resolve specific subtypes,
+  // preserve a temporal/maturation gradient, emphasize a signaling
+  // pathway. Refines emphasis WITHIN the literature-grounding rules;
+  // does not license ungrounded modules. null if unspecified.
+  "notes": "IMPORTANT AGENT CONSTRAINTS: organize axes as a time-forward hierarchical tree matching the scenario; tree depth = time (root = earliest state, leaves = latest). Every non-root axis MUST declare its parent via gate — the parent's module becomes the gate, which both anchors tree parentage and scopes the signal to cells expressing the parent's program (the biologically correct behavior for both sub-states and sequential transitions). For sibling-vs-sibling discrimination at a branch point, pass the sibling modules as negatives on the same gated axis. Use a plain axis (no gate, no parent) ONLY for roots: scenario-given starting states (one or several, as the scenario allows), populations that do not progress within the window, terminal populations whose precursor isn't represented, and cycling/proliferating populations. Naming: <chainPrefix>_<descriptiveTail>; <chainPrefix> is one camelCase token (no underscores) grouping axes from the same lineage. When you gate across chains (parent has a different <chainPrefix>), the child MUST use a fresh, unique <chainPrefix> — reusing a prefix that already exists in a different subtree creates ambiguity. Cover the full cell landscape implied by the scenario; preserve continuous maturation gradients rather than treating states as discrete clusters."
+}

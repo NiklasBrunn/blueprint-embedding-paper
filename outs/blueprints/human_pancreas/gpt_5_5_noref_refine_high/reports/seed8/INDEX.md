@@ -1,0 +1,3 @@
+- iter 01 — minor — The blueprint broadly covers human pancreas but needs targeted coverage additions and marker/axis cleanup before it is publishable as-is.
+- iter 02 — minor — The blueprint covers the major healthy human pancreas compartments but needs targeted cleanup of developmental/off-scope axes, redundant endothelial structure, and several broad or conflated marker mo
+- iter 03 — minor — The blueprint broadly covers healthy human pancreas, but targeted vascular, mural/stromal, and ductal marker refinements would make it more biologically complete.

@@ -1,0 +1,25 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint is broadly plausible for healthy human pancreas, but should split venous from capillary/fenestrated endothelium and retune the ductal mucin axis away from metaplastic or disease-heavy markers.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "module/axis: venous_capillary_endothelial and venous_capillary_endothelial_within_vascular",
+      "description": "The current endothelial refinement merges venous and capillary/fenestrated endothelial identities into one module/axis, losing a meaningful expected pancreatic vascular component, especially islet-associated capillary/fenestrated endothelium.",
+      "suggested_fix": "Split this into separate gated endothelial axes: one capillary/fenestrated/islet-capillary module using markers such as PLVAP, CA4, RGCC, EMCN, RAMP2, KDR/FLT1 as appropriate, and one venous module enriched for venous markers such as ACKR1, VWF, EPHB4/NR2F2 or related venous genes. Keep arterial and lymphatic branches as sibling endothelial refinements.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module/axis: ductal_secretory_mucin and ductal_secretory_mucin_within_ductal",
+      "description": "The mucin/secretory ductal module includes several genes more suggestive of gastric/intestinal metaplasia or mucinous disease/injury programs, especially TFF1, TFF2, and MUC5B, which risks over-representing a non-baseline ductal state in a healthy, condition-null pancreas scenario.",
+      "suggested_fix": "Retune this module toward normal pancreatic ductal/large-duct or secretory duct biology, or explicitly make it a low-emphasis ductal injury/metaplastic state. If keeping a normal mucin/secretory duct axis, emphasize markers such as MUC1, MUC4, TFF3, AGR2, AGR3, CLDN18, ANXA4, CFTR/SLC4A4-compatible ductal markers and avoid making TFF1/TFF2/MUC5B primary drivers.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "I did not check dataset-specific gene presence or expression frequency; this is only a biological plausibility review of the declared modules and axes."
+  ]
+}

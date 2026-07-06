@@ -1,0 +1,285 @@
+{
+  "cohort": "gpt_5_5_noref_unrefined_high_mouse_cortex",
+  "model": "gpt_5_5_noref_unrefined",
+  "reasoning": "high",
+  "dataset": "mouse_cortex",
+  "n_runs": 10,
+  "scenario": {
+    "species": "mouse",
+    "tissue": "isocortex",
+    "celltype": null
+  },
+  "run_ids": [
+    "260605_blueprint_run01",
+    "260605_blueprint_run02",
+    "260605_blueprint_run03",
+    "260605_blueprint_run04",
+    "260605_blueprint_run05",
+    "260605_blueprint_run06",
+    "260605_blueprint_run07",
+    "260605_blueprint_run08",
+    "260605_blueprint_run09",
+    "260605_blueprint_run10"
+  ],
+  "size": {
+    "n_modules": {
+      "mean": 30.1,
+      "std": 3.8715486421958962,
+      "min": 22.0,
+      "max": 36.0,
+      "cv": 0.12862287847826898
+    },
+    "n_axes": {
+      "mean": 28.3,
+      "std": 4.029061098237818,
+      "min": 21.0,
+      "max": 35.0,
+      "cv": 0.14236965011441055
+    },
+    "n_unique_genes": {
+      "mean": 187.8,
+      "std": 28.358028453645673,
+      "min": 122.0,
+      "max": 221.0,
+      "cv": 0.15100121647308665
+    },
+    "n_resources": {
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "cv": NaN
+    },
+    "n_dois_unique": {
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "cv": NaN
+    },
+    "gene_redundancy": {
+      "mean": 1.228081659168976,
+      "std": 0.0749346780257709,
+      "min": 1.1065573770491803,
+      "max": 1.3166666666666667,
+      "cv": 0.06101766724248455
+    },
+    "mean_genes_per_module": {
+      "mean": 7.648903511714233,
+      "std": 0.6918736816881613,
+      "min": 6.136363636363637,
+      "max": 8.5,
+      "cv": 0.09045396907263406
+    }
+  },
+  "jaccard": {
+    "genes": {
+      "mean": 0.5376104740299605,
+      "ci_lo": 0.5298242021532287,
+      "ci_hi": 0.5456587776257946,
+      "min": 0.42916666666666664,
+      "max": 0.6017316017316018
+    },
+    "dois": {
+      "mean": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "resources": {
+      "mean": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "modnames": {
+      "mean": 0.727901411806595,
+      "ci_lo": 0.7137866252250656,
+      "ci_hi": 0.7421975944900597,
+      "min": 0.6,
+      "max": 0.9032258064516129
+    },
+    "axisnames": {
+      "mean": 0.6442632512395026,
+      "ci_lo": 0.630710815153639,
+      "ci_hi": 0.6574900720639655,
+      "min": 0.5263157894736842,
+      "max": 0.8235294117647058
+    }
+  },
+  "structural_consistency": {
+    "mean_kind_agreement": 0.8970521541950114,
+    "mean_role_agreement": 0.8435926476624152,
+    "mean_within_module_geneset_jaccard": 0.4751153294680376,
+    "mean_axis_positive_agreement": 0.9908163265306121,
+    "mean_axis_gate_agreement": 0.8551668286362164,
+    "mean_axis_negatives_jaccard": 0.6647405935989575
+  },
+  "recurrence": {
+    "modules": {
+      "frac_in_ge80pct": 0.5581395348837209,
+      "gini": 0.2850245433330651,
+      "n_universal": 19,
+      "n_majority": 28,
+      "n_singleton": 5,
+      "n_unique_total": 43
+    },
+    "axes": {
+      "frac_in_ge80pct": 0.42857142857142855,
+      "gini": 0.3721488595438175,
+      "n_universal": 15,
+      "n_majority": 27,
+      "n_singleton": 10,
+      "n_unique_total": 49
+    },
+    "genes": {
+      "frac_in_ge80pct": 0.27228915662650605,
+      "gini": 0.42950588295674713,
+      "n_universal": 85,
+      "n_majority": 171,
+      "n_singleton": 132,
+      "n_unique_total": 415
+    },
+    "resources": {
+      "frac_in_ge80pct": 0.0,
+      "gini": NaN,
+      "n_universal": 0,
+      "n_majority": 0,
+      "n_singleton": 0,
+      "n_unique_total": 0
+    }
+  },
+  "saturation_slope_at_N": {
+    "genes": 13.574999999999989,
+    "modules": 0.5249999999999986,
+    "dois": 0.0
+  },
+  "coverage": {
+    "n_unique_modules": 43,
+    "n_unique_axes": 49,
+    "n_unique_genes": 415,
+    "n_unique_resources": 0
+  },
+  "resource_kind_composition": {
+    "frac_paper": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "frac_atlas": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "frac_database": {
+      "mean": 0.0,
+      "std": 0.0
+    }
+  },
+  "top_hubs": {
+    "top_positives": [
+      {
+        "module": "neuronal_activity_ieg",
+        "module_can": "neuronalactivityieg",
+        "n_axes_using": 14
+      },
+      {
+        "module": "pvalb",
+        "module_can": "pvalb",
+        "n_axes_using": 13
+      },
+      {
+        "module": "sncg",
+        "module_can": "sncg",
+        "n_axes_using": 12
+      },
+      {
+        "module": "astrocyte",
+        "module_can": "astrocyte",
+        "n_axes_using": 12
+      },
+      {
+        "module": "mature_oligodendrocyte",
+        "module_can": "matureoligodendrocyte",
+        "n_axes_using": 11
+      }
+    ],
+    "top_gates": [
+      {
+        "module": "glutamatergic_neuron",
+        "module_can": "glutamatergicneuron",
+        "n_axes_using": 69
+      },
+      {
+        "module": "gabaergic_neuron",
+        "module_can": "gabaergicneuron",
+        "n_axes_using": 60
+      },
+      {
+        "module": "non_neuronal",
+        "module_can": "nonneuronal",
+        "n_axes_using": 41
+      },
+      {
+        "module": "endothelial",
+        "module_can": "endothelial",
+        "n_axes_using": 15
+      },
+      {
+        "module": "pan_neuronal",
+        "module_can": "panneuronal",
+        "n_axes_using": 12
+      }
+    ],
+    "top_negatives": [
+      {
+        "module": "sncg",
+        "module_can": "sncg",
+        "n_axes_using": 60
+      },
+      {
+        "module": "pvalb",
+        "module_can": "pvalb",
+        "n_axes_using": 58
+      },
+      {
+        "module": "l4_it",
+        "module_can": "l4it",
+        "n_axes_using": 57
+      },
+      {
+        "module": "l5_et",
+        "module_can": "l5et",
+        "n_axes_using": 57
+      },
+      {
+        "module": "l6_ct",
+        "module_can": "l6ct",
+        "n_axes_using": 57
+      }
+    ]
+  },
+  "top_resources": [],
+  "stability_composite": 0.7453480572821053,
+  "stability_weights": {
+    "jaccard_genes_off_diag": 1.0,
+    "jaccard_modnames_off_diag": 1.0,
+    "mean_kind_agreement": 1.0,
+    "mean_role_agreement": 1.0,
+    "mean_within_module_geneset_jaccard": 1.0,
+    "mean_axis_positive_agreement": 1.0
+  },
+  "sanity": {
+    "frac_with_placeholders": 0.0,
+    "mean_orphaned_modules": 0.1,
+    "mean_modules_missing_resources": 30.1,
+    "mean_unused_resources": 0.0,
+    "frac_clip_overridden": 0.0,
+    "n_modules_merged_by_canonicalization": 35,
+    "n_axes_merged_by_canonicalization": 38,
+    "n_genes_merged_by_canonicalization": 0,
+    "n_module_name_drift_candidates": 0,
+    "n_module_name_near_duplicates": 16,
+    "doi_kind_agreement": NaN
+  }
+}

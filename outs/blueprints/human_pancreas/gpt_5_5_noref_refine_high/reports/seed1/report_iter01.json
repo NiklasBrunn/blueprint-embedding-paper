@@ -1,0 +1,42 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers healthy human pancreas cell types, but targeted marker and gate fixes are needed for immune, mesothelial, and neural compartments.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:leukocyte_core and axes gated by leukocyte_core",
+      "description": "The leukocyte_core module is myeloid/APC-heavy because LST1, TYROBP, SPI1, FCER1G, and HLA-DRA are not pan-leukocyte markers. Since T, NK, B, plasma, mast, macrophage, and dendritic axes all use this gate, non-myeloid immune populations could be artificially suppressed or distorted.",
+      "suggested_fix": "Replace leukocyte_core with broader pan-immune markers such as PTPRC, LAPTM5, LCP1, CORO1A, CD53, DOCK2, ARHGAP15, and FYB1, and keep myeloid-specific genes in lineage-specific modules.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:mesothelial_surface_epithelium",
+      "description": "Mesothelial cells are plausible in pancreatic surface/capsular tissue, but gating the mesothelial module through epithelial_core may under-detect them because epithelial_core is biased toward pancreatic EPCAM/TACSTD2/KRT19/CDH1 epithelial identity.",
+      "suggested_fix": "Make mesothelial_surface_epithelium a plain mesothelial axis, or gate it with a broader epithelial/serosal module that does not depend on pancreatic epithelial markers. Consider adding CALB2, KRT7, or CLDN15 if more mesothelial support is needed.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "module:neuron_neuroendocrine_fiber and axis:neuronal_fiber_within_neural_compartment",
+      "description": "The neural refinement mixes neuronal genes with generic neuroendocrine vesicle genes such as SNAP25 and SYP, which are also strong in endocrine cells, and then gates the signal by Schwann/glial markers. This may miss true pancreatic neurons while blurring endocrine versus neural biology.",
+      "suggested_fix": "Separate neuronal markers from endocrine vesicle biology. Use a neuronal module enriched for TUBB3, ELAVL4, RBFOX3, PHOX2B, RET, ASCL1, CHAT, or TH as appropriate, and make it a plain rare-neural axis or gate it with a broader neural/glial compartment rather than Schwann-only markers.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "general endocrine/developmental modules",
+      "description": "Pancreatic epithelial progenitor, endocrine progenitor, epsilon-ghrelin, and enterochromaffin-like endocrine axes are plausible for an age-unspecified human pancreas scenario, but would be fetal/rare-skewed if the intended data are adult healthy pancreas.",
+      "suggested_fix": "Keep these axes if age remains truly unspecified. If refining toward adult healthy pancreas, de-emphasize progenitor/fetal endocrine axes and add adult endocrine state axes such as beta stress/dedifferentiation or alpha/beta maturity only where supported by canonical markers.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "The structural check passed with python3 embedder_blueprint.py --describe.",
+    "No deletions are required; the recommended changes are marker swaps or axis/gate modifications."
+  ]
+}

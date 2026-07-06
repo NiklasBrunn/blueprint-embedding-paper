@@ -1,0 +1,94 @@
+axis_name_canonical,n_raw_spellings,raw_spellings,n_runs,fraction_runs,modal_kind,modal_positive,modal_gate
+endocrinecore,2,endocrine_core (6) | endocrine_identity (1),7,0.7,plain,endocrine_core,
+endothelial,3,endothelial (2) | endothelial_identity (2) | endothelial_vascular (1),5,0.5,plain,endothelial,vascular_gate
+fibroblaststellate,2,fibroblast_stellate (4) | fibroblast_stellate_identity (1),5,0.5,plain,fibroblast_stellate,mesenchymal_gate
+endocrinecorevsacinarcell,1,endocrine_vs_exocrine (4),4,0.4,contrast,endocrine_core,
+betavsalpha,1,beta_vs_alpha (3),3,0.3,contrast,beta_program,
+cellcycle,2,cell_cycle (2) | cycling_state (1),3,0.3,plain,cell_cycle,
+cyclingprogram,1,cycling_program (3),3,0.3,plain,cycling_program,
+immunecore,2,immune_identity (2) | immune_core (1),3,0.3,plain,immune_core,
+myeloid,1,myeloid (3),3,0.3,plain,myeloid,immune_gate
+acinar,1,acinar (2),2,0.2,gated,acinar_cell,exocrine_core
+acinarcell,2,acinar_identity (1) | acinar_secretory (1),2,0.2,plain,acinar_cell,
+acinarcells,1,acinar_cells (2),2,0.2,plain,acinar_cells,
+acinarvsductal,1,acinar_vs_ductal (2),2,0.2,contrast,acinar_cell,
+alpha,1,alpha (2),2,0.2,gated,alpha_core,endocrine_core
+alphacells,1,alpha_cells (2),2,0.2,gated,alpha_cells,endocrine_core
+alphaidentity,1,alpha_identity (2),2,0.2,gated,alpha_program,endocrine_core
+bcell,1,b_cell (2),2,0.2,gated,b_cell_core,immune_gate
+beta,1,beta (2),2,0.2,gated,beta_core,endocrine_core
+betacells,1,beta_cells (2),2,0.2,gated,beta_cells,endocrine_core
+betaidentity,1,beta_identity (2),2,0.2,gated,beta_program,endocrine_core
+betamaturity,1,beta_maturity (2),2,0.2,gated,beta_mature_core,beta_core
+cycling,1,cycling (2),2,0.2,plain,cycling_core,
+delta,1,delta (2),2,0.2,gated,delta_core,endocrine_core
+deltacells,1,delta_cells (2),2,0.2,gated,delta_cells,endocrine_core
+deltaidentity,1,delta_identity (2),2,0.2,gated,delta_program,endocrine_core
+ductal,1,ductal (2),2,0.2,gated,ductal_cell,exocrine_core
+ductalcell,2,ductal_identity (1) | ductal_epithelial (1),2,0.2,plain,ductal_cell,
+ductalcells,1,ductal_cells (2),2,0.2,plain,ductal_cells,
+endothelialcells,1,endothelial_cells (2),2,0.2,gated,endothelial_cells,vascular_core
+endothelialprogram,1,endothelial_program (2),2,0.2,plain,endothelial_program,
+epsiloncells,1,epsilon_cells (2),2,0.2,gated,epsilon_cells,endocrine_core
+pp,1,pp (2),2,0.2,gated,pp_core,endocrine_core
+ppcells,1,pp_cells (2),2,0.2,gated,pp_cells,endocrine_core
+ppidentity,1,pp_identity (2),2,0.2,gated,pp_program,endocrine_core
+schwannglia,1,schwann_glia (2),2,0.2,plain,schwann_cell,
+tnk,1,t_nk (2),2,0.2,gated,t_nk_core,immune_gate
+acinarprogram,1,acinar_program (1),1,0.1,plain,acinar_program,
+acinarupr,1,acinar_upr (1),1,0.1,gated,upr_stress,acinar_cell
+alphacellinendocrinecore,1,alpha_within_endocrine (1),1,0.1,gated,alpha_program,endocrine_core
+bcellidentity,1,b_cell_identity (1),1,0.1,plain,b_cell_program,
+betacellinendocrinecore,1,beta_within_endocrine (1),1,0.1,gated,beta_program,endocrine_core
+bplasma,1,b_plasma (1),1,0.1,plain,b_plasma,
+deltacellinendocrinecore,1,delta_within_endocrine (1),1,0.1,gated,delta_program,endocrine_core
+deltappwithinendocrine,1,delta_pp_within_endocrine (1),1,0.1,gated,delta_pp_cell,endocrine_core
+deltavspp,1,delta_vs_pp (1),1,0.1,contrast,delta_core,
+ductalprogram,1,ductal_program (1),1,0.1,plain,ductal_program,
+epsiloncellinendocrinecore,1,epsilon_within_endocrine (1),1,0.1,gated,epsilon_program,endocrine_core
+epsilonidentity,1,epsilon_identity (1),1,0.1,gated,epsilon_cells,endocrine_core
+fibroblastprogram,1,fibroblast_program (1),1,0.1,plain,fibroblast_program,
+fibroblaststellatecells,1,fibroblast_stellate_cells (1),1,0.1,plain,fibroblast_stellate_cells,
+fibroblastvsmural,1,fibroblast_vs_mural (1),1,0.1,contrast,fibroblast_core,
+fibroblastvspericyte,1,fibroblast_vs_pericyte (1),1,0.1,contrast,fibroblast_program,
+hypoxia,1,hypoxia (1),1,0.1,plain,hypoxia,
+interferonprogram,1,interferon_program (1),1,0.1,plain,interferon_program,
+interferonresponse,1,interferon_response (1),1,0.1,plain,interferon_response,
+lymphaticendothelialinendothelial,1,lymphatic_endothelium (1),1,0.1,gated,lymphatic_core,vascular_gate
+lymphoidcells,1,lymphoid_cells (1),1,0.1,gated,lymphoid_cells,immune_core
+lymphoidimmune,1,lymphoid_immune (1),1,0.1,plain,lymphoid_immune,
+lymphoidprogram,1,lymphoid_program (1),1,0.1,plain,lymphoid_program,
+lymphoidtnk,1,lymphoid_tnk (1),1,0.1,plain,lymphoid_tnk,
+mast,1,mast (1),1,0.1,gated,mast_core,immune_gate
+mesothelial,1,mesothelial_identity (1),1,0.1,plain,mesothelial_program,
+mesothelialcells,1,mesothelial_cells (1),1,0.1,plain,mesothelial_cells,
+mesothelialprogram,1,mesothelial_program (1),1,0.1,plain,mesothelial_core,
+muralcells,1,mural_cells (1),1,0.1,gated,mural_cells,vascular_core
+myeloidcells,1,myeloid_cells (1),1,0.1,gated,myeloid_cells,immune_core
+myeloidcore,1,myeloid_identity (1),1,0.1,plain,myeloid_program,
+myeloidimmune,1,myeloid_immune (1),1,0.1,plain,myeloid_immune,
+myeloidprogram,1,myeloid_program (1),1,0.1,plain,myeloid_program,
+myeloidvsadaptive,1,myeloid_vs_adaptive (1),1,0.1,contrast,myeloid_core,
+myeloidvslymphoid,1,myeloid_vs_lymphoid (1),1,0.1,contrast,myeloid_program,
+neuronal,1,neuronal (1),1,0.1,plain,neuron,
+nkcellidentity,1,nk_cell_identity (1),1,0.1,plain,nk_cell_program,
+pericyte,1,pericyte_smooth_muscle (1),1,0.1,gated,pericyte_smc_core,mesenchymal_gate
+pericyteinpericyte,1,pericyte_identity (1),1,0.1,plain,pericyte_program,
+pericytemural,1,pericyte_mural (1),1,0.1,plain,pericyte_mural,
+pericyteprogram,1,pericyte_program (1),1,0.1,plain,pericyte_program,
+pericytesmc,1,pericyte_smc (1),1,0.1,plain,pericyte_smc,
+pericytevsfibroblast,1,pericyte_vs_fibroblast (1),1,0.1,contrast,pericyte_contractile,
+pericytevsmc,1,pericyte_vsmc (1),1,0.1,plain,pericyte_vsmc,
+plasma,1,plasma (1),1,0.1,plain,plasma,
+plasmacell,1,plasma_cell (1),1,0.1,gated,plasma_cell_core,immune_gate
+ppgammacellinendocrinecore,1,pp_within_endocrine (1),1,0.1,gated,pp_program,endocrine_core
+schwanncells,1,schwann_cells (1),1,0.1,plain,schwann_cells,
+schwannidentity,1,schwann_identity (1),1,0.1,plain,schwann_program,
+schwannprogram,1,schwann_program (1),1,0.1,plain,schwann_core,
+secretoryer,1,secretory_er (1),1,0.1,plain,secretory_er,
+stromalmatrix,1,stromal_matrix (1),1,0.1,plain,stromal_mesenchymal,
+tcellidentity,1,t_cell_identity (1),1,0.1,plain,t_cell_program,
+tvsbplasma,1,t_vs_bplasma (1),1,0.1,contrast,t_nk_core,
+uprprogram,1,upr_program (1),1,0.1,plain,upr_program,
+uprstress,1,upr_stress (1),1,0.1,plain,upr_stress,
+vascularcore,1,vascular_core (1),1,0.1,plain,vascular_core,

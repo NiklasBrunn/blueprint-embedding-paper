@@ -1,0 +1,922 @@
+{
+  "run_id": "260610_blueprint_run02",
+  "extracted_at": "2026-06-10T08:46:34+00:00",
+  "scenario": {
+    "species": [
+      "human"
+    ],
+    "tissue": [
+      "pancreas"
+    ],
+    "celltype": null,
+    "age": null,
+    "sex": null,
+    "condition": null,
+    "notes": null
+  },
+  "blueprint": {
+    "name": "extract",
+    "clip": 4.0,
+    "n_modules": 16,
+    "n_axes": 14,
+    "n_axes_by_kind": {
+      "plain": 7,
+      "contrast": 2,
+      "gated": 5
+    },
+    "n_resources": 9,
+    "n_resources_by_kind": {
+      "paper": 1,
+      "atlas": 2,
+      "database": 6
+    },
+    "n_dois_unique": 3,
+    "n_total_genes": 163,
+    "n_unique_genes": 150,
+    "modules": [
+      {
+        "name": "islet_core",
+        "genes": [
+          "CHGA",
+          "CHGB",
+          "ISL1",
+          "NEUROD1",
+          "PAX6",
+          "PCSK1",
+          "PCSK2",
+          "SCG2",
+          "SLC30A8",
+          "IAPP"
+        ],
+        "n_genes": 10,
+        "resource_keys": [
+          "segerstolpe_cell_metab_2016",
+          "tabula_sapiens_science_2022"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "islet_identity",
+            "role": "positive"
+          },
+          {
+            "axis": "beta_identity",
+            "role": "gate"
+          },
+          {
+            "axis": "alpha_identity",
+            "role": "gate"
+          },
+          {
+            "axis": "delta_identity",
+            "role": "gate"
+          },
+          {
+            "axis": "pp_identity",
+            "role": "gate"
+          },
+          {
+            "axis": "epsilon_identity",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 6,
+        "n_genes_present": 10,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.9134415822243926
+      },
+      {
+        "name": "beta_program",
+        "genes": [
+          "INS",
+          "IAPP",
+          "MAFA",
+          "PDX1",
+          "NKX6-1",
+          "SLC30A8",
+          "ABCC8",
+          "KCNJ11",
+          "G6PC2",
+          "UCN3",
+          "PCSK1",
+          "PCSK2"
+        ],
+        "n_genes": 12,
+        "resource_keys": [
+          "segerstolpe_cell_metab_2016",
+          "hpa_science_2015"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "beta_identity",
+            "role": "positive"
+          },
+          {
+            "axis": "alpha_identity",
+            "role": "negative"
+          },
+          {
+            "axis": "delta_identity",
+            "role": "negative"
+          },
+          {
+            "axis": "pp_identity",
+            "role": "negative"
+          },
+          {
+            "axis": "epsilon_identity",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 5,
+        "n_genes_present": 11,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "NKX6-1"
+        ],
+        "fraction_nonzero_cells": 0.9750335734342571
+      },
+      {
+        "name": "alpha_program",
+        "genes": [
+          "GCG",
+          "ARX",
+          "IRX2",
+          "TM4SF4",
+          "TTR",
+          "LOXL4",
+          "SLC2A1",
+          "RGS4",
+          "PPP1R1A",
+          "FEV"
+        ],
+        "n_genes": 10,
+        "resource_keys": [
+          "segerstolpe_cell_metab_2016",
+          "tabula_sapiens_science_2022"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "beta_identity",
+            "role": "negative"
+          },
+          {
+            "axis": "alpha_identity",
+            "role": "positive"
+          },
+          {
+            "axis": "delta_identity",
+            "role": "negative"
+          },
+          {
+            "axis": "pp_identity",
+            "role": "negative"
+          },
+          {
+            "axis": "epsilon_identity",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 5,
+        "n_genes_present": 10,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.9576974728360396
+      },
+      {
+        "name": "delta_program",
+        "genes": [
+          "SST",
+          "HHEX",
+          "DPP4",
+          "RBP4",
+          "HOPX",
+          "GHSR"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "segerstolpe_cell_metab_2016",
+          "tabula_sapiens_science_2022"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "beta_identity",
+            "role": "negative"
+          },
+          {
+            "axis": "alpha_identity",
+            "role": "negative"
+          },
+          {
+            "axis": "delta_identity",
+            "role": "positive"
+          },
+          {
+            "axis": "pp_identity",
+            "role": "negative"
+          },
+          {
+            "axis": "epsilon_identity",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 5,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.8790745940666586
+      },
+      {
+        "name": "pp_program",
+        "genes": [
+          "PPY",
+          "PAX6",
+          "PDX1",
+          "ARX",
+          "TTR",
+          "RBP4"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "segerstolpe_cell_metab_2016",
+          "tabula_sapiens_science_2022"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "beta_identity",
+            "role": "negative"
+          },
+          {
+            "axis": "alpha_identity",
+            "role": "negative"
+          },
+          {
+            "axis": "delta_identity",
+            "role": "negative"
+          },
+          {
+            "axis": "pp_identity",
+            "role": "positive"
+          },
+          {
+            "axis": "epsilon_identity",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 5,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.90660481015749
+      },
+      {
+        "name": "epsilon_program",
+        "genes": [
+          "GHRL",
+          "MBOAT4",
+          "CCKBR",
+          "GHSR",
+          "ASCL1",
+          "NEUROD1"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "segerstolpe_cell_metab_2016",
+          "tabula_sapiens_science_2022"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "beta_identity",
+            "role": "negative"
+          },
+          {
+            "axis": "alpha_identity",
+            "role": "negative"
+          },
+          {
+            "axis": "delta_identity",
+            "role": "negative"
+          },
+          {
+            "axis": "pp_identity",
+            "role": "negative"
+          },
+          {
+            "axis": "epsilon_identity",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 5,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.6270296667073617
+      },
+      {
+        "name": "acinar_program",
+        "genes": [
+          "PRSS1",
+          "PRSS2",
+          "CPA1",
+          "CPA2",
+          "CPB1",
+          "CTRB1",
+          "CTRC",
+          "CELA3A",
+          "PNLIP",
+          "CLPS",
+          "AMY2A",
+          "REG1A",
+          "REG3A",
+          "SYCN",
+          "RBPJL",
+          "BHLHA15"
+        ],
+        "n_genes": 16,
+        "resource_keys": [
+          "hpa_science_2015",
+          "tabula_sapiens_science_2022"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "acinar_vs_ductal",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 15,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "PRSS2"
+        ],
+        "fraction_nonzero_cells": 0.7597362959345624
+      },
+      {
+        "name": "ductal_program",
+        "genes": [
+          "KRT19",
+          "KRT8",
+          "KRT18",
+          "SOX9",
+          "CFTR",
+          "EPCAM",
+          "CLDN4",
+          "MUC1",
+          "SPP1",
+          "KRT7",
+          "HNF1B",
+          "ONECUT1",
+          "KRT17",
+          "ANXA4"
+        ],
+        "n_genes": 14,
+        "resource_keys": [
+          "hpa_science_2015",
+          "tabula_sapiens_science_2022"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "acinar_vs_ductal",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 14,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.9453668660725186
+      },
+      {
+        "name": "quiescent_stellate_program",
+        "genes": [
+          "DCN",
+          "LUM",
+          "COL1A1",
+          "COL1A2",
+          "COL3A1",
+          "PDGFRA",
+          "LRAT",
+          "RBP1",
+          "CXCL12",
+          "VIM"
+        ],
+        "n_genes": 10,
+        "resource_keys": [
+          "hpa_science_2015",
+          "tabula_sapiens_science_2022"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "stromal_activation",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 10,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.7836649981687218
+      },
+      {
+        "name": "activated_stellate_program",
+        "genes": [
+          "ACTA2",
+          "TAGLN",
+          "MYL9",
+          "POSTN",
+          "CTGF",
+          "FN1",
+          "SERPINE1",
+          "COL11A1",
+          "SPARC",
+          "LOX"
+        ],
+        "n_genes": 10,
+        "resource_keys": [
+          "hpa_science_2015",
+          "tabula_sapiens_science_2022",
+          "hallmark_epithelial_mesenchymal_transition"
+        ],
+        "n_resource_keys": 3,
+        "used_in_axes": [
+          {
+            "axis": "stromal_activation",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 10,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.3917104138688805
+      },
+      {
+        "name": "endothelial_program",
+        "genes": [
+          "PECAM1",
+          "VWF",
+          "KDR",
+          "EMCN",
+          "CLDN5",
+          "ESAM",
+          "PLVAP",
+          "RAMP2",
+          "RGCC",
+          "AQP1"
+        ],
+        "n_genes": 10,
+        "resource_keys": [
+          "hpa_science_2015",
+          "tabula_sapiens_science_2022"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "endothelial_identity",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 10,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.2632157245757539
+      },
+      {
+        "name": "pericyte_program",
+        "genes": [
+          "RGS5",
+          "CSPG4",
+          "MCAM",
+          "PDGFRB",
+          "NOTCH3",
+          "ABCC9",
+          "DES",
+          "ACTA2",
+          "TAGLN",
+          "MYH11"
+        ],
+        "n_genes": 10,
+        "resource_keys": [
+          "hpa_science_2015",
+          "tabula_sapiens_science_2022"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "pericyte_identity",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 10,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.44799169820534734
+      },
+      {
+        "name": "immune_program",
+        "genes": [
+          "PTPRC",
+          "LST1",
+          "TYROBP",
+          "FCER1G",
+          "AIF1",
+          "SPI1",
+          "HLA-DRA",
+          "CTSS",
+          "C1QA",
+          "C1QB",
+          "C1QC"
+        ],
+        "n_genes": 11,
+        "resource_keys": [
+          "hpa_science_2015",
+          "tabula_sapiens_science_2022"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "immune_identity",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 10,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "HLA-DRA"
+        ],
+        "fraction_nonzero_cells": 0.229214992064461
+      },
+      {
+        "name": "cycling_program",
+        "genes": [
+          "MKI67",
+          "TOP2A",
+          "UBE2C",
+          "BIRC5",
+          "CDK1",
+          "CCNB1",
+          "CCNB2",
+          "CENPF",
+          "PCNA",
+          "MCM2",
+          "MCM5",
+          "TYMS"
+        ],
+        "n_genes": 12,
+        "resource_keys": [
+          "hallmark_g2m_checkpoint",
+          "hallmark_e2f_targets"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "cycling_state",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 12,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.42040043950677575
+      },
+      {
+        "name": "stress_upr_program",
+        "genes": [
+          "HSPA5",
+          "XBP1",
+          "DDIT3",
+          "ATF4",
+          "HERPUD1",
+          "DNAJB9",
+          "SEL1L",
+          "PDIA4",
+          "HSP90B1",
+          "EIF2AK3"
+        ],
+        "n_genes": 10,
+        "resource_keys": [
+          "hallmark_unfolded_protein_response"
+        ],
+        "n_resource_keys": 1,
+        "used_in_axes": [
+          {
+            "axis": "stress_upr_state",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 10,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.9930411427176169
+      },
+      {
+        "name": "interferon_response_program",
+        "genes": [
+          "ISG15",
+          "IFIT1",
+          "IFIT3",
+          "MX1",
+          "OAS1",
+          "OAS2",
+          "IRF7",
+          "STAT1",
+          "GBP1",
+          "CXCL10"
+        ],
+        "n_genes": 10,
+        "resource_keys": [
+          "hallmark_interferon_alpha_response",
+          "hallmark_interferon_gamma_response"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "interferon_state",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 10,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.6510194115492614
+      }
+    ],
+    "axes": [
+      {
+        "name": "islet_identity",
+        "kind": "plain",
+        "positive": "islet_core",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "beta_identity",
+        "kind": "gated",
+        "positive": "beta_program",
+        "negatives": [
+          "alpha_program",
+          "delta_program",
+          "pp_program",
+          "epsilon_program"
+        ],
+        "negative_weight": 0.5,
+        "gate": "islet_core"
+      },
+      {
+        "name": "alpha_identity",
+        "kind": "gated",
+        "positive": "alpha_program",
+        "negatives": [
+          "beta_program",
+          "delta_program",
+          "pp_program",
+          "epsilon_program"
+        ],
+        "negative_weight": 0.5,
+        "gate": "islet_core"
+      },
+      {
+        "name": "delta_identity",
+        "kind": "gated",
+        "positive": "delta_program",
+        "negatives": [
+          "beta_program",
+          "alpha_program",
+          "pp_program",
+          "epsilon_program"
+        ],
+        "negative_weight": 0.5,
+        "gate": "islet_core"
+      },
+      {
+        "name": "pp_identity",
+        "kind": "gated",
+        "positive": "pp_program",
+        "negatives": [
+          "beta_program",
+          "alpha_program",
+          "delta_program",
+          "epsilon_program"
+        ],
+        "negative_weight": 0.5,
+        "gate": "islet_core"
+      },
+      {
+        "name": "epsilon_identity",
+        "kind": "gated",
+        "positive": "epsilon_program",
+        "negatives": [
+          "beta_program",
+          "alpha_program",
+          "delta_program",
+          "pp_program"
+        ],
+        "negative_weight": 0.5,
+        "gate": "islet_core"
+      },
+      {
+        "name": "acinar_vs_ductal",
+        "kind": "contrast",
+        "positive": "acinar_program",
+        "negatives": [
+          "ductal_program"
+        ],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "stromal_activation",
+        "kind": "contrast",
+        "positive": "activated_stellate_program",
+        "negatives": [
+          "quiescent_stellate_program"
+        ],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "endothelial_identity",
+        "kind": "plain",
+        "positive": "endothelial_program",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "pericyte_identity",
+        "kind": "plain",
+        "positive": "pericyte_program",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "immune_identity",
+        "kind": "plain",
+        "positive": "immune_program",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "cycling_state",
+        "kind": "plain",
+        "positive": "cycling_program",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "stress_upr_state",
+        "kind": "plain",
+        "positive": "stress_upr_program",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "interferon_state",
+        "kind": "plain",
+        "positive": "interferon_response_program",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      }
+    ],
+    "resources": [
+      {
+        "key": "hpa_science_2015",
+        "kind": "atlas",
+        "citation": "Uhlen et al. 2015 Science",
+        "doi": "10.1126/science.1260419",
+        "used_in_modules": [
+          "acinar_program",
+          "activated_stellate_program",
+          "beta_program",
+          "ductal_program",
+          "endothelial_program",
+          "immune_program",
+          "pericyte_program",
+          "quiescent_stellate_program"
+        ]
+      },
+      {
+        "key": "tabula_sapiens_science_2022",
+        "kind": "atlas",
+        "citation": "Tabula Sapiens Consortium 2022 Science",
+        "doi": "10.1126/science.abl4896",
+        "used_in_modules": [
+          "acinar_program",
+          "activated_stellate_program",
+          "alpha_program",
+          "delta_program",
+          "ductal_program",
+          "endothelial_program",
+          "epsilon_program",
+          "immune_program",
+          "islet_core",
+          "pericyte_program",
+          "pp_program",
+          "quiescent_stellate_program"
+        ]
+      },
+      {
+        "key": "segerstolpe_cell_metab_2016",
+        "kind": "paper",
+        "citation": "Segerstolpe et al. 2016 Cell Metabolism",
+        "doi": "10.1016/j.cmet.2016.08.020",
+        "used_in_modules": [
+          "alpha_program",
+          "beta_program",
+          "delta_program",
+          "epsilon_program",
+          "islet_core",
+          "pp_program"
+        ]
+      },
+      {
+        "key": "hallmark_g2m_checkpoint",
+        "kind": "database",
+        "citation": "MSigDB HALLMARK_G2M_CHECKPOINT",
+        "doi": null,
+        "used_in_modules": [
+          "cycling_program"
+        ]
+      },
+      {
+        "key": "hallmark_e2f_targets",
+        "kind": "database",
+        "citation": "MSigDB HALLMARK_E2F_TARGETS",
+        "doi": null,
+        "used_in_modules": [
+          "cycling_program"
+        ]
+      },
+      {
+        "key": "hallmark_unfolded_protein_response",
+        "kind": "database",
+        "citation": "MSigDB HALLMARK_UNFOLDED_PROTEIN_RESPONSE",
+        "doi": null,
+        "used_in_modules": [
+          "stress_upr_program"
+        ]
+      },
+      {
+        "key": "hallmark_interferon_alpha_response",
+        "kind": "database",
+        "citation": "MSigDB HALLMARK_INTERFERON_ALPHA_RESPONSE",
+        "doi": null,
+        "used_in_modules": [
+          "interferon_response_program"
+        ]
+      },
+      {
+        "key": "hallmark_interferon_gamma_response",
+        "kind": "database",
+        "citation": "MSigDB HALLMARK_INTERFERON_GAMMA_RESPONSE",
+        "doi": null,
+        "used_in_modules": [
+          "interferon_response_program"
+        ]
+      },
+      {
+        "key": "hallmark_epithelial_mesenchymal_transition",
+        "kind": "database",
+        "citation": "MSigDB HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION",
+        "doi": null,
+        "used_in_modules": [
+          "activated_stellate_program"
+        ]
+      }
+    ]
+  },
+  "sanity": {
+    "placeholder_strings_present": false,
+    "orphaned_modules": [],
+    "modules_missing_resources": [],
+    "unused_resources": [],
+    "set_clip_overridden": false
+  },
+  "dataset_coverage": {
+    "h5ad_path": "data/preprocessed/human_pancreas_pp.h5ad",
+    "layer": null,
+    "n_cells": 16382,
+    "n_vars": 18268
+  }
+}

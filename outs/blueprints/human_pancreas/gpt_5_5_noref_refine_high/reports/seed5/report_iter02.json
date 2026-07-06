@@ -1,0 +1,41 @@
+{
+  "rating": "minor",
+  "summary": "Broad human pancreas coverage is biologically plausible, but targeted refinements are needed in neural gating, stellate markers, ductal-state emphasis, and optionally pan-immune anchoring.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:neuron_within_neural / modules:pan_neural, neural_glial, neuron",
+      "description": "The neural branch mixes Schwann/glial and neuronal markers in pan_neural, but the gated neuron axis subtracts endocrine_core instead of a neural sibling module. This can encode neuron versus endocrine contamination rather than neuron versus Schwann/glial identity.",
+      "suggested_fix": "Change neuron_within_neural to contrast neuron against neural_glial under the pan_neural gate, and consider adding a reciprocal gated Schwann/glial axis under pan_neural if dimensionality allows.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:quiescent_pancreatic_stellate / axis:quiescent_stellate_within_stromal",
+      "description": "The quiescent stellate module relies on several pericyte- or adipocyte-associated genes such as RGS5, PDGFRB, and FABP4 while the axis also uses pericyte and adipocyte modules as negatives, which can blur stellate identity with mural/adipose programs.",
+      "suggested_fix": "Keep the axis but rebalance the module toward quiescent PSC/fibroblast markers such as SPARCL1, COL15A1, COL6A1, COL6A2, DCN, LUM, GPX3, and IGFBP4, reducing dependence on pericyte/adipocyte-heavy markers.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:ductal_secretory_mucin / axis:ductal_secretory_mucin_within_ductal",
+      "description": "The MUC5B/TFF/LCN2/MMP7 ductal program is plausible but leans toward secretory/metaplastic or stressed ductal states in an otherwise healthy, condition-null scenario.",
+      "suggested_fix": "Retain the ductal subtype axis, but tune the module toward canonical MUC5B-positive/secretory ductal identity and avoid making inflammatory injury genes such as LCN2 and MMP7 dominate. If the intended target is stress/metaplasia, rename the module and axis accordingly.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "general immune coverage",
+      "description": "The blueprint covers major immune lineages but lacks a simple pan-leukocyte anchor, which would help separate mixed low-depth immune cells from non-immune compartments.",
+      "suggested_fix": "Add a compact immune_common module and plain axis using markers such as PTPRC, LCP1, CORO1A, CD52, and ARHGAP15, or otherwise ensure the existing lineage-specific axes are sufficient.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "The blueprint is relatively high dimensional for a hand-authored marker embedding, but the dimensionality is defensible given whole-pancreas coverage."
+  ]
+}

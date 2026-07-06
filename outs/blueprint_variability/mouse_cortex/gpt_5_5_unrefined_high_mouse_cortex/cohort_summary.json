@@ -1,0 +1,321 @@
+{
+  "cohort": "gpt_5_5_unrefined_high_mouse_cortex",
+  "model": "gpt_5_5_unrefined",
+  "reasoning": "high",
+  "dataset": "mouse_cortex",
+  "n_runs": 10,
+  "scenario": {
+    "species": "mouse",
+    "tissue": "isocortex",
+    "celltype": null
+  },
+  "run_ids": [
+    "260605_blueprint_run01",
+    "260605_blueprint_run02",
+    "260605_blueprint_run03",
+    "260605_blueprint_run04",
+    "260605_blueprint_run05",
+    "260605_blueprint_run06",
+    "260605_blueprint_run07",
+    "260605_blueprint_run08",
+    "260605_blueprint_run09",
+    "260605_blueprint_run10"
+  ],
+  "size": {
+    "n_modules": {
+      "mean": 25.4,
+      "std": 2.9514591494904874,
+      "min": 22.0,
+      "max": 30.0,
+      "cv": 0.11619917911379872
+    },
+    "n_axes": {
+      "mean": 23.8,
+      "std": 2.8596814119369625,
+      "min": 19.0,
+      "max": 28.0,
+      "cv": 0.12015468117382194
+    },
+    "n_unique_genes": {
+      "mean": 145.5,
+      "std": 12.085344660188866,
+      "min": 128.0,
+      "max": 165.0,
+      "cv": 0.08306078804253517
+    },
+    "n_resources": {
+      "mean": 10.0,
+      "std": 1.8856180831641267,
+      "min": 8.0,
+      "max": 14.0,
+      "cv": 0.18856180831641267
+    },
+    "n_dois_unique": {
+      "mean": 7.4,
+      "std": 1.429840705968481,
+      "min": 5.0,
+      "max": 9.0,
+      "cv": 0.1932217170227677
+    },
+    "gene_redundancy": {
+      "mean": 1.1243799938297387,
+      "std": 0.07248047579418154,
+      "min": 1.0151515151515151,
+      "max": 1.2483660130718954,
+      "cv": 0.06446261601232033
+    },
+    "mean_genes_per_module": {
+      "mean": 6.459003351859424,
+      "std": 0.40254054684786106,
+      "min": 5.888888888888889,
+      "max": 7.090909090909091,
+      "cv": 0.062322393242291364
+    }
+  },
+  "jaccard": {
+    "genes": {
+      "mean": 0.5677700766990248,
+      "ci_lo": 0.562107810559505,
+      "ci_hi": 0.573382758786775,
+      "min": 0.485,
+      "max": 0.6272189349112426
+    },
+    "dois": {
+      "mean": 0.5758305274971941,
+      "ci_lo": 0.5438737774571107,
+      "ci_hi": 0.6109681738015071,
+      "min": 0.25,
+      "max": 0.8888888888888888
+    },
+    "resources": {
+      "mean": 0.41245479103322247,
+      "ci_lo": 0.3847932134586546,
+      "ci_hi": 0.4402842695158872,
+      "min": 0.2,
+      "max": 0.75
+    },
+    "modnames": {
+      "mean": 0.7861672815394503,
+      "ci_lo": 0.7668901663766966,
+      "ci_hi": 0.805069473729568,
+      "min": 0.6451612903225806,
+      "max": 0.9583333333333334
+    },
+    "axisnames": {
+      "mean": 0.5704005486617347,
+      "ci_lo": 0.529105039884588,
+      "ci_hi": 0.6138343089765635,
+      "min": 0.1794871794871795,
+      "max": 0.9130434782608695
+    }
+  },
+  "structural_consistency": {
+    "mean_kind_agreement": 0.9380658436213991,
+    "mean_role_agreement": 0.890990990990991,
+    "mean_within_module_geneset_jaccard": 0.5436132579294345,
+    "mean_axis_positive_agreement": 1.0,
+    "mean_axis_gate_agreement": 0.9380658436213991,
+    "mean_axis_negatives_jaccard": 0.764697570947571
+  },
+  "recurrence": {
+    "modules": {
+      "frac_in_ge80pct": 0.5675675675675675,
+      "gini": 0.28565324217498134,
+      "n_universal": 20,
+      "n_majority": 25,
+      "n_singleton": 7,
+      "n_unique_total": 37
+    },
+    "axes": {
+      "frac_in_ge80pct": 0.3333333333333333,
+      "gini": 0.4363963119237381,
+      "n_universal": 3,
+      "n_majority": 21,
+      "n_singleton": 22,
+      "n_unique_total": 54
+    },
+    "genes": {
+      "frac_in_ge80pct": 0.30158730158730157,
+      "gini": 0.43314242077128673,
+      "n_universal": 73,
+      "n_majority": 127,
+      "n_singleton": 109,
+      "n_unique_total": 315
+    },
+    "resources": {
+      "frac_in_ge80pct": 0.15625,
+      "gini": 0.48375,
+      "n_universal": 2,
+      "n_majority": 9,
+      "n_singleton": 18,
+      "n_unique_total": 32
+    }
+  },
+  "saturation_slope_at_N": {
+    "genes": 10.685000000000002,
+    "modules": 0.7700000000000031,
+    "dois": 0.3650000000000002
+  },
+  "coverage": {
+    "n_unique_modules": 37,
+    "n_unique_axes": 54,
+    "n_unique_genes": 315,
+    "n_unique_resources": 32
+  },
+  "resource_kind_composition": {
+    "frac_paper": {
+      "mean": 0.3284668109668109,
+      "std": 0.15612435807897357
+    },
+    "frac_atlas": {
+      "mean": 0.4188275613275613,
+      "std": 0.14137606981512751
+    },
+    "frac_database": {
+      "mean": 0.2527056277056277,
+      "std": 0.12459689850755198
+    }
+  },
+  "top_hubs": {
+    "top_positives": [
+      {
+        "module": "mature_oligodendrocyte",
+        "module_can": "matureoligodendrocyte",
+        "n_axes_using": 13
+      },
+      {
+        "module": "pan_neuronal",
+        "module_can": "panneuronal",
+        "n_axes_using": 10
+      },
+      {
+        "module": "glutamatergic_neuron",
+        "module_can": "glutamatergicneuron",
+        "n_axes_using": 10
+      },
+      {
+        "module": "l23_it",
+        "module_can": "l23it",
+        "n_axes_using": 10
+      },
+      {
+        "module": "l4_it",
+        "module_can": "l4it",
+        "n_axes_using": 10
+      }
+    ],
+    "top_gates": [
+      {
+        "module": "glutamatergic_neuron",
+        "module_can": "glutamatergicneuron",
+        "n_axes_using": 67
+      },
+      {
+        "module": "gabaergic_neuron",
+        "module_can": "gabaergicneuron",
+        "n_axes_using": 53
+      },
+      {
+        "module": "pan_neuronal",
+        "module_can": "panneuronal",
+        "n_axes_using": 10
+      },
+      {
+        "module": "non_neuronal",
+        "module_can": "nonneuronal",
+        "n_axes_using": 7
+      },
+      {
+        "module": "vascular",
+        "module_can": "vascular",
+        "n_axes_using": 4
+      }
+    ],
+    "top_negatives": [
+      {
+        "module": "l4_it",
+        "module_can": "l4it",
+        "n_axes_using": 57
+      },
+      {
+        "module": "l5_it",
+        "module_can": "l5it",
+        "n_axes_using": 57
+      },
+      {
+        "module": "l5_et",
+        "module_can": "l5et",
+        "n_axes_using": 57
+      },
+      {
+        "module": "l6_ct",
+        "module_can": "l6ct",
+        "n_axes_using": 57
+      },
+      {
+        "module": "l6b",
+        "module_can": "l6b",
+        "n_axes_using": 57
+      }
+    ]
+  },
+  "top_resources": [
+    {
+      "doi": "10.1016/j.cell.2018.07.028",
+      "citation": "Saunders 2018 Cell molecular diversity and specializations among cells of the adult mouse brain",
+      "kind": "atlas",
+      "n_runs": 10,
+      "fraction_runs": 1.0
+    },
+    {
+      "doi": "10.1038/s41586-018-0654-5",
+      "citation": "Tasic 2018 Nature shared and distinct transcriptomic cell types across mouse neocortical areas",
+      "kind": "atlas",
+      "n_runs": 10,
+      "fraction_runs": 1.0
+    },
+    {
+      "doi": "10.1016/j.cell.2021.04.021",
+      "citation": "Yao 2021 Cell taxonomy of transcriptomic cell types across adult mouse isocortex and hippocampal formation",
+      "kind": "atlas",
+      "n_runs": 9,
+      "fraction_runs": 0.9
+    },
+    {
+      "doi": "10.1038/nn.4216",
+      "citation": "Tasic 2016 Nature Neuroscience adult mouse cortical cell taxonomy",
+      "kind": "atlas",
+      "n_runs": 8,
+      "fraction_runs": 0.8
+    },
+    {
+      "doi": "10.1038/s41593-017-0029-5",
+      "citation": "Hrvatin 2018 Nature Neuroscience experience-dependent transcriptomic states in mouse visual cortex",
+      "kind": "paper",
+      "n_runs": 8,
+      "fraction_runs": 0.8
+    }
+  ],
+  "stability_composite": 0.7877679084633833,
+  "stability_weights": {
+    "jaccard_genes_off_diag": 1.0,
+    "jaccard_modnames_off_diag": 1.0,
+    "mean_kind_agreement": 1.0,
+    "mean_role_agreement": 1.0,
+    "mean_within_module_geneset_jaccard": 1.0,
+    "mean_axis_positive_agreement": 1.0
+  },
+  "sanity": {
+    "frac_with_placeholders": 0.0,
+    "mean_orphaned_modules": 0.0,
+    "mean_modules_missing_resources": 0.0,
+    "mean_unused_resources": 0.0,
+    "frac_clip_overridden": 0.0,
+    "n_modules_merged_by_canonicalization": 25,
+    "n_axes_merged_by_canonicalization": 32,
+    "n_genes_merged_by_canonicalization": 0,
+    "n_module_name_drift_candidates": 0,
+    "n_module_name_near_duplicates": 10,
+    "doi_kind_agreement": 0.9354591836734694
+  }
+}

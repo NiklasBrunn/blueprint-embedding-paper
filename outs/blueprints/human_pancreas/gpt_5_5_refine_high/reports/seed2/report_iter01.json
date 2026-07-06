@@ -1,0 +1,44 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers healthy human pancreas but needs targeted refinement of immune subtype resolution, acinar/REG marker separation, epsilon markers, and redundant contrast axes.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "immune modules/axes: t_nk_lymphocyte, b_plasma_cell, myeloid_macrophage",
+      "description": "The immune compartment is present but over-collapsed: T and NK/cytotoxic lymphocytes share one axis, B and plasma cells share one axis, and macrophage/monocyte/APC signal is a single myeloid axis.",
+      "suggested_fix": "Add targeted refinement modules/axes for T cell versus NK/cytotoxic lymphocyte, B cell versus plasma cell, and, if supported by the cited atlas resources, macrophage/monocyte versus dendritic/APC-enriched myeloid. These can be gated by the existing broad immune modules.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "gene-set-hygiene",
+      "where": "modules: acinar_secretory and reg_positive_acinar_state",
+      "description": "REG1A and REG3A appear in the baseline acinar module and the REG-positive acinar state module, making the state axis partly duplicate acinar identity instead of isolating a REG-high state.",
+      "suggested_fix": "Keep REG genes concentrated in reg_positive_acinar_state and replace REG1A/REG3A in acinar_secretory with additional canonical digestive enzyme/acinar markers supported by the pancreas resources.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module: epsilon_cell",
+      "description": "The epsilon module has only two genes and MLN is not a strong canonical adult pancreatic epsilon-cell marker compared with ghrelin-centered epsilon identity, making the rare-cell axis fragile.",
+      "suggested_fix": "Rework epsilon_cell around supported human pancreatic ghrelin/epsilon markers, or keep it as a conservative rare-cell axis with a more defensible small gene set.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axes: acinar_vs_ductal_epithelium and endothelial_vs_mural_vascular",
+      "description": "These contrast axes are redundant with plain identity axes and do not encode clearly opposing biological programs; endothelial and mural cells are vascular partners rather than opposite ends of one state axis.",
+      "suggested_fix": "Remove these contrast axes unless replacing them with a clearly justified biological gradient; use dimensionality for supported subtype/state resolution instead.",
+      "remove": [
+        "axis:acinar_vs_ductal_epithelium",
+        "axis:endothelial_vs_mural_vascular"
+      ]
+    }
+  ],
+  "out_of_scope": [
+    "DOI and impact-factor verification were not repeated because citation validation is outside this discriminator pass."
+  ]
+}

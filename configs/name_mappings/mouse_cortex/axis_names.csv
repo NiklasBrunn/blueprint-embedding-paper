@@ -1,0 +1,260 @@
+raw_name,standardized_name,notes
+arterial_endothelium_state,arterial_endothelial,
+arterial_vs_venous_endothelium,arterial_endothelial_vs_venous_endothelial,contrast partner (modal negative)=venous_endothelial
+astrocyte,astrocyte,
+astrocyte_endfoot_homeostatic_state,astrocyte,
+astrocyte_homeostatic_state,astrocyte,
+astrocyte_identity,astrocyte,
+astrocyte_vs_oligodendrocyte_lineage,astrocyte_vs_oligodendrocyte_lineage,contrast partner (modal negative)=oligodendrocyte_lineage
+border_associated_macrophage_identity,macrophage,
+border_macrophage,macrophage,
+border_macrophage_identity,macrophage,
+border_macrophage_like,macrophage,
+border_macrophage_program,macrophage,
+capillary_endothelium_state,capillary_endothelial,
+chandelier_interneuron_identity,pvalb,chandelier ChC folded to pvalb (subclass-level granularity)
+committed_oligodendrocyte_identity,committed_oligo_precursor,
+committed_oligodendrocyte_precursor,committed_oligo_precursor,
+committed_oligodendrocyte_precursor_identity,committed_oligo_precursor,
+cycling_opc_state,opc_cell_cycle_in_opc,gated cycling substate within OPC
+differentiating_oligodendrocyte_window,newly_formed_oligodendrocyte,
+endothelial,endothelial,
+endothelial_arterial,arterial_endothelial,
+endothelial_barrier,endothelial,
+endothelial_capillary,capillary_endothelial,
+endothelial_identity,endothelial,
+endothelial_venous,venous_endothelial,
+ex_l23_it_identity,l23_it,
+ex_l4_it_identity,l4_it,
+ex_l5_et_identity,l5_et,
+ex_l5_it_identity,l5_it,
+ex_l6_ct_identity,l6_ct,
+ex_l6_it_identity,l6_it,
+ex_l6b_identity,l6b,
+exc_l23_it,l23_it,
+exc_l4_it,l4_it,
+exc_l5_et,l5_et,
+exc_l5_it,l5_it,
+exc_l6_ct,l6_ct,
+exc_l6b,l6b,
+excitatory_activity_ieg,neuronal_activity_ieg,IEG activity program; excitatory/inhibitory variants merged
+excitatory_activity_state,neuronal_activity_ieg,
+excitatory_car3_it,l6_it_car3,
+excitatory_car3_np,l6_it_car3,Car3 is L6 IT Car3; '_np' likely mislabel; merged
+excitatory_ct_l6,l6_ct,
+excitatory_deep_it,deep_layer_it,
+excitatory_et_l5,l5_et,
+excitatory_it_l2_3,l23_it,
+excitatory_it_l4,l4_it,
+excitatory_it_l5,l5_it,
+excitatory_l23_it,l23_it,
+excitatory_l2_3_it,l23_it,
+excitatory_l4_it,l4_it,
+excitatory_l56_np,l5_6_np,
+excitatory_l5_et,l5_et,
+excitatory_l5_et_pt,l5_et,
+excitatory_l5_it,l5_it,
+excitatory_l6_ct,l6_ct,
+excitatory_l6_it_car3,l6_it_car3,
+excitatory_l6b,l6b,
+excitatory_l6b_subplate,l6b,
+excitatory_layer23_it,l23_it,
+excitatory_layer4_it,l4_it,
+excitatory_layer5_et,l5_et,
+excitatory_layer5_et_pt,l5_et,
+excitatory_layer5_it,l5_it,
+excitatory_layer6_ct,l6_ct,
+excitatory_layer6_it_car3,l6_it_car3,
+excitatory_layer6b,l6b,
+excitatory_layer6b_subplate,l6b,
+excitatory_upper_it,upper_layer_it,
+excitatory_upper_layer_it,upper_layer_it,
+excitatory_vs_inhibitory,glutamatergic_neuron_vs_gabaergic_neuron,contrast partner (modal negative)=gabaergic_neuron
+excitatory_vs_inhibitory_neuron,glutamatergic_neuron_vs_gabaergic_neuron,contrast partner (modal negative)=gabaergic_neuron
+gabaergic_lamp5,lamp5,
+gabaergic_lamp5_reln,lamp5,
+gabaergic_meis2,meis2,
+gabaergic_pvalb,pvalb,
+gabaergic_sncg,sncg,
+gabaergic_sst,sst,
+gabaergic_vip,vip,
+glia_vs_vascular_mesenchymal,glia_vs_vlmc,contrast partner (modal negative)=vlmc
+glial_immune_vs_vascular_mesenchymal,glia_vs_vlmc,contrast partner (modal negative)=vlmc
+glial_myelin_vs_astrocyte,oligodendrocyte_lineage_vs_astrocyte,contrast partner (modal negative)=astrocyte
+glutamatergic_l23_it,l23_it,
+glutamatergic_l4_it,l4_it,
+glutamatergic_l56_np,l5_6_np,
+glutamatergic_l5_et,l5_et,
+glutamatergic_l5_et_pt,l5_et,
+glutamatergic_l5_it,l5_it,
+glutamatergic_l6_ct,l6_ct,
+glutamatergic_l6_it_car3,l6_it_car3,
+glutamatergic_l6b,l6b,
+glutamatergic_l6b_subplate,l6b,
+glutamatergic_vs_gabaergic,glutamatergic_neuron_vs_gabaergic_neuron,contrast partner (modal negative)=gabaergic_neuron
+glutamatergic_vs_gabaergic_neuron,glutamatergic_neuron_vs_gabaergic_neuron,contrast partner (modal negative)=gabaergic_neuron
+inh_lamp5,lamp5,
+inh_pvalb,pvalb,
+inh_sncg,sncg,
+inh_sst,sst,
+inh_vip,vip,
+inhibitory_activity_ieg,neuronal_activity_ieg,
+inhibitory_activity_state,neuronal_activity_ieg,
+inhibitory_chandelier,pvalb,chandelier ChC folded to pvalb
+inhibitory_lamp5,lamp5,
+inhibitory_lamp5_neurogliaform,lamp5,neurogliaform = Lamp5 subtype; merged
+inhibitory_lamp5_reln,lamp5,
+inhibitory_meis2,meis2,
+inhibitory_pvalb,pvalb,
+inhibitory_sncg,sncg,
+inhibitory_sncg_pax6,sncg,
+inhibitory_sst,sst,
+inhibitory_vip,vip,
+interneuron_lamp5,lamp5,
+interneuron_lamp5_reln,lamp5,
+interneuron_meis2,meis2,
+interneuron_pvalb,pvalb,
+interneuron_serpinf1,sncg,
+interneuron_sncg,sncg,
+interneuron_sncg_serpinf1,sncg,
+interneuron_sst,sst,
+interneuron_vip,vip,
+l23_it_program,l23_it,
+l23_it_refinement,l23_it,
+l4_it_program,l4_it,
+l4_it_refinement,l4_it,
+l56_np_refinement,l5_6_np,
+l5_6_np_program,l5_6_np,
+l5_et_pt_program,l5_et,
+l5_et_refinement,l5_et,
+l5_it_program,l5_it,
+l5_it_refinement,l5_it,
+l6_ct_program,l6_ct,
+l6_ct_refinement,l6_ct,
+l6_it_car3_program,l6_it_car3,
+l6b_program,l6b,
+l6b_refinement,l6b,
+lamp5_interneuron,lamp5,
+lamp5_interneuron_identity,lamp5,
+lamp5_interneuron_refinement,lamp5,
+lamp5_program,lamp5,
+lamp5_reln_interneuron,lamp5,
+lamp5_within_gabaergic,lamp5_in_gabaergic_neuron,gated substate within GABAergic
+layer4_it_within_excitatory,l4_it_in_glutamatergic_neuron,gated substate within glutamatergic
+layer5_et_within_excitatory,l5_et_in_glutamatergic_neuron,gated substate within glutamatergic
+layer5_it_within_excitatory,l5_it_in_glutamatergic_neuron,gated substate within glutamatergic
+layer6_ct_within_excitatory,l6_ct_in_glutamatergic_neuron,gated substate within glutamatergic
+layer6b_subplate_within_excitatory,l6b_in_glutamatergic_neuron,gated substate within glutamatergic
+mature_oligodendrocyte,mature_oligodendrocyte,
+mature_oligodendrocyte_identity,mature_oligodendrocyte,
+mature_oligodendrocyte_myelin_identity,mature_oligodendrocyte,
+mature_oligodendrocyte_vs_opc,mature_oligodendrocyte_vs_opc,contrast partner (modal negative)=opc
+meis2_interneuron_refinement,meis2,
+meis2_program,meis2,
+microglia,microglia,
+microglia_homeostasis,microglia,
+microglia_homeostatic,microglia,
+microglia_homeostatic_identity,microglia,
+microglia_homeostatic_program,microglia,
+microglia_homeostatic_vs_reactive,microglia,within-microglia homeostatic-vs-reactive state contrast; merged to microglia identity
+microglia_identity,microglia,
+microglia_macrophage,myeloid,spans microglia+macrophage; merged to myeloid
+microglia_vs_border_macrophage,microglia_vs_macrophage,contrast partner (modal negative)=macrophage
+mural,mural,
+mural_contractile_vs_pericyte,smooth_muscle_vs_pericyte,contrast partner (modal negative)=pericyte; mural-contractile=SMC
+mural_identity,mural,
+mural_pericyte,pericyte,
+mural_pericyte_smooth_muscle,mural,
+mural_pericyte_smooth_muscle_identity,mural,
+mural_smooth_muscle,smooth_muscle,
+mural_vs_endothelial_vascular,mural_vs_endothelial,contrast partner (modal negative)=endothelial
+myelin_maturation_program,myelin_program,
+myeloid_identity,myeloid,
+neuron_activity_state,neuronal_activity_ieg,
+neuron_vs_non_neural,pan_neuronal_vs_non_neuronal,contrast partner (modal negative)=non_neuronal
+neuron_vs_non_neuronal,pan_neuronal_vs_non_neuronal,contrast partner (modal negative)=non_neuronal
+neuronal_activity_ieg,neuronal_activity_ieg,
+neuronal_activity_immediate_early,neuronal_activity_ieg,
+neuronal_activity_response,neuronal_activity_ieg,
+neuronal_activity_state,neuronal_activity_ieg,
+neuronal_gabaergic_vs_glutamatergic,gabaergic_neuron_vs_glutamatergic_neuron,contrast partner (modal negative)=glutamatergic_neuron
+neuronal_glutamatergic_vs_gabaergic,glutamatergic_neuron_vs_gabaergic_neuron,contrast partner (modal negative)=gabaergic_neuron
+neuronal_identity,pan_neuronal,
+neuronal_vs_glial,pan_neuronal_vs_glia,contrast partner (modal negative)=glia; negative pole is glia (no vascular) unlike neuronal_vs_non_neuronal
+neuronal_vs_non_neural,pan_neuronal_vs_non_neuronal,contrast partner (modal negative)=non_neuronal
+neuronal_vs_non_neuronal,pan_neuronal_vs_non_neuronal,contrast partner (modal negative)=non_neuronal
+newly_formed_oligodendrocyte,newly_formed_oligodendrocyte,
+non_neuronal_enrichment,non_neuronal,
+oligodendrocyte,mature_oligodendrocyte,
+oligodendrocyte_identity,mature_oligodendrocyte,
+oligodendrocyte_lineage_committed_precursor,committed_oligo_precursor,
+oligodendrocyte_lineage_mature_myelinating,mature_oligodendrocyte,
+oligodendrocyte_lineage_opc,opc,
+oligodendrocyte_maturation,oligodendrocyte_maturation,OPC->mature maturation trajectory program kept distinct from stage identities
+oligodendrocyte_maturation_state,oligodendrocyte_maturation,
+oligodendrocyte_maturity,oligodendrocyte_maturation,
+oligodendrocyte_myelinating,mature_oligodendrocyte,
+oligodendrocyte_precursor,opc,
+oligodendrocyte_precursor_identity,opc,
+oligodendrocyte_vs_opc,mature_oligodendrocyte_vs_opc,contrast partner (modal negative)=opc
+oligodendrocyte_vs_opc_maturation,mature_oligodendrocyte_vs_opc,contrast partner (modal negative)=opc
+opc,opc,
+opc_cell_cycle_state,opc_cell_cycle_in_opc,gated cycling substate within OPC
+opc_cycling_state,opc_cell_cycle_in_opc,gated cycling substate within OPC
+opc_identity,opc,
+opc_to_committed_oligo_state,committed_oligo_precursor,OPC->COP transition
+opc_transition_state,committed_oligo_precursor,
+opc_vs_mature_oligodendrocyte,opc_vs_mature_oligodendrocyte,contrast partner (modal negative)=mature_oligodendrocyte
+pan_neuron_identity,pan_neuronal,
+pan_neuronal_identity,pan_neuronal,
+pericyte,pericyte,
+pericyte_identity,pericyte,
+pericyte_smooth_muscle_identity,mural,
+pericyte_vs_endothelial,pericyte_vs_endothelial,contrast partner (modal negative)=endothelial
+pericyte_vs_smooth_muscle,pericyte_vs_smooth_muscle,contrast partner (modal negative)=smooth_muscle
+perivascular_macrophage,macrophage,
+perivascular_macrophage_identity,macrophage,
+pre_oligodendrocyte_transition,committed_oligo_precursor,
+proliferation_state,cell_cycle,
+pvalb_interneuron,pvalb,
+pvalb_interneuron_identity,pvalb,
+pvalb_interneuron_refinement,pvalb,
+pvalb_program,pvalb,
+pvalb_within_gabaergic,pvalb_in_gabaergic_neuron,gated substate within GABAergic
+serpinf1_interneuron_refinement,sncg,
+serpinf1_within_gabaergic,sncg_in_gabaergic_neuron,Serpinf1->Sncg; gated substate within GABAergic
+smooth_muscle_identity,smooth_muscle,
+smooth_muscle_vs_pericyte,smooth_muscle_vs_pericyte,contrast partner (modal negative)=pericyte
+sncg_interneuron,sncg,
+sncg_interneuron_refinement,sncg,
+sncg_pax6_interneuron_identity,sncg,
+sncg_program,sncg,
+sncg_serpinf1_interneuron,sncg,
+sncg_within_gabaergic,sncg_in_gabaergic_neuron,gated substate within GABAergic
+sst_chodl_long_range,sst_chodl,
+sst_interneuron,sst,
+sst_interneuron_identity,sst,
+sst_interneuron_refinement,sst,
+sst_program,sst,
+sst_within_gabaergic,sst_in_gabaergic_neuron,gated substate within GABAergic
+upper_it_l23_within_excitatory,l23_it_in_glutamatergic_neuron,gated substate within glutamatergic
+vascular_endothelial,endothelial,
+vascular_endothelial_identity,endothelial,
+vascular_endothelial_vs_mural,endothelial_vs_mural,contrast partner (modal negative)=mural
+vascular_leptomeningeal_fibroblast,vlmc,
+vascular_leptomeningeal_fibroblast_identity,vlmc,
+vascular_mural_vs_endothelial,mural_vs_endothelial,contrast partner (modal negative)=endothelial
+vascular_pericyte,pericyte,
+vascular_smooth_muscle,smooth_muscle,
+vascular_smooth_muscle_identity,smooth_muscle,
+vascular_vlmc_fibroblast_like,vlmc,
+venous_endothelium_state,venous_endothelial,
+venous_vs_arterial_endothelium,venous_endothelial_vs_arterial_endothelial,contrast partner (modal negative)=arterial_endothelial
+vip_interneuron,vip,
+vip_interneuron_identity,vip,
+vip_interneuron_refinement,vip,
+vip_program,vip,
+vip_within_gabaergic,vip_in_gabaergic_neuron,gated substate within GABAergic
+vlmc_fibroblast,vlmc,
+vlmc_fibroblast_identity,vlmc,
+vlmc_identity,vlmc,

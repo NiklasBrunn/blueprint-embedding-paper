@@ -1,0 +1,17 @@
+name_a_can,name_b_can,name_a,name_b,edit_distance,n_runs_a,n_runs_b,co_occurring_runs
+l4it,l5it,l4_it,l5_it,1,10,9,9
+l4it,l6it,l4_it,l6_it,1,10,1,1
+l5et,l5it,l5_et,l5_it,1,10,9,9
+l5it,l6it,l5_it,l6_it,1,9,1,1
+l6ct,l6it,l6_ct,l6_it,1,10,1,1
+l23it,l4it,l23_it,l4_it,2,8,10,8
+l23it,l5it,l23_it,l5_it,2,8,9,8
+l23it,l6it,l23_it,l6_it,2,8,1,1
+l4it,l5et,l4_it,l5_et,2,10,10,10
+l4it,l6ct,l4_it,l6_ct,2,10,10,10
+l5et,l6ct,l5_et,l6_ct,2,10,10,10
+l5et,l6it,l5_et,l6_it,2,10,1,1
+l5it,l6ct,l5_it,l6_ct,2,9,10,9
+l6b,l6ct,l6b,l6_ct,2,10,10,10
+l6b,l6it,l6b,l6_it,2,10,1,1
+nonneuronal,panneuronal,non_neuronal,pan_neuronal,2,8,10,8

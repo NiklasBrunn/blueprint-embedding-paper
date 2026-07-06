@@ -1,0 +1,36 @@
+name: agentic-embeddings
+# Cross-platform conda env for the data-loading + agentic embedding pipeline.
+# Lower bounds only; conda-forge resolves to platform wheels for linux-64,
+# osx-64, osx-arm64, and win-64.
+#
+# Install (first time):
+#     conda env create -f environment.yml
+#
+# Update in place (after editing this file):
+#     conda env update -f environment.yml --prune
+#
+# Activate, then run the pipeline / tests:
+#     conda activate agentic-embeddings
+#     pytest tests/ -v
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.11,<3.13          # pyucell requires >=3.11
+  - numpy>=1.23
+  - pandas>=2.0
+  - scipy>=1.10
+  - anndata>=0.10
+  - scanpy>=1.10
+  - scikit-misc>=0.3      # required by sc.pp.highly_variable_genes(flavor="seurat_v3")
+  - matplotlib>=3.7       # qc.py and preprocess.py write PNG plots
+  - pyarrow>=14           # parquet I/O for scripts/models/*.py
+  - pytest>=7             # test suite (tests/)
+  - scvi-tools>=1.1,<2    # scripts/models/scvi.py + scvi_census.py
+  - pytorch>=2.1          # UCE inference; also pulled in by scvi-tools
+  - pip
+  - pip:
+    - cellxgene-census>=1.9.1   # not on conda-forge; canonical via pip
+    - accelerate==0.24.0        # UCE eval_single_anndata.py pinned dep
+    - scarches>=0.6             # scripts/models/expimap.py
+    - pyucell>=0.6              # scripts/models/ucell.py
+    - scib-metrics>=0.5         # Benchmarker engine for embedding_metrics/metrics.py + plots/plot_scib_table.py (pulls in pynndescent + jax)

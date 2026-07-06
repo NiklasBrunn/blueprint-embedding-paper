@@ -1,0 +1,65 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint is broadly plausible for healthy human pancreas but needs targeted refinement for lymphatic endothelial coverage, immune gate/subtype resolution, and a few mislabeled or over-combined axes.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "vascular compartment",
+      "description": "The blueprint has generic blood endothelial coverage but no lymphatic endothelial representation, which is expected in pancreatic tissue.",
+      "suggested_fix": "Add a lymphatic endothelial module using markers such as PROX1, PDPN, LYVE1, FLT4, CCL21, MMRN1, and/or RELN, with an endothelial-gated lymphatic axis or blood-vs-lymphatic endothelial contrast.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:immune_common and immune gated axes",
+      "description": "The immune_common gate includes multiple myeloid/APC-skewed genes, so T, NK, B, and plasma-cell axes may be suppressed by a gate that scores best in myeloid cells.",
+      "suggested_fix": "Rebalance immune_common toward pan-leukocyte markers such as PTPRC, CD52, LAPTM5, LCP1, CORO1A, and FYB1, leaving LST1/TYROBP/FCER1G/HLA-heavy signal to myeloid or APC modules.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "module:b_plasma_cell / axis:immune_b_plasma_cell",
+      "description": "B cells and plasma cells are merged into one mixed marker module, which blurs two biologically distinct immune populations and weakens mean-expression scoring for either pure subtype.",
+      "suggested_fix": "Split B-cell and plasma-cell modules/axes, for example MS4A1/CD79A/CD79B/BANK1/CD74 for B cells and MZB1/JCHAIN/XBP1/SDC1/IGHG1/IGKC for plasma cells.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:dendritic_antigen_presenting",
+      "description": "The dendritic module mixes conventional DC markers with plasmacytoid DC markers, which can blur distinct immune subtypes if both are present.",
+      "suggested_fix": "Split cDC and pDC into separate immune-gated axes, or narrow the module to the intended dominant DC/APC population.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:epithelial_endocrine_vs_exocrine",
+      "description": "The axis name says endocrine versus exocrine, but the negative module is only acinar_zymogen and does not include ductal epithelium.",
+      "suggested_fix": "Rename the axis to endocrine_vs_acinar or redesign the exocrine contrast/topology so ductal identity is also represented on the exocrine side.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:epithelial_secretory_er_load",
+      "description": "The axis is named as epithelial secretory ER load but is gated only by endocrine_common, while acinar has a separate ER-load axis.",
+      "suggested_fix": "Rename it to endocrine_secretory_er_load, or add a true broader epithelial/ductal-scoped ER-load axis if that is intended.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axes:endocrine_epsilon_ghrelin_cell and endocrine_enterochromaffin_serotonin_cell",
+      "description": "Rare endocrine epsilon/ghrelin and serotonin/EC-like programs are not treated as sibling negatives despite shared endocrine/neuroendocrine signal, and the serotonin module may overlap pancreatic endocrine states rather than a canonical adult pancreas cell type.",
+      "suggested_fix": "Include these rare endocrine modules in each other's negative sets where appropriate and tighten the serotonin module toward a clearly intended rare EC-like endocrine state.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "Healthy pancreas atlases vary in whether they recover very rare populations such as mesothelial/capsular cells or fetal-like serotonin endocrine states; absence of a note means these should not dominate dimensionality."
+  ]
+}

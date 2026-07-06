@@ -1,0 +1,3 @@
+- iter 01 — minor — The blueprint broadly covers healthy human pancreas but needs targeted additions for adipocyte/DC coverage, removal of a redundant inverse stromal axis, and several marker cleanups.
+- iter 02 — minor — The blueprint covers the major healthy human pancreas compartments but needs targeted refinements for mixed immune modules, vascular subtype resolution, and a few specificity issues.
+- iter 03 — minor — The blueprint broadly covers healthy human pancreas but needs targeted refinements to ductal/centroacinar specificity, stromal stellate versus mural separation, and a few marker modules.

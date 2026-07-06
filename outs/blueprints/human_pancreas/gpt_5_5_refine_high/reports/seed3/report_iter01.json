@@ -1,0 +1,42 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint covers the major pancreatic epithelial and endocrine landscape but needs targeted additions for lymphatic endothelium, mural cells, and finer immune subsets, plus modest marker cleanup.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "vascular compartment / endothelial_vascular axis",
+      "description": "The blueprint has a single blood endothelial module but no lymphatic endothelial representation, which is an expected component of broad human pancreas atlases.",
+      "suggested_fix": "Add a lymphatic endothelial module and axis, ideally as a vascular-vs-lymphatic contrast or pan-endothelial gated lymphatic axis. Plausible markers include PROX1, LYVE1, PDPN, FLT4, CCL21, MMRN1, and TFF3 where supported.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "stellate_quiescent / stellate_activation_state",
+      "description": "The stromal module mixes stellate/fibroblast markers with mural/pericyte markers, and the activated-stellate axis is gated by a quiescent module that may suppress activated cells.",
+      "suggested_fix": "Split stromal coverage into fibroblast/stellate and mural/pericyte or vascular smooth muscle modules. Use a broader stromal/fibroblast gate for activation rather than a narrowly quiescent gate, and move markers such as PDGFRB and RGS5 into the mural module.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "immune compartment axes",
+      "description": "Macrophage/myeloid, T cell, B cell, and mast cell axes omit expected pancreatic immune subsets such as NK/cytotoxic lymphocytes, plasma cells, and dendritic cells.",
+      "suggested_fix": "Add supported modules for plasma cells, NK/cytotoxic lymphocytes, and dendritic cells/cDCs using atlas-backed markers such as MZB1/JCHAIN/XBP1, NKG7/GNLY/PRF1/KLRD1, and FCER1A/CD1C/CLEC10A/CLEC9A/XCR1/LILRA4 as appropriate.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "beta_cell and stellate_quiescent modules",
+      "description": "FTL and FTH1 dilute beta-cell specificity as generic iron/stress genes, while FABP4, PDGFRB, and RGS5 blur stellate/fibroblast identity with adipocyte/endothelial or mural programs.",
+      "suggested_fix": "Replace generic beta markers with beta-specific genes such as SLC30A8, NKX6-1, G6PC2, UCN3, or HADH where supported. Keep stellate/fibroblast markers focused on matrix/fibroblast identity and move mural markers to a separate mural module.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "I did not verify DOI correctness or journal impact factors; this report only judges biological plausibility and coverage.",
+    "A separate centroacinar/ductal-subtype axis could be useful if strongly supported by the selected atlas resources, but the current ductal coverage is adequate enough that this is not a required next-round fix."
+  ]
+}

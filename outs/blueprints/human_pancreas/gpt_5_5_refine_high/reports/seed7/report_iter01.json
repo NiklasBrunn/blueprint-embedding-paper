@@ -1,0 +1,49 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers human pancreas but needs targeted fixes for immune resolution, mural-cell gating, and acinar endothelial marker specificity.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "immune_leukocyte / immune subtype axes",
+      "description": "The resident immune compartment resolves macrophage/myeloid, T, B, and mast cells, but does not explicitly capture dendritic/APC subsets or cytotoxic/NK-like lymphocytes expected in human pancreas atlases. The macrophage module is C1Q/TYROBP macrophage-skewed and the T-cell module lacks cytotoxic/NK markers.",
+      "suggested_fix": "Add gated leukocyte axes for cytotoxic/NK-like lymphocytes and dendritic/APC myeloid subsets where supported, using markers such as NKG7, GNLY, PRF1, GZMB, KLRD1, FCGR3A for cytotoxic/NK and FCER1A, CD1C, CLEC10A, CLEC9A, LILRA4, IRF8 for DC subsets.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "stromal_pericyte_smooth_muscle_identity",
+      "description": "The pericyte/smooth-muscle axis is gated by stromal_matrix, a collagen/DCN/LUM/PDGFRA fibroblast-like ECM module. Mural cells may not score strongly on this gate, so an expected pancreatic mural compartment can be suppressed.",
+      "suggested_fix": "Make mural identity a plain compartment axis or gate it with a mural-compatible core rather than a fibroblast ECM module. Keep stellate/fibroblast refinement under the stromal matrix compartment and consider adding a separate activated stellate/fibroblast state if supported.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "acinar_endothelium / acinar_endothelial_specialization",
+      "description": "The acinar_endothelium module contains broad immediate-early and activation/flow genes (JUN, FOS, FOSB, KLF2, KLF4) and CD74, so the axis may capture endothelial stress, flow response, or immune-interacting endothelium rather than acinar-region endothelial specialization.",
+      "suggested_fix": "Replace the acinar_endothelium positive module with more anatomically or subtype-specific acinar endothelial markers from the pancreas endothelial source. If stress/activation is intended, split it into a separately named endothelial activation/state axis.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "acinar_regenerating_substate",
+      "description": "The REG-family module is plausible for acinar stress/regeneration, but contrasting it against the ductal epithelial module makes the axis partly an acinar-vs-ductal separator rather than a state scoped cleanly within acinar cells.",
+      "suggested_fix": "Rename or tune the axis toward acinar REG/stress/regeneration and consider leaving negative_modules empty under the acinar gate, or add a separate ductal injury/SPP1-MMP7 state if both epithelial stress programs are intended.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "gene-set-hygiene",
+      "where": "gamma_pp_cell / epsilon_cell",
+      "description": "The PP/gamma and epsilon endocrine modules are very thin, especially epsilon_cell with only GHRL. These rare-population axes are biologically plausible but brittle to dropout and dataset gene naming.",
+      "suggested_fix": "Expand these modules with additional literature-supported human pancreatic PP and epsilon markers if available. If support is weak for adult/baseline samples, keep them conservative and avoid overinterpreting them as high-resolution axes.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "Citation DOI verification was not assessed; this report only evaluates biological coverage, axis design, and marker plausibility."
+  ]
+}

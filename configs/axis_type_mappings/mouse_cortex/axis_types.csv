@@ -1,0 +1,28 @@
+axis_name,cell_type,axis_kind,notes
+neuronal_identity,,plain,pan-neuronal program; no single cell type
+glutamatergic_vs_gabaergic,,contrast,glutamatergic class; no single cell type
+l23_it_program,L2/3 IT,gated,
+l4_it_program,L4,gated,
+l5_it_program,L5 IT,gated,
+l5_et_pt_program,L5 PT,gated,
+l5_6_np_program,L5 NP,gated,
+l6_ct_program,L6 CT,gated,
+l6_it_car3_program,L6 IT,gated,
+l6b_program,L6b,gated,
+lamp5_program,Lamp5,gated,
+vip_program,Vip,gated,
+sncg_program,Sncg,gated,
+sst_program,Sst,gated,
+pvalb_program,Pvalb,gated,
+meis2_program,Meis2,gated,
+astrocyte_identity,Astro,plain,
+oligodendrocyte_vs_opc,Oligo,contrast,positive pole = oligodendrocyte
+myelin_maturation_program,,gated,within-Oligo myelination/maturation program; Oligo identity is carried by oligodendrocyte_vs_opc
+opc_identity,OPC,plain,
+microglia_homeostatic_program,Microglia,gated,
+border_macrophage_program,Macrophage,gated,
+endothelial_identity,Endo,plain,
+pericyte_vs_smooth_muscle,Peri,contrast,positive pole = pericyte
+smooth_muscle_identity,SMC,plain,
+vlmc_fibroblast_identity,VLMC,plain,
+neuronal_activity_response,,gated,immediate-early activity program; no single cell type

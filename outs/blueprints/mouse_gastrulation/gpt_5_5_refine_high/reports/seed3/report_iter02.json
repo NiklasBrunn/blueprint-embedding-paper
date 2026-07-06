@@ -1,0 +1,41 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint is broadly plausible and well structured, but needs targeted refinement for endoderm convergence and early hematopoietic resolution plus a few marker cleanups.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "endo/gut branch: visc_anteriorVisceralEndoderm, gut_gutTubeEndoderm, gut_foregutEndoderm, gut_hindgutEndoderm",
+      "description": "The endoderm tree is too strictly definitive-endoderm centered. In E6.5-E8.5 mouse gastrulation, visceral endoderm matures and intercalates/converges with primitive-streak-derived definitive endoderm, especially in posterior/hindgut trajectories. The current VE root only refines to AVE, while gut tube and foregut/hindgut are gated solely through definitiveEndoderm.",
+      "suggested_fix": "Add a visceral-endoderm maturation/posterior-VE or VE-hindgut/intercalating-endoderm axis gated by visceralEndoderm as a sibling to AVE, or otherwise add a separate VE-derived gut/hindgut branch that captures the convergence trajectory while retaining the existing definitive-endoderm gut branch.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "hematopoietic branch: hemo_bloodProgenitor, blood_erythroid, blood_myeloid",
+      "description": "The branch covers haemato-endothelial, endothelial, blood progenitor, erythroid, and myeloid states, but E7.5-E8.5 blood emergence also needs early EMP/megakaryocyte resolution. The current myeloid axis reads more like later macrophage differentiation and there is no explicit megakaryocyte/EMP axis.",
+      "suggested_fix": "Add or convert one blood-child axis to an early EMP/megakaryocyte program under bloodProgenitor or hematoEndothelial, using stage-appropriate markers such as Itga2b, Pf4, Vwf, Nfe2, Mpl, Gata1, and Fli1. Retain erythroid and endothelial coverage and adjust myeloid toward early embryonic myeloid if kept.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module: myeloid",
+      "description": "Several genes in the myeloid module, including Adgre1, C1qa, C1qb, Tyrobp, and Aif1, are more characteristic of differentiated macrophage/microglial programs than the earliest E8.5 myeloid emergence.",
+      "suggested_fix": "Replace the mature macrophage-heavy genes with earlier yolk-sac myeloid/EMP-compatible markers, or explicitly make this an early myeloid/macrophage-precursor module and keep it gated under blood progenitors.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module: foregutEndoderm",
+      "description": "Ttr and Rbp4 are strong visceral/yolk-sac endoderm-associated markers in this stage range and may confound foregut definitive endoderm with the separate visceral endoderm program.",
+      "suggested_fix": "Swap Ttr and Rbp4 for more foregut/anterior definitive-endoderm markers appropriate to E8-E8.5, such as Shh, Pyy, Nepn, Gata4, Gata6, or other supported foregut/anterior gut markers.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "Citation and DOI verification were not assessed; this review judged biological coverage, marker plausibility, and tree structure only."
+  ]
+}

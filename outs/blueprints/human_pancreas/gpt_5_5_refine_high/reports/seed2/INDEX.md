@@ -1,0 +1,3 @@
+- iter 01 — minor — The blueprint broadly covers healthy human pancreas but needs targeted refinement of immune subtype resolution, acinar/REG marker separation, epsilon markers, and redundant contrast axes.
+- iter 02 — minor — The blueprint broadly covers human pancreas but needs targeted refinements for lymphatic endothelium, mural/stromal resolution, and a few marker choices.
+- iter 03 — fine — The blueprint adequately covers the broad healthy human pancreas cell-type and state landscape with plausible axes and markers.

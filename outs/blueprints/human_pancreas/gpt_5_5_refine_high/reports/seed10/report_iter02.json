@@ -1,0 +1,43 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint is broadly plausible for healthy human pancreas but needs targeted cleanup of a redundant exocrine axis, immune gate/label refinements, and modest missing-population coverage.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axes: acinar_vs_ductal_exocrine / ductal_vs_acinar_exocrine",
+      "description": "The acinar-vs-ductal and ductal-vs-acinar axes are exact sign-reversed duplicates and add dimensionality without adding biological resolution.",
+      "suggested_fix": "Keep one acinar/ductal contrast axis and remove the reverse duplicate. If a ductal-positive dimension is desired, replace it with a plain or gated ductal/centroacinar program rather than the inverse contrast.",
+      "remove": [
+        "axis:ductal_vs_acinar_exocrine"
+      ]
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "immune_core and immune subtype axes",
+      "description": "The immune_core gate is myeloid/APC-biased rather than pan-leukocyte, which can suppress T, NK, and some B-cell gated axes. The t_nk_lymphocyte and b_plasma_cell labels also do not match their marker contents because NK and plasma cells are already separate modules.",
+      "suggested_fix": "Revise immune_core toward pan-leukocyte markers such as PTPRC, LCP1, CORO1A, CD53, LAPTM5, HCLS1, RAC2, and SRGN or similar. Rename or relabel the T and B modules/axes to match their marker sets, or adjust the marker sets if broader labels are intended.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "immune compartment",
+      "description": "Resident dendritic/APC subsets are expected in human pancreas but are not cleanly represented; the macrophage_monocyte module does not adequately cover cDC-like cells.",
+      "suggested_fix": "Add an immune-gated dendritic-cell module/axis using supported human cDC/APC markers such as CD1C, FCER1A, CLEC10A, ITGAX, IRF8, and HLA-DRA, while avoiding duplication of macrophage markers.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "stromal/adipose compartment",
+      "description": "For all-cell-types healthy human pancreas, adipocytes or adipocyte-like fat cells can be part of whole-tissue samples, but no adipocyte program is represented.",
+      "suggested_fix": "If supported by the cited human pancreas atlas/literature resources, add a plain or stromal-scoped adipocyte axis with markers such as ADIPOQ, PLIN1, LPL, FABP4, CIDEC, and LEP or LIPE as appropriate.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "DOI, impact-factor, and citation-title verification were not checked in this discriminator pass."
+  ]
+}

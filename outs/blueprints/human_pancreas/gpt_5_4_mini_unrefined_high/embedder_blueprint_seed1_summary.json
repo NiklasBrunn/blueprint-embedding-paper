@@ -1,0 +1,1200 @@
+{
+  "run_id": "260609_blueprint_run01",
+  "extracted_at": "2026-06-09T17:21:31+00:00",
+  "scenario": {
+    "species": [
+      "human"
+    ],
+    "tissue": [
+      "pancreas"
+    ],
+    "celltype": null,
+    "age": null,
+    "sex": null,
+    "condition": null,
+    "notes": null
+  },
+  "blueprint": {
+    "name": "extract",
+    "clip": 4.0,
+    "n_modules": 21,
+    "n_axes": 17,
+    "n_axes_by_kind": {
+      "plain": 1,
+      "contrast": 1,
+      "gated": 15
+    },
+    "n_resources": 5,
+    "n_resources_by_kind": {
+      "paper": 0,
+      "atlas": 3,
+      "database": 2
+    },
+    "n_dois_unique": 3,
+    "n_total_genes": 224,
+    "n_unique_genes": 167,
+    "modules": [
+      {
+        "name": "endocrine_core",
+        "genes": [
+          "CHGA",
+          "CHGB",
+          "ISL1",
+          "INSM1",
+          "NEUROD1",
+          "PCSK1",
+          "PCSK2",
+          "PAX6",
+          "SCG5",
+          "SYP"
+        ],
+        "n_genes": 10,
+        "resource_keys": [
+          "muraro2016_cels",
+          "segerstolpe2016_cmet"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "endocrine_vs_exocrine",
+            "role": "positive"
+          },
+          {
+            "axis": "beta",
+            "role": "gate"
+          },
+          {
+            "axis": "alpha",
+            "role": "gate"
+          },
+          {
+            "axis": "delta",
+            "role": "gate"
+          },
+          {
+            "axis": "pp",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 5,
+        "n_genes_present": 10,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.8770601880112319
+      },
+      {
+        "name": "beta_core",
+        "genes": [
+          "INS",
+          "IAPP",
+          "MAFA",
+          "PDX1",
+          "SLC2A2",
+          "SLC30A8",
+          "G6PC2",
+          "UCN3",
+          "PCSK1",
+          "SIX3"
+        ],
+        "n_genes": 10,
+        "resource_keys": [
+          "muraro2016_cels",
+          "segerstolpe2016_cmet"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "beta",
+            "role": "positive"
+          },
+          {
+            "axis": "alpha",
+            "role": "negative"
+          },
+          {
+            "axis": "delta",
+            "role": "negative"
+          },
+          {
+            "axis": "pp",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 4,
+        "n_genes_present": 10,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.9678305457209132
+      },
+      {
+        "name": "alpha_core",
+        "genes": [
+          "GCG",
+          "ARX",
+          "IRX2",
+          "TM4SF4",
+          "LOXL4",
+          "TTR",
+          "SLC7A2",
+          "SLC38A5",
+          "CD81",
+          "GCGR"
+        ],
+        "n_genes": 10,
+        "resource_keys": [
+          "muraro2016_cels",
+          "segerstolpe2016_cmet"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "beta",
+            "role": "negative"
+          },
+          {
+            "axis": "alpha",
+            "role": "positive"
+          },
+          {
+            "axis": "delta",
+            "role": "negative"
+          },
+          {
+            "axis": "pp",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 4,
+        "n_genes_present": 10,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.9925528018556953
+      },
+      {
+        "name": "delta_core",
+        "genes": [
+          "SST",
+          "HHEX",
+          "DPP4",
+          "GHSR",
+          "PENK",
+          "RBP4",
+          "C3",
+          "SSTR2",
+          "CRYAB",
+          "KCNK1"
+        ],
+        "n_genes": 10,
+        "resource_keys": [
+          "muraro2016_cels",
+          "segerstolpe2016_cmet"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "beta",
+            "role": "negative"
+          },
+          {
+            "axis": "alpha",
+            "role": "negative"
+          },
+          {
+            "axis": "delta",
+            "role": "positive"
+          },
+          {
+            "axis": "pp",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 4,
+        "n_genes_present": 10,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.9387742644365767
+      },
+      {
+        "name": "pp_core",
+        "genes": [
+          "PPY",
+          "PAX6",
+          "TM4SF4",
+          "TTR",
+          "ID3",
+          "SYT13",
+          "RBP4",
+          "SLC30A8",
+          "LMO1",
+          "SYT1"
+        ],
+        "n_genes": 10,
+        "resource_keys": [
+          "muraro2016_cels",
+          "segerstolpe2016_cmet"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "beta",
+            "role": "negative"
+          },
+          {
+            "axis": "alpha",
+            "role": "negative"
+          },
+          {
+            "axis": "delta",
+            "role": "negative"
+          },
+          {
+            "axis": "pp",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 4,
+        "n_genes_present": 10,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.9582468563057014
+      },
+      {
+        "name": "exocrine_core",
+        "genes": [
+          "PRSS1",
+          "CPA1",
+          "CTRB1",
+          "AMY2A",
+          "CLPS",
+          "PNLIP",
+          "KRT19",
+          "EPCAM",
+          "SOX9",
+          "HNF1B",
+          "CFTR",
+          "MUC1"
+        ],
+        "n_genes": 12,
+        "resource_keys": [
+          "baron2016_cels",
+          "muraro2016_cels"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "endocrine_vs_exocrine",
+            "role": "negative"
+          },
+          {
+            "axis": "acinar",
+            "role": "gate"
+          },
+          {
+            "axis": "ductal",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 12,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.9158222439262605
+      },
+      {
+        "name": "acinar_core",
+        "genes": [
+          "PRSS1",
+          "CPA1",
+          "CTRB1",
+          "AMY2A",
+          "CLPS",
+          "PNLIP",
+          "CELA3A",
+          "CTRC",
+          "PRSS3",
+          "REG3A"
+        ],
+        "n_genes": 10,
+        "resource_keys": [
+          "baron2016_cels",
+          "muraro2016_cels"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "acinar",
+            "role": "positive"
+          },
+          {
+            "axis": "ductal",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 2,
+        "n_genes_present": 10,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.6899645952875106
+      },
+      {
+        "name": "ductal_core",
+        "genes": [
+          "KRT19",
+          "KRT8",
+          "KRT18",
+          "EPCAM",
+          "SOX9",
+          "HNF1B",
+          "CFTR",
+          "MUC1",
+          "SLC4A7",
+          "CLDN4",
+          "KRT7"
+        ],
+        "n_genes": 11,
+        "resource_keys": [
+          "baron2016_cels",
+          "muraro2016_cels"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "acinar",
+            "role": "negative"
+          },
+          {
+            "axis": "ductal",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 2,
+        "n_genes_present": 11,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.9431693321938713
+      },
+      {
+        "name": "vascular_gate",
+        "genes": [
+          "PECAM1",
+          "VWF",
+          "KDR",
+          "CLDN5",
+          "EMCN",
+          "RAMP2",
+          "ESAM",
+          "PLVAP",
+          "PROX1",
+          "PDPN",
+          "LYVE1",
+          "FLT4",
+          "CCL21"
+        ],
+        "n_genes": 13,
+        "resource_keys": [
+          "baron2016_cels"
+        ],
+        "n_resource_keys": 1,
+        "used_in_axes": [
+          {
+            "axis": "endothelial",
+            "role": "gate"
+          },
+          {
+            "axis": "lymphatic_endothelium",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 2,
+        "n_genes_present": 13,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.4235746551092663
+      },
+      {
+        "name": "endothelial_core",
+        "genes": [
+          "PECAM1",
+          "VWF",
+          "KDR",
+          "CLDN5",
+          "EMCN",
+          "RAMP2",
+          "ESAM",
+          "PLVAP"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "baron2016_cels"
+        ],
+        "n_resource_keys": 1,
+        "used_in_axes": [
+          {
+            "axis": "endothelial",
+            "role": "positive"
+          },
+          {
+            "axis": "lymphatic_endothelium",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 2,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.15425466975949212
+      },
+      {
+        "name": "lymphatic_core",
+        "genes": [
+          "PROX1",
+          "PDPN",
+          "LYVE1",
+          "FLT4",
+          "CCL21",
+          "FOXC2",
+          "MMRN1",
+          "RELN"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "baron2016_cels"
+        ],
+        "n_resource_keys": 1,
+        "used_in_axes": [
+          {
+            "axis": "endothelial",
+            "role": "negative"
+          },
+          {
+            "axis": "lymphatic_endothelium",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 2,
+        "n_genes_present": 7,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "RELN"
+        ],
+        "fraction_nonzero_cells": 0.4083750457819558
+      },
+      {
+        "name": "mesenchymal_gate",
+        "genes": [
+          "COL1A1",
+          "COL1A2",
+          "COL3A1",
+          "DCN",
+          "LUM",
+          "PDGFRA",
+          "DPT",
+          "COL6A1",
+          "COL6A2",
+          "ACTA2",
+          "RGS5",
+          "CSPG4",
+          "MCAM",
+          "TAGLN",
+          "MYH11",
+          "NOTCH3",
+          "PDGFRB"
+        ],
+        "n_genes": 17,
+        "resource_keys": [
+          "baron2016_cels"
+        ],
+        "n_resource_keys": 1,
+        "used_in_axes": [
+          {
+            "axis": "fibroblast_stellate",
+            "role": "gate"
+          },
+          {
+            "axis": "pericyte_smooth_muscle",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 2,
+        "n_genes_present": 17,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.5142839702112074
+      },
+      {
+        "name": "fibroblast_stellate_core",
+        "genes": [
+          "COL1A1",
+          "COL1A2",
+          "COL3A1",
+          "DCN",
+          "LUM",
+          "PDGFRA",
+          "DPT",
+          "COL6A1",
+          "COL6A2",
+          "COL14A1",
+          "CFD",
+          "C7",
+          "MGP"
+        ],
+        "n_genes": 13,
+        "resource_keys": [
+          "baron2016_cels"
+        ],
+        "n_resource_keys": 1,
+        "used_in_axes": [
+          {
+            "axis": "fibroblast_stellate",
+            "role": "positive"
+          },
+          {
+            "axis": "pericyte_smooth_muscle",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 2,
+        "n_genes_present": 13,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.44115492613844465
+      },
+      {
+        "name": "pericyte_smc_core",
+        "genes": [
+          "RGS5",
+          "CSPG4",
+          "MCAM",
+          "ACTA2",
+          "TAGLN",
+          "MYH11",
+          "PDGFRB",
+          "DES",
+          "NOTCH3",
+          "KCNJ8",
+          "ABCC9"
+        ],
+        "n_genes": 11,
+        "resource_keys": [
+          "baron2016_cels"
+        ],
+        "n_resource_keys": 1,
+        "used_in_axes": [
+          {
+            "axis": "fibroblast_stellate",
+            "role": "negative"
+          },
+          {
+            "axis": "pericyte_smooth_muscle",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 2,
+        "n_genes_present": 11,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.5134904163105848
+      },
+      {
+        "name": "immune_gate",
+        "genes": [
+          "PTPRC",
+          "LST1",
+          "TYROBP",
+          "FCER1G",
+          "HLA-DRA",
+          "CD74",
+          "TRAC",
+          "MS4A1",
+          "TPSB2",
+          "AIF1"
+        ],
+        "n_genes": 10,
+        "resource_keys": [
+          "baron2016_cels"
+        ],
+        "n_resource_keys": 1,
+        "used_in_axes": [
+          {
+            "axis": "myeloid",
+            "role": "gate"
+          },
+          {
+            "axis": "t_nk",
+            "role": "gate"
+          },
+          {
+            "axis": "b_cell",
+            "role": "gate"
+          },
+          {
+            "axis": "plasma_cell",
+            "role": "gate"
+          },
+          {
+            "axis": "mast",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 5,
+        "n_genes_present": 9,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "HLA-DRA"
+        ],
+        "fraction_nonzero_cells": 0.3329263826150653
+      },
+      {
+        "name": "myeloid_core",
+        "genes": [
+          "LST1",
+          "C1QA",
+          "C1QB",
+          "C1QC",
+          "APOE",
+          "TYROBP",
+          "FCER1G",
+          "CTSS",
+          "MARCO",
+          "MRC1",
+          "AIF1"
+        ],
+        "n_genes": 11,
+        "resource_keys": [
+          "baron2016_cels"
+        ],
+        "n_resource_keys": 1,
+        "used_in_axes": [
+          {
+            "axis": "myeloid",
+            "role": "positive"
+          },
+          {
+            "axis": "t_nk",
+            "role": "negative"
+          },
+          {
+            "axis": "b_cell",
+            "role": "negative"
+          },
+          {
+            "axis": "plasma_cell",
+            "role": "negative"
+          },
+          {
+            "axis": "mast",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 5,
+        "n_genes_present": 11,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.3121108533756562
+      },
+      {
+        "name": "t_nk_core",
+        "genes": [
+          "TRAC",
+          "CD3D",
+          "CD3E",
+          "TRBC2",
+          "LTB",
+          "IL7R",
+          "NKG7",
+          "KLRD1",
+          "GNLY",
+          "CST7"
+        ],
+        "n_genes": 10,
+        "resource_keys": [
+          "baron2016_cels"
+        ],
+        "n_resource_keys": 1,
+        "used_in_axes": [
+          {
+            "axis": "myeloid",
+            "role": "negative"
+          },
+          {
+            "axis": "t_nk",
+            "role": "positive"
+          },
+          {
+            "axis": "b_cell",
+            "role": "negative"
+          },
+          {
+            "axis": "plasma_cell",
+            "role": "negative"
+          },
+          {
+            "axis": "mast",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 5,
+        "n_genes_present": 10,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.17568062507630325
+      },
+      {
+        "name": "b_cell_core",
+        "genes": [
+          "MS4A1",
+          "CD79A",
+          "CD79B",
+          "CD74",
+          "HLA-DRA",
+          "HLA-DPB1",
+          "CD37",
+          "CXCR4",
+          "BANK1",
+          "CD19"
+        ],
+        "n_genes": 10,
+        "resource_keys": [
+          "baron2016_cels"
+        ],
+        "n_resource_keys": 1,
+        "used_in_axes": [
+          {
+            "axis": "myeloid",
+            "role": "negative"
+          },
+          {
+            "axis": "t_nk",
+            "role": "negative"
+          },
+          {
+            "axis": "b_cell",
+            "role": "positive"
+          },
+          {
+            "axis": "plasma_cell",
+            "role": "negative"
+          },
+          {
+            "axis": "mast",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 5,
+        "n_genes_present": 8,
+        "n_genes_missing": 2,
+        "missing_genes": [
+          "HLA-DPB1",
+          "HLA-DRA"
+        ],
+        "fraction_nonzero_cells": 0.3693077768282261
+      },
+      {
+        "name": "plasma_cell_core",
+        "genes": [
+          "JCHAIN",
+          "MZB1",
+          "XBP1",
+          "SDC1",
+          "DERL3",
+          "PRDM1",
+          "IGKC",
+          "IGHG1",
+          "TNFRSF17",
+          "FKBP11"
+        ],
+        "n_genes": 10,
+        "resource_keys": [
+          "baron2016_cels"
+        ],
+        "n_resource_keys": 1,
+        "used_in_axes": [
+          {
+            "axis": "myeloid",
+            "role": "negative"
+          },
+          {
+            "axis": "t_nk",
+            "role": "negative"
+          },
+          {
+            "axis": "b_cell",
+            "role": "negative"
+          },
+          {
+            "axis": "plasma_cell",
+            "role": "positive"
+          },
+          {
+            "axis": "mast",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 5,
+        "n_genes_present": 9,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "JCHAIN"
+        ],
+        "fraction_nonzero_cells": 0.8766328897570504
+      },
+      {
+        "name": "mast_core",
+        "genes": [
+          "TPSB2",
+          "TPSAB1",
+          "CPA3",
+          "KIT",
+          "MS4A2",
+          "HDC",
+          "CTSG",
+          "GATA2"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "baron2016_cels"
+        ],
+        "n_resource_keys": 1,
+        "used_in_axes": [
+          {
+            "axis": "myeloid",
+            "role": "negative"
+          },
+          {
+            "axis": "t_nk",
+            "role": "negative"
+          },
+          {
+            "axis": "b_cell",
+            "role": "negative"
+          },
+          {
+            "axis": "plasma_cell",
+            "role": "negative"
+          },
+          {
+            "axis": "mast",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 5,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.07306800146502258
+      },
+      {
+        "name": "cycling_core",
+        "genes": [
+          "MKI67",
+          "TOP2A",
+          "UBE2C",
+          "CDK1",
+          "CENPF",
+          "BIRC5",
+          "HMGB2",
+          "TYMS",
+          "MCM5",
+          "PCNA",
+          "CCNB1",
+          "CDC20"
+        ],
+        "n_genes": 12,
+        "resource_keys": [
+          "msigdb_hallmark_g2m",
+          "msigdb_hallmark_e2f"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "cycling",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 12,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.4889512879990233
+      }
+    ],
+    "axes": [
+      {
+        "name": "endocrine_vs_exocrine",
+        "kind": "contrast",
+        "positive": "endocrine_core",
+        "negatives": [
+          "exocrine_core"
+        ],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "beta",
+        "kind": "gated",
+        "positive": "beta_core",
+        "negatives": [
+          "alpha_core",
+          "delta_core",
+          "pp_core"
+        ],
+        "negative_weight": 0.5,
+        "gate": "endocrine_core"
+      },
+      {
+        "name": "alpha",
+        "kind": "gated",
+        "positive": "alpha_core",
+        "negatives": [
+          "beta_core",
+          "delta_core",
+          "pp_core"
+        ],
+        "negative_weight": 0.5,
+        "gate": "endocrine_core"
+      },
+      {
+        "name": "delta",
+        "kind": "gated",
+        "positive": "delta_core",
+        "negatives": [
+          "beta_core",
+          "alpha_core",
+          "pp_core"
+        ],
+        "negative_weight": 0.5,
+        "gate": "endocrine_core"
+      },
+      {
+        "name": "pp",
+        "kind": "gated",
+        "positive": "pp_core",
+        "negatives": [
+          "beta_core",
+          "alpha_core",
+          "delta_core"
+        ],
+        "negative_weight": 0.5,
+        "gate": "endocrine_core"
+      },
+      {
+        "name": "acinar",
+        "kind": "gated",
+        "positive": "acinar_core",
+        "negatives": [
+          "ductal_core"
+        ],
+        "negative_weight": 0.5,
+        "gate": "exocrine_core"
+      },
+      {
+        "name": "ductal",
+        "kind": "gated",
+        "positive": "ductal_core",
+        "negatives": [
+          "acinar_core"
+        ],
+        "negative_weight": 0.5,
+        "gate": "exocrine_core"
+      },
+      {
+        "name": "endothelial",
+        "kind": "gated",
+        "positive": "endothelial_core",
+        "negatives": [
+          "lymphatic_core"
+        ],
+        "negative_weight": 0.5,
+        "gate": "vascular_gate"
+      },
+      {
+        "name": "lymphatic_endothelium",
+        "kind": "gated",
+        "positive": "lymphatic_core",
+        "negatives": [
+          "endothelial_core"
+        ],
+        "negative_weight": 0.5,
+        "gate": "vascular_gate"
+      },
+      {
+        "name": "fibroblast_stellate",
+        "kind": "gated",
+        "positive": "fibroblast_stellate_core",
+        "negatives": [
+          "pericyte_smc_core"
+        ],
+        "negative_weight": 0.5,
+        "gate": "mesenchymal_gate"
+      },
+      {
+        "name": "pericyte_smooth_muscle",
+        "kind": "gated",
+        "positive": "pericyte_smc_core",
+        "negatives": [
+          "fibroblast_stellate_core"
+        ],
+        "negative_weight": 0.5,
+        "gate": "mesenchymal_gate"
+      },
+      {
+        "name": "myeloid",
+        "kind": "gated",
+        "positive": "myeloid_core",
+        "negatives": [
+          "t_nk_core",
+          "b_cell_core",
+          "plasma_cell_core",
+          "mast_core"
+        ],
+        "negative_weight": 0.5,
+        "gate": "immune_gate"
+      },
+      {
+        "name": "t_nk",
+        "kind": "gated",
+        "positive": "t_nk_core",
+        "negatives": [
+          "myeloid_core",
+          "b_cell_core",
+          "plasma_cell_core",
+          "mast_core"
+        ],
+        "negative_weight": 0.5,
+        "gate": "immune_gate"
+      },
+      {
+        "name": "b_cell",
+        "kind": "gated",
+        "positive": "b_cell_core",
+        "negatives": [
+          "myeloid_core",
+          "t_nk_core",
+          "plasma_cell_core",
+          "mast_core"
+        ],
+        "negative_weight": 0.5,
+        "gate": "immune_gate"
+      },
+      {
+        "name": "plasma_cell",
+        "kind": "gated",
+        "positive": "plasma_cell_core",
+        "negatives": [
+          "myeloid_core",
+          "t_nk_core",
+          "b_cell_core",
+          "mast_core"
+        ],
+        "negative_weight": 0.5,
+        "gate": "immune_gate"
+      },
+      {
+        "name": "mast",
+        "kind": "gated",
+        "positive": "mast_core",
+        "negatives": [
+          "myeloid_core",
+          "t_nk_core",
+          "b_cell_core",
+          "plasma_cell_core"
+        ],
+        "negative_weight": 0.5,
+        "gate": "immune_gate"
+      },
+      {
+        "name": "cycling",
+        "kind": "plain",
+        "positive": "cycling_core",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      }
+    ],
+    "resources": [
+      {
+        "key": "baron2016_cels",
+        "kind": "atlas",
+        "citation": "Baron et al. 2016 Cell Systems",
+        "doi": "10.1016/j.cels.2016.08.011",
+        "used_in_modules": [
+          "acinar_core",
+          "b_cell_core",
+          "ductal_core",
+          "endothelial_core",
+          "exocrine_core",
+          "fibroblast_stellate_core",
+          "immune_gate",
+          "lymphatic_core",
+          "mast_core",
+          "mesenchymal_gate",
+          "myeloid_core",
+          "pericyte_smc_core",
+          "plasma_cell_core",
+          "t_nk_core",
+          "vascular_gate"
+        ]
+      },
+      {
+        "key": "muraro2016_cels",
+        "kind": "atlas",
+        "citation": "Muraro et al. 2016 Cell Systems",
+        "doi": "10.1016/j.cels.2016.09.002",
+        "used_in_modules": [
+          "acinar_core",
+          "alpha_core",
+          "beta_core",
+          "delta_core",
+          "ductal_core",
+          "endocrine_core",
+          "exocrine_core",
+          "pp_core"
+        ]
+      },
+      {
+        "key": "segerstolpe2016_cmet",
+        "kind": "atlas",
+        "citation": "Segerstolpe et al. 2016 Cell Metabolism",
+        "doi": "10.1016/j.cmet.2016.08.020",
+        "used_in_modules": [
+          "alpha_core",
+          "beta_core",
+          "delta_core",
+          "endocrine_core",
+          "pp_core"
+        ]
+      },
+      {
+        "key": "msigdb_hallmark_g2m",
+        "kind": "database",
+        "citation": "MSigDB HALLMARK_G2M_CHECKPOINT",
+        "doi": null,
+        "used_in_modules": [
+          "cycling_core"
+        ]
+      },
+      {
+        "key": "msigdb_hallmark_e2f",
+        "kind": "database",
+        "citation": "MSigDB HALLMARK_E2F_TARGETS",
+        "doi": null,
+        "used_in_modules": [
+          "cycling_core"
+        ]
+      }
+    ]
+  },
+  "sanity": {
+    "placeholder_strings_present": false,
+    "orphaned_modules": [],
+    "modules_missing_resources": [],
+    "unused_resources": [],
+    "set_clip_overridden": false
+  },
+  "dataset_coverage": {
+    "h5ad_path": "data/preprocessed/human_pancreas_pp.h5ad",
+    "layer": null,
+    "n_cells": 16382,
+    "n_vars": 18268
+  }
+}

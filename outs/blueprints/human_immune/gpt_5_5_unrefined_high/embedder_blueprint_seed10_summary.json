@@ -1,0 +1,1679 @@
+{
+  "run_id": "260605_blueprint_run10",
+  "extracted_at": "2026-06-05T15:05:26+00:00",
+  "scenario": {
+    "species": [
+      "human"
+    ],
+    "tissue": [
+      "peripheral blood",
+      "bone marrow"
+    ],
+    "celltype": null,
+    "age": null,
+    "sex": null,
+    "condition": null,
+    "notes": null
+  },
+  "blueprint": {
+    "name": "extract",
+    "clip": 4.0,
+    "n_modules": 33,
+    "n_axes": 30,
+    "n_axes_by_kind": {
+      "plain": 9,
+      "contrast": 8,
+      "gated": 13
+    },
+    "n_resources": 9,
+    "n_resources_by_kind": {
+      "paper": 2,
+      "atlas": 2,
+      "database": 5
+    },
+    "n_dois_unique": 4,
+    "n_total_genes": 249,
+    "n_unique_genes": 222,
+    "modules": [
+      {
+        "name": "hsc_mpp_stemness",
+        "genes": [
+          "HLF",
+          "CRHBP",
+          "SPINK2",
+          "ADGRG6",
+          "DUSP1",
+          "AVP",
+          "MEIS1",
+          "MLLT3"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "pellin_hspc_2019",
+          "bandyopadhyay_bm_2024"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "hsc_mpp_stemness",
+            "role": "positive"
+          },
+          {
+            "axis": "hspc_erythroid_megakaryocyte_bias",
+            "role": "gate"
+          },
+          {
+            "axis": "hspc_myeloid_granulocyte_bias",
+            "role": "gate"
+          },
+          {
+            "axis": "hspc_lymphoid_bias",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 4,
+        "n_genes_present": 6,
+        "n_genes_missing": 2,
+        "missing_genes": [
+          "ADGRG6",
+          "AVP"
+        ],
+        "fraction_nonzero_cells": 0.7998865874768698
+      },
+      {
+        "name": "erythroid_megakaryocyte_priming",
+        "genes": [
+          "KLF1",
+          "CA1",
+          "TFR2",
+          "GATA1",
+          "TAL1",
+          "LMO2",
+          "ITGA2B",
+          "PLEK"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "pellin_hspc_2019",
+          "msigdb_heme"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "hspc_erythroid_megakaryocyte_bias",
+            "role": "positive"
+          },
+          {
+            "axis": "hspc_myeloid_granulocyte_bias",
+            "role": "negative"
+          },
+          {
+            "axis": "hspc_lymphoid_bias",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 7,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "CA1"
+        ],
+        "fraction_nonzero_cells": 0.4341013549811974
+      },
+      {
+        "name": "myeloid_granulocyte_priming",
+        "genes": [
+          "MPO",
+          "ELANE",
+          "AZU1",
+          "CTSG",
+          "PRTN3",
+          "LYZ",
+          "CSF1R",
+          "CEBPE"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "pellin_hspc_2019"
+        ],
+        "n_resource_keys": 1,
+        "used_in_axes": [
+          {
+            "axis": "hspc_erythroid_megakaryocyte_bias",
+            "role": "negative"
+          },
+          {
+            "axis": "hspc_myeloid_granulocyte_bias",
+            "role": "positive"
+          },
+          {
+            "axis": "hspc_lymphoid_bias",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 7,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "PRTN3"
+        ],
+        "fraction_nonzero_cells": 0.6369605443801111
+      },
+      {
+        "name": "lymphoid_priming",
+        "genes": [
+          "DNTT",
+          "RAG1",
+          "RAG2",
+          "VPREB1",
+          "IGLL1",
+          "CD79A",
+          "EBF1",
+          "PAX5"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "pellin_hspc_2019",
+          "bandyopadhyay_bm_2024"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "hspc_erythroid_megakaryocyte_bias",
+            "role": "negative"
+          },
+          {
+            "axis": "hspc_myeloid_granulocyte_bias",
+            "role": "negative"
+          },
+          {
+            "axis": "hspc_lymphoid_bias",
+            "role": "positive"
+          },
+          {
+            "axis": "marrow_early_b_lymphoid",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 4,
+        "n_genes_present": 7,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "RAG2"
+        ],
+        "fraction_nonzero_cells": 0.214110905509461
+      },
+      {
+        "name": "erythroid_mature",
+        "genes": [
+          "HBB",
+          "HBA1",
+          "HBA2",
+          "HBD",
+          "ALAS2",
+          "SLC4A1",
+          "GYPA",
+          "BLVRB",
+          "PRDX2"
+        ],
+        "n_genes": 9,
+        "resource_keys": [
+          "pellin_hspc_2019",
+          "bandyopadhyay_bm_2024",
+          "msigdb_heme"
+        ],
+        "n_resource_keys": 3,
+        "used_in_axes": [
+          {
+            "axis": "erythroid_vs_megakaryocyte_platelet",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 5,
+        "n_genes_missing": 4,
+        "missing_genes": [
+          "ALAS2",
+          "GYPA",
+          "HBD",
+          "SLC4A1"
+        ],
+        "fraction_nonzero_cells": 0.749895541097117
+      },
+      {
+        "name": "megakaryocyte_platelet",
+        "genes": [
+          "PF4",
+          "PPBP",
+          "ITGA2B",
+          "GP9",
+          "VWF",
+          "GNG11",
+          "NRGN",
+          "TUBB1"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "pellin_hspc_2019",
+          "hao_pbmc_2021",
+          "bandyopadhyay_bm_2024"
+        ],
+        "n_resource_keys": 3,
+        "used_in_axes": [
+          {
+            "axis": "erythroid_vs_megakaryocyte_platelet",
+            "role": "negative"
+          },
+          {
+            "axis": "megakaryocyte_platelet",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 2,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.2406434668417597
+      },
+      {
+        "name": "granulocyte_neutrophil",
+        "genes": [
+          "FCGR3B",
+          "CSF3R",
+          "CXCR2",
+          "S100A8",
+          "S100A9",
+          "LTF",
+          "LCN2",
+          "MPO"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "pellin_hspc_2019",
+          "bandyopadhyay_bm_2024"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "granulocyte_vs_monocyte",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 7,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "LTF"
+        ],
+        "fraction_nonzero_cells": 0.7927833820808213
+      },
+      {
+        "name": "classical_monocyte",
+        "genes": [
+          "CD14",
+          "VCAN",
+          "S100A8",
+          "S100A9",
+          "LST1",
+          "CTSS",
+          "LYZ",
+          "FCN1"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "hao_pbmc_2021",
+          "bandyopadhyay_bm_2024"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "granulocyte_vs_monocyte",
+            "role": "negative"
+          },
+          {
+            "axis": "classical_vs_nonclassical_monocyte",
+            "role": "positive"
+          },
+          {
+            "axis": "myeloid_inflammatory_state",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.9330567659523668
+      },
+      {
+        "name": "nonclassical_monocyte",
+        "genes": [
+          "FCGR3A",
+          "MS4A7",
+          "LST1",
+          "IFITM3",
+          "LILRB2",
+          "HLA-DRA",
+          "CTSS"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "hao_pbmc_2021",
+          "bandyopadhyay_bm_2024"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "classical_vs_nonclassical_monocyte",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.8419686026383334
+      },
+      {
+        "name": "conventional_dendritic",
+        "genes": [
+          "CD1C",
+          "FCER1A",
+          "CLEC10A",
+          "CLEC9A",
+          "XCR1",
+          "IRF8",
+          "ITGAX",
+          "HLA-DRA"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "hao_pbmc_2021",
+          "pellin_hspc_2019",
+          "bandyopadhyay_bm_2024"
+        ],
+        "n_resource_keys": 3,
+        "used_in_axes": [
+          {
+            "axis": "conventional_vs_plasmacytoid_dc",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 7,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "XCR1"
+        ],
+        "fraction_nonzero_cells": 0.6113233450725243
+      },
+      {
+        "name": "plasmacytoid_dendritic",
+        "genes": [
+          "LILRA4",
+          "CLEC4C",
+          "IL3RA",
+          "TCF4",
+          "IRF8",
+          "SPIB",
+          "GZMB",
+          "MZB1"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "hao_pbmc_2021",
+          "pellin_hspc_2019",
+          "bandyopadhyay_bm_2024"
+        ],
+        "n_resource_keys": 3,
+        "used_in_axes": [
+          {
+            "axis": "conventional_vs_plasmacytoid_dc",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.42953500865516625
+      },
+      {
+        "name": "basophil_mast",
+        "genes": [
+          "CLC",
+          "CPA3",
+          "HDC",
+          "MS4A2",
+          "GATA2",
+          "KIT",
+          "TPSAB1",
+          "TPSB2"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "pellin_hspc_2019",
+          "bandyopadhyay_bm_2024"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "basophil_mast",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 5,
+        "n_genes_missing": 3,
+        "missing_genes": [
+          "MS4A2",
+          "TPSAB1",
+          "TPSB2"
+        ],
+        "fraction_nonzero_cells": 0.04148510714498896
+      },
+      {
+        "name": "eosinophil",
+        "genes": [
+          "CLC",
+          "PRG2",
+          "RNASE2",
+          "IL5RA",
+          "CCR3",
+          "SIGLEC8",
+          "EPX"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "bandyopadhyay_bm_2024"
+        ],
+        "n_resource_keys": 1,
+        "used_in_axes": [
+          {
+            "axis": "eosinophil",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 4,
+        "n_genes_missing": 3,
+        "missing_genes": [
+          "EPX",
+          "PRG2",
+          "SIGLEC8"
+        ],
+        "fraction_nonzero_cells": 0.10150420820151615
+      },
+      {
+        "name": "b_cell",
+        "genes": [
+          "MS4A1",
+          "CD79A",
+          "CD79B",
+          "CD74",
+          "HLA-DRA",
+          "BANK1",
+          "CD37",
+          "PAX5"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "hao_pbmc_2021",
+          "bandyopadhyay_bm_2024"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "b_cell_vs_plasma_cell",
+            "role": "positive"
+          },
+          {
+            "axis": "marrow_early_b_lymphoid",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 2,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.9692293917507312
+      },
+      {
+        "name": "plasma_cell",
+        "genes": [
+          "MZB1",
+          "JCHAIN",
+          "XBP1",
+          "PRDM1",
+          "SDC1",
+          "IGKC",
+          "IGHG1",
+          "DERL3"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "hao_pbmc_2021",
+          "bandyopadhyay_bm_2024"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "b_cell_vs_plasma_cell",
+            "role": "negative"
+          },
+          {
+            "axis": "marrow_early_b_lymphoid",
+            "role": "negative"
+          },
+          {
+            "axis": "plasma_cell",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 4,
+        "n_genes_missing": 4,
+        "missing_genes": [
+          "IGHG1",
+          "IGKC",
+          "JCHAIN",
+          "SDC1"
+        ],
+        "fraction_nonzero_cells": 0.5091028472512386
+      },
+      {
+        "name": "t_cell",
+        "genes": [
+          "CD3D",
+          "CD3E",
+          "CD3G",
+          "TRAC",
+          "TRBC1",
+          "IL7R",
+          "LCK",
+          "CD2"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "hao_pbmc_2021",
+          "szabo_tcell_2019"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "t_cell_vs_nk_cell",
+            "role": "positive"
+          },
+          {
+            "axis": "t_cd4_naive_memory",
+            "role": "gate"
+          },
+          {
+            "axis": "t_cd8_cytotoxic",
+            "role": "gate"
+          },
+          {
+            "axis": "t_regulatory",
+            "role": "gate"
+          },
+          {
+            "axis": "t_mait_gamma_delta",
+            "role": "gate"
+          },
+          {
+            "axis": "t_activation_state",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 6,
+        "n_genes_present": 6,
+        "n_genes_missing": 2,
+        "missing_genes": [
+          "TRAC",
+          "TRBC1"
+        ],
+        "fraction_nonzero_cells": 0.7224676177401063
+      },
+      {
+        "name": "cd4_naive_memory_t",
+        "genes": [
+          "CCR7",
+          "SELL",
+          "TCF7",
+          "LEF1",
+          "LTB",
+          "IL7R",
+          "MAL",
+          "CD40LG"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "hao_pbmc_2021",
+          "szabo_tcell_2019"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "t_cd4_naive_memory",
+            "role": "positive"
+          },
+          {
+            "axis": "t_cd8_cytotoxic",
+            "role": "negative"
+          },
+          {
+            "axis": "t_regulatory",
+            "role": "negative"
+          },
+          {
+            "axis": "t_mait_gamma_delta",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 4,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.9131498836029368
+      },
+      {
+        "name": "cd8_cytotoxic_t",
+        "genes": [
+          "CD8A",
+          "CD8B",
+          "CCL5",
+          "GZMK",
+          "GZMB",
+          "PRF1",
+          "NKG7",
+          "CST7"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "hao_pbmc_2021",
+          "szabo_tcell_2019"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "t_cd4_naive_memory",
+            "role": "negative"
+          },
+          {
+            "axis": "t_cd8_cytotoxic",
+            "role": "positive"
+          },
+          {
+            "axis": "t_regulatory",
+            "role": "negative"
+          },
+          {
+            "axis": "t_mait_gamma_delta",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 4,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.5911180087148571
+      },
+      {
+        "name": "regulatory_t",
+        "genes": [
+          "FOXP3",
+          "IL2RA",
+          "CTLA4",
+          "TIGIT",
+          "TNFRSF18",
+          "IKZF2",
+          "CCR8"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "hao_pbmc_2021",
+          "szabo_tcell_2019",
+          "msigdb_il2_stat5"
+        ],
+        "n_resource_keys": 3,
+        "used_in_axes": [
+          {
+            "axis": "t_cd8_cytotoxic",
+            "role": "negative"
+          },
+          {
+            "axis": "t_regulatory",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 2,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.15340536023398793
+      },
+      {
+        "name": "mait_gamma_delta_t",
+        "genes": [
+          "SLC4A10",
+          "KLRB1",
+          "TRAV1-2",
+          "ZBTB16",
+          "TRDC",
+          "TRGC1",
+          "RORC"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "hao_pbmc_2021"
+        ],
+        "n_resource_keys": 1,
+        "used_in_axes": [
+          {
+            "axis": "t_mait_gamma_delta",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 4,
+        "n_genes_missing": 3,
+        "missing_genes": [
+          "TRAV1-2",
+          "TRDC",
+          "TRGC1"
+        ],
+        "fraction_nonzero_cells": 0.29287291828329254
+      },
+      {
+        "name": "nk_cell",
+        "genes": [
+          "KLRD1",
+          "NKG7",
+          "GNLY",
+          "PRF1",
+          "GZMB",
+          "FCGR3A",
+          "TYROBP",
+          "KLRF1"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "hao_pbmc_2021"
+        ],
+        "n_resource_keys": 1,
+        "used_in_axes": [
+          {
+            "axis": "t_cell_vs_nk_cell",
+            "role": "negative"
+          },
+          {
+            "axis": "t_cd4_naive_memory",
+            "role": "negative"
+          },
+          {
+            "axis": "nk_cell",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.7003521757297201
+      },
+      {
+        "name": "t_activation",
+        "genes": [
+          "IL2",
+          "TNF",
+          "IFNG",
+          "CD69",
+          "ICOS",
+          "NME1",
+          "LIF",
+          "G0S2"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "szabo_tcell_2019",
+          "msigdb_il2_stat5"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "t_activation_state",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 6,
+        "n_genes_missing": 2,
+        "missing_genes": [
+          "IL2",
+          "LIF"
+        ],
+        "fraction_nonzero_cells": 0.6554348474900018
+      },
+      {
+        "name": "interferon_response",
+        "genes": [
+          "ISG15",
+          "IFIT1",
+          "IFIT2",
+          "IFIT3",
+          "MX1",
+          "OAS1",
+          "OAS2",
+          "IFI6",
+          "IRF7"
+        ],
+        "n_genes": 9,
+        "resource_keys": [
+          "szabo_tcell_2019",
+          "msigdb_ifn_alpha"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "interferon_response",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 9,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.6391094132394198
+      },
+      {
+        "name": "inflammatory_myeloid",
+        "genes": [
+          "IL1B",
+          "CCL3",
+          "CCL4",
+          "CXCL8",
+          "NFKBIA",
+          "TNFAIP3",
+          "IER3",
+          "JUNB"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "hao_pbmc_2021",
+          "msigdb_tnfa_nfkb"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "myeloid_inflammatory_state",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 7,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "CXCL8"
+        ],
+        "fraction_nonzero_cells": 0.9606637617143198
+      },
+      {
+        "name": "cycling",
+        "genes": [
+          "UBE2C",
+          "HMGB2",
+          "HMGN2",
+          "TUBA1B",
+          "MKI67",
+          "CCNB1",
+          "TUBB",
+          "TOP2A",
+          "TUBB4B"
+        ],
+        "n_genes": 9,
+        "resource_keys": [
+          "pellin_hspc_2019",
+          "szabo_tcell_2019",
+          "msigdb_g2m"
+        ],
+        "n_resource_keys": 3,
+        "used_in_axes": [
+          {
+            "axis": "cycling",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 9,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.9569032412105295
+      },
+      {
+        "name": "mesenchymal_stromal",
+        "genes": [
+          "CXCL12",
+          "LEPR",
+          "PDGFRA",
+          "FOXC1",
+          "KITLG",
+          "NGFR",
+          "MCAM"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "bandyopadhyay_bm_2024"
+        ],
+        "n_resource_keys": 1,
+        "used_in_axes": [
+          {
+            "axis": "mesenchymal_vs_endothelial",
+            "role": "positive"
+          },
+          {
+            "axis": "msc_adipogenic_bias",
+            "role": "gate"
+          },
+          {
+            "axis": "msc_osteolineage_bias",
+            "role": "gate"
+          },
+          {
+            "axis": "msc_fibroblastic_bias",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 4,
+        "n_genes_present": 3,
+        "n_genes_missing": 4,
+        "missing_genes": [
+          "CXCL12",
+          "FOXC1",
+          "MCAM",
+          "PDGFRA"
+        ],
+        "fraction_nonzero_cells": 0.019608428341192623
+      },
+      {
+        "name": "adipo_msc",
+        "genes": [
+          "APOE",
+          "LPL",
+          "PPARG",
+          "CEBPA",
+          "LEPR",
+          "CXCL12"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "bandyopadhyay_bm_2024"
+        ],
+        "n_resource_keys": 1,
+        "used_in_axes": [
+          {
+            "axis": "msc_adipogenic_bias",
+            "role": "positive"
+          },
+          {
+            "axis": "msc_osteolineage_bias",
+            "role": "negative"
+          },
+          {
+            "axis": "msc_fibroblastic_bias",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 3,
+        "n_genes_missing": 3,
+        "missing_genes": [
+          "CXCL12",
+          "LPL",
+          "PPARG"
+        ],
+        "fraction_nonzero_cells": 0.1403629200740166
+      },
+      {
+        "name": "osteo_lineage",
+        "genes": [
+          "NCAM1",
+          "SPP1",
+          "BGLAP",
+          "IBSP",
+          "RUNX2",
+          "COL1A1",
+          "COL1A2"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "bandyopadhyay_bm_2024"
+        ],
+        "n_resource_keys": 1,
+        "used_in_axes": [
+          {
+            "axis": "msc_adipogenic_bias",
+            "role": "negative"
+          },
+          {
+            "axis": "msc_osteolineage_bias",
+            "role": "positive"
+          },
+          {
+            "axis": "msc_fibroblastic_bias",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 4,
+        "n_genes_missing": 3,
+        "missing_genes": [
+          "COL1A2",
+          "IBSP",
+          "SPP1"
+        ],
+        "fraction_nonzero_cells": 0.09637079925983406
+      },
+      {
+        "name": "fibro_msc",
+        "genes": [
+          "PDPN",
+          "CSPG4",
+          "DCN",
+          "DPT",
+          "COL1A1",
+          "COL3A1"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "bandyopadhyay_bm_2024"
+        ],
+        "n_resource_keys": 1,
+        "used_in_axes": [
+          {
+            "axis": "msc_adipogenic_bias",
+            "role": "negative"
+          },
+          {
+            "axis": "msc_osteolineage_bias",
+            "role": "negative"
+          },
+          {
+            "axis": "msc_fibroblastic_bias",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 1,
+        "n_genes_missing": 5,
+        "missing_genes": [
+          "COL3A1",
+          "CSPG4",
+          "DCN",
+          "DPT",
+          "PDPN"
+        ],
+        "fraction_nonzero_cells": 0.0020891780576613142
+      },
+      {
+        "name": "endothelial",
+        "genes": [
+          "PECAM1",
+          "CDH5",
+          "VWF",
+          "ENG",
+          "KDR",
+          "EMCN"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "bandyopadhyay_bm_2024"
+        ],
+        "n_resource_keys": 1,
+        "used_in_axes": [
+          {
+            "axis": "mesenchymal_vs_endothelial",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 2,
+        "n_genes_missing": 4,
+        "missing_genes": [
+          "CDH5",
+          "EMCN",
+          "KDR",
+          "PECAM1"
+        ],
+        "fraction_nonzero_cells": 0.07395690324121053
+      },
+      {
+        "name": "arterial_endothelial",
+        "genes": [
+          "PODXL",
+          "ICAM2",
+          "CXCL12",
+          "CD34",
+          "GJA4",
+          "HEY1"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "bandyopadhyay_bm_2024"
+        ],
+        "n_resource_keys": 1,
+        "used_in_axes": [
+          {
+            "axis": "arterial_vs_sinusoidal_endothelial",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 3,
+        "n_genes_missing": 3,
+        "missing_genes": [
+          "CXCL12",
+          "GJA4",
+          "HEY1"
+        ],
+        "fraction_nonzero_cells": 0.2904852862173939
+      },
+      {
+        "name": "sinusoidal_endothelial",
+        "genes": [
+          "STAB2",
+          "CLEC4G",
+          "FLT4",
+          "ENG",
+          "VCAM1",
+          "LYVE1"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "bandyopadhyay_bm_2024"
+        ],
+        "n_resource_keys": 1,
+        "used_in_axes": [
+          {
+            "axis": "arterial_vs_sinusoidal_endothelial",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 3,
+        "n_genes_missing": 3,
+        "missing_genes": [
+          "LYVE1",
+          "STAB2",
+          "VCAM1"
+        ],
+        "fraction_nonzero_cells": 0.08804393243001253
+      },
+      {
+        "name": "vascular_smooth_muscle",
+        "genes": [
+          "ACTA2",
+          "RGS5",
+          "TAGLN",
+          "MYH11",
+          "MCAM",
+          "NOTCH3"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "bandyopadhyay_bm_2024"
+        ],
+        "n_resource_keys": 1,
+        "used_in_axes": [
+          {
+            "axis": "vascular_smooth_muscle",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 5,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "MCAM"
+        ],
+        "fraction_nonzero_cells": 0.09887781292902764
+      }
+    ],
+    "axes": [
+      {
+        "name": "hsc_mpp_stemness",
+        "kind": "plain",
+        "positive": "hsc_mpp_stemness",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "hspc_erythroid_megakaryocyte_bias",
+        "kind": "gated",
+        "positive": "erythroid_megakaryocyte_priming",
+        "negatives": [
+          "myeloid_granulocyte_priming",
+          "lymphoid_priming"
+        ],
+        "negative_weight": 0.5,
+        "gate": "hsc_mpp_stemness"
+      },
+      {
+        "name": "hspc_myeloid_granulocyte_bias",
+        "kind": "gated",
+        "positive": "myeloid_granulocyte_priming",
+        "negatives": [
+          "erythroid_megakaryocyte_priming",
+          "lymphoid_priming"
+        ],
+        "negative_weight": 0.5,
+        "gate": "hsc_mpp_stemness"
+      },
+      {
+        "name": "hspc_lymphoid_bias",
+        "kind": "gated",
+        "positive": "lymphoid_priming",
+        "negatives": [
+          "erythroid_megakaryocyte_priming",
+          "myeloid_granulocyte_priming"
+        ],
+        "negative_weight": 0.5,
+        "gate": "hsc_mpp_stemness"
+      },
+      {
+        "name": "erythroid_vs_megakaryocyte_platelet",
+        "kind": "contrast",
+        "positive": "erythroid_mature",
+        "negatives": [
+          "megakaryocyte_platelet"
+        ],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "megakaryocyte_platelet",
+        "kind": "plain",
+        "positive": "megakaryocyte_platelet",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "granulocyte_vs_monocyte",
+        "kind": "contrast",
+        "positive": "granulocyte_neutrophil",
+        "negatives": [
+          "classical_monocyte"
+        ],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "classical_vs_nonclassical_monocyte",
+        "kind": "contrast",
+        "positive": "classical_monocyte",
+        "negatives": [
+          "nonclassical_monocyte"
+        ],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "myeloid_inflammatory_state",
+        "kind": "gated",
+        "positive": "inflammatory_myeloid",
+        "negatives": [],
+        "negative_weight": 0.5,
+        "gate": "classical_monocyte"
+      },
+      {
+        "name": "conventional_vs_plasmacytoid_dc",
+        "kind": "contrast",
+        "positive": "conventional_dendritic",
+        "negatives": [
+          "plasmacytoid_dendritic"
+        ],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "basophil_mast",
+        "kind": "plain",
+        "positive": "basophil_mast",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "eosinophil",
+        "kind": "plain",
+        "positive": "eosinophil",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "b_cell_vs_plasma_cell",
+        "kind": "contrast",
+        "positive": "b_cell",
+        "negatives": [
+          "plasma_cell"
+        ],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "marrow_early_b_lymphoid",
+        "kind": "gated",
+        "positive": "lymphoid_priming",
+        "negatives": [
+          "plasma_cell"
+        ],
+        "negative_weight": 0.5,
+        "gate": "b_cell"
+      },
+      {
+        "name": "plasma_cell",
+        "kind": "plain",
+        "positive": "plasma_cell",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "t_cell_vs_nk_cell",
+        "kind": "contrast",
+        "positive": "t_cell",
+        "negatives": [
+          "nk_cell"
+        ],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "t_cd4_naive_memory",
+        "kind": "gated",
+        "positive": "cd4_naive_memory_t",
+        "negatives": [
+          "cd8_cytotoxic_t",
+          "nk_cell"
+        ],
+        "negative_weight": 0.5,
+        "gate": "t_cell"
+      },
+      {
+        "name": "t_cd8_cytotoxic",
+        "kind": "gated",
+        "positive": "cd8_cytotoxic_t",
+        "negatives": [
+          "cd4_naive_memory_t",
+          "regulatory_t"
+        ],
+        "negative_weight": 0.5,
+        "gate": "t_cell"
+      },
+      {
+        "name": "t_regulatory",
+        "kind": "gated",
+        "positive": "regulatory_t",
+        "negatives": [
+          "cd4_naive_memory_t",
+          "cd8_cytotoxic_t"
+        ],
+        "negative_weight": 0.5,
+        "gate": "t_cell"
+      },
+      {
+        "name": "t_mait_gamma_delta",
+        "kind": "gated",
+        "positive": "mait_gamma_delta_t",
+        "negatives": [
+          "cd4_naive_memory_t",
+          "cd8_cytotoxic_t"
+        ],
+        "negative_weight": 0.5,
+        "gate": "t_cell"
+      },
+      {
+        "name": "t_activation_state",
+        "kind": "gated",
+        "positive": "t_activation",
+        "negatives": [],
+        "negative_weight": 0.5,
+        "gate": "t_cell"
+      },
+      {
+        "name": "nk_cell",
+        "kind": "plain",
+        "positive": "nk_cell",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "interferon_response",
+        "kind": "plain",
+        "positive": "interferon_response",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "cycling",
+        "kind": "plain",
+        "positive": "cycling",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "mesenchymal_vs_endothelial",
+        "kind": "contrast",
+        "positive": "mesenchymal_stromal",
+        "negatives": [
+          "endothelial"
+        ],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "msc_adipogenic_bias",
+        "kind": "gated",
+        "positive": "adipo_msc",
+        "negatives": [
+          "osteo_lineage",
+          "fibro_msc"
+        ],
+        "negative_weight": 0.5,
+        "gate": "mesenchymal_stromal"
+      },
+      {
+        "name": "msc_osteolineage_bias",
+        "kind": "gated",
+        "positive": "osteo_lineage",
+        "negatives": [
+          "adipo_msc",
+          "fibro_msc"
+        ],
+        "negative_weight": 0.5,
+        "gate": "mesenchymal_stromal"
+      },
+      {
+        "name": "msc_fibroblastic_bias",
+        "kind": "gated",
+        "positive": "fibro_msc",
+        "negatives": [
+          "adipo_msc",
+          "osteo_lineage"
+        ],
+        "negative_weight": 0.5,
+        "gate": "mesenchymal_stromal"
+      },
+      {
+        "name": "arterial_vs_sinusoidal_endothelial",
+        "kind": "contrast",
+        "positive": "arterial_endothelial",
+        "negatives": [
+          "sinusoidal_endothelial"
+        ],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "vascular_smooth_muscle",
+        "kind": "plain",
+        "positive": "vascular_smooth_muscle",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      }
+    ],
+    "resources": [
+      {
+        "key": "hao_pbmc_2021",
+        "kind": "atlas",
+        "citation": "Hao 2021 Cell multimodal human PBMC atlas",
+        "doi": "10.1016/j.cell.2021.04.048",
+        "used_in_modules": [
+          "b_cell",
+          "cd4_naive_memory_t",
+          "cd8_cytotoxic_t",
+          "classical_monocyte",
+          "conventional_dendritic",
+          "inflammatory_myeloid",
+          "mait_gamma_delta_t",
+          "megakaryocyte_platelet",
+          "nk_cell",
+          "nonclassical_monocyte",
+          "plasma_cell",
+          "plasmacytoid_dendritic",
+          "regulatory_t",
+          "t_cell"
+        ]
+      },
+      {
+        "key": "pellin_hspc_2019",
+        "kind": "paper",
+        "citation": "Pellin 2019 Nature Communications human bone marrow HSPC transcriptional landscape",
+        "doi": "10.1038/s41467-019-10291-0",
+        "used_in_modules": [
+          "basophil_mast",
+          "conventional_dendritic",
+          "cycling",
+          "erythroid_mature",
+          "erythroid_megakaryocyte_priming",
+          "granulocyte_neutrophil",
+          "hsc_mpp_stemness",
+          "lymphoid_priming",
+          "megakaryocyte_platelet",
+          "myeloid_granulocyte_priming",
+          "plasmacytoid_dendritic"
+        ]
+      },
+      {
+        "key": "bandyopadhyay_bm_2024",
+        "kind": "atlas",
+        "citation": "Bandyopadhyay 2024 Cell human bone marrow niche atlas",
+        "doi": "10.1016/j.cell.2024.04.013",
+        "used_in_modules": [
+          "adipo_msc",
+          "arterial_endothelial",
+          "b_cell",
+          "basophil_mast",
+          "classical_monocyte",
+          "conventional_dendritic",
+          "endothelial",
+          "eosinophil",
+          "erythroid_mature",
+          "fibro_msc",
+          "granulocyte_neutrophil",
+          "hsc_mpp_stemness",
+          "lymphoid_priming",
+          "megakaryocyte_platelet",
+          "mesenchymal_stromal",
+          "nonclassical_monocyte",
+          "osteo_lineage",
+          "plasma_cell",
+          "plasmacytoid_dendritic",
+          "sinusoidal_endothelial",
+          "vascular_smooth_muscle"
+        ]
+      },
+      {
+        "key": "szabo_tcell_2019",
+        "kind": "paper",
+        "citation": "Szabo 2019 Nature Communications human T cell blood and bone marrow states",
+        "doi": "10.1038/s41467-019-12464-3",
+        "used_in_modules": [
+          "cd4_naive_memory_t",
+          "cd8_cytotoxic_t",
+          "cycling",
+          "interferon_response",
+          "regulatory_t",
+          "t_activation",
+          "t_cell"
+        ]
+      },
+      {
+        "key": "msigdb_ifn_alpha",
+        "kind": "database",
+        "citation": "MSigDB HALLMARK_INTERFERON_ALPHA_RESPONSE",
+        "doi": null,
+        "used_in_modules": [
+          "interferon_response"
+        ]
+      },
+      {
+        "key": "msigdb_tnfa_nfkb",
+        "kind": "database",
+        "citation": "MSigDB HALLMARK_TNFA_SIGNALING_VIA_NFKB",
+        "doi": null,
+        "used_in_modules": [
+          "inflammatory_myeloid"
+        ]
+      },
+      {
+        "key": "msigdb_il2_stat5",
+        "kind": "database",
+        "citation": "MSigDB HALLMARK_IL2_STAT5_SIGNALING",
+        "doi": null,
+        "used_in_modules": [
+          "regulatory_t",
+          "t_activation"
+        ]
+      },
+      {
+        "key": "msigdb_g2m",
+        "kind": "database",
+        "citation": "MSigDB HALLMARK_G2M_CHECKPOINT",
+        "doi": null,
+        "used_in_modules": [
+          "cycling"
+        ]
+      },
+      {
+        "key": "msigdb_heme",
+        "kind": "database",
+        "citation": "MSigDB HALLMARK_HEME_METABOLISM",
+        "doi": null,
+        "used_in_modules": [
+          "erythroid_mature",
+          "erythroid_megakaryocyte_priming"
+        ]
+      }
+    ]
+  },
+  "sanity": {
+    "placeholder_strings_present": false,
+    "orphaned_modules": [],
+    "modules_missing_resources": [],
+    "unused_resources": [],
+    "set_clip_overridden": false
+  },
+  "dataset_coverage": {
+    "h5ad_path": "data/preprocessed/human_immune_pp.h5ad",
+    "layer": null,
+    "n_cells": 33506,
+    "n_vars": 12303
+  }
+}

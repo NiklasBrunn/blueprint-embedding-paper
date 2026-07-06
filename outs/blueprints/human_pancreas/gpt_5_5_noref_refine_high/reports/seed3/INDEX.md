@@ -1,0 +1,3 @@
+- iter 01 — minor — The blueprint is broadly plausible for healthy human pancreas but needs targeted refinement for lymphatic endothelial coverage, immune gate/subtype resolution, and a few mislabeled or over-combined ax
+- iter 02 — minor — Broad human pancreas coverage is plausible, but targeted refinements are needed for merged mural cells, missing mesothelial/capsular cells, ductal substructure, and weak rare endocrine semantics.
+- iter 03 — minor — The blueprint broadly covers healthy human pancreas but needs targeted vascular/stromal refinement and minor module-label hygiene.

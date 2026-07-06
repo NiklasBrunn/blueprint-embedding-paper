@@ -1,0 +1,50 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers healthy human pancreas but needs targeted additions for mesothelial/rare epithelial coverage and cleanup of ductal, lymphatic, immune-gate, and acinar-axis marker design.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "missing mesothelial and rare ductal/tuft-like epithelial axes",
+      "description": "Whole human pancreas preparations can include mesothelial surface cells, and modern pancreas atlases can resolve rare tuft-like ductal/epithelial populations. The current blueprint lacks a mesothelial axis, places MSLN in the ductal module, and has no tuft-like epithelial program.",
+      "suggested_fix": "Add a mesothelial module/axis using markers such as WT1, UPK3B, MSLN, CALB2, KRT8, KRT18, PRG4, and optionally add a duct/epithelial-gated tuft-like axis with markers such as POU2F3, TRPM5, DCLK1, CHAT, AVIL, GFI1B, HPGDS.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "module:ductal_epithelial; module:centroacinar_ductal; axis:ductal_centroacinar_refinement",
+      "description": "The ductal and centroacinar modules are nearly identical, so the centroacinar refinement does not meaningfully separate centroacinar cells from broad ductal epithelium. MSLN and TFF1 also make the ductal module less clean for baseline duct identity.",
+      "suggested_fix": "Make ductal_epithelial a cleaner broad duct module, move MSLN to a mesothelial module if added, and either strengthen distinct centroacinar/subductal markers or redefine this as a specific ductal state/subtype axis with a marker set that differs from the parent duct module.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:lymphatic_endothelium",
+      "description": "TFF3 is an epithelial/secretory marker rather than a canonical lymphatic endothelial marker, so it can contaminate the lymphatic score with ductal or epithelial signal.",
+      "suggested_fix": "Replace TFF3 with a lymphatic endothelial marker such as RELN, TBX1, ACKR4, or another appropriate lymphatic-supporting marker while retaining canonical PROX1, LYVE1, PDPN, FLT4, CCL21, and MMRN1.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:immune_core and immune gated axes",
+      "description": "immune_core is used as the gate for all immune subtype axes but includes several myeloid/APC-biased genes, including LST1, HLA-DRA, HLA-DPA1, and TYROBP. This can bias the gate toward myeloid/APC cells and underrepresent lymphoid populations.",
+      "suggested_fix": "Revise immune_core toward pan-leukocyte markers such as PTPRC, LAPTM5, LCP1, CORO1A, CD52, ARHGAP15, RAC2, and FYB1, leaving myeloid/APC markers in macrophage_monocyte and dendritic_cell modules.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:exocrine_acinar_vs_ductal",
+      "description": "The axis name implies an acinar-vs-ductal contrast, but the implementation is a plain acinar identity axis. The corresponding ductal axis is a true ductal-minus-acinar contrast, making the exocrine design asymmetric and confusing.",
+      "suggested_fix": "Rename the plain axis to acinar_identity, or convert it into a true acinar-vs-ductal contrast if the intended dimension is explicitly bipolar.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "Epsilon cells are rare in adult pancreas, but age is unspecified, so retaining an epsilon-cell refinement is acceptable.",
+    "More detailed vascular zonation, such as arterial, venous, capillary, and islet/acinar endothelial specialization, would be useful for a vascular-focused embedding but is not required for this broad pancreas scenario."
+  ]
+}

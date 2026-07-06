@@ -1,0 +1,49 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers healthy human pancreas, but needs targeted refinement of endothelial/mural resolution, immune coverage, and several subtype marker modules.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "axis:vascular_lymphatic_bias / module:lymphatic_endothelial",
+      "description": "Lymphatic endothelium is represented only as a positive program gated by vascular endothelial identity, with no blood-endothelial negative module or independent identity axis.",
+      "suggested_fix": "Add a pan-endothelial gate if useful, keep blood vascular and lymphatic endothelial modules separate, and represent lymphatics with a plain lymphatic identity axis and/or a gated lymphatic-vs-blood-endothelial contrast.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:mural_cell_bias / module:pericyte_smooth_muscle",
+      "description": "The mural module combines pericyte and vascular smooth-muscle markers, while the axis gates the same module by itself and mostly duplicates mural_cell_identity.",
+      "suggested_fix": "Split pericyte and vascular smooth-muscle programs and replace the self-gated mural bias with a pericyte-vs-smooth-muscle gated or contrast axis.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "immune subtype axes",
+      "description": "The immune compartment lacks an explicit dendritic/APC axis, and T/NK plus B/plasma are merged into coarse modules.",
+      "suggested_fix": "Add a dendritic/APC module and gated axis distinct from macrophage genes; if dimensionality permits, split T from NK and B from plasma programs.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:centroacinar_ductal",
+      "description": "The centroacinar/ductal module includes stress or nonspecific genes such as TFF1, MMP7, and SPINK1, weakening its specificity for baseline centroacinar cells.",
+      "suggested_fix": "Tighten the module around canonical ductal/centroacinar transport, junction, and epithelial markers such as CA2, CLDN10, CFTR, SOX9, KRT19, and SLC4A4; reserve TFF1/MMP7 for a separate stress axis only if intended.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "gene-set-hygiene",
+      "where": "endocrine subtype modules",
+      "description": "Some endocrine subtype modules include generic endocrine genes already covered by the endocrine gate or less subtype-specific markers, which may blur beta, PP, and epsilon subtype axes.",
+      "suggested_fix": "Keep generic neuroendocrine genes mainly in endocrine_islet and make beta, PP, and epsilon modules more subtype-specific; treat DLK1 as an immature/fetal beta-state marker only if that state is intentionally modeled.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "No placeholders or orphan-module structural problems were found; python3 embedder_blueprint.py --describe exits cleanly."
+  ]
+}

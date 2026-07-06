@@ -1,0 +1,285 @@
+{
+  "cohort": "gpt_5_5_noref_refine_high_human_pancreas",
+  "model": "gpt_5_5_noref_refine",
+  "reasoning": "high",
+  "dataset": "human_pancreas",
+  "n_runs": 10,
+  "scenario": {
+    "species": "human",
+    "tissue": "pancreas",
+    "celltype": null
+  },
+  "run_ids": [
+    "260603_blueprint_run01",
+    "260603_blueprint_run02",
+    "260603_blueprint_run03",
+    "260603_blueprint_run04",
+    "260603_blueprint_run05",
+    "260603_blueprint_run06",
+    "260603_blueprint_run07",
+    "260603_blueprint_run08",
+    "260603_blueprint_run09",
+    "260603_blueprint_run10"
+  ],
+  "size": {
+    "n_modules": {
+      "mean": 37.1,
+      "std": 5.971227307309239,
+      "min": 28.0,
+      "max": 44.0,
+      "cv": 0.16094952310806573
+    },
+    "n_axes": {
+      "mean": 36.2,
+      "std": 5.138093031466052,
+      "min": 30.0,
+      "max": 45.0,
+      "cv": 0.14193627158745997
+    },
+    "n_unique_genes": {
+      "mean": 247.4,
+      "std": 34.593512558153314,
+      "min": 194.0,
+      "max": 296.0,
+      "cv": 0.13982826418008615
+    },
+    "n_resources": {
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "cv": NaN
+    },
+    "n_dois_unique": {
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "cv": NaN
+    },
+    "gene_redundancy": {
+      "mean": 1.2234568596283588,
+      "std": 0.09252217393512165,
+      "min": 1.1237113402061856,
+      "max": 1.3695652173913044,
+      "cv": 0.07562356874865737
+    },
+    "mean_genes_per_module": {
+      "mean": 8.200393039213358,
+      "std": 0.8092632012478135,
+      "min": 7.032258064516129,
+      "max": 9.214285714285714,
+      "cv": 0.09868590412410817
+    }
+  },
+  "jaccard": {
+    "genes": {
+      "mean": 0.5217665270941194,
+      "ci_lo": 0.514107499354964,
+      "ci_hi": 0.529236123481286,
+      "min": 0.45098039215686275,
+      "max": 0.602112676056338
+    },
+    "dois": {
+      "mean": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "resources": {
+      "mean": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "modnames": {
+      "mean": 0.603595910728217,
+      "ci_lo": 0.5906026967211065,
+      "ci_hi": 0.6173007773843084,
+      "min": 0.5,
+      "max": 0.7575757575757576
+    },
+    "axisnames": {
+      "mean": 0.3610525544805729,
+      "ci_lo": 0.3433447323443831,
+      "ci_hi": 0.37827165677400737,
+      "min": 0.208955223880597,
+      "max": 0.5454545454545454
+    }
+  },
+  "structural_consistency": {
+    "mean_kind_agreement": 0.9864337822671155,
+    "mean_role_agreement": 0.8447895568483804,
+    "mean_within_module_geneset_jaccard": 0.5376158778075665,
+    "mean_axis_positive_agreement": 0.9969135802469135,
+    "mean_axis_gate_agreement": 0.981804152637486,
+    "mean_axis_negatives_jaccard": 0.6722041484113919
+  },
+  "recurrence": {
+    "modules": {
+      "frac_in_ge80pct": 0.37142857142857144,
+      "gini": 0.40293762575452713,
+      "n_universal": 17,
+      "n_majority": 33,
+      "n_singleton": 19,
+      "n_unique_total": 70
+    },
+    "axes": {
+      "frac_in_ge80pct": 0.1574074074074074,
+      "gini": 0.43311607697082555,
+      "n_universal": 7,
+      "n_majority": 27,
+      "n_singleton": 37,
+      "n_unique_total": 108
+    },
+    "genes": {
+      "frac_in_ge80pct": 0.2682060390763766,
+      "gini": 0.4339755122905212,
+      "n_universal": 100,
+      "n_majority": 222,
+      "n_singleton": 185,
+      "n_unique_total": 563
+    },
+    "resources": {
+      "frac_in_ge80pct": 0.0,
+      "gini": NaN,
+      "n_universal": 0,
+      "n_majority": 0,
+      "n_singleton": 0,
+      "n_unique_total": 0
+    }
+  },
+  "saturation_slope_at_N": {
+    "genes": 18.289999999999964,
+    "modules": 1.9050000000000011,
+    "dois": 0.0
+  },
+  "coverage": {
+    "n_unique_modules": 70,
+    "n_unique_axes": 108,
+    "n_unique_genes": 563,
+    "n_unique_resources": 0
+  },
+  "resource_kind_composition": {
+    "frac_paper": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "frac_atlas": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "frac_database": {
+      "mean": 0.0,
+      "std": 0.0
+    }
+  },
+  "top_hubs": {
+    "top_positives": [
+      {
+        "module": "endothelial",
+        "module_can": "endothelial",
+        "n_axes_using": 14
+      },
+      {
+        "module": "pericyte",
+        "module_can": "pericyte",
+        "n_axes_using": 13
+      },
+      {
+        "module": "fibroblast_stellate",
+        "module_can": "fibroblaststellate",
+        "n_axes_using": 12
+      },
+      {
+        "module": "endocrine_core",
+        "module_can": "endocrinecore",
+        "n_axes_using": 11
+      },
+      {
+        "module": "acinar_cell",
+        "module_can": "acinarcell",
+        "n_axes_using": 11
+      }
+    ],
+    "top_gates": [
+      {
+        "module": "immune_core",
+        "module_can": "immunecore",
+        "n_axes_using": 59
+      },
+      {
+        "module": "endocrine_core",
+        "module_can": "endocrinecore",
+        "n_axes_using": 55
+      },
+      {
+        "module": "endothelial",
+        "module_can": "endothelial",
+        "n_axes_using": 27
+      },
+      {
+        "module": "fibroblast_stellate",
+        "module_can": "fibroblaststellate",
+        "n_axes_using": 16
+      },
+      {
+        "module": "ductal_cell",
+        "module_can": "ductalcell",
+        "n_axes_using": 13
+      }
+    ],
+    "top_negatives": [
+      {
+        "module": "macrophage",
+        "module_can": "macrophage",
+        "n_axes_using": 60
+      },
+      {
+        "module": "alpha_cell",
+        "module_can": "alphacell",
+        "n_axes_using": 47
+      },
+      {
+        "module": "mast_cell",
+        "module_can": "mastcell",
+        "n_axes_using": 47
+      },
+      {
+        "module": "beta_cell",
+        "module_can": "betacell",
+        "n_axes_using": 46
+      },
+      {
+        "module": "dendritic_cell",
+        "module_can": "dendriticcell",
+        "n_axes_using": 46
+      }
+    ]
+  },
+  "top_resources": [],
+  "stability_composite": 0.7485192058320521,
+  "stability_weights": {
+    "jaccard_genes_off_diag": 1.0,
+    "jaccard_modnames_off_diag": 1.0,
+    "mean_kind_agreement": 1.0,
+    "mean_role_agreement": 1.0,
+    "mean_within_module_geneset_jaccard": 1.0,
+    "mean_axis_positive_agreement": 1.0
+  },
+  "sanity": {
+    "frac_with_placeholders": 0.0,
+    "mean_orphaned_modules": 0.0,
+    "mean_modules_missing_resources": 37.1,
+    "mean_unused_resources": 0.0,
+    "frac_clip_overridden": 0.0,
+    "n_modules_merged_by_canonicalization": 44,
+    "n_axes_merged_by_canonicalization": 67,
+    "n_genes_merged_by_canonicalization": 0,
+    "n_module_name_drift_candidates": 0,
+    "n_module_name_near_duplicates": 9,
+    "doi_kind_agreement": NaN
+  }
+}

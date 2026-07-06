@@ -1,0 +1,50 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers healthy human pancreas but needs targeted refinement of progenitor-state scoping and a few endocrine/endothelial marker choices.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:pancreatic_epithelial_progenitor_state / module:pancreatic_epithelial_progenitor",
+      "description": "The progenitor-state axis is not well scoped for a broad human pancreas scenario with no developmental note, and its marker set mixes mature beta, ductal, and acinar lineage regulators that may score normal adult epithelial cells rather than true progenitor-like cells.",
+      "suggested_fix": "Narrow the module to a clearer immature/regenerative epithelial program with stronger progenitor markers and better sibling negatives, or rename/reframe it as an immature epithelial lineage signal while reducing mature-lineage markers.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:neurogenin_endocrine_progenitor_state / module:endocrine_progenitor_neurogenin",
+      "description": "NEUROG3/INSM1 endocrine progenitors are biologically real but developmentally weighted and rare in most healthy postnatal pancreas samples; SOX9 and NEUROD1 can also pull in ductal or differentiated endocrine signal.",
+      "suggested_fix": "Keep a core immature endocrine progenitor-like module around NEUROG3, INSM1, HES6, DLL1, PAX4, and NKX2-2, but reduce generic ductal/differentiated endocrine leakage and make the axis naming/state explicitly progenitor-like rather than a standard mature compartment.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "endocrine subtype gated axes",
+      "description": "The endocrine subtype axes do not consistently include all rare endocrine siblings as negatives: enterochromaffin-like cells are omitted from most subtype negative sets, and epsilon cells are omitted from the enterochromaffin-like negative set.",
+      "suggested_fix": "Add enterochromaffin_like_endocrine to the negative modules for beta, alpha, delta, gamma/PP, and epsilon axes, and add epsilon_ghrelin_cell as a negative for enterochromaffin_like_endocrine_subtype.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:epsilon_ghrelin_cell",
+      "description": "GHRL and MBOAT4 are plausible epsilon-cell anchors, but MLN is more characteristic of gastrointestinal motilin endocrine cells than canonical pancreatic epsilon cells.",
+      "suggested_fix": "Replace or supplement MLN with a more pancreas-relevant ghrelin/epsilon or immature endocrine marker while retaining GHRL and MBOAT4.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:venous_endothelium",
+      "description": "ACKR1 and NR2F2 are plausible venous markers, but SELE and VCAM1 primarily indicate endothelial activation/inflammation rather than stable venous identity in a healthy baseline scenario.",
+      "suggested_fix": "Replace SELE and VCAM1 with more stable venous/venular markers, or represent endothelial activation separately only if such a state is intentionally in scope.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "The 35-axis dimensionality is high but defensible for a broad all-cell human pancreas embedding.",
+    "Rare neutrophil or erythroid contamination can occur in some datasets, but these are not core healthy pancreas compartments and do not require dedicated axes here."
+  ]
+}

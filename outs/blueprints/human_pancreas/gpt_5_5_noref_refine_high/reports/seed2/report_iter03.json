@@ -1,0 +1,50 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint is broadly plausible for healthy human pancreas but needs targeted additions for missing adipocyte and granulocyte coverage plus cleanup of the progenitor/maturation axis design.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "general coverage / stromal axes",
+      "description": "The blueprint lacks an adipocyte/adipose stromal axis, even though human pancreas tissue can contain adipocytes or adipose-associated cells that should not be forced into generic fibroblast/stellate space.",
+      "suggested_fix": "Add an adipocyte/adipose module and a plain adipocyte identity axis using markers such as ADIPOQ, PLIN1, FABP4, LPL, PPARG, CIDEC, and LEP or CIDEA.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "general coverage / immune axes",
+      "description": "Myeloid coverage includes macrophage, monocyte, and dendritic cells, but there is no granulocyte/neutrophil axis to distinguish true granulocytes from S100A8/S100A9 inflammatory monocytes.",
+      "suggested_fix": "Add a granulocyte/neutrophil module and either a plain identity axis or a gated myeloid/leukocyte refinement using markers such as CSF3R, CXCR2, FCGR3B, MNDA, LCN2, MPO, and ELANE, with negatives against monocyte/macrophage modules if gated.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:pancreatic_progenitor_to_mature_endocrine; module:pancreatic_progenitor_bias; module:endocrine_maturation",
+      "description": "The axis name implies a developmental progenitor-to-mature endocrine trajectory, but the scenario has no developmental note and the positive module is mostly ductal/centroacinar/progenitor-like epithelial markers rather than a true endocrine progenitor program. The negative side mixes mature beta, acinar, and ductal transport modules, so the contrast is not a clean temporal trajectory.",
+      "suggested_fix": "Recast this as a ductal/centroacinar progenitor-like epithelial state, or add a separate true endocrine progenitor/neogenesis module with markers such as NEUROG3, RFX6, NKX2-2, PAX6, DLL1, and INSM1 if developmental coverage is intended.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "axis:endocrine_maturation_gradient; module:endocrine_maturation",
+      "description": "The endocrine maturation module is heavily beta-cell-biased and is gated across all endocrine cells, so it will mostly report beta maturity/function rather than a shared endocrine maturation state.",
+      "suggested_fix": "Rename/reframe the axis as beta-cell maturity/function and gate it through beta_cell, or split endocrine maturation into subtype-appropriate functional/maturation axes.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "ductal/epithelial rare states",
+      "description": "The ductal compartment lacks a tuft/chemosensory epithelial axis, a rare but biologically plausible pancreatic ductal subtype not well captured by ductal identity, centroacinar, or transport/mucin modules.",
+      "suggested_fix": "Consider adding a ductal/epithelial-gated tuft/chemosensory module using markers such as POU2F3, TRPM5, GNAT3, AVIL, DCLK1, and KIT.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "The 43-axis dimensionality is high but defensible for a broad all-cell pancreas embedding.",
+    "Some marker overlap between gate and refinement modules is acceptable in this blueprint design."
+  ]
+}

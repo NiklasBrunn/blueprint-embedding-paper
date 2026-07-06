@@ -1,0 +1,3 @@
+- iter 01 — minor — The blueprint broadly covers human pancreas but needs targeted refinements to endothelial gating, stromal/mural separation, and ambiguous progenitor/beta-maturation axes.
+- iter 02 — minor — The blueprint is broadly plausible for human pancreas but needs targeted improvements to immune subtype resolution, endothelial identity coverage, and a few axis-design clarifications.
+- iter 03 — minor — The blueprint broadly covers human pancreas compartments but needs targeted cleanup of the unsupported endocrine progenitor-like axis, beta maturation/stress labeling, and a few vascular/endocrine dis

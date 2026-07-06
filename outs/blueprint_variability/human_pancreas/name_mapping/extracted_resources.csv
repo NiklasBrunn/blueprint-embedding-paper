@@ -1,0 +1,102 @@
+resource_id,n_runs,n_cohorts,cohorts,citation,kind,doi,standardized_resolved
+10.1016/j.cmet.2016.08.020,37,4,"gpt_5_4_mini_unrefined_high_human_pancreas, gpt_5_4_mini_unrefined_medium_human_pancreas, gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",Segerstolpe et al. 2016 Cell Metabolism,atlas,10.1016/j.cmet.2016.08.020,10.1016/j.cmet.2016.08.020
+10.1126/science.abl4896,31,4,"gpt_5_4_mini_unrefined_high_human_pancreas, gpt_5_4_mini_unrefined_medium_human_pancreas, gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas","The Tabula Sapiens: A multiple-organ, single-cell transcriptomic atlas of humans",atlas,10.1126/science.abl4896,10.1126/science.abl4896
+10.1016/j.cels.2016.09.002,22,4,"gpt_5_4_mini_unrefined_high_human_pancreas, gpt_5_4_mini_unrefined_medium_human_pancreas, gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",Muraro et al. 2016 Cell Systems,atlas,10.1016/j.cels.2016.09.002,10.1016/j.cels.2016.09.002
+10.1016/j.cels.2016.08.011,21,4,"gpt_5_4_mini_unrefined_high_human_pancreas, gpt_5_4_mini_unrefined_medium_human_pancreas, gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",Baron et al. 2016 Cell Systems,atlas,10.1016/j.cels.2016.08.011,10.1016/j.cels.2016.08.011
+key:keggpancreaticsecretion,17,4,"gpt_5_4_mini_unrefined_high_human_pancreas, gpt_5_4_mini_unrefined_medium_human_pancreas, gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",KEGG hsa04972 Pancreatic secretion,database,,keggpancreaticsecretion
+10.1016/j.cell.2017.09.004,12,4,"gpt_5_4_mini_unrefined_high_human_pancreas, gpt_5_4_mini_unrefined_medium_human_pancreas, gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",Enge et al. 2017 Cell,paper,10.1016/j.cell.2017.09.004,10.1016/j.cell.2017.09.004
+key:kegginsulinsecretion,11,4,"gpt_5_4_mini_unrefined_high_human_pancreas, gpt_5_4_mini_unrefined_medium_human_pancreas, gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",KEGG hsa04911 Insulin secretion,database,,kegginsulinsecretion
+10.1016/j.cmet.2016.04.002,9,2,"gpt_5_4_mini_unrefined_high_human_pancreas, gpt_5_4_mini_unrefined_medium_human_pancreas",Arda et al. 2016 Cell Metabolism,paper,10.1016/j.cmet.2016.04.002,10.1016/j.cmet.2016.04.002
+key:goimmuneresponse,9,4,"gpt_5_4_mini_unrefined_high_human_pancreas, gpt_5_4_mini_unrefined_medium_human_pancreas, gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",GO:0006955 immune response,database,,goimmuneresponse
+10.1038/s41467-024-55415-3,7,3,"gpt_5_4_mini_unrefined_medium_human_pancreas, gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",Craig-Schapiro et al. 2024 Nature Communications,atlas,10.1038/s41467-024-55415-3,10.1038/s41467-024-55415-3
+key:msigdbhallmarkemt,7,2,"gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",MSigDB HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION,database,,msigdbhallmarkemt
+10.1053/j.gastro.2020.11.010,6,2,"gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",Tosti 2021 Gastroenterology,atlas,10.1053/j.gastro.2020.11.010,10.1053/j.gastro.2020.11.010
+key:goangiogenesis,6,3,"gpt_5_4_mini_unrefined_medium_human_pancreas, gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",GO:0001525 angiogenesis,database,,goangiogenesis
+key:msigdbemt,6,2,"gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",MSigDB HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION,database,,msigdbhallmarkemt
+key:msigdbhallmarke2f,6,3,"gpt_5_4_mini_unrefined_high_human_pancreas, gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",MSigDB HALLMARK_E2F_TARGETS,database,,msigdbhallmarke2ftargets
+key:msigdbhallmarkg2m,6,3,"gpt_5_4_mini_unrefined_high_human_pancreas, gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",MSigDB HALLMARK_G2M_CHECKPOINT,database,,msigdbhallmarkg2mcheckpoint
+10.1016/j.cels.2018.07.007,5,2,"gpt_5_4_mini_unrefined_high_human_pancreas, gpt_5_4_mini_unrefined_medium_human_pancreas",Arda et al. 2018 Cell Systems,paper,10.1016/j.cels.2018.07.007,10.1016/j.cels.2018.07.007
+key:goecmorganization,5,2,"gpt_5_4_mini_unrefined_high_human_pancreas, gpt_5_4_mini_unrefined_medium_human_pancreas",GO:0030198 extracellular matrix organization,database,,key:goecmorganization
+key:gotcellactivation,5,3,"gpt_5_4_mini_unrefined_medium_human_pancreas, gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",GO:0042110 T cell activation,database,,gotcellactivation
+key:reactomeecm,5,3,"gpt_5_4_mini_unrefined_high_human_pancreas, gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",REACTOME_EXTRACELLULAR_MATRIX_ORGANIZATION,database,,reactomeecmorganization
+10.1016/j.cmet.2016.08.018,4,2,"gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",Xin 2016 Cell Metabolism,paper,10.1016/j.cmet.2016.08.018,10.1016/j.cmet.2016.08.018
+10.1126/science.1260419,4,2,"gpt_5_4_mini_unrefined_high_human_pancreas, gpt_5_4_mini_unrefined_medium_human_pancreas",Uhlen et al. 2015 Science,atlas,10.1126/science.1260419,10.1126/science.1260419
+key:gohormoneactivity,4,2,"gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",GO:0005179 hormone activity,database,,gohormoneactivity
+10.1016/j.cmet.2016.09.007,3,3,"gpt_5_4_mini_unrefined_medium_human_pancreas, gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",Wang et al. 2016 Cell Metabolism,paper,10.1016/j.cmet.2016.09.007,10.1016/j.cmet.2016.09.007
+key:gobcellactivation,3,3,"gpt_5_4_mini_unrefined_medium_human_pancreas, gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",GO:0042113 B cell activation,database,,gobcellactivation
+key:msigdbg2m,3,3,"gpt_5_4_mini_unrefined_high_human_pancreas, gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",MSigDB HALLMARK_G2M_CHECKPOINT,database,,msigdbhallmarkg2mcheckpoint
+key:msigdbhallmarkangiogenesis,3,3,"gpt_5_4_mini_unrefined_medium_human_pancreas, gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",MSigDB HALLMARK_ANGIOGENESIS,database,,msigdbhallmarkangiogenesis
+key:msigdbhallmarke2ftargets,3,2,"gpt_5_4_mini_unrefined_high_human_pancreas, gpt_5_4_mini_unrefined_medium_human_pancreas",MSigDB HALLMARK_E2F_TARGETS,database,,key:msigdbhallmarke2ftargets
+key:msigdbhallmarkg2mcheckpoint,3,2,"gpt_5_4_mini_unrefined_high_human_pancreas, gpt_5_4_mini_unrefined_medium_human_pancreas",MSigDB HALLMARK_G2M_CHECKPOINT,database,,key:msigdbhallmarkg2mcheckpoint
+10.1038/s41422-019-0195-y,2,2,"gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",Peng 2019 Cell Research,paper,10.1038/s41422-019-0195-y,10.1038/s41422-019-0195-y
+10.1038/s41467-021-24788-0,2,2,"gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",Perez-Frances 2021 Nature Communications,paper,10.1038/s41467-021-24788-0,10.1038/s41467-021-24788-0
+10.1038/s41586-020-2157-4,2,2,"gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",Han 2020 Nature,atlas,10.1038/s41586-020-2157-4,10.1038/s41586-020-2157-4
+10.1101/gr.212720.116,2,2,"gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",Lawlor 2017 Genome Research,paper,10.1101/gr.212720.116,10.1101/gr.212720.116
+10.1126/science.aah4573,2,1,gpt_5_5_refine_high_human_pancreas,Villani 2017 Science,paper,10.1126/science.aah4573,10.1126/science.aah4573
+10.1126/science.abl5197,2,2,"gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",Dominguez Conde 2022 Science,atlas,10.1126/science.abl5197,10.1126/science.abl5197
+key:godigestion,2,2,"gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",GO:0007586 digestion,database,,godigestion
+key:goextracellularmatrix,2,2,"gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",GO:0005201 extracellular matrix structural constituent,database,,goecmstructuralconstituent
+key:goextracellularmatrixorganization,2,2,"gpt_5_4_mini_unrefined_medium_human_pancreas, gpt_5_5_refine_high_human_pancreas",GO:0030198 extracellular matrix organization,database,,key:goextracellularmatrixorganization
+key:hallmarkg2mcheckpoint,2,1,gpt_5_4_mini_unrefined_medium_human_pancreas,HALLMARK_G2M_CHECKPOINT,database,,key:hallmarkg2mcheckpoint
+key:keggantigenprocessing,2,2,"gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",KEGG hsa04612 ANTIGEN_PROCESSING_AND_PRESENTATION,database,,keggantigenprocessingpresentation
+key:kegghematopoietic,2,2,"gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",KEGG hsa04640 Hematopoietic cell lineage,database,,kegghematopoieticcelllineage
+key:kegghsa04972pancreaticsecretion,2,2,"gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",KEGG hsa04972 PANCREATIC_SECRETION,database,,keggpancreaticsecretion
+key:msigdbbetacells,2,2,"gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",MSigDB HALLMARK_PANCREAS_BETA_CELLS,database,,msigdbhallmarkpancreasbetacells
+key:msigdbcomplement,2,2,"gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",MSigDB HALLMARK_COMPLEMENT,database,,msigdbhallmarkcomplement
+key:msigdbgammacell,2,2,"gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",MSigDB VANGURP_PANCREATIC_GAMMA_CELL,database,,msigdbvangurppancreaticgammacell
+key:msigdbhallmarkbetacells,2,2,"gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",MSigDB HALLMARK_PANCREAS_BETA_CELLS,database,,msigdbhallmarkpancreasbetacells
+key:msigdbhallmarkinflammatoryresponse,2,2,"gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",MSigDB HALLMARK_INFLAMMATORY_RESPONSE,database,,msigdbhallmarkinflammatoryresponse
+key:msigdbhallmarkunfoldedproteinresponse,2,2,"gpt_5_4_mini_unrefined_high_human_pancreas, gpt_5_4_mini_unrefined_medium_human_pancreas",MSigDB HALLMARK_UNFOLDED_PROTEIN_RESPONSE,database,,key:msigdbhallmarkunfoldedproteinresponse
+key:reactomeimmunesystem,2,2,"gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",Reactome R-HSA-168256 Immune System,database,,reactomeimmunesystem
+key:reactomerhsa109582hemostasis,2,2,"gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",Reactome R-HSA-109582 HEMOSTASIS,database,,reactomehemostasis
+key:reactomerhsa1280215cytokinesignaling,2,2,"gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",Reactome R-HSA-1280215 CYTOKINE_SIGNALING_IN_IMMUNE_SYSTEM,database,,reactomecytokinesignaling
+key:reactomerhsa1474244ecmorganization,2,2,"gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",Reactome R-HSA-1474244 EXTRACELLULAR_MATRIX_ORGANIZATION,database,,reactomeecmorganization
+key:reactomerhsa168249innateimmunesystem,2,2,"gpt_5_5_refine_high_human_pancreas, gpt_5_5_unrefined_high_human_pancreas",Reactome R-HSA-168249 INNATE_IMMUNE_SYSTEM,database,,reactomeinnateimmunesystem
+10.1016/j.cell.2014.09.040,1,1,gpt_5_4_mini_unrefined_medium_human_pancreas,Pagliuca et al. 2014 Cell,paper,10.1016/j.cell.2014.09.040,10.1016/j.cell.2014.09.040
+10.1016/j.cell.2020.08.003,1,1,gpt_5_5_refine_high_human_pancreas,Drokhlyansky 2020 Cell,paper,10.1016/j.cell.2020.08.003,10.1016/j.cell.2020.08.003
+10.1016/j.cmet.2017.12.017,1,1,gpt_5_4_mini_unrefined_medium_human_pancreas,Gandasi et al. 2018 Cell Metabolism,paper,10.1016/j.cmet.2017.12.017,10.1016/j.cmet.2017.12.017
+10.1016/j.cmet.2018.01.017,1,1,gpt_5_4_mini_unrefined_high_human_pancreas,Qiu et al. 2018 Cell Metabolism,paper,10.1016/j.cmet.2018.01.017,10.1016/j.cmet.2018.01.017
+10.1016/j.cmet.2022.08.014,1,1,gpt_5_4_mini_unrefined_medium_human_pancreas,Su et al. 2022 Cell Metabolism,paper,10.1016/j.cmet.2022.08.014,10.1016/j.cmet.2022.08.014
+10.1038/nbt.2141,1,1,gpt_5_4_mini_unrefined_medium_human_pancreas,Blum et al. 2012 Nature Biotechnology,paper,10.1038/nbt.2141,10.1038/nbt.2141
+10.1038/ncomms11756,1,1,gpt_5_4_mini_unrefined_high_human_pancreas,Dorrell et al. 2016 Nature Communications,paper,10.1038/ncomms11756,10.1038/ncomms11756
+10.1038/nm.3872,1,1,gpt_5_4_mini_unrefined_high_human_pancreas,van der Meulen et al. 2015 Nature Medicine,paper,10.1038/nm.3872,10.1038/nm.3872
+10.1038/s41586-022-04518-2,1,1,gpt_5_5_refine_high_human_pancreas,Emont 2022 Nature,paper,10.1038/s41586-022-04518-2,10.1038/s41586-022-04518-2
+key:cellmarker2humanlymphaticendothelialcell,1,1,gpt_5_5_refine_high_human_pancreas,CellMarker 2.0 human Lymphatic endothelial cell marker set,database,,key:cellmarker2humanlymphaticendothelialcell
+key:cellmarker2humanmastcell,1,1,gpt_5_5_refine_high_human_pancreas,CellMarker 2.0 human Mast cell marker set,database,,key:cellmarker2humanmastcell
+key:go0001946lymphangiogenesis,1,1,gpt_5_5_refine_high_human_pancreas,GO:0001946 LYMPHANGIOGENESIS,database,,key:go0001946lymphangiogenesis
+key:goantigenprocessingpresentation,1,1,gpt_5_5_refine_high_human_pancreas,GO:0019882 antigen processing and presentation,database,,key:goantigenprocessingpresentation
+key:gobloodvesseldevelopment,1,1,gpt_5_4_mini_unrefined_high_human_pancreas,GO:0001568 blood vessel development,database,,key:gobloodvesseldevelopment
+key:goepithelialcelldifferentiation,1,1,gpt_5_4_mini_unrefined_medium_human_pancreas,GO:0030855 epithelial cell differentiation,database,,key:goepithelialcelldifferentiation
+key:gohumoralimmuneresponse,1,1,gpt_5_5_refine_high_human_pancreas,GO:0006959 humoral immune response,database,,key:gohumoralimmuneresponse
+key:goimmunesystemprocess,1,1,gpt_5_4_mini_unrefined_medium_human_pancreas,GO:0002376 immune system process,database,,key:goimmunesystemprocess
+key:golipidstorage,1,1,gpt_5_5_refine_high_human_pancreas,GO:0019915 lipid storage,database,,key:golipidstorage
+key:golymphangiogenesis,1,1,gpt_5_5_refine_high_human_pancreas,GO:0001946 lymphangiogenesis,database,,key:golymphangiogenesis
+key:golymphocyteactivation,1,1,gpt_5_4_mini_unrefined_high_human_pancreas,GO:0046649 lymphocyte activation,database,,key:golymphocyteactivation
+key:gomusclecontraction,1,1,gpt_5_4_mini_unrefined_medium_human_pancreas,GO:0006935 muscle contraction,database,,key:gomusclecontraction
+key:gomyelination,1,1,gpt_5_4_mini_unrefined_medium_human_pancreas,GO:0042552 myelination,database,,key:gomyelination
+key:gomyeloidactivation,1,1,gpt_5_4_mini_unrefined_high_human_pancreas,GO:0002274 myeloid leukocyte activation,database,,key:gomyeloidactivation
+key:gonkcellcytotoxicity,1,1,gpt_5_5_refine_high_human_pancreas,GO:0042267 natural killer cell mediated cytotoxicity,database,,key:gonkcellcytotoxicity
+key:goschwanndifferentiation,1,1,gpt_5_4_mini_unrefined_high_human_pancreas,GO:0014032 Schwann cell differentiation,database,,key:goschwanndifferentiation
+key:gosmoothmusclecontraction,1,1,gpt_5_5_refine_high_human_pancreas,GO:0006939 smooth muscle contraction,database,,key:gosmoothmusclecontraction
+key:govasculaturedevelopment,1,1,gpt_5_4_mini_unrefined_medium_human_pancreas,GO:0001944 vasculature development,database,,key:govasculaturedevelopment
+key:hallmarke2ftargets,1,1,gpt_5_4_mini_unrefined_medium_human_pancreas,MSigDB HALLMARK_E2F_TARGETS,database,,key:hallmarke2ftargets
+key:hallmarkepithelialmesenchymaltransition,1,1,gpt_5_4_mini_unrefined_medium_human_pancreas,MSigDB HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION,database,,key:hallmarkepithelialmesenchymaltransition
+key:hallmarkinterferonalpharesponse,1,1,gpt_5_4_mini_unrefined_medium_human_pancreas,MSigDB HALLMARK_INTERFERON_ALPHA_RESPONSE,database,,key:hallmarkinterferonalpharesponse
+key:hallmarkinterferongammaresponse,1,1,gpt_5_4_mini_unrefined_medium_human_pancreas,MSigDB HALLMARK_INTERFERON_GAMMA_RESPONSE,database,,key:hallmarkinterferongammaresponse
+key:hallmarkunfoldedproteinresponse,1,1,gpt_5_4_mini_unrefined_medium_human_pancreas,MSigDB HALLMARK_UNFOLDED_PROTEIN_RESPONSE,database,,key:hallmarkunfoldedproteinresponse
+key:keggcellcycle,1,1,gpt_5_4_mini_unrefined_high_human_pancreas,KEGG hsa04110 Cell cycle,database,,key:keggcellcycle
+key:keggerprocessing,1,1,gpt_5_4_mini_unrefined_high_human_pancreas,KEGG hsa04141 Protein processing in endoplasmic reticulum,database,,key:keggerprocessing
+key:msigdbadipogenesis,1,1,gpt_5_5_refine_high_human_pancreas,MSigDB HALLMARK_ADIPOGENESIS,database,,key:msigdbadipogenesis
+key:msigdbe2f,1,1,gpt_5_4_mini_unrefined_high_human_pancreas,MSigDB HALLMARK_E2F_TARGETS,database,,key:msigdbe2f
+key:msigdbg2mcheckpoint,1,1,gpt_5_4_mini_unrefined_medium_human_pancreas,MSigDB HALLMARK_G2M_CHECKPOINT,database,,key:msigdbg2mcheckpoint
+key:msigdbgobplymphvesseldevelopment,1,1,gpt_5_5_refine_high_human_pancreas,MSigDB GOBP_LYMPH_VESSEL_DEVELOPMENT,database,,key:msigdbgobplymphvesseldevelopment
+key:msigdbhallmarkhypoxia,1,1,gpt_5_4_mini_unrefined_high_human_pancreas,MSigDB HALLMARK_HYPOXIA,database,,key:msigdbhallmarkhypoxia
+key:msigdbhallmarkifnaresponse,1,1,gpt_5_4_mini_unrefined_high_human_pancreas,MSigDB HALLMARK_INTERFERON_ALPHA_RESPONSE,database,,key:msigdbhallmarkifnaresponse
+key:msigdbhallmarkifngresponse,1,1,gpt_5_4_mini_unrefined_high_human_pancreas,MSigDB HALLMARK_INTERFERON_GAMMA_RESPONSE,database,,key:msigdbhallmarkifngresponse
+key:msigdbhallmarkinterferonalpharesponse,1,1,gpt_5_4_mini_unrefined_high_human_pancreas,MSigDB HALLMARK_INTERFERON_ALPHA_RESPONSE,database,,key:msigdbhallmarkinterferonalpharesponse
+key:msigdbhallmarkupr,1,1,gpt_5_4_mini_unrefined_high_human_pancreas,MSigDB HALLMARK_UNFOLDED_PROTEIN_RESPONSE,database,,key:msigdbhallmarkupr
+key:msigdbunfoldedproteinresponse,1,1,gpt_5_4_mini_unrefined_medium_human_pancreas,MSigDB HALLMARK_UNFOLDED_PROTEIN_RESPONSE,database,,key:msigdbunfoldedproteinresponse
+key:msigdbupr,1,1,gpt_5_4_mini_unrefined_high_human_pancreas,MSigDB HALLMARK_UNFOLDED_PROTEIN_RESPONSE,database,,key:msigdbupr
+key:reactomeinsulinsecretion,1,1,gpt_5_4_mini_unrefined_medium_human_pancreas,Reactome R-HSA-6871271 INSULIN SECRETION,database,,key:reactomeinsulinsecretion
+key:reactomeschwannmyelination,1,1,gpt_5_5_refine_high_human_pancreas,Reactome R-HSA-9619665 EGR2 and SOX10-mediated initiation of Schwann cell myelination,database,,key:reactomeschwannmyelination
+key:reactomesmoothmuscle,1,1,gpt_5_4_mini_unrefined_high_human_pancreas,REACTOME_SMOOTH_MUSCLE_CONTRACTION,database,,key:reactomesmoothmuscle

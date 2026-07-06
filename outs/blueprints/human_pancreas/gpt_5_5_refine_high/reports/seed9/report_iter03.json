@@ -1,0 +1,41 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint is broadly plausible for healthy human pancreas but needs targeted immune, stromal, and rare endocrine refinements before it is publishable unchanged.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "myeloid_macrophage / immune coverage",
+      "description": "The only myeloid axis is macrophage-skewed and does not clearly represent dendritic or antigen-presenting myeloid populations expected in healthy human pancreas atlases.",
+      "suggested_fix": "Add a dendritic/APC-focused module and axis if supported by the cited pancreas atlas literature, or broaden the myeloid design to distinguish macrophage from DC-like antigen-presenting cells. Candidate markers to evaluate include FCER1A, CD1C, CLEC10A, CLEC9A, XCR1, LILRA4, and HLA class II genes.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "t_nk_lymphocyte / nk_cell",
+      "description": "The t_nk_lymphocyte module is T-cell focused while NK cells already have a separate nk_cell axis, so the current name implies a mixed T/NK population and weakens interpretability.",
+      "suggested_fix": "Rename/refocus t_nk_lymphocyte as a T-cell module/axis, or redesign the lymphocyte axes around an explicit pan T/NK gate plus separate T and NK refinements. The simpler fix is to make it t_cell and keep nk_cell separate.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "epsilon_cell",
+      "description": "The rare epsilon/ghrelin cell module includes strong markers such as GHRL and MBOAT4 but also less canonical or potentially non-pancreas-enter endocrine/metabolic genes such as MLN, FFAR3, CD320, and ACSL1.",
+      "suggested_fix": "Tighten the epsilon module against human pancreas/islet evidence. Keep high-confidence ghrelin-cell markers and replace weak entries with better-supported epsilon markers, or use a shorter high-confidence module rather than padding it.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "stellate_fibroblast_ecm",
+      "description": "The stromal axis mainly scores broad collagen/ECM fibroblast activation and may under-resolve resident pancreatic stellate/fibroblast identity versus activated ECM or myofibroblast-like state.",
+      "suggested_fix": "Split the stromal design into quiescent stellate/fibroblast and activated ECM/myofibroblast axes if literature-supported, or rebalance the current module so it is clearly a resident stellate/fibroblast identity axis rather than mostly an ECM activation score.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "I did not re-verify paper or atlas DOI metadata; citation verification is outside this discriminator pass."
+  ]
+}

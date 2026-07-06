@@ -1,0 +1,177 @@
+{
+  "h5ad_path": "data/preprocessed/human_pancreas_pp.h5ad",
+  "layer": null,
+  "n_cells": 16382,
+  "n_vars": 18268,
+  "modules": [
+    {
+      "name": "endocrine_core",
+      "n_genes": 16,
+      "n_genes_present": 16,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.9926138444634355
+    },
+    {
+      "name": "exocrine_core",
+      "n_genes": 25,
+      "n_genes_present": 24,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "PRSS2"
+      ],
+      "fraction_nonzero_cells": 0.9799780246612135
+    },
+    {
+      "name": "acinar_core",
+      "n_genes": 14,
+      "n_genes_present": 13,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "PRSS2"
+      ],
+      "fraction_nonzero_cells": 0.7925772188987914
+    },
+    {
+      "name": "ductal_core",
+      "n_genes": 13,
+      "n_genes_present": 13,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.9365767305579294
+    },
+    {
+      "name": "beta_core",
+      "n_genes": 13,
+      "n_genes_present": 12,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "NKX6-1"
+      ],
+      "fraction_nonzero_cells": 0.9753998290806983
+    },
+    {
+      "name": "beta_mature_core",
+      "n_genes": 11,
+      "n_genes_present": 10,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "NKX6-1"
+      ],
+      "fraction_nonzero_cells": 0.894274203393969
+    },
+    {
+      "name": "alpha_core",
+      "n_genes": 12,
+      "n_genes_present": 12,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.9661823953119277
+    },
+    {
+      "name": "delta_core",
+      "n_genes": 11,
+      "n_genes_present": 11,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.9666096935661092
+    },
+    {
+      "name": "pp_core",
+      "n_genes": 9,
+      "n_genes_present": 9,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.9509827859846173
+    },
+    {
+      "name": "myeloid_core",
+      "n_genes": 15,
+      "n_genes_present": 14,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "HLA-DRA"
+      ],
+      "fraction_nonzero_cells": 0.4768648516664632
+    },
+    {
+      "name": "t_nk_core",
+      "n_genes": 13,
+      "n_genes_present": 12,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "TRBC1"
+      ],
+      "fraction_nonzero_cells": 0.0985227688926871
+    },
+    {
+      "name": "b_plasma_core",
+      "n_genes": 12,
+      "n_genes_present": 10,
+      "n_genes_missing": 2,
+      "missing_genes": [
+        "HLA-DRA",
+        "JCHAIN"
+      ],
+      "fraction_nonzero_cells": 0.8552069344402393
+    },
+    {
+      "name": "adaptive_immune_core",
+      "n_genes": 21,
+      "n_genes_present": 20,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "JCHAIN"
+      ],
+      "fraction_nonzero_cells": 0.8254791844707606
+    },
+    {
+      "name": "endothelial_core",
+      "n_genes": 13,
+      "n_genes_present": 13,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.23922597973385423
+    },
+    {
+      "name": "fibroblast_core",
+      "n_genes": 13,
+      "n_genes_present": 13,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.4513490416310585
+    },
+    {
+      "name": "mural_stellate_core",
+      "n_genes": 14,
+      "n_genes_present": 14,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.7437431327066292
+    },
+    {
+      "name": "schwann_core",
+      "n_genes": 10,
+      "n_genes_present": 10,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.7197533878647295
+    },
+    {
+      "name": "mesothelial_core",
+      "n_genes": 10,
+      "n_genes_present": 10,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.7280551825173971
+    },
+    {
+      "name": "cycling_core",
+      "n_genes": 18,
+      "n_genes_present": 18,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.5369918202905628
+    }
+  ]
+}

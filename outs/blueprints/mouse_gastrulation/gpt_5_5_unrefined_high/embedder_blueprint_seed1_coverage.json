@@ -1,0 +1,298 @@
+{
+  "h5ad_path": "data/preprocessed/mouse_gastrulation_pp.h5ad",
+  "layer": null,
+  "n_cells": 116312,
+  "n_vars": 22035,
+  "modules": [
+    {
+      "name": "epiblast_pluripotent",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.8456393149460073
+    },
+    {
+      "name": "primitive_streak",
+      "n_genes": 8,
+      "n_genes_present": 8,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.5548696609120297
+    },
+    {
+      "name": "embryonic_ectoderm",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.7262363298713804
+    },
+    {
+      "name": "primordial_germ_cell",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.6510162322030401
+    },
+    {
+      "name": "neuromesodermal_progenitor",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.7580645161290323
+    },
+    {
+      "name": "definitive_endoderm",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.3439541921727767
+    },
+    {
+      "name": "node_notochord",
+      "n_genes": 8,
+      "n_genes_present": 8,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.328865465300227
+    },
+    {
+      "name": "nascent_mesoderm",
+      "n_genes": 8,
+      "n_genes_present": 8,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.6532172088864434
+    },
+    {
+      "name": "extraembryonic_mesoderm",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.6152159708370589
+    },
+    {
+      "name": "paraxial_presomitic_mesoderm",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.17387715798885756
+    },
+    {
+      "name": "somitic_mesoderm",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.19084875163353737
+    },
+    {
+      "name": "intermediate_mesoderm",
+      "n_genes": 5,
+      "n_genes_present": 5,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.23046633193479607
+    },
+    {
+      "name": "lateral_plate_mesoderm",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.4297664901299952
+    },
+    {
+      "name": "cardiac_mesoderm",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.33883004333172845
+    },
+    {
+      "name": "pharyngeal_mesoderm",
+      "n_genes": 6,
+      "n_genes_present": 6,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.2593025655134466
+    },
+    {
+      "name": "hematoendothelial_mesoderm",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.4419836302359172
+    },
+    {
+      "name": "endothelial",
+      "n_genes": 8,
+      "n_genes_present": 8,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.15990611458834858
+    },
+    {
+      "name": "primitive_erythroid",
+      "n_genes": 8,
+      "n_genes_present": 8,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.8183506430978746
+    },
+    {
+      "name": "primitive_myeloid",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.01516610495907559
+    },
+    {
+      "name": "neural_plate",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.4554560148565926
+    },
+    {
+      "name": "anterior_neural",
+      "n_genes": 6,
+      "n_genes_present": 6,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.2836938578994429
+    },
+    {
+      "name": "posterior_neural",
+      "n_genes": 8,
+      "n_genes_present": 8,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.6464939129238599
+    },
+    {
+      "name": "neural_crest",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.4414333860650664
+    },
+    {
+      "name": "surface_ectoderm",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.7897551413439714
+    },
+    {
+      "name": "otic_placode",
+      "n_genes": 6,
+      "n_genes_present": 6,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.16599319072838573
+    },
+    {
+      "name": "visceral_endoderm",
+      "n_genes": 8,
+      "n_genes_present": 8,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.8216779008184882
+    },
+    {
+      "name": "anterior_visceral_endoderm",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.4588520530985625
+    },
+    {
+      "name": "parietal_endoderm",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.790743861338469
+    },
+    {
+      "name": "yolk_sac_endoderm",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.7182749845243827
+    },
+    {
+      "name": "gut_endoderm",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.6460210468395351
+    },
+    {
+      "name": "anterior_foregut",
+      "n_genes": 6,
+      "n_genes_present": 6,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.5339345897241901
+    },
+    {
+      "name": "posterior_hindgut",
+      "n_genes": 6,
+      "n_genes_present": 6,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.5288276360134809
+    },
+    {
+      "name": "extraembryonic_ectoderm",
+      "n_genes": 7,
+      "n_genes_present": 7,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.7591306142100557
+    },
+    {
+      "name": "chorion_trophoblast",
+      "n_genes": 6,
+      "n_genes_present": 6,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.5487224018158058
+    },
+    {
+      "name": "trophoblast_giant_cell",
+      "n_genes": 6,
+      "n_genes_present": 5,
+      "n_genes_missing": 1,
+      "missing_genes": [
+        "Ctsq"
+      ],
+      "fraction_nonzero_cells": 0.3016197812779421
+    },
+    {
+      "name": "proliferation",
+      "n_genes": 10,
+      "n_genes_present": 10,
+      "n_genes_missing": 0,
+      "missing_genes": [],
+      "fraction_nonzero_cells": 0.9996732925235573
+    }
+  ]
+}

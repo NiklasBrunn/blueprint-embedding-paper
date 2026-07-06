@@ -1,0 +1,49 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers healthy human pancreas but needs targeted cleanup of immune lineage modules, rare endocrine coverage, and endothelial contrast design.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "endocrine branch",
+      "description": "The endocrine branch includes beta, alpha, delta, PP/gamma, and epsilon cells, but lacks the rare enterochromaffin/serotonergic endocrine population reported in human pancreatic/islet datasets.",
+      "suggested_fix": "Add an enterochromaffin/serotonergic endocrine module with canonical markers such as TPH1, DDC, SLC18A1, TAC1, LMX1A, and endocrine markers as appropriate, then add a gated axis under endocrine_common contrasted against sibling endocrine modules.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "t_nk_cell, nk_cytotoxic_cell, t_nk_within_leukocyte, nk_cytotoxic_within_leukocyte",
+      "description": "The T/NK module includes strong NK/cytotoxic markers while a separate NK/cytotoxic module uses nearly the same program, and the gated T and NK axes do not contrast against each other.",
+      "suggested_fix": "Make the T-cell module T-lineage specific, keep cytotoxic genes in the NK/cytotoxic module, and include T and NK modules as mutual negatives in their gated leukocyte axes.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "b_plasma_cell, plasma_cell, b_plasma_within_leukocyte, plasma_within_leukocyte",
+      "description": "b_plasma_cell mixes B-cell and plasma-cell markers while plasma_cell separately captures plasma cells, making the B-cell axis partially redundant and less lineage-specific.",
+      "suggested_fix": "Convert b_plasma_cell into a cleaner B-cell module by removing plasma genes and adding supported B-cell markers such as CD19, CD22, CD74, HLA-DRA, TCL1A, or MS4A1-centered markers; keep plasma_cell as the plasma-cell module and make the axes mutual negatives.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "dendritic_cell",
+      "description": "The dendritic module combines cDC2, cDC1, and pDC markers into one axis. A broad DC axis is acceptable, but this loses meaningful immune resolution in an otherwise fairly high-dimensional pancreas embedding.",
+      "suggested_fix": "Either narrow this module to a broad antigen-presenting DC program without subtype-exclusive markers, or split it into cDC and pDC axes if supporting resources justify the added dimensionality.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "endothelial and lymphatic_vs_blood_endothelial",
+      "description": "The endothelial module is pan-endothelial/blood-endothelial leaning, but the lymphatic contrast uses it directly as the negative even though lymphatic endothelial cells also express pan-endothelial genes.",
+      "suggested_fix": "Refactor to a vascular endothelial common gate plus separate blood endothelial and lymphatic modules, or make the negative module explicitly blood-endothelial rather than pan-endothelial.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "Citation and DOI validation were not rechecked; this review only judged biological coverage, marker plausibility, and structural fit."
+  ]
+}

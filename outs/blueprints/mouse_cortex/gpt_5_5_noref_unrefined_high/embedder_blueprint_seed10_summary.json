@@ -1,0 +1,1704 @@
+{
+  "run_id": "260605_blueprint_run10",
+  "extracted_at": "2026-06-05T10:25:18+00:00",
+  "scenario": {
+    "species": [
+      "mouse"
+    ],
+    "tissue": [
+      "isocortex"
+    ],
+    "celltype": null,
+    "age": "adult",
+    "sex": null,
+    "condition": null,
+    "notes": null
+  },
+  "blueprint": {
+    "name": "extract",
+    "clip": 4.0,
+    "n_modules": 30,
+    "n_axes": 28,
+    "n_axes_by_kind": {
+      "plain": 8,
+      "contrast": 3,
+      "gated": 17
+    },
+    "n_resources": 0,
+    "n_resources_by_kind": {
+      "paper": 0,
+      "atlas": 0,
+      "database": 0
+    },
+    "n_dois_unique": 0,
+    "n_total_genes": 237,
+    "n_unique_genes": 180,
+    "modules": [
+      {
+        "name": "pan_neuronal",
+        "genes": [
+          "Snap25",
+          "Syt1",
+          "Tubb3",
+          "Rbfox3",
+          "Map2",
+          "Elavl3",
+          "Elavl4",
+          "Stmn2"
+        ],
+        "n_genes": 8,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "neuronal_vs_non_neuronal",
+            "role": "positive"
+          },
+          {
+            "axis": "neuronal_activity_state",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 2,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.9977293165467626
+      },
+      {
+        "name": "non_neuronal_support",
+        "genes": [
+          "Aldh1l1",
+          "Aqp4",
+          "Plp1",
+          "Mbp",
+          "Pdgfra",
+          "Cspg4",
+          "P2ry12",
+          "Cldn5",
+          "Pdgfrb",
+          "Col1a1"
+        ],
+        "n_genes": 10,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "neuronal_vs_non_neuronal",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 10,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.6191321942446043
+      },
+      {
+        "name": "glutamatergic_neuron",
+        "genes": [
+          "Slc17a7",
+          "Slc17a6",
+          "Camk2a",
+          "Neurod6",
+          "Tbr1",
+          "Satb2",
+          "Sla"
+        ],
+        "n_genes": 7,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "glutamatergic_vs_gabaergic",
+            "role": "positive"
+          },
+          {
+            "axis": "excitatory_l23_it",
+            "role": "gate"
+          },
+          {
+            "axis": "excitatory_l4_it",
+            "role": "gate"
+          },
+          {
+            "axis": "excitatory_l5_it",
+            "role": "gate"
+          },
+          {
+            "axis": "excitatory_l5_et_pt",
+            "role": "gate"
+          },
+          {
+            "axis": "excitatory_l6_ct",
+            "role": "gate"
+          },
+          {
+            "axis": "excitatory_l6b",
+            "role": "gate"
+          },
+          {
+            "axis": "excitatory_l56_np",
+            "role": "gate"
+          },
+          {
+            "axis": "excitatory_car3_it",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 9,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.8559802158273381
+      },
+      {
+        "name": "gabaergic_neuron",
+        "genes": [
+          "Gad1",
+          "Gad2",
+          "Slc32a1",
+          "Dlx1",
+          "Dlx2",
+          "Erbb4",
+          "Lhx6"
+        ],
+        "n_genes": 7,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "glutamatergic_vs_gabaergic",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_vip",
+            "role": "gate"
+          },
+          {
+            "axis": "interneuron_sst",
+            "role": "gate"
+          },
+          {
+            "axis": "interneuron_pvalb",
+            "role": "gate"
+          },
+          {
+            "axis": "interneuron_lamp5",
+            "role": "gate"
+          },
+          {
+            "axis": "interneuron_sncg",
+            "role": "gate"
+          },
+          {
+            "axis": "interneuron_serpinf1",
+            "role": "gate"
+          },
+          {
+            "axis": "interneuron_meis2",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 8,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.5272482014388489
+      },
+      {
+        "name": "astrocyte",
+        "genes": [
+          "Aqp4",
+          "Aldh1l1",
+          "Slc1a3",
+          "Gja1",
+          "Glul",
+          "S100b",
+          "Mfge8",
+          "Gfap"
+        ],
+        "n_genes": 8,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "astrocyte_identity",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.7004721223021583
+      },
+      {
+        "name": "oligodendrocyte",
+        "genes": [
+          "Mog",
+          "Mbp",
+          "Plp1",
+          "Mag",
+          "Mobp",
+          "Cldn11",
+          "Opalin",
+          "Mal"
+        ],
+        "n_genes": 8,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "oligodendrocyte_vs_opc_maturation",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.604226618705036
+      },
+      {
+        "name": "opc",
+        "genes": [
+          "Pdgfra",
+          "Cspg4",
+          "Vcan",
+          "Ptprz1",
+          "Olig1",
+          "Olig2",
+          "Sox10",
+          "Neu4"
+        ],
+        "n_genes": 8,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "oligodendrocyte_vs_opc_maturation",
+            "role": "negative"
+          },
+          {
+            "axis": "opc_identity",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 2,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.28741007194244605
+      },
+      {
+        "name": "microglia",
+        "genes": [
+          "P2ry12",
+          "Tmem119",
+          "Cx3cr1",
+          "Csf1r",
+          "Hexb",
+          "C1qa",
+          "C1qb",
+          "Aif1"
+        ],
+        "n_genes": 8,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "microglia_identity",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.44858363309352517
+      },
+      {
+        "name": "endothelial",
+        "genes": [
+          "Pecam1",
+          "Cldn5",
+          "Kdr",
+          "Flt1",
+          "Esam",
+          "Slco1a4",
+          "Ly6c1",
+          "Tek"
+        ],
+        "n_genes": 8,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "endothelial_identity",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.16717625899280575
+      },
+      {
+        "name": "pericyte",
+        "genes": [
+          "Pdgfrb",
+          "Rgs5",
+          "Kcnj8",
+          "Abcc9",
+          "Notch3",
+          "Des",
+          "Cspg4",
+          "Mcam"
+        ],
+        "n_genes": 8,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "pericyte_identity",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.22088579136690648
+      },
+      {
+        "name": "vascular_leptomeningeal_fibroblast",
+        "genes": [
+          "Col1a1",
+          "Col1a2",
+          "Dcn",
+          "Lum",
+          "Pdgfra",
+          "Slc6a13",
+          "Igfbp6",
+          "Serping1"
+        ],
+        "n_genes": 8,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "vlmc_fibroblast_identity",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.43549910071942444
+      },
+      {
+        "name": "vascular_smooth_muscle",
+        "genes": [
+          "Acta2",
+          "Tagln",
+          "Myh11",
+          "Cnn1",
+          "Myl9",
+          "Des",
+          "Mustn1"
+        ],
+        "n_genes": 7,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "vascular_smooth_muscle_identity",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.22969874100719426
+      },
+      {
+        "name": "l23_it_excitatory",
+        "genes": [
+          "Cux1",
+          "Cux2",
+          "Lpl",
+          "Calb1",
+          "Rorb",
+          "Satb2",
+          "Cdh13",
+          "Sema3c"
+        ],
+        "n_genes": 8,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "excitatory_l23_it",
+            "role": "positive"
+          },
+          {
+            "axis": "excitatory_l4_it",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l5_it",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l5_et_pt",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l6_ct",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l6b",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l56_np",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_car3_it",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 8,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.8569919064748202
+      },
+      {
+        "name": "l4_it_excitatory",
+        "genes": [
+          "Rorb",
+          "Scnn1a",
+          "Cux2",
+          "Cux1",
+          "Cnih3",
+          "Rspo1",
+          "Unc5d",
+          "Whrn"
+        ],
+        "n_genes": 8,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "excitatory_l23_it",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l4_it",
+            "role": "positive"
+          },
+          {
+            "axis": "excitatory_l5_it",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l5_et_pt",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l6_ct",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l6b",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l56_np",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_car3_it",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 8,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.787410071942446
+      },
+      {
+        "name": "l5_it_excitatory",
+        "genes": [
+          "Deptor",
+          "Bcl11b",
+          "Hsd11b1",
+          "Tmem163",
+          "Cdh13",
+          "Satb2",
+          "Rorb",
+          "Pld5"
+        ],
+        "n_genes": 8,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "excitatory_l23_it",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l4_it",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l5_it",
+            "role": "positive"
+          },
+          {
+            "axis": "excitatory_l5_et_pt",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l6_ct",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l6b",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l56_np",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_car3_it",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 8,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.8278552158273381
+      },
+      {
+        "name": "l5_et_excitatory",
+        "genes": [
+          "Bcl11b",
+          "Fezf2",
+          "Etv1",
+          "Fam84b",
+          "Kcnk2",
+          "Crym",
+          "Chrna6",
+          "Sim1"
+        ],
+        "n_genes": 8,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "excitatory_l23_it",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l4_it",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l5_it",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l5_et_pt",
+            "role": "positive"
+          },
+          {
+            "axis": "excitatory_l6_ct",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l6b",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l56_np",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_car3_it",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 8,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.7789343525179856
+      },
+      {
+        "name": "l6_ct_excitatory",
+        "genes": [
+          "Foxp2",
+          "Tle4",
+          "Syt6",
+          "Ntsr1",
+          "Pcp4",
+          "Grik3",
+          "Nxph4",
+          "Kcnip1"
+        ],
+        "n_genes": 8,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "excitatory_l23_it",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l4_it",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l5_it",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l5_et_pt",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l6_ct",
+            "role": "positive"
+          },
+          {
+            "axis": "excitatory_l6b",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l56_np",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_car3_it",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 8,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.8662095323741007
+      },
+      {
+        "name": "l6b_excitatory",
+        "genes": [
+          "Ctgf",
+          "Ccn2",
+          "Cplx3",
+          "Nxph4",
+          "Lypd1",
+          "Car3",
+          "Tmem163",
+          "Syt6"
+        ],
+        "n_genes": 8,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "excitatory_l23_it",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l4_it",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l5_it",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l5_et_pt",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l6_ct",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l6b",
+            "role": "positive"
+          },
+          {
+            "axis": "excitatory_l56_np",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_car3_it",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 8,
+        "n_genes_present": 7,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "Ccn2"
+        ],
+        "fraction_nonzero_cells": 0.5550584532374101
+      },
+      {
+        "name": "l56_np_excitatory",
+        "genes": [
+          "Tshz2",
+          "Sema3e",
+          "Cplx3",
+          "Fezf2",
+          "Reln",
+          "Kcnk2",
+          "Colgalt2",
+          "Nfib"
+        ],
+        "n_genes": 8,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "excitatory_l23_it",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l4_it",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l5_it",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l5_et_pt",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l6_ct",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l6b",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l56_np",
+            "role": "positive"
+          },
+          {
+            "axis": "excitatory_car3_it",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 8,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.896875
+      },
+      {
+        "name": "car3_it_excitatory",
+        "genes": [
+          "Car3",
+          "Chodl",
+          "Colgalt2",
+          "Nxph4",
+          "Lypd1",
+          "Tle4",
+          "Cdh13"
+        ],
+        "n_genes": 7,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "excitatory_l23_it",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l4_it",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l5_it",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l5_et_pt",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l6_ct",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l6b",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_l56_np",
+            "role": "negative"
+          },
+          {
+            "axis": "excitatory_car3_it",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 8,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.6794964028776979
+      },
+      {
+        "name": "vip_interneuron",
+        "genes": [
+          "Vip",
+          "Crh",
+          "Cck",
+          "Htr3a",
+          "Tac2",
+          "Synpr",
+          "Igf1",
+          "Pde1a"
+        ],
+        "n_genes": 8,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "interneuron_vip",
+            "role": "positive"
+          },
+          {
+            "axis": "interneuron_sst",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_pvalb",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_lamp5",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_sncg",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_serpinf1",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_meis2",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 7,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.9441996402877698
+      },
+      {
+        "name": "sst_interneuron",
+        "genes": [
+          "Sst",
+          "Npy",
+          "Nos1",
+          "Thsd7a",
+          "Chrna2",
+          "Penk",
+          "Calb2",
+          "Lhx6"
+        ],
+        "n_genes": 8,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "interneuron_vip",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_sst",
+            "role": "positive"
+          },
+          {
+            "axis": "interneuron_pvalb",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_lamp5",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_sncg",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_serpinf1",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_meis2",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 7,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.686578237410072
+      },
+      {
+        "name": "pvalb_interneuron",
+        "genes": [
+          "Pvalb",
+          "Kcnc1",
+          "Scn1a",
+          "Tac1",
+          "Gabra1",
+          "Lhx6",
+          "Syt2",
+          "Pthlh"
+        ],
+        "n_genes": 8,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "interneuron_vip",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_sst",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_pvalb",
+            "role": "positive"
+          },
+          {
+            "axis": "interneuron_lamp5",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_sncg",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_serpinf1",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_meis2",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 7,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.9174010791366907
+      },
+      {
+        "name": "lamp5_interneuron",
+        "genes": [
+          "Lamp5",
+          "Reln",
+          "Ndnf",
+          "Cplx3",
+          "Npy2r",
+          "Fam19a1",
+          "Tafa1",
+          "Lhx6"
+        ],
+        "n_genes": 8,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "interneuron_vip",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_sst",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_pvalb",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_lamp5",
+            "role": "positive"
+          },
+          {
+            "axis": "interneuron_sncg",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_serpinf1",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_meis2",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 7,
+        "n_genes_present": 7,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "Tafa1"
+        ],
+        "fraction_nonzero_cells": 0.7521807553956834
+      },
+      {
+        "name": "sncg_interneuron",
+        "genes": [
+          "Sncg",
+          "Cxcl14",
+          "Kit",
+          "Npy2r",
+          "Tac2",
+          "Reln",
+          "Htr3a",
+          "Vip"
+        ],
+        "n_genes": 8,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "interneuron_vip",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_sst",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_pvalb",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_lamp5",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_sncg",
+            "role": "positive"
+          },
+          {
+            "axis": "interneuron_serpinf1",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_meis2",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 7,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.5637589928057554
+      },
+      {
+        "name": "serpinf1_interneuron",
+        "genes": [
+          "Serpinf1",
+          "Vipr2",
+          "Ndnf",
+          "Mybpc1",
+          "Npy2r",
+          "Htr3a",
+          "Reln"
+        ],
+        "n_genes": 7,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "interneuron_vip",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_sst",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_pvalb",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_lamp5",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_sncg",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_serpinf1",
+            "role": "positive"
+          },
+          {
+            "axis": "interneuron_meis2",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 7,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.39660521582733815
+      },
+      {
+        "name": "meis2_interneuron",
+        "genes": [
+          "Meis2",
+          "Pax6",
+          "Sp8",
+          "Htr3a",
+          "Gad2",
+          "Slc32a1",
+          "Cnr1"
+        ],
+        "n_genes": 7,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "interneuron_vip",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_sst",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_pvalb",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_lamp5",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_sncg",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_serpinf1",
+            "role": "negative"
+          },
+          {
+            "axis": "interneuron_meis2",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 7,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.8109037769784173
+      },
+      {
+        "name": "neuronal_activity",
+        "genes": [
+          "Fos",
+          "Jun",
+          "Junb",
+          "Egr1",
+          "Egr2",
+          "Arc",
+          "Npas4",
+          "Nr4a1",
+          "Bdnf",
+          "Dusp1"
+        ],
+        "n_genes": 10,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "neuronal_activity_state",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 10,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.8700314748201439
+      },
+      {
+        "name": "proliferation",
+        "genes": [
+          "Mki67",
+          "Top2a",
+          "Ccnb1",
+          "Cdk1",
+          "Pcna",
+          "Mcm5",
+          "Ube2c",
+          "Cenpf"
+        ],
+        "n_genes": 8,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "proliferation_state",
+            "role": "positive"
+          },
+          {
+            "axis": "cycling_opc_state",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 2,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.5672212230215827
+      },
+      {
+        "name": "opc_cell_cycle_gate",
+        "genes": [
+          "Pdgfra",
+          "Cspg4",
+          "Olig1",
+          "Olig2",
+          "Ptprz1",
+          "Mki67",
+          "Top2a"
+        ],
+        "n_genes": 7,
+        "resource_keys": [],
+        "n_resource_keys": 0,
+        "used_in_axes": [
+          {
+            "axis": "cycling_opc_state",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.2653776978417266
+      }
+    ],
+    "axes": [
+      {
+        "name": "neuronal_vs_non_neuronal",
+        "kind": "contrast",
+        "positive": "pan_neuronal",
+        "negatives": [
+          "non_neuronal_support"
+        ],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "glutamatergic_vs_gabaergic",
+        "kind": "contrast",
+        "positive": "glutamatergic_neuron",
+        "negatives": [
+          "gabaergic_neuron"
+        ],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "astrocyte_identity",
+        "kind": "plain",
+        "positive": "astrocyte",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "oligodendrocyte_vs_opc_maturation",
+        "kind": "contrast",
+        "positive": "oligodendrocyte",
+        "negatives": [
+          "opc"
+        ],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "opc_identity",
+        "kind": "plain",
+        "positive": "opc",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "microglia_identity",
+        "kind": "plain",
+        "positive": "microglia",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "endothelial_identity",
+        "kind": "plain",
+        "positive": "endothelial",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "pericyte_identity",
+        "kind": "plain",
+        "positive": "pericyte",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "vlmc_fibroblast_identity",
+        "kind": "plain",
+        "positive": "vascular_leptomeningeal_fibroblast",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "vascular_smooth_muscle_identity",
+        "kind": "plain",
+        "positive": "vascular_smooth_muscle",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "excitatory_l23_it",
+        "kind": "gated",
+        "positive": "l23_it_excitatory",
+        "negatives": [
+          "l4_it_excitatory",
+          "l5_it_excitatory",
+          "l5_et_excitatory",
+          "l6_ct_excitatory",
+          "l6b_excitatory",
+          "l56_np_excitatory",
+          "car3_it_excitatory"
+        ],
+        "negative_weight": 0.3,
+        "gate": "glutamatergic_neuron"
+      },
+      {
+        "name": "excitatory_l4_it",
+        "kind": "gated",
+        "positive": "l4_it_excitatory",
+        "negatives": [
+          "l23_it_excitatory",
+          "l5_it_excitatory",
+          "l5_et_excitatory",
+          "l6_ct_excitatory",
+          "l6b_excitatory",
+          "l56_np_excitatory",
+          "car3_it_excitatory"
+        ],
+        "negative_weight": 0.3,
+        "gate": "glutamatergic_neuron"
+      },
+      {
+        "name": "excitatory_l5_it",
+        "kind": "gated",
+        "positive": "l5_it_excitatory",
+        "negatives": [
+          "l23_it_excitatory",
+          "l4_it_excitatory",
+          "l5_et_excitatory",
+          "l6_ct_excitatory",
+          "l6b_excitatory",
+          "l56_np_excitatory",
+          "car3_it_excitatory"
+        ],
+        "negative_weight": 0.3,
+        "gate": "glutamatergic_neuron"
+      },
+      {
+        "name": "excitatory_l5_et_pt",
+        "kind": "gated",
+        "positive": "l5_et_excitatory",
+        "negatives": [
+          "l23_it_excitatory",
+          "l4_it_excitatory",
+          "l5_it_excitatory",
+          "l6_ct_excitatory",
+          "l6b_excitatory",
+          "l56_np_excitatory",
+          "car3_it_excitatory"
+        ],
+        "negative_weight": 0.3,
+        "gate": "glutamatergic_neuron"
+      },
+      {
+        "name": "excitatory_l6_ct",
+        "kind": "gated",
+        "positive": "l6_ct_excitatory",
+        "negatives": [
+          "l23_it_excitatory",
+          "l4_it_excitatory",
+          "l5_it_excitatory",
+          "l5_et_excitatory",
+          "l6b_excitatory",
+          "l56_np_excitatory",
+          "car3_it_excitatory"
+        ],
+        "negative_weight": 0.3,
+        "gate": "glutamatergic_neuron"
+      },
+      {
+        "name": "excitatory_l6b",
+        "kind": "gated",
+        "positive": "l6b_excitatory",
+        "negatives": [
+          "l23_it_excitatory",
+          "l4_it_excitatory",
+          "l5_it_excitatory",
+          "l5_et_excitatory",
+          "l6_ct_excitatory",
+          "l56_np_excitatory",
+          "car3_it_excitatory"
+        ],
+        "negative_weight": 0.3,
+        "gate": "glutamatergic_neuron"
+      },
+      {
+        "name": "excitatory_l56_np",
+        "kind": "gated",
+        "positive": "l56_np_excitatory",
+        "negatives": [
+          "l23_it_excitatory",
+          "l4_it_excitatory",
+          "l5_it_excitatory",
+          "l5_et_excitatory",
+          "l6_ct_excitatory",
+          "l6b_excitatory",
+          "car3_it_excitatory"
+        ],
+        "negative_weight": 0.3,
+        "gate": "glutamatergic_neuron"
+      },
+      {
+        "name": "excitatory_car3_it",
+        "kind": "gated",
+        "positive": "car3_it_excitatory",
+        "negatives": [
+          "l23_it_excitatory",
+          "l4_it_excitatory",
+          "l5_it_excitatory",
+          "l5_et_excitatory",
+          "l6_ct_excitatory",
+          "l6b_excitatory",
+          "l56_np_excitatory"
+        ],
+        "negative_weight": 0.3,
+        "gate": "glutamatergic_neuron"
+      },
+      {
+        "name": "interneuron_vip",
+        "kind": "gated",
+        "positive": "vip_interneuron",
+        "negatives": [
+          "sst_interneuron",
+          "pvalb_interneuron",
+          "lamp5_interneuron",
+          "sncg_interneuron",
+          "serpinf1_interneuron",
+          "meis2_interneuron"
+        ],
+        "negative_weight": 0.3,
+        "gate": "gabaergic_neuron"
+      },
+      {
+        "name": "interneuron_sst",
+        "kind": "gated",
+        "positive": "sst_interneuron",
+        "negatives": [
+          "vip_interneuron",
+          "pvalb_interneuron",
+          "lamp5_interneuron",
+          "sncg_interneuron",
+          "serpinf1_interneuron",
+          "meis2_interneuron"
+        ],
+        "negative_weight": 0.3,
+        "gate": "gabaergic_neuron"
+      },
+      {
+        "name": "interneuron_pvalb",
+        "kind": "gated",
+        "positive": "pvalb_interneuron",
+        "negatives": [
+          "vip_interneuron",
+          "sst_interneuron",
+          "lamp5_interneuron",
+          "sncg_interneuron",
+          "serpinf1_interneuron",
+          "meis2_interneuron"
+        ],
+        "negative_weight": 0.3,
+        "gate": "gabaergic_neuron"
+      },
+      {
+        "name": "interneuron_lamp5",
+        "kind": "gated",
+        "positive": "lamp5_interneuron",
+        "negatives": [
+          "vip_interneuron",
+          "sst_interneuron",
+          "pvalb_interneuron",
+          "sncg_interneuron",
+          "serpinf1_interneuron",
+          "meis2_interneuron"
+        ],
+        "negative_weight": 0.3,
+        "gate": "gabaergic_neuron"
+      },
+      {
+        "name": "interneuron_sncg",
+        "kind": "gated",
+        "positive": "sncg_interneuron",
+        "negatives": [
+          "vip_interneuron",
+          "sst_interneuron",
+          "pvalb_interneuron",
+          "lamp5_interneuron",
+          "serpinf1_interneuron",
+          "meis2_interneuron"
+        ],
+        "negative_weight": 0.3,
+        "gate": "gabaergic_neuron"
+      },
+      {
+        "name": "interneuron_serpinf1",
+        "kind": "gated",
+        "positive": "serpinf1_interneuron",
+        "negatives": [
+          "vip_interneuron",
+          "sst_interneuron",
+          "pvalb_interneuron",
+          "lamp5_interneuron",
+          "sncg_interneuron",
+          "meis2_interneuron"
+        ],
+        "negative_weight": 0.3,
+        "gate": "gabaergic_neuron"
+      },
+      {
+        "name": "interneuron_meis2",
+        "kind": "gated",
+        "positive": "meis2_interneuron",
+        "negatives": [
+          "vip_interneuron",
+          "sst_interneuron",
+          "pvalb_interneuron",
+          "lamp5_interneuron",
+          "sncg_interneuron",
+          "serpinf1_interneuron"
+        ],
+        "negative_weight": 0.3,
+        "gate": "gabaergic_neuron"
+      },
+      {
+        "name": "neuronal_activity_state",
+        "kind": "gated",
+        "positive": "neuronal_activity",
+        "negatives": [],
+        "negative_weight": 0.5,
+        "gate": "pan_neuronal"
+      },
+      {
+        "name": "proliferation_state",
+        "kind": "plain",
+        "positive": "proliferation",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "cycling_opc_state",
+        "kind": "gated",
+        "positive": "proliferation",
+        "negatives": [],
+        "negative_weight": 0.5,
+        "gate": "opc_cell_cycle_gate"
+      }
+    ],
+    "resources": []
+  },
+  "sanity": {
+    "placeholder_strings_present": false,
+    "orphaned_modules": [],
+    "modules_missing_resources": [
+      "pan_neuronal",
+      "non_neuronal_support",
+      "glutamatergic_neuron",
+      "gabaergic_neuron",
+      "astrocyte",
+      "oligodendrocyte",
+      "opc",
+      "microglia",
+      "endothelial",
+      "pericyte",
+      "vascular_leptomeningeal_fibroblast",
+      "vascular_smooth_muscle",
+      "l23_it_excitatory",
+      "l4_it_excitatory",
+      "l5_it_excitatory",
+      "l5_et_excitatory",
+      "l6_ct_excitatory",
+      "l6b_excitatory",
+      "l56_np_excitatory",
+      "car3_it_excitatory",
+      "vip_interneuron",
+      "sst_interneuron",
+      "pvalb_interneuron",
+      "lamp5_interneuron",
+      "sncg_interneuron",
+      "serpinf1_interneuron",
+      "meis2_interneuron",
+      "neuronal_activity",
+      "proliferation",
+      "opc_cell_cycle_gate"
+    ],
+    "unused_resources": [],
+    "set_clip_overridden": false
+  },
+  "dataset_coverage": {
+    "h5ad_path": "data/preprocessed/mouse_cortex_pp.h5ad",
+    "layer": null,
+    "n_cells": 44480,
+    "n_vars": 23415
+  }
+}

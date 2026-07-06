@@ -1,0 +1,3 @@
+- iter 01 — minor — The blueprint is broadly plausible for healthy human pancreas but needs dendritic-cell coverage and a few marker refinements before it is publishable.
+- iter 02 — minor — The blueprint broadly covers human pancreas cell types but needs targeted refinement for mural-cell and dendritic-cell resolution plus a few marker-specificity issues.
+- iter 03 — minor — Broad human pancreas coverage is biologically plausible, but targeted refinements are needed for ductal/centroacinar resolution, stellate state structure, DC gating hierarchy, and a few marker-set hyg

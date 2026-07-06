@@ -1,0 +1,107 @@
+axis_name_canonical,n_raw_spellings,raw_spellings,n_runs,fraction_runs,modal_kind,modal_positive,modal_gate
+alphacellinendocrinecore,5,alpha_within_endocrine (4) | endocrine_alpha_identity (3) | alpha_endocrine_identity (1) | endocrine_alpha (1) | endocrine_alpha_cell (1),10,1.0,gated,alpha_cell,endocrine_core
+betacellinendocrinecore,5,beta_within_endocrine (4) | endocrine_beta_identity (3) | beta_endocrine_identity (1) | endocrine_beta (1) | endocrine_beta_cell (1),10,1.0,gated,beta_cell,endocrine_core
+deltacellinendocrinecore,5,delta_within_endocrine (4) | endocrine_delta_identity (3) | delta_endocrine_identity (1) | endocrine_delta (1) | endocrine_delta_cell (1),10,1.0,gated,delta_cell,endocrine_core
+endothelial,9,endothelial_vascular (2) | vascular_compartment (1) | endothelial (1) | vascular_endothelial (1) | endothelial_compartment (1) | vascular_endothelial_compartment (1) | blood_endothelial_identity (1) | blood_endothelial (1) | endothelial_core (1),10,1.0,plain,endothelial,
+epsiloncellinendocrinecore,6,epsilon_within_endocrine (4) | endocrine_epsilon_identity (2) | epsilon_endocrine_identity (1) | endocrine_epsilon (1) | endocrine_epsilon_cell (1) | endocrine_epsilon_ghrelin_identity (1),10,1.0,gated,epsilon_cell,endocrine_core
+ppgammacellinendocrinecore,7,endocrine_gamma_pp_identity (3) | pp_gamma_within_endocrine (2) | gamma_pp_endocrine_identity (1) | endocrine_pp (1) | gamma_pp_within_endocrine (1) | pp_within_endocrine (1) | endocrine_pp_gamma_cell (1),10,1.0,gated,pp_gamma_cell,endocrine_core
+endocrinecore,5,endocrine_core (4) | endocrine_compartment (2) | endocrine_hormone_compartment (1) | endocrine_islet_compartment (1) | endocrine_core_identity (1),9,0.9,plain,endocrine_core,
+schwanncell,8,schwann_glial (2) | neural_ganglial_compartment (1) | schwann_peripheral_glia (1) | neural_schwann (1) | schwann_neural_compartment (1) | neural_ganglial_schwann_compartment (1) | schwann_neural_identity (1) | schwann_neural (1),9,0.9,plain,schwann_cell,
+ductalcell,6,ductal_epithelial (3) | ductal_exocrine_compartment (1) | ductal_transport_epithelium (1) | ductal_compartment (1) | ductal_epithelial_compartment (1) | ductal_identity (1),8,0.8,plain,ductal_cell,
+fibroblaststellate,8,stromal_compartment (1) | stellate_fibroblast (1) | stellate_fibroblast_matrix (1) | mesenchymal_compartment (1) | stromal_matrix_compartment (1) | stellate_fibroblast_identity (1) | stellate_fibroblast_ecm (1) | fibroblast_stellate_ecm (1),8,0.8,plain,fibroblast_stellate,
+acinarcell,5,acinar_exocrine_compartment (2) | acinar_digestive_enzyme (2) | acinar_secretory (1) | acinar_compartment (1) | acinar_identity (1),7,0.7,plain,acinar_cell,
+immunecore,6,immune_compartment (2) | leukocyte_infiltrate (1) | leukocyte_common (1) | resident_immune_compartment (1) | immune_identity (1) | immune_core (1),7,0.7,plain,immune_core,
+macrophageinimmunecore,7,macrophage_myeloid_identity (1) | myeloid_macrophage_within_leukocyte (1) | macrophage_monocyte_within_leukocytes (1) | immune_macrophage_monocyte_identity (1) | immune_macrophage_identity (1) | macrophage_within_immune (1) | immune_macrophage_monocyte (1),7,0.7,gated,macrophage,immune_core
+acinarcellvsductalcell,5,acinar_vs_ductal_epithelium (2) | acinar_secretory_vs_ductal_epithelial (1) | exocrine_acinar_to_ductal (1) | acinar_vs_ductal_exocrine_branch (1) | acinar_vs_ductal_exocrine (1),6,0.6,contrast,acinar_cell,
+lymphaticendothelialinendothelial,3,lymphatic_endothelial_identity (3) | endothelial_lymphatic_identity (1) | lymphatic_endothelium (1),5,0.5,gated,lymphatic_endothelial,endothelial
+mastcellinimmunecore,5,mast_within_leukocyte (1) | immune_mast_identity (1) | immune_mast_cell_identity (1) | mast_cell_within_immune (1) | immune_mast_cell (1),5,0.5,gated,mast_cell,immune_core
+acinarregenerativeinacinarcell,3,reg_positive_acinar_state (2) | acinar_regenerative_secretory_state (1) | acinar_regenerating_substate (1),4,0.4,gated,acinar_regenerative,acinar_cell
+mastcell,3,mast_cell (2) | mast_cell_identity (1) | mast_cell_granule (1),4,0.4,plain,mast_cell,immune_core
+plasmacellinimmunecore,3,immune_plasma_cell_identity (2) | plasma_cell_within_immune (1) | immune_plasma_cell (1),4,0.4,gated,plasma_cell,immune_core
+acinarendothelialinendothelial,3,acinar_endothelial_identity (1) | acinar_endothelial_specialization (1) | acinar_vs_islet_endothelium (1),3,0.3,gated,acinar_endothelial,endothelial
+adipocyte,2,adipocyte_lipid_storage (2) | adipocyte (1),3,0.3,plain,adipocyte,
+bcellinimmunecore,2,immune_b_cell_identity (2) | b_cell_within_immune (1),3,0.3,gated,b_cell,immune_core
+dendriticcellinimmunecore,2,immune_dendritic_apc_identity (2) | dendritic_apc_within_leukocytes (1),3,0.3,gated,dendritic_cell,immune_core
+isletendothelialinendothelial,3,islet_endothelial_identity (1) | islet_endothelial_specialization (1) | islet_vs_acinar_endothelium (1),3,0.3,gated,islet_endothelial,endothelial
+macrophage,2,myeloid_macrophage (2) | macrophage_myeloid_resident (1),3,0.3,plain,macrophage,
+pericyte,3,mural_pericyte_smooth_muscle (1) | mural_identity (1) | pericyte_smooth_muscle (1),3,0.3,plain,pericyte,
+pericyteinfibroblaststellate,3,mural_pericyte_smooth_muscle_stroma (1) | mesenchymal_pericyte_smooth_muscle_identity (1) | stromal_pericyte_smooth_muscle_identity (1),3,0.3,gated,pericyte,fibroblast_stellate
+tcellinimmunecore,2,immune_t_cell_identity (2) | t_cell_within_immune (1),3,0.3,gated,t_cell,immune_core
+bplasmacell,1,b_plasma_cell (2),2,0.2,plain,b_plasma_cell,
+bplasmacellinimmunecore,2,b_plasma_within_leukocyte (1) | immune_b_plasma_cell (1),2,0.2,gated,b_plasma_cell,immune_core
+cellcycle,2,cycling_proliferation_state (1) | cycling_state (1),2,0.2,plain,cell_cycle,
+endothelialarterialinendothelial,1,arterial_endothelial_identity (2),2,0.2,gated,endothelial_arterial,endothelial
+endothelialvenousinendothelial,1,venous_endothelial_identity (2),2,0.2,gated,endothelial_venous,endothelial
+fibroblaststellateinfibroblaststellate,2,fibroblast_matrix_stroma (1) | mesenchymal_fibroblast_stellate_identity (1),2,0.2,gated,fibroblast_stellate,fibroblast_stellate
+mesothelialcapsular,1,mesothelial_capsular (2),2,0.2,plain,mesothelial,
+nkcellinimmunecore,2,nk_cell_within_immune (1) | immune_nk_cell (1),2,0.2,gated,nk_cell,immune_core
+pericyteinpericyte,2,mural_pericyte_vs_smooth_muscle (1) | pericyte_within_mural (1),2,0.2,gated,pericyte_enriched,pericyte
+pericytevsendothelial,2,mural_contractile_vs_endothelial (1) | pericyte_smooth_muscle_vs_endothelium (1),2,0.2,plain,smooth_muscle,
+pericytevsfibroblaststellate,2,mural_vs_fibroblast_stroma_branch (1) | mural_vs_fibroblast_stellate (1),2,0.2,contrast,pericyte,
+stellateactivatedinfibroblaststellate,2,stellate_activation_state (1) | contractile_stellate_myofibroblast (1),2,0.2,gated,stellate_activated,stromal_fibroblast
+tnkcell,1,t_nk_lymphocyte (2),2,0.2,plain,t_nk_cell,
+tnkcellinimmunecore,2,t_nk_within_leukocyte (1) | immune_t_nk_lymphocyte (1),2,0.2,gated,t_nk_cell,immune_core
+acinarcellvsendocrinecore,1,acinar_exocrine_vs_endocrine (1),1,0.1,contrast,acinar_cell,
+activatedremodelingductstate,1,activated_remodeling_duct_state (1),1,0.1,gated,activated_remodeling_duct,ductal_cell
+autonomicneuronalganglionicidentity,1,autonomic_neuronal_ganglionic_identity (1),1,0.1,gated,autonomic_neuronal_ganglionic,schwann_cell
+bcell,1,b_cell_lymphoid (1),1,0.1,plain,b_cell,
+bcelllymphoididentity,1,b_cell_lymphoid_identity (1),1,0.1,gated,b_cell,immune_core
+bcellvsplasmacell,1,b_cell_vs_plasma_cell (1),1,0.1,gated,b_cell,b_plasma_cell
+bcellwithinleukocytes,1,b_cell_within_leukocytes (1),1,0.1,gated,b_cell,immune_core
+betacellvsalphacell,1,beta_vs_alpha_islet (1),1,0.1,contrast,beta_cell,
+betamatureinbetacell,1,beta_mature_secretory_state (1),1,0.1,gated,beta_mature,beta_cell
+cdc1dendriticwithinimmune,1,cdc1_dendritic_within_immune (1),1,0.1,gated,cdc1_dendritic_cell,immune_core
+cdc2dendriticwithinimmune,1,cdc2_dendritic_within_immune (1),1,0.1,gated,cdc2_dendritic_cell,immune_core
+centroacinarcellinductalcell,1,centroacinar_ductal_state (1),1,0.1,gated,centroacinar_cell,ductal_cell
+centroacinarterminalduct,1,centroacinar_terminal_duct (1),1,0.1,gated,centroacinar_cell,ductal_cell
+dendriticapcidentity,1,dendritic_apc_identity (1),1,0.1,gated,dendritic_cell,immune_core
+dendriticcellantigenpresenting,1,dendritic_cell_antigen_presenting (1),1,0.1,plain,dendritic_cell,
+dendriticcellwithinimmune,1,dendritic_cell_within_immune (1),1,0.1,gated,dendritic_cell,immune_core
+dendriticwithinleukocyte,1,dendritic_within_leukocyte (1),1,0.1,gated,dendritic_cell,immune_core
+ductalbicarbonateinductalcell,1,ductal_bicarbonate_water_transport (1),1,0.1,gated,ductal_bicarbonate,ductal_cell
+ductalcellinpancreaticepithelial,1,epithelial_ductal_bias (1),1,0.1,gated,ductal_cell,pancreatic_epithelial
+ductalmucinousinductalcell,1,ductal_mucin_substate (1),1,0.1,gated,ductal_mucinous,ductal_cell
+endocrinecorevsacinarcell,1,endocrine_vs_exocrine_epithelium (1),1,0.1,contrast,endocrine_core,
+endothelialinendothelial,1,endothelial_blood_vascular_identity (1),1,0.1,gated,endothelial,endothelial
+endotheliallymphaticvsblood,1,endothelial_lymphatic_vs_blood (1),1,0.1,gated,lymphatic_endothelial,endothelial
+endotheliallymphaticvsvascular,1,endothelial_lymphatic_vs_vascular (1),1,0.1,contrast,lymphatic_endothelial,
+fibroblaststellatevspericyte,1,stellate_matrix_vs_mural_contractile (1),1,0.1,contrast,fibroblast_stellate,
+immunecytotoxicnkidentity,1,immune_cytotoxic_nk_identity (1),1,0.1,gated,cytotoxic_nk_cell,immune_core
+immunedendriticcell,1,immune_dendritic_cell (1),1,0.1,gated,dendritic_cell,immune_core
+immunenkcytotoxicidentity,1,immune_nk_cytotoxic_identity (1),1,0.1,gated,nk_cell,immune_core
+lymphaticendothelial,1,lymphatic_endothelial (1),1,0.1,plain,lymphatic_endothelial,
+lymphaticendothelialwithinendothelium,1,lymphatic_endothelial_within_endothelium (1),1,0.1,gated,lymphatic_endothelial,endothelial
+lymphaticvsbloodendothelial,1,lymphatic_vs_blood_endothelial (1),1,0.1,contrast,lymphatic_endothelial,
+mastcellwithinleukocytes,1,mast_cell_within_leukocytes (1),1,0.1,gated,mast_cell,immune_core
+mesenchymalstellatemyofibroblastactivation,1,mesenchymal_stellate_myofibroblast_activation (1),1,0.1,gated,stellate_myofibroblast_activation,fibroblast_stellate
+monocyteinflammatorymyeloididentity,1,monocyte_inflammatory_myeloid_identity (1),1,0.1,gated,monocyte,immune_core
+monocytemacrophagevsdendriticapc,1,monocyte_macrophage_vs_dendritic_apc (1),1,0.1,gated,monocyte_macrophage,macrophage
+muralpericytevsmc,1,mural_pericyte_vsmc (1),1,0.1,plain,mural_pericyte_vsmc,
+nkcell,1,nk_cell (1),1,0.1,plain,nk_cell,
+nkcelllymphoididentity,1,nk_cell_lymphoid_identity (1),1,0.1,gated,nk_cell,immune_core
+nkcellwithinleukocytes,1,nk_cell_within_leukocytes (1),1,0.1,gated,nk_cell,immune_core
+nkcytotoxiclymphoid,1,nk_cytotoxic_lymphoid (1),1,0.1,plain,nk_cytotoxic_lymphocyte,
+nkcytotoxicwithinleukocyte,1,nk_cytotoxic_within_leukocyte (1),1,0.1,gated,nk_cell,immune_core
+pancreaticepithelialvsimmunecore,1,epithelial_vs_non_epithelial (1),1,0.1,contrast,pancreatic_epithelial,
+pericytestroma,1,pericyte_stroma (1),1,0.1,gated,pericyte,fibroblast_stellate
+pericytevssmoothmuscle,1,pericyte_vs_smooth_muscle (1),1,0.1,contrast,pericyte,
+peripheralglialschwann,1,peripheral_glial_schwann (1),1,0.1,plain,peripheral_glial_schwann,
+plasmacell,1,plasma_cell (1),1,0.1,plain,plasma_cell,
+plasmacellantibodysecreting,1,plasma_cell_antibody_secreting (1),1,0.1,plain,plasma_cell,
+plasmacelllymphoididentity,1,plasma_cell_lymphoid_identity (1),1,0.1,gated,plasma_cell,immune_core
+plasmacellwithinleukocytes,1,plasma_cell_within_leukocytes (1),1,0.1,gated,plasma_cell,immune_core
+plasmacytoiddendriticcellidentity,1,plasmacytoid_dendritic_cell_identity (1),1,0.1,gated,plasmacytoid_dendritic_cell,immune_core
+plasmacytoiddendriticwithinimmune,1,plasmacytoid_dendritic_within_immune (1),1,0.1,gated,plasmacytoid_dendritic_cell,immune_core
+plasmawithinleukocyte,1,plasma_within_leukocyte (1),1,0.1,gated,plasma_cell,immune_core
+schwannglialneuralidentity,1,schwann_glial_neural_identity (1),1,0.1,gated,schwann_cell,schwann_cell
+stellateactivationvsquiescence,1,stellate_activation_vs_quiescence (1),1,0.1,gated,activated_myofibroblast_stellate,fibroblast_stellate
+stellatequiescent,1,stellate_matrix_compartment (1),1,0.1,contrast,stellate_quiescent,
+stellatequiescentinfibroblaststellate,1,stromal_quiescent_stellate_identity (1),1,0.1,gated,stellate_quiescent,fibroblast_stellate
+stromalactivatedstellatemyofibroblaststate,1,stromal_activated_stellate_myofibroblast_state (1),1,0.1,gated,stellate_activated,fibroblast_stellate
+stromalfibroblastcompartment,1,stromal_fibroblast_compartment (1),1,0.1,plain,stromal_fibroblast,
+tcell,1,t_cell_lymphoid (1),1,0.1,plain,t_cell,
+tcelllymphoididentity,1,t_cell_lymphoid_identity (1),1,0.1,gated,t_cell,immune_core
+tcellvsnkcytotoxic,1,t_cell_vs_nk_cytotoxic (1),1,0.1,gated,t_cell,t_nk_cell
+tcellwithinleukocytes,1,t_cell_within_leukocytes (1),1,0.1,gated,t_cell,immune_core
+vascularsmoothmusclestroma,1,vascular_smooth_muscle_stroma (1),1,0.1,gated,smooth_muscle,fibroblast_stellate
+vascularsmoothmusclewithinmural,1,vascular_smooth_muscle_within_mural (1),1,0.1,gated,smooth_muscle,pericyte

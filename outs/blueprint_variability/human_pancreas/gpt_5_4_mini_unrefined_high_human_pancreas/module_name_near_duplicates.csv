@@ -1,0 +1,16 @@
+name_a_can,name_b_can,name_a,name_b,edit_distance,n_runs_a,n_runs_b,co_occurring_runs
+acinarcell,acinarcells,acinar_cell,acinar_cells,1,4,2,0
+alphacell,alphacells,alpha_cell,alpha_cells,1,1,3,0
+bcellprogram,tcellprogram,b_cell_program,t_cell_program,1,1,1,1
+betacell,betacells,beta_cell,beta_cells,1,1,3,0
+bplasma,plasma,b_plasma,plasma,1,1,1,0
+ductalcell,ductalcells,ductal_cell,ductal_cells,1,4,2,0
+pericytesmc,pericytevsmc,pericyte_smc,pericyte_vsmc,1,1,1,0
+schwanncell,schwanncells,schwann_cell,schwann_cells,1,2,1,0
+bcellprogram,nkcellprogram,b_cell_program,nk_cell_program,2,1,1,1
+betacells,deltacells,beta_cells,delta_cells,2,3,3,3
+betacore,deltacore,beta_core,delta_core,2,2,2,2
+betaprogram,deltaprogram,beta_program,delta_program,2,2,2,2
+endocrinecore,exocrinecore,endocrine_core,exocrine_core,2,9,2,2
+nkcellprogram,tcellprogram,nk_cell_program,t_cell_program,2,1,1,1
+ppprogram,uprprogram,pp_program,upr_program,2,2,1,1

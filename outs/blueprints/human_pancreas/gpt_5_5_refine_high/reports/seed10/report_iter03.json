@@ -1,0 +1,49 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint broadly covers human pancreas but needs targeted cleanup of mixed immune modules and modest refinement of mural, lymphatic endothelial, and ductal/centroacinar representation.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:b_plasma_cell / axis:immune_b_plasma_cell",
+      "description": "The B/plasma module mixes B-cell markers with plasma-cell markers even though a separate plasma_cell module and axis already exist, making the B-cell signal redundant and less discriminative.",
+      "suggested_fix": "Edit b_plasma_cell into a B-cell-only module by retaining B-lineage genes such as MS4A1, CD79A, CD79B, CD74 and BANK1 and adding literature-supported B-cell markers; keep plasma_cell as the separate antibody-secreting program.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:t_nk_lymphocyte / axes:immune_t_nk_lymphocyte and immune_nk_cell",
+      "description": "The T/NK module combines CD3/TCR genes with cytotoxic NK genes such as NKG7, GNLY and PRF1 while a separate NK module exists, so the T-cell axis is not cleanly separated from NK identity.",
+      "suggested_fix": "Make t_nk_lymphocyte T-cell-focused with CD3/TCR genes plus T-cell markers such as CD2, CD7, IL7R, CD4 or CD8A, and keep cytotoxic/NK markers in the NK module where appropriate.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "module:mural_pericyte_smooth_muscle / axis:mural_vs_fibroblast_stellate",
+      "description": "The current mural module merges pericytes and vascular smooth muscle, both expected in pancreas, so the embedding captures broad mural identity but not the pericyte versus smooth-muscle distinction.",
+      "suggested_fix": "Add a supported pericyte-versus-smooth-muscle refinement axis, or split the mural signal into pericyte and vascular smooth muscle modules while preserving separation from fibroblast/stellate cells.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "module:lymphatic_endothelial",
+      "description": "The lymphatic endothelial module has canonical anchors but omits several common lymphatic markers and includes less immediately canonical choices, making it weaker than the other endothelial modules.",
+      "suggested_fix": "Strengthen the module with canonical human lymphatic markers such as LYVE1, FLT4, MMRN1, RELN or TFF3 if supported by the declared resources, while retaining pancreas-specific genes only where well grounded.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "coverage",
+      "where": "ductal/centroacinar epithelial coverage",
+      "description": "The blueprint covers main duct identity but does not explicitly resolve centroacinar or intercalated duct-like cells, an expected pancreatic epithelial compartment close to ductal/acinar boundaries.",
+      "suggested_fix": "If supported by human pancreas literature resources, add a small ductal/centroacinar refinement axis or broaden the ductal module with carefully chosen markers that preserve this compartment without importing disease-associated ductal programs.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "Citation DOI accuracy and exact gene-list support in the cited papers were not checked, per discriminator scope."
+  ]
+}

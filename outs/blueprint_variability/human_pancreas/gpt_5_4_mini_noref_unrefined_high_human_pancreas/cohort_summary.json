@@ -1,0 +1,284 @@
+{
+  "cohort": "gpt_5_4_mini_noref_unrefined_high_human_pancreas",
+  "model": "gpt_5_4_mini_noref_unrefined",
+  "reasoning": "high",
+  "dataset": "human_pancreas",
+  "n_runs": 9,
+  "scenario": {
+    "species": "human",
+    "tissue": "pancreas",
+    "celltype": null
+  },
+  "run_ids": [
+    "260609_blueprint_run01",
+    "260609_blueprint_run03",
+    "260609_blueprint_run04",
+    "260609_blueprint_run05",
+    "260609_blueprint_run06",
+    "260609_blueprint_run07",
+    "260609_blueprint_run08",
+    "260609_blueprint_run09",
+    "260609_blueprint_run10"
+  ],
+  "size": {
+    "n_modules": {
+      "mean": 22.0,
+      "std": 4.47213595499958,
+      "min": 16.0,
+      "max": 29.0,
+      "cv": 0.20327890704543544
+    },
+    "n_axes": {
+      "mean": 21.88888888888889,
+      "std": 4.833333333333334,
+      "min": 16.0,
+      "max": 29.0,
+      "cv": 0.22081218274111677
+    },
+    "n_unique_genes": {
+      "mean": 183.0,
+      "std": 31.060424980994707,
+      "min": 154.0,
+      "max": 235.0,
+      "cv": 0.16972909825680169
+    },
+    "n_resources": {
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "cv": NaN
+    },
+    "n_dois_unique": {
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "cv": NaN
+    },
+    "gene_redundancy": {
+      "mean": 1.1715200660468974,
+      "std": 0.09722895000524535,
+      "min": 1.0454545454545454,
+      "max": 1.3013100436681222,
+      "cv": 0.08299384092781997
+    },
+    "mean_genes_per_module": {
+      "mean": 9.831149859696442,
+      "std": 1.099574241828916,
+      "min": 7.863636363636363,
+      "max": 11.772727272727273,
+      "cv": 0.1118459445254421
+    }
+  },
+  "jaccard": {
+    "genes": {
+      "mean": 0.5051629621354372,
+      "ci_lo": 0.4951275706319942,
+      "ci_hi": 0.5146505122786786,
+      "min": 0.4260869565217391,
+      "max": 0.6020408163265306
+    },
+    "dois": {
+      "mean": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "resources": {
+      "mean": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "modnames": {
+      "mean": 0.0750693976826295,
+      "ci_lo": 0.059439420668077024,
+      "ci_hi": 0.09210103257901,
+      "min": 0.0,
+      "max": 0.2631578947368421
+    },
+    "axisnames": {
+      "mean": 0.05933714165550789,
+      "ci_lo": 0.045121381321544037,
+      "ci_hi": 0.07320491158655142,
+      "min": 0.0,
+      "max": 0.25
+    }
+  },
+  "structural_consistency": {
+    "mean_kind_agreement": 0.9724444444444444,
+    "mean_role_agreement": 0.9110696517412935,
+    "mean_within_module_geneset_jaccard": 0.5372006891595431,
+    "mean_axis_positive_agreement": 0.9221111111111111,
+    "mean_axis_gate_agreement": 0.9702222222222222,
+    "mean_axis_negatives_jaccard": 0.3308641975308642
+  },
+  "recurrence": {
+    "modules": {
+      "frac_in_ge80pct": 0.0,
+      "gini": 0.24611557596632225,
+      "n_universal": 0,
+      "n_majority": 4,
+      "n_singleton": 94,
+      "n_unique_total": 134
+    },
+    "axes": {
+      "frac_in_ge80pct": 0.0,
+      "gini": 0.20910321489001688,
+      "n_universal": 0,
+      "n_majority": 4,
+      "n_singleton": 123,
+      "n_unique_total": 150
+    },
+    "genes": {
+      "frac_in_ge80pct": 0.23113207547169812,
+      "gini": 0.4327264551901112,
+      "n_universal": 73,
+      "n_majority": 151,
+      "n_singleton": 159,
+      "n_unique_total": 424
+    },
+    "resources": {
+      "frac_in_ge80pct": 0.0,
+      "gini": NaN,
+      "n_universal": 0,
+      "n_majority": 0,
+      "n_singleton": 0,
+      "n_unique_total": 0
+    }
+  },
+  "saturation_slope_at_N": {
+    "genes": 17.41500000000002,
+    "modules": 10.14,
+    "dois": 0.0
+  },
+  "coverage": {
+    "n_unique_modules": 134,
+    "n_unique_axes": 150,
+    "n_unique_genes": 424,
+    "n_unique_resources": 0
+  },
+  "resource_kind_composition": {
+    "frac_paper": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "frac_atlas": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "frac_database": {
+      "mean": 0.0,
+      "std": 0.0
+    }
+  },
+  "top_hubs": {
+    "top_positives": [
+      {
+        "module": "endocrine_core",
+        "module_can": "endocrinecore",
+        "n_axes_using": 7
+      },
+      {
+        "module": "fibroblast_stellate",
+        "module_can": "fibroblaststellate",
+        "n_axes_using": 6
+      },
+      {
+        "module": "immune_core",
+        "module_can": "immunecore",
+        "n_axes_using": 5
+      },
+      {
+        "module": "lymphatic_endothelial",
+        "module_can": "lymphaticendothelial",
+        "n_axes_using": 5
+      },
+      {
+        "module": "endothelial",
+        "module_can": "endothelial",
+        "n_axes_using": 4
+      }
+    ],
+    "top_gates": [
+      {
+        "module": "endocrine_core",
+        "module_can": "endocrinecore",
+        "n_axes_using": 33
+      },
+      {
+        "module": "immune_core",
+        "module_can": "immunecore",
+        "n_axes_using": 33
+      },
+      {
+        "module": "endocrine_compartment",
+        "module_can": "endocrinecompartment",
+        "n_axes_using": 5
+      },
+      {
+        "module": "fibroblast_stellate",
+        "module_can": "fibroblaststellate",
+        "n_axes_using": 4
+      },
+      {
+        "module": "vascular_core",
+        "module_can": "vascularcore",
+        "n_axes_using": 4
+      }
+    ],
+    "top_negatives": [
+      {
+        "module": "beta_cells",
+        "module_can": "betacells",
+        "n_axes_using": 10
+      },
+      {
+        "module": "alpha_cells",
+        "module_can": "alphacells",
+        "n_axes_using": 10
+      },
+      {
+        "module": "delta_cells",
+        "module_can": "deltacells",
+        "n_axes_using": 8
+      },
+      {
+        "module": "pp_cells",
+        "module_can": "ppcells",
+        "n_axes_using": 8
+      },
+      {
+        "module": "epsilon_cells",
+        "module_can": "epsiloncells",
+        "n_axes_using": 8
+      }
+    ]
+  },
+  "top_resources": [],
+  "stability_composite": 0.6538430427124099,
+  "stability_weights": {
+    "jaccard_genes_off_diag": 1.0,
+    "jaccard_modnames_off_diag": 1.0,
+    "mean_kind_agreement": 1.0,
+    "mean_role_agreement": 1.0,
+    "mean_within_module_geneset_jaccard": 1.0,
+    "mean_axis_positive_agreement": 1.0
+  },
+  "sanity": {
+    "frac_with_placeholders": 0.0,
+    "mean_orphaned_modules": 0.0,
+    "mean_modules_missing_resources": 22.0,
+    "mean_unused_resources": 0.0,
+    "frac_clip_overridden": 0.0,
+    "n_modules_merged_by_canonicalization": 7,
+    "n_axes_merged_by_canonicalization": 7,
+    "n_genes_merged_by_canonicalization": 0,
+    "n_module_name_drift_candidates": 19,
+    "n_module_name_near_duplicates": 31,
+    "doi_kind_agreement": NaN
+  }
+}

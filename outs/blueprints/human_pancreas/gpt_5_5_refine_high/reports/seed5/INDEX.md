@@ -1,0 +1,3 @@
+- iter 01 — minor — Broad human pancreas coverage is plausible, but expected mast-cell and lymphatic-endothelial populations are missing and the immune gate is too myeloid/APC-biased.
+- iter 02 — minor — The blueprint broadly covers healthy human pancreas but needs targeted marker and axis-design cleanup before it is publishable as-is.
+- iter 03 — minor — The blueprint broadly covers human pancreas but needs targeted refinements for mural vascular resolution, reactive ductal/epithelial state handling, granulocyte coverage, and epsilon-cell marker speci

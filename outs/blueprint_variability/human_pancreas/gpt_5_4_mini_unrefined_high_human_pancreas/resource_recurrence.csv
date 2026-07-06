@@ -1,0 +1,36 @@
+resource_id,n_runs,fraction_runs,run_ids,citation,kind,doi
+10.1016/j.cmet.2016.08.020,8,0.8,260609_blueprint_run01|260609_blueprint_run02|260609_blueprint_run04|260609_blueprint_run05|260609_blueprint_run06|260609_blueprint_run07|260609_blueprint_run08|260609_blueprint_run10,Segerstolpe et al. 2016 Cell Metabolism,atlas,10.1016/j.cmet.2016.08.020
+10.1016/j.cels.2016.09.002,5,0.5,260609_blueprint_run01|260609_blueprint_run04|260609_blueprint_run05|260609_blueprint_run07|260609_blueprint_run10,Muraro et al. 2016 Cell Systems,atlas,10.1016/j.cels.2016.09.002
+10.1016/j.cmet.2016.04.002,5,0.5,260609_blueprint_run03|260609_blueprint_run04|260609_blueprint_run07|260609_blueprint_run08|260609_blueprint_run10,Arda et al. 2016 Cell Metabolism,paper,10.1016/j.cmet.2016.04.002
+10.1126/science.abl4896,5,0.5,260609_blueprint_run02|260609_blueprint_run03|260609_blueprint_run05|260609_blueprint_run08|260609_blueprint_run10,"The Tabula Sapiens: A multiple-organ, single-cell transcriptomic atlas of humans",atlas,10.1126/science.abl4896
+msigdbhallmarkg2mcheckpoint,5,0.5,260609_blueprint_run01|260609_blueprint_run04|260609_blueprint_run05|260609_blueprint_run06|260609_blueprint_run10,MSigDB HALLMARK_G2M_CHECKPOINT,database,
+msigdbhallmarke2ftargets,4,0.4,260609_blueprint_run01|260609_blueprint_run04|260609_blueprint_run05|260609_blueprint_run10,MSigDB HALLMARK_E2F_TARGETS,database,
+10.1016/j.cels.2016.08.011,3,0.3,260609_blueprint_run01|260609_blueprint_run04|260609_blueprint_run07,Baron et al. 2016 Cell Systems,atlas,10.1016/j.cels.2016.08.011
+10.1016/j.cels.2018.07.007,3,0.3,260609_blueprint_run04|260609_blueprint_run07|260609_blueprint_run08,Arda et al. 2018 Cell Systems,paper,10.1016/j.cels.2018.07.007
+10.1126/science.1260419,2,0.2,260609_blueprint_run03|260609_blueprint_run05,Uhlen et al. 2015 Science,atlas,10.1126/science.1260419
+key:msigdbhallmarke2ftargets,2,0.2,260609_blueprint_run03|260609_blueprint_run08,MSigDB HALLMARK_E2F_TARGETS,database,
+key:msigdbhallmarkg2mcheckpoint,2,0.2,260609_blueprint_run03|260609_blueprint_run08,MSigDB HALLMARK_G2M_CHECKPOINT,database,
+10.1016/j.cell.2017.09.004,1,0.1,260609_blueprint_run07,Enge et al. 2017 Cell,paper,10.1016/j.cell.2017.09.004
+10.1016/j.cmet.2018.01.017,1,0.1,260609_blueprint_run04,Qiu et al. 2018 Cell Metabolism,paper,10.1016/j.cmet.2018.01.017
+10.1038/ncomms11756,1,0.1,260609_blueprint_run04,Dorrell et al. 2016 Nature Communications,paper,10.1038/ncomms11756
+10.1038/nm.3872,1,0.1,260609_blueprint_run06,van der Meulen et al. 2015 Nature Medicine,paper,10.1038/nm.3872
+goimmuneresponse,1,0.1,260609_blueprint_run02,GO:0006955 immune response,database,
+kegginsulinsecretion,1,0.1,260609_blueprint_run02,KEGG hsa04911 Insulin secretion,database,
+keggpancreaticsecretion,1,0.1,260609_blueprint_run02,KEGG hsa04972 Pancreatic secretion,database,
+key:gobloodvesseldevelopment,1,0.1,260609_blueprint_run02,GO:0001568 blood vessel development,database,
+key:goecmorganization,1,0.1,260609_blueprint_run02,GO:0030198 extracellular matrix organization,database,
+key:golymphocyteactivation,1,0.1,260609_blueprint_run02,GO:0046649 lymphocyte activation,database,
+key:gomyeloidactivation,1,0.1,260609_blueprint_run02,GO:0002274 myeloid leukocyte activation,database,
+key:goschwanndifferentiation,1,0.1,260609_blueprint_run02,GO:0014032 Schwann cell differentiation,database,
+key:keggcellcycle,1,0.1,260609_blueprint_run07,KEGG hsa04110 Cell cycle,database,
+key:keggerprocessing,1,0.1,260609_blueprint_run07,KEGG hsa04141 Protein processing in endoplasmic reticulum,database,
+key:msigdbe2f,1,0.1,260609_blueprint_run06,MSigDB HALLMARK_E2F_TARGETS,database,
+key:msigdbhallmarkhypoxia,1,0.1,260609_blueprint_run08,MSigDB HALLMARK_HYPOXIA,database,
+key:msigdbhallmarkifnaresponse,1,0.1,260609_blueprint_run03,MSigDB HALLMARK_INTERFERON_ALPHA_RESPONSE,database,
+key:msigdbhallmarkifngresponse,1,0.1,260609_blueprint_run03,MSigDB HALLMARK_INTERFERON_GAMMA_RESPONSE,database,
+key:msigdbhallmarkinterferonalpharesponse,1,0.1,260609_blueprint_run08,MSigDB HALLMARK_INTERFERON_ALPHA_RESPONSE,database,
+key:msigdbhallmarkunfoldedproteinresponse,1,0.1,260609_blueprint_run08,MSigDB HALLMARK_UNFOLDED_PROTEIN_RESPONSE,database,
+key:msigdbhallmarkupr,1,0.1,260609_blueprint_run03,MSigDB HALLMARK_UNFOLDED_PROTEIN_RESPONSE,database,
+key:msigdbupr,1,0.1,260609_blueprint_run06,MSigDB HALLMARK_UNFOLDED_PROTEIN_RESPONSE,database,
+key:reactomesmoothmuscle,1,0.1,260609_blueprint_run06,REACTOME_SMOOTH_MUSCLE_CONTRACTION,database,
+reactomeecmorganization,1,0.1,260609_blueprint_run06,REACTOME_EXTRACELLULAR_MATRIX_ORGANIZATION,database,

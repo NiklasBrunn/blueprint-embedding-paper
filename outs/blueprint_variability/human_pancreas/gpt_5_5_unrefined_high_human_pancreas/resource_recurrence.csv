@@ -1,0 +1,39 @@
+resource_id,n_runs,fraction_runs,run_ids,citation,kind,doi
+10.1016/j.cmet.2016.08.020,10,1.0,260603_blueprint_run01|260603_blueprint_run02|260603_blueprint_run03|260603_blueprint_run04|260603_blueprint_run05|260603_blueprint_run06|260603_blueprint_run07|260603_blueprint_run08|260603_blueprint_run09|260603_blueprint_run10,Segerstolpe 2016 Cell Metabolism,paper,10.1016/j.cmet.2016.08.020
+10.1126/science.abl4896,9,0.9,260603_blueprint_run01|260603_blueprint_run02|260603_blueprint_run03|260603_blueprint_run04|260603_blueprint_run05|260603_blueprint_run06|260603_blueprint_run07|260603_blueprint_run08|260603_blueprint_run10,Tabula Sapiens Consortium 2022 Science,atlas,10.1126/science.abl4896
+10.1016/j.cels.2016.08.011,8,0.8,260603_blueprint_run02|260603_blueprint_run03|260603_blueprint_run04|260603_blueprint_run05|260603_blueprint_run06|260603_blueprint_run07|260603_blueprint_run08|260603_blueprint_run09,Baron 2016 Cell Systems,atlas,10.1016/j.cels.2016.08.011
+10.1016/j.cels.2016.09.002,8,0.8,260603_blueprint_run02|260603_blueprint_run03|260603_blueprint_run04|260603_blueprint_run05|260603_blueprint_run06|260603_blueprint_run07|260603_blueprint_run08|260603_blueprint_run09,Muraro 2016 Cell Systems,atlas,10.1016/j.cels.2016.09.002
+keggpancreaticsecretion,7,0.7,260603_blueprint_run02|260603_blueprint_run04|260603_blueprint_run05|260603_blueprint_run06|260603_blueprint_run07|260603_blueprint_run08|260603_blueprint_run10,KEGG hsa04972 Pancreatic secretion,database,
+msigdbhallmarkemt,6,0.6,260603_blueprint_run01|260603_blueprint_run03|260603_blueprint_run04|260603_blueprint_run06|260603_blueprint_run07|260603_blueprint_run08,MSigDB HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION,database,
+10.1016/j.cell.2017.09.004,5,0.5,260603_blueprint_run01|260603_blueprint_run05|260603_blueprint_run08|260603_blueprint_run09|260603_blueprint_run10,Enge 2017 Cell,paper,10.1016/j.cell.2017.09.004
+kegginsulinsecretion,4,0.4,260603_blueprint_run06|260603_blueprint_run07|260603_blueprint_run08|260603_blueprint_run10,KEGG hsa04911 Insulin secretion,database,
+10.1038/s41467-024-55415-3,3,0.3,260603_blueprint_run01|260603_blueprint_run07|260603_blueprint_run10,Craig-Schapiro 2025 Nature Communications,paper,10.1038/s41467-024-55415-3
+10.1053/j.gastro.2020.11.010,3,0.3,260603_blueprint_run03|260603_blueprint_run04|260603_blueprint_run09,Tosti 2021 Gastroenterology,atlas,10.1053/j.gastro.2020.11.010
+reactomeecmorganization,3,0.3,260603_blueprint_run05|260603_blueprint_run09|260603_blueprint_run10,Reactome R-HSA-1474244 EXTRACELLULAR_MATRIX_ORGANIZATION,database,
+10.1016/j.cmet.2016.08.018,2,0.2,260603_blueprint_run09|260603_blueprint_run10,Xin 2016 Cell Metabolism,paper,10.1016/j.cmet.2016.08.018
+goangiogenesis,2,0.2,260603_blueprint_run02|260603_blueprint_run07,GO:0001525 angiogenesis,database,
+gohormoneactivity,2,0.2,260603_blueprint_run02|260603_blueprint_run09,GO:0005179 hormone activity,database,
+goimmuneresponse,2,0.2,260603_blueprint_run02|260603_blueprint_run07,GO:0006955 immune response,database,
+gotcellactivation,2,0.2,260603_blueprint_run07|260603_blueprint_run08,GO:0042110 T cell activation,database,
+msigdbhallmarkg2mcheckpoint,2,0.2,260603_blueprint_run04|260603_blueprint_run10,MSigDB HALLMARK_G2M_CHECKPOINT,database,
+msigdbhallmarkpancreasbetacells,2,0.2,260603_blueprint_run01|260603_blueprint_run09,MSigDB HALLMARK_PANCREAS_BETA_CELLS,database,
+10.1016/j.cmet.2016.09.007,1,0.1,260603_blueprint_run02,Wang 2016 Cell Metabolism,paper,10.1016/j.cmet.2016.09.007
+10.1038/s41422-019-0195-y,1,0.1,260603_blueprint_run10,Peng 2019 Cell Research,paper,10.1038/s41422-019-0195-y
+10.1038/s41467-021-24788-0,1,0.1,260603_blueprint_run09,Perez-Frances 2021 Nature Communications,paper,10.1038/s41467-021-24788-0
+10.1038/s41586-020-2157-4,1,0.1,260603_blueprint_run02,Han 2020 Nature,atlas,10.1038/s41586-020-2157-4
+10.1101/gr.212720.116,1,0.1,260603_blueprint_run04,Lawlor 2017 Genome Research,paper,10.1101/gr.212720.116
+10.1126/science.abl5197,1,0.1,260603_blueprint_run08,Dominguez Conde 2022 Science,atlas,10.1126/science.abl5197
+gobcellactivation,1,0.1,260603_blueprint_run07,GO:0042113 B cell activation,database,
+godigestion,1,0.1,260603_blueprint_run09,GO:0007586 digestion,database,
+goecmstructuralconstituent,1,0.1,260603_blueprint_run02,GO:0005201 extracellular matrix structural constituent,database,
+keggantigenprocessingpresentation,1,0.1,260603_blueprint_run08,KEGG hsa04612 ANTIGEN_PROCESSING_AND_PRESENTATION,database,
+kegghematopoieticcelllineage,1,0.1,260603_blueprint_run09,KEGG hsa04640 Hematopoietic cell lineage,database,
+msigdbhallmarkangiogenesis,1,0.1,260603_blueprint_run04,MSigDB HALLMARK_ANGIOGENESIS,database,
+msigdbhallmarkcomplement,1,0.1,260603_blueprint_run03,MSigDB HALLMARK_COMPLEMENT,database,
+msigdbhallmarke2ftargets,1,0.1,260603_blueprint_run04,MSigDB HALLMARK_E2F_TARGETS,database,
+msigdbhallmarkinflammatoryresponse,1,0.1,260603_blueprint_run04,MSigDB HALLMARK_INFLAMMATORY_RESPONSE,database,
+msigdbvangurppancreaticgammacell,1,0.1,260603_blueprint_run09,MSigDB VANGURP_PANCREATIC_GAMMA_CELL,database,
+reactomecytokinesignaling,1,0.1,260603_blueprint_run05,Reactome R-HSA-1280215 CYTOKINE_SIGNALING_IN_IMMUNE_SYSTEM,database,
+reactomehemostasis,1,0.1,260603_blueprint_run05,Reactome R-HSA-109582 HEMOSTASIS,database,
+reactomeimmunesystem,1,0.1,260603_blueprint_run06,Reactome R-HSA-168256 Immune System,database,
+reactomeinnateimmunesystem,1,0.1,260603_blueprint_run05,Reactome R-HSA-168249 INNATE_IMMUNE_SYSTEM,database,

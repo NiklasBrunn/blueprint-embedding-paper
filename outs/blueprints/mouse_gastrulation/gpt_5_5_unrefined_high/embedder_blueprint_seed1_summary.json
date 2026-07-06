@@ -1,0 +1,2067 @@
+{
+  "run_id": "260605_blueprint_run01",
+  "extracted_at": "2026-06-05T15:06:16+00:00",
+  "scenario": {
+    "species": [
+      "mouse"
+    ],
+    "tissue": [
+      "gastrulating embryo"
+    ],
+    "celltype": null,
+    "age": "E6.5-E8.5",
+    "sex": "mixed",
+    "condition": null,
+    "notes": "IMPORTANT AGENT CONSTRAINTS: organize axes as a time-forward hierarchical tree matching the scenario; tree depth = time (root = earliest state, leaves = latest). Every non-root axis MUST declare its parent via gate \u2014 the parent's module becomes the gate, which both anchors tree parentage and scopes the signal to cells expressing the parent's program (the biologically correct behavior for both sub-states and sequential transitions). For sibling-vs-sibling discrimination at a branch point, pass the sibling modules as negatives on the same gated axis. Use a plain axis (no gate, no parent) ONLY for roots: scenario-given starting states (one or several, as the scenario allows), populations that do not progress within the window, terminal populations whose precursor isn't represented, and cycling/proliferating populations. Naming: <chainPrefix>_<descriptiveTail>; <chainPrefix> is one camelCase token (no underscores) grouping axes from the same lineage. When you gate across chains (parent has a different <chainPrefix>), the child MUST use a fresh, unique <chainPrefix> \u2014 reusing a prefix that already exists in a different subtree creates ambiguity. Cover the full cell landscape implied by the scenario; preserve continuous maturation gradients rather than treating states as discrete clusters."
+  },
+  "blueprint": {
+    "name": "extract",
+    "clip": 4.0,
+    "n_modules": 36,
+    "n_axes": 36,
+    "n_axes_by_kind": {
+      "plain": 4,
+      "contrast": 0,
+      "gated": 32
+    },
+    "n_resources": 6,
+    "n_resources_by_kind": {
+      "paper": 3,
+      "atlas": 2,
+      "database": 1
+    },
+    "n_dois_unique": 5,
+    "n_total_genes": 253,
+    "n_unique_genes": 177,
+    "modules": [
+      {
+        "name": "epiblast_pluripotent",
+        "genes": [
+          "Pou5f1",
+          "Nanog",
+          "Sox2",
+          "Otx2",
+          "Fgf5",
+          "Utf1",
+          "Dnmt3b"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "argelaguet2019_gastrulation_multiome"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "epi_pluripotentRoot",
+            "role": "positive"
+          },
+          {
+            "axis": "streak_primitiveStreak",
+            "role": "gate"
+          },
+          {
+            "axis": "ect_embryonicEctoderm",
+            "role": "gate"
+          },
+          {
+            "axis": "pgc_primordialGermCell",
+            "role": "gate"
+          },
+          {
+            "axis": "nmp_neuromesodermalProgenitor",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 5,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.8456393149460073
+      },
+      {
+        "name": "primitive_streak",
+        "genes": [
+          "T",
+          "Eomes",
+          "Mixl1",
+          "Wnt3",
+          "Fgf8",
+          "Evx1",
+          "Mesp1",
+          "Tbx6"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "argelaguet2019_gastrulation_multiome",
+          "scialdone2016_mesoderm"
+        ],
+        "n_resource_keys": 3,
+        "used_in_axes": [
+          {
+            "axis": "streak_primitiveStreak",
+            "role": "positive"
+          },
+          {
+            "axis": "ect_embryonicEctoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "pgc_primordialGermCell",
+            "role": "negative"
+          },
+          {
+            "axis": "nmp_neuromesodermalProgenitor",
+            "role": "negative"
+          },
+          {
+            "axis": "mes_nascentMesoderm",
+            "role": "gate"
+          },
+          {
+            "axis": "end_definitiveEndoderm",
+            "role": "gate"
+          },
+          {
+            "axis": "axial_nodeNotochord",
+            "role": "gate"
+          },
+          {
+            "axis": "extraMes_extraembryonicMesoderm",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 8,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.5548696609120297
+      },
+      {
+        "name": "embryonic_ectoderm",
+        "genes": [
+          "Sox2",
+          "Otx2",
+          "Pou3f1",
+          "Zic2",
+          "Zic3",
+          "Cdh1",
+          "Epcam"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "argelaguet2019_gastrulation_multiome"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "streak_primitiveStreak",
+            "role": "negative"
+          },
+          {
+            "axis": "ect_embryonicEctoderm",
+            "role": "positive"
+          },
+          {
+            "axis": "pgc_primordialGermCell",
+            "role": "negative"
+          },
+          {
+            "axis": "nmp_neuromesodermalProgenitor",
+            "role": "negative"
+          },
+          {
+            "axis": "ect_neuralPlate",
+            "role": "gate"
+          },
+          {
+            "axis": "ect_surfaceEctoderm",
+            "role": "gate"
+          },
+          {
+            "axis": "ect_oticPlacode",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 7,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.7262363298713804
+      },
+      {
+        "name": "primordial_germ_cell",
+        "genes": [
+          "Prdm1",
+          "Prdm14",
+          "Tfap2c",
+          "Dppa3",
+          "Nanos3",
+          "Kit",
+          "Pou5f1"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "magnusdottir2013_pgc"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "streak_primitiveStreak",
+            "role": "negative"
+          },
+          {
+            "axis": "ect_embryonicEctoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "pgc_primordialGermCell",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.6510162322030401
+      },
+      {
+        "name": "neuromesodermal_progenitor",
+        "genes": [
+          "T",
+          "Sox2",
+          "Cdx2",
+          "Nkx1-2",
+          "Fgf8",
+          "Wnt3a",
+          "Cyp26a1"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "argelaguet2019_gastrulation_multiome"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "nmp_neuromesodermalProgenitor",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.7580645161290323
+      },
+      {
+        "name": "definitive_endoderm",
+        "genes": [
+          "Sox17",
+          "Foxa2",
+          "Cxcr4",
+          "Gsc",
+          "Cer1",
+          "Lhx1",
+          "Hhex"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "nowotschin2019_gut_endoderm"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "mes_nascentMesoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "end_definitiveEndoderm",
+            "role": "positive"
+          },
+          {
+            "axis": "axial_nodeNotochord",
+            "role": "negative"
+          },
+          {
+            "axis": "extraMes_extraembryonicMesoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "end_gutEndoderm",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 5,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.3439541921727767
+      },
+      {
+        "name": "node_notochord",
+        "genes": [
+          "Noto",
+          "Foxa2",
+          "Shh",
+          "T",
+          "Chrd",
+          "Nog",
+          "Dnah11",
+          "Lefty1"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "argelaguet2019_gastrulation_multiome"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "mes_nascentMesoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "end_definitiveEndoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "axial_nodeNotochord",
+            "role": "positive"
+          },
+          {
+            "axis": "extraMes_extraembryonicMesoderm",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 4,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.328865465300227
+      },
+      {
+        "name": "nascent_mesoderm",
+        "genes": [
+          "Tbx6",
+          "Msgn1",
+          "Mesp1",
+          "Mixl1",
+          "Fgf8",
+          "Cdx1",
+          "Cdx2",
+          "Snai1"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "scialdone2016_mesoderm"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "mes_nascentMesoderm",
+            "role": "positive"
+          },
+          {
+            "axis": "end_definitiveEndoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "axial_nodeNotochord",
+            "role": "negative"
+          },
+          {
+            "axis": "extraMes_extraembryonicMesoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "mes_paraxialPresomitic",
+            "role": "gate"
+          },
+          {
+            "axis": "mes_lateralPlate",
+            "role": "gate"
+          },
+          {
+            "axis": "mes_intermediateMesoderm",
+            "role": "gate"
+          },
+          {
+            "axis": "mes_cardiacMesoderm",
+            "role": "gate"
+          },
+          {
+            "axis": "mes_pharyngealMesoderm",
+            "role": "gate"
+          },
+          {
+            "axis": "mes_hematoendothelial",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 10,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.6532172088864434
+      },
+      {
+        "name": "extraembryonic_mesoderm",
+        "genes": [
+          "Tbx4",
+          "Hand1",
+          "Hoxa10",
+          "Bmp4",
+          "Msx1",
+          "Cdx2",
+          "Pdgfra"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "scialdone2016_mesoderm"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "mes_nascentMesoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "end_definitiveEndoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "axial_nodeNotochord",
+            "role": "negative"
+          },
+          {
+            "axis": "extraMes_extraembryonicMesoderm",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 4,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.6152159708370589
+      },
+      {
+        "name": "paraxial_presomitic_mesoderm",
+        "genes": [
+          "Tbx6",
+          "Msgn1",
+          "Meox1",
+          "Mesp2",
+          "Dll1",
+          "Ripply2",
+          "Dmrt2"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "scialdone2016_mesoderm"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "mes_paraxialPresomitic",
+            "role": "positive"
+          },
+          {
+            "axis": "mes_lateralPlate",
+            "role": "negative"
+          },
+          {
+            "axis": "mes_intermediateMesoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "mes_cardiacMesoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "mes_pharyngealMesoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "mes_hematoendothelial",
+            "role": "negative"
+          },
+          {
+            "axis": "mes_somiticMesoderm",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 7,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.17387715798885756
+      },
+      {
+        "name": "somitic_mesoderm",
+        "genes": [
+          "Pax3",
+          "Meox1",
+          "Tcf15",
+          "Uncx",
+          "Dmrt2",
+          "Myf5",
+          "Pax7"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "argelaguet2019_gastrulation_multiome"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "mes_somiticMesoderm",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.19084875163353737
+      },
+      {
+        "name": "intermediate_mesoderm",
+        "genes": [
+          "Osr1",
+          "Pax2",
+          "Lhx1",
+          "Wt1",
+          "Gata3"
+        ],
+        "n_genes": 5,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "argelaguet2019_gastrulation_multiome"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "mes_paraxialPresomitic",
+            "role": "negative"
+          },
+          {
+            "axis": "mes_lateralPlate",
+            "role": "negative"
+          },
+          {
+            "axis": "mes_intermediateMesoderm",
+            "role": "positive"
+          },
+          {
+            "axis": "mes_cardiacMesoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "mes_pharyngealMesoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "mes_hematoendothelial",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 6,
+        "n_genes_present": 5,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.23046633193479607
+      },
+      {
+        "name": "lateral_plate_mesoderm",
+        "genes": [
+          "Foxf1",
+          "Hand1",
+          "Hand2",
+          "Prrx1",
+          "Bmp4",
+          "Wt1",
+          "Kdr"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "scialdone2016_mesoderm"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "mes_paraxialPresomitic",
+            "role": "negative"
+          },
+          {
+            "axis": "mes_lateralPlate",
+            "role": "positive"
+          },
+          {
+            "axis": "mes_intermediateMesoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "mes_cardiacMesoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "mes_pharyngealMesoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "mes_hematoendothelial",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 6,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.4297664901299952
+      },
+      {
+        "name": "cardiac_mesoderm",
+        "genes": [
+          "Mesp1",
+          "Nkx2-5",
+          "Isl1",
+          "Tbx5",
+          "Gata4",
+          "Mef2c",
+          "Hand2"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "scialdone2016_mesoderm"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "mes_paraxialPresomitic",
+            "role": "negative"
+          },
+          {
+            "axis": "mes_lateralPlate",
+            "role": "negative"
+          },
+          {
+            "axis": "mes_intermediateMesoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "mes_cardiacMesoderm",
+            "role": "positive"
+          },
+          {
+            "axis": "mes_pharyngealMesoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "mes_hematoendothelial",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 6,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.33883004333172845
+      },
+      {
+        "name": "pharyngeal_mesoderm",
+        "genes": [
+          "Tbx1",
+          "Pitx2",
+          "Alx3",
+          "Alx4",
+          "Twist1",
+          "Tcf21"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "argelaguet2019_gastrulation_multiome"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "mes_paraxialPresomitic",
+            "role": "negative"
+          },
+          {
+            "axis": "mes_lateralPlate",
+            "role": "negative"
+          },
+          {
+            "axis": "mes_intermediateMesoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "mes_cardiacMesoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "mes_pharyngealMesoderm",
+            "role": "positive"
+          },
+          {
+            "axis": "mes_hematoendothelial",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 6,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.2593025655134466
+      },
+      {
+        "name": "hematoendothelial_mesoderm",
+        "genes": [
+          "Kdr",
+          "Tal1",
+          "Lmo2",
+          "Gata2",
+          "Fli1",
+          "Runx1",
+          "Etv2"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "scialdone2016_mesoderm"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "mes_paraxialPresomitic",
+            "role": "negative"
+          },
+          {
+            "axis": "mes_lateralPlate",
+            "role": "negative"
+          },
+          {
+            "axis": "mes_intermediateMesoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "mes_cardiacMesoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "mes_pharyngealMesoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "mes_hematoendothelial",
+            "role": "positive"
+          },
+          {
+            "axis": "hemo_endothelial",
+            "role": "gate"
+          },
+          {
+            "axis": "hemo_primitiveErythroid",
+            "role": "gate"
+          },
+          {
+            "axis": "hemo_primitiveMyeloid",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 9,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.4419836302359172
+      },
+      {
+        "name": "endothelial",
+        "genes": [
+          "Pecam1",
+          "Cdh5",
+          "Tek",
+          "Kdr",
+          "Sox7",
+          "Sox18",
+          "Esam",
+          "Eng"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "scialdone2016_mesoderm"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "hemo_endothelial",
+            "role": "positive"
+          },
+          {
+            "axis": "hemo_primitiveErythroid",
+            "role": "negative"
+          },
+          {
+            "axis": "hemo_primitiveMyeloid",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.15990611458834858
+      },
+      {
+        "name": "primitive_erythroid",
+        "genes": [
+          "Gata1",
+          "Klf1",
+          "Hbb-bt",
+          "Hbb-y",
+          "Hba-a1",
+          "Alas2",
+          "Car2",
+          "Epor"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "scialdone2016_mesoderm"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "hemo_endothelial",
+            "role": "negative"
+          },
+          {
+            "axis": "hemo_primitiveErythroid",
+            "role": "positive"
+          },
+          {
+            "axis": "hemo_primitiveMyeloid",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.8183506430978746
+      },
+      {
+        "name": "primitive_myeloid",
+        "genes": [
+          "Spi1",
+          "Csf1r",
+          "Lyz2",
+          "Itgam",
+          "Adgre1",
+          "Mpeg1",
+          "C1qa"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "scialdone2016_mesoderm"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "hemo_endothelial",
+            "role": "negative"
+          },
+          {
+            "axis": "hemo_primitiveErythroid",
+            "role": "negative"
+          },
+          {
+            "axis": "hemo_primitiveMyeloid",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.01516610495907559
+      },
+      {
+        "name": "neural_plate",
+        "genes": [
+          "Sox1",
+          "Sox2",
+          "Pax6",
+          "Zic1",
+          "Zic2",
+          "Hesx1",
+          "Otx2"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "argelaguet2019_gastrulation_multiome"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "ect_neuralPlate",
+            "role": "positive"
+          },
+          {
+            "axis": "ect_surfaceEctoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "ect_oticPlacode",
+            "role": "negative"
+          },
+          {
+            "axis": "neural_anteriorNeural",
+            "role": "gate"
+          },
+          {
+            "axis": "neural_posteriorNeural",
+            "role": "gate"
+          },
+          {
+            "axis": "neural_neuralCrest",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 6,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.4554560148565926
+      },
+      {
+        "name": "anterior_neural",
+        "genes": [
+          "Six3",
+          "Hesx1",
+          "Foxg1",
+          "Lhx5",
+          "Otx2",
+          "Rax"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "argelaguet2019_gastrulation_multiome"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "neural_anteriorNeural",
+            "role": "positive"
+          },
+          {
+            "axis": "neural_posteriorNeural",
+            "role": "negative"
+          },
+          {
+            "axis": "neural_neuralCrest",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.2836938578994429
+      },
+      {
+        "name": "posterior_neural",
+        "genes": [
+          "Sox2",
+          "Sox1",
+          "Pax6",
+          "Cdx2",
+          "Hoxb1",
+          "Hoxa2",
+          "Hoxb2",
+          "Nkx1-2"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "argelaguet2019_gastrulation_multiome"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "neural_anteriorNeural",
+            "role": "negative"
+          },
+          {
+            "axis": "neural_posteriorNeural",
+            "role": "positive"
+          },
+          {
+            "axis": "neural_neuralCrest",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.6464939129238599
+      },
+      {
+        "name": "neural_crest",
+        "genes": [
+          "Sox10",
+          "Foxd3",
+          "Tfap2a",
+          "Snai2",
+          "Pax3",
+          "Msx1",
+          "Ngfr"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "argelaguet2019_gastrulation_multiome"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "neural_anteriorNeural",
+            "role": "negative"
+          },
+          {
+            "axis": "neural_posteriorNeural",
+            "role": "negative"
+          },
+          {
+            "axis": "neural_neuralCrest",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.4414333860650664
+      },
+      {
+        "name": "surface_ectoderm",
+        "genes": [
+          "Krt8",
+          "Krt18",
+          "Krt19",
+          "Tfap2a",
+          "Grhl2",
+          "Dlx5",
+          "Perp"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "argelaguet2019_gastrulation_multiome"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "ect_neuralPlate",
+            "role": "negative"
+          },
+          {
+            "axis": "ect_surfaceEctoderm",
+            "role": "positive"
+          },
+          {
+            "axis": "ect_oticPlacode",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.7897551413439714
+      },
+      {
+        "name": "otic_placode",
+        "genes": [
+          "Pax2",
+          "Pax8",
+          "Eya1",
+          "Six1",
+          "Dlx5",
+          "Sox9"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "argelaguet2019_gastrulation_multiome"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "ect_neuralPlate",
+            "role": "negative"
+          },
+          {
+            "axis": "ect_surfaceEctoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "ect_oticPlacode",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.16599319072838573
+      },
+      {
+        "name": "visceral_endoderm",
+        "genes": [
+          "Apoa1",
+          "Apoa2",
+          "Afp",
+          "Ttr",
+          "Amn",
+          "Cubn",
+          "Hnf4a",
+          "Krt8"
+        ],
+        "n_genes": 8,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "nowotschin2019_gut_endoderm"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "ve_visceralEndodermRoot",
+            "role": "positive"
+          },
+          {
+            "axis": "end_gutEndoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "ve_anteriorVisceralEndoderm",
+            "role": "gate"
+          },
+          {
+            "axis": "ve_parietalEndoderm",
+            "role": "gate"
+          },
+          {
+            "axis": "ve_yolkSacEndoderm",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 5,
+        "n_genes_present": 8,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.8216779008184882
+      },
+      {
+        "name": "anterior_visceral_endoderm",
+        "genes": [
+          "Cer1",
+          "Lefty1",
+          "Dkk1",
+          "Hhex",
+          "Hesx1",
+          "Gsc",
+          "Otx2"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "nowotschin2019_gut_endoderm"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "ve_anteriorVisceralEndoderm",
+            "role": "positive"
+          },
+          {
+            "axis": "ve_parietalEndoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "ve_yolkSacEndoderm",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.4588520530985625
+      },
+      {
+        "name": "parietal_endoderm",
+        "genes": [
+          "Pdgfra",
+          "Sparc",
+          "Lama1",
+          "Col4a1",
+          "Col4a2",
+          "Plat",
+          "Dab2"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "nowotschin2019_gut_endoderm"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "ve_anteriorVisceralEndoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "ve_parietalEndoderm",
+            "role": "positive"
+          },
+          {
+            "axis": "ve_yolkSacEndoderm",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.790743861338469
+      },
+      {
+        "name": "yolk_sac_endoderm",
+        "genes": [
+          "Apoa1",
+          "Apoa2",
+          "Afp",
+          "Ttr",
+          "Apob",
+          "Hnf4a",
+          "Rbp4"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "nowotschin2019_gut_endoderm"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "ve_anteriorVisceralEndoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "ve_parietalEndoderm",
+            "role": "negative"
+          },
+          {
+            "axis": "ve_yolkSacEndoderm",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.7182749845243827
+      },
+      {
+        "name": "gut_endoderm",
+        "genes": [
+          "Sox17",
+          "Foxa2",
+          "Hnf1b",
+          "Onecut1",
+          "Hhex",
+          "Cldn6",
+          "Cldn7"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "nowotschin2019_gut_endoderm"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "end_gutEndoderm",
+            "role": "positive"
+          },
+          {
+            "axis": "gut_anteriorForegut",
+            "role": "gate"
+          },
+          {
+            "axis": "gut_posteriorHindgut",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.6460210468395351
+      },
+      {
+        "name": "anterior_foregut",
+        "genes": [
+          "Hhex",
+          "Foxa2",
+          "Sox2",
+          "Onecut1",
+          "Irx3",
+          "Shh"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "nowotschin2019_gut_endoderm"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "gut_anteriorForegut",
+            "role": "positive"
+          },
+          {
+            "axis": "gut_posteriorHindgut",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 2,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.5339345897241901
+      },
+      {
+        "name": "posterior_hindgut",
+        "genes": [
+          "Cdx2",
+          "Cdx1",
+          "Hoxb9",
+          "Hoxa9",
+          "Foxa2",
+          "Gata4"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "nowotschin2019_gut_endoderm"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "gut_anteriorForegut",
+            "role": "negative"
+          },
+          {
+            "axis": "gut_posteriorHindgut",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 2,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.5288276360134809
+      },
+      {
+        "name": "extraembryonic_ectoderm",
+        "genes": [
+          "Cdx2",
+          "Elf5",
+          "Eomes",
+          "Tfap2c",
+          "Tead4",
+          "Hand1",
+          "Krt8"
+        ],
+        "n_genes": 7,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "argelaguet2019_gastrulation_multiome"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "exe_extraembryonicEctodermRoot",
+            "role": "positive"
+          },
+          {
+            "axis": "exe_chorionTrophoblast",
+            "role": "gate"
+          },
+          {
+            "axis": "exe_trophoblastGiantCell",
+            "role": "gate"
+          }
+        ],
+        "n_axes_using": 3,
+        "n_genes_present": 7,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.7591306142100557
+      },
+      {
+        "name": "chorion_trophoblast",
+        "genes": [
+          "Gcm1",
+          "Esx1",
+          "Cdx2",
+          "Elf5",
+          "Eomes",
+          "Tfap2c"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "argelaguet2019_gastrulation_multiome"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "exe_chorionTrophoblast",
+            "role": "positive"
+          },
+          {
+            "axis": "exe_trophoblastGiantCell",
+            "role": "negative"
+          }
+        ],
+        "n_axes_using": 2,
+        "n_genes_present": 6,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.5487224018158058
+      },
+      {
+        "name": "trophoblast_giant_cell",
+        "genes": [
+          "Hand1",
+          "Prl3d1",
+          "Prl3b1",
+          "Tpbpa",
+          "Ctsq",
+          "Ascl2"
+        ],
+        "n_genes": 6,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "argelaguet2019_gastrulation_multiome"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "exe_chorionTrophoblast",
+            "role": "negative"
+          },
+          {
+            "axis": "exe_trophoblastGiantCell",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 2,
+        "n_genes_present": 5,
+        "n_genes_missing": 1,
+        "missing_genes": [
+          "Ctsq"
+        ],
+        "fraction_nonzero_cells": 0.3016197812779421
+      },
+      {
+        "name": "proliferation",
+        "genes": [
+          "Mki67",
+          "Top2a",
+          "Cdk1",
+          "Ccnb1",
+          "Ccna2",
+          "Pcna",
+          "Mcm5",
+          "Mcm6",
+          "Ube2c",
+          "Cenpf"
+        ],
+        "n_genes": 10,
+        "resource_keys": [
+          "pijuan2019_gastrulation_atlas",
+          "reactome_cell_cycle"
+        ],
+        "n_resource_keys": 2,
+        "used_in_axes": [
+          {
+            "axis": "cycle_proliferationRoot",
+            "role": "positive"
+          }
+        ],
+        "n_axes_using": 1,
+        "n_genes_present": 10,
+        "n_genes_missing": 0,
+        "missing_genes": [],
+        "fraction_nonzero_cells": 0.9996732925235573
+      }
+    ],
+    "axes": [
+      {
+        "name": "epi_pluripotentRoot",
+        "kind": "plain",
+        "positive": "epiblast_pluripotent",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "ve_visceralEndodermRoot",
+        "kind": "plain",
+        "positive": "visceral_endoderm",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "exe_extraembryonicEctodermRoot",
+        "kind": "plain",
+        "positive": "extraembryonic_ectoderm",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "cycle_proliferationRoot",
+        "kind": "plain",
+        "positive": "proliferation",
+        "negatives": [],
+        "negative_weight": 1.0,
+        "gate": null
+      },
+      {
+        "name": "streak_primitiveStreak",
+        "kind": "gated",
+        "positive": "primitive_streak",
+        "negatives": [
+          "embryonic_ectoderm",
+          "primordial_germ_cell"
+        ],
+        "negative_weight": 0.5,
+        "gate": "epiblast_pluripotent"
+      },
+      {
+        "name": "ect_embryonicEctoderm",
+        "kind": "gated",
+        "positive": "embryonic_ectoderm",
+        "negatives": [
+          "primitive_streak",
+          "primordial_germ_cell"
+        ],
+        "negative_weight": 0.5,
+        "gate": "epiblast_pluripotent"
+      },
+      {
+        "name": "pgc_primordialGermCell",
+        "kind": "gated",
+        "positive": "primordial_germ_cell",
+        "negatives": [
+          "primitive_streak",
+          "embryonic_ectoderm"
+        ],
+        "negative_weight": 0.5,
+        "gate": "epiblast_pluripotent"
+      },
+      {
+        "name": "nmp_neuromesodermalProgenitor",
+        "kind": "gated",
+        "positive": "neuromesodermal_progenitor",
+        "negatives": [
+          "primitive_streak",
+          "embryonic_ectoderm"
+        ],
+        "negative_weight": 0.5,
+        "gate": "epiblast_pluripotent"
+      },
+      {
+        "name": "mes_nascentMesoderm",
+        "kind": "gated",
+        "positive": "nascent_mesoderm",
+        "negatives": [
+          "definitive_endoderm",
+          "node_notochord",
+          "extraembryonic_mesoderm"
+        ],
+        "negative_weight": 0.35,
+        "gate": "primitive_streak"
+      },
+      {
+        "name": "end_definitiveEndoderm",
+        "kind": "gated",
+        "positive": "definitive_endoderm",
+        "negatives": [
+          "nascent_mesoderm",
+          "node_notochord",
+          "extraembryonic_mesoderm"
+        ],
+        "negative_weight": 0.35,
+        "gate": "primitive_streak"
+      },
+      {
+        "name": "axial_nodeNotochord",
+        "kind": "gated",
+        "positive": "node_notochord",
+        "negatives": [
+          "nascent_mesoderm",
+          "definitive_endoderm",
+          "extraembryonic_mesoderm"
+        ],
+        "negative_weight": 0.35,
+        "gate": "primitive_streak"
+      },
+      {
+        "name": "extraMes_extraembryonicMesoderm",
+        "kind": "gated",
+        "positive": "extraembryonic_mesoderm",
+        "negatives": [
+          "nascent_mesoderm",
+          "definitive_endoderm",
+          "node_notochord"
+        ],
+        "negative_weight": 0.35,
+        "gate": "primitive_streak"
+      },
+      {
+        "name": "mes_paraxialPresomitic",
+        "kind": "gated",
+        "positive": "paraxial_presomitic_mesoderm",
+        "negatives": [
+          "lateral_plate_mesoderm",
+          "intermediate_mesoderm",
+          "cardiac_mesoderm",
+          "pharyngeal_mesoderm",
+          "hematoendothelial_mesoderm"
+        ],
+        "negative_weight": 0.3,
+        "gate": "nascent_mesoderm"
+      },
+      {
+        "name": "mes_lateralPlate",
+        "kind": "gated",
+        "positive": "lateral_plate_mesoderm",
+        "negatives": [
+          "paraxial_presomitic_mesoderm",
+          "intermediate_mesoderm",
+          "cardiac_mesoderm",
+          "pharyngeal_mesoderm",
+          "hematoendothelial_mesoderm"
+        ],
+        "negative_weight": 0.3,
+        "gate": "nascent_mesoderm"
+      },
+      {
+        "name": "mes_intermediateMesoderm",
+        "kind": "gated",
+        "positive": "intermediate_mesoderm",
+        "negatives": [
+          "paraxial_presomitic_mesoderm",
+          "lateral_plate_mesoderm",
+          "cardiac_mesoderm",
+          "pharyngeal_mesoderm",
+          "hematoendothelial_mesoderm"
+        ],
+        "negative_weight": 0.3,
+        "gate": "nascent_mesoderm"
+      },
+      {
+        "name": "mes_cardiacMesoderm",
+        "kind": "gated",
+        "positive": "cardiac_mesoderm",
+        "negatives": [
+          "paraxial_presomitic_mesoderm",
+          "lateral_plate_mesoderm",
+          "intermediate_mesoderm",
+          "pharyngeal_mesoderm",
+          "hematoendothelial_mesoderm"
+        ],
+        "negative_weight": 0.3,
+        "gate": "nascent_mesoderm"
+      },
+      {
+        "name": "mes_pharyngealMesoderm",
+        "kind": "gated",
+        "positive": "pharyngeal_mesoderm",
+        "negatives": [
+          "paraxial_presomitic_mesoderm",
+          "lateral_plate_mesoderm",
+          "intermediate_mesoderm",
+          "cardiac_mesoderm",
+          "hematoendothelial_mesoderm"
+        ],
+        "negative_weight": 0.3,
+        "gate": "nascent_mesoderm"
+      },
+      {
+        "name": "mes_hematoendothelial",
+        "kind": "gated",
+        "positive": "hematoendothelial_mesoderm",
+        "negatives": [
+          "paraxial_presomitic_mesoderm",
+          "lateral_plate_mesoderm",
+          "intermediate_mesoderm",
+          "cardiac_mesoderm",
+          "pharyngeal_mesoderm"
+        ],
+        "negative_weight": 0.3,
+        "gate": "nascent_mesoderm"
+      },
+      {
+        "name": "mes_somiticMesoderm",
+        "kind": "gated",
+        "positive": "somitic_mesoderm",
+        "negatives": [],
+        "negative_weight": 0.5,
+        "gate": "paraxial_presomitic_mesoderm"
+      },
+      {
+        "name": "hemo_endothelial",
+        "kind": "gated",
+        "positive": "endothelial",
+        "negatives": [
+          "primitive_erythroid",
+          "primitive_myeloid"
+        ],
+        "negative_weight": 0.5,
+        "gate": "hematoendothelial_mesoderm"
+      },
+      {
+        "name": "hemo_primitiveErythroid",
+        "kind": "gated",
+        "positive": "primitive_erythroid",
+        "negatives": [
+          "endothelial",
+          "primitive_myeloid"
+        ],
+        "negative_weight": 0.5,
+        "gate": "hematoendothelial_mesoderm"
+      },
+      {
+        "name": "hemo_primitiveMyeloid",
+        "kind": "gated",
+        "positive": "primitive_myeloid",
+        "negatives": [
+          "endothelial",
+          "primitive_erythroid"
+        ],
+        "negative_weight": 0.5,
+        "gate": "hematoendothelial_mesoderm"
+      },
+      {
+        "name": "ect_neuralPlate",
+        "kind": "gated",
+        "positive": "neural_plate",
+        "negatives": [
+          "surface_ectoderm",
+          "otic_placode"
+        ],
+        "negative_weight": 0.5,
+        "gate": "embryonic_ectoderm"
+      },
+      {
+        "name": "ect_surfaceEctoderm",
+        "kind": "gated",
+        "positive": "surface_ectoderm",
+        "negatives": [
+          "neural_plate",
+          "otic_placode"
+        ],
+        "negative_weight": 0.5,
+        "gate": "embryonic_ectoderm"
+      },
+      {
+        "name": "ect_oticPlacode",
+        "kind": "gated",
+        "positive": "otic_placode",
+        "negatives": [
+          "neural_plate",
+          "surface_ectoderm"
+        ],
+        "negative_weight": 0.5,
+        "gate": "embryonic_ectoderm"
+      },
+      {
+        "name": "neural_anteriorNeural",
+        "kind": "gated",
+        "positive": "anterior_neural",
+        "negatives": [
+          "posterior_neural",
+          "neural_crest"
+        ],
+        "negative_weight": 0.5,
+        "gate": "neural_plate"
+      },
+      {
+        "name": "neural_posteriorNeural",
+        "kind": "gated",
+        "positive": "posterior_neural",
+        "negatives": [
+          "anterior_neural",
+          "neural_crest"
+        ],
+        "negative_weight": 0.5,
+        "gate": "neural_plate"
+      },
+      {
+        "name": "neural_neuralCrest",
+        "kind": "gated",
+        "positive": "neural_crest",
+        "negatives": [
+          "anterior_neural",
+          "posterior_neural"
+        ],
+        "negative_weight": 0.5,
+        "gate": "neural_plate"
+      },
+      {
+        "name": "end_gutEndoderm",
+        "kind": "gated",
+        "positive": "gut_endoderm",
+        "negatives": [
+          "visceral_endoderm"
+        ],
+        "negative_weight": 0.5,
+        "gate": "definitive_endoderm"
+      },
+      {
+        "name": "gut_anteriorForegut",
+        "kind": "gated",
+        "positive": "anterior_foregut",
+        "negatives": [
+          "posterior_hindgut"
+        ],
+        "negative_weight": 0.5,
+        "gate": "gut_endoderm"
+      },
+      {
+        "name": "gut_posteriorHindgut",
+        "kind": "gated",
+        "positive": "posterior_hindgut",
+        "negatives": [
+          "anterior_foregut"
+        ],
+        "negative_weight": 0.5,
+        "gate": "gut_endoderm"
+      },
+      {
+        "name": "ve_anteriorVisceralEndoderm",
+        "kind": "gated",
+        "positive": "anterior_visceral_endoderm",
+        "negatives": [
+          "parietal_endoderm",
+          "yolk_sac_endoderm"
+        ],
+        "negative_weight": 0.5,
+        "gate": "visceral_endoderm"
+      },
+      {
+        "name": "ve_parietalEndoderm",
+        "kind": "gated",
+        "positive": "parietal_endoderm",
+        "negatives": [
+          "anterior_visceral_endoderm",
+          "yolk_sac_endoderm"
+        ],
+        "negative_weight": 0.5,
+        "gate": "visceral_endoderm"
+      },
+      {
+        "name": "ve_yolkSacEndoderm",
+        "kind": "gated",
+        "positive": "yolk_sac_endoderm",
+        "negatives": [
+          "anterior_visceral_endoderm",
+          "parietal_endoderm"
+        ],
+        "negative_weight": 0.5,
+        "gate": "visceral_endoderm"
+      },
+      {
+        "name": "exe_chorionTrophoblast",
+        "kind": "gated",
+        "positive": "chorion_trophoblast",
+        "negatives": [
+          "trophoblast_giant_cell"
+        ],
+        "negative_weight": 0.5,
+        "gate": "extraembryonic_ectoderm"
+      },
+      {
+        "name": "exe_trophoblastGiantCell",
+        "kind": "gated",
+        "positive": "trophoblast_giant_cell",
+        "negatives": [
+          "chorion_trophoblast"
+        ],
+        "negative_weight": 0.5,
+        "gate": "extraembryonic_ectoderm"
+      }
+    ],
+    "resources": [
+      {
+        "key": "pijuan2019_gastrulation_atlas",
+        "kind": "atlas",
+        "citation": "Pijuan-Sala 2019 Nature mouse gastrulation and early organogenesis atlas",
+        "doi": "10.1038/s41586-019-0933-9",
+        "used_in_modules": [
+          "anterior_foregut",
+          "anterior_neural",
+          "anterior_visceral_endoderm",
+          "cardiac_mesoderm",
+          "chorion_trophoblast",
+          "definitive_endoderm",
+          "embryonic_ectoderm",
+          "endothelial",
+          "epiblast_pluripotent",
+          "extraembryonic_ectoderm",
+          "extraembryonic_mesoderm",
+          "gut_endoderm",
+          "hematoendothelial_mesoderm",
+          "intermediate_mesoderm",
+          "lateral_plate_mesoderm",
+          "nascent_mesoderm",
+          "neural_crest",
+          "neural_plate",
+          "neuromesodermal_progenitor",
+          "node_notochord",
+          "otic_placode",
+          "paraxial_presomitic_mesoderm",
+          "parietal_endoderm",
+          "pharyngeal_mesoderm",
+          "posterior_hindgut",
+          "posterior_neural",
+          "primitive_erythroid",
+          "primitive_myeloid",
+          "primitive_streak",
+          "primordial_germ_cell",
+          "proliferation",
+          "somitic_mesoderm",
+          "surface_ectoderm",
+          "trophoblast_giant_cell",
+          "visceral_endoderm",
+          "yolk_sac_endoderm"
+        ]
+      },
+      {
+        "key": "argelaguet2019_gastrulation_multiome",
+        "kind": "atlas",
+        "citation": "Argelaguet 2019 Nature mouse gastrulation single-cell multi-omics atlas",
+        "doi": "10.1038/s41586-019-1825-8",
+        "used_in_modules": [
+          "anterior_neural",
+          "chorion_trophoblast",
+          "embryonic_ectoderm",
+          "epiblast_pluripotent",
+          "extraembryonic_ectoderm",
+          "intermediate_mesoderm",
+          "neural_crest",
+          "neural_plate",
+          "neuromesodermal_progenitor",
+          "node_notochord",
+          "otic_placode",
+          "pharyngeal_mesoderm",
+          "posterior_neural",
+          "primitive_streak",
+          "somitic_mesoderm",
+          "surface_ectoderm",
+          "trophoblast_giant_cell"
+        ]
+      },
+      {
+        "key": "nowotschin2019_gut_endoderm",
+        "kind": "paper",
+        "citation": "Nowotschin 2019 Nature mouse gut endoderm single-cell landscape",
+        "doi": "10.1038/s41586-019-1127-1",
+        "used_in_modules": [
+          "anterior_foregut",
+          "anterior_visceral_endoderm",
+          "definitive_endoderm",
+          "gut_endoderm",
+          "parietal_endoderm",
+          "posterior_hindgut",
+          "visceral_endoderm",
+          "yolk_sac_endoderm"
+        ]
+      },
+      {
+        "key": "scialdone2016_mesoderm",
+        "kind": "paper",
+        "citation": "Scialdone 2016 Nature early mouse mesoderm diversification single-cell profiling",
+        "doi": "10.1038/nature18633",
+        "used_in_modules": [
+          "cardiac_mesoderm",
+          "endothelial",
+          "extraembryonic_mesoderm",
+          "hematoendothelial_mesoderm",
+          "lateral_plate_mesoderm",
+          "nascent_mesoderm",
+          "paraxial_presomitic_mesoderm",
+          "primitive_erythroid",
+          "primitive_myeloid",
+          "primitive_streak"
+        ]
+      },
+      {
+        "key": "magnusdottir2013_pgc",
+        "kind": "paper",
+        "citation": "Magnusdottir 2013 Nature Cell Biology PGC specification transcription-factor network",
+        "doi": "10.1038/ncb2798",
+        "used_in_modules": [
+          "primordial_germ_cell"
+        ]
+      },
+      {
+        "key": "reactome_cell_cycle",
+        "kind": "database",
+        "citation": "Reactome R-MMU-1640170 Cell Cycle",
+        "doi": null,
+        "used_in_modules": [
+          "proliferation"
+        ]
+      }
+    ]
+  },
+  "sanity": {
+    "placeholder_strings_present": false,
+    "orphaned_modules": [],
+    "modules_missing_resources": [],
+    "unused_resources": [],
+    "set_clip_overridden": false
+  },
+  "dataset_coverage": {
+    "h5ad_path": "data/preprocessed/mouse_gastrulation_pp.h5ad",
+    "layer": null,
+    "n_cells": 116312,
+    "n_vars": 22035
+  }
+}

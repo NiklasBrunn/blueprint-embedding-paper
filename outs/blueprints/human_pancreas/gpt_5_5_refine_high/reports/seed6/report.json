@@ -1,0 +1,33 @@
+{
+  "rating": "minor",
+  "summary": "The blueprint covers the major healthy human pancreas landscape, but targeted refinements are needed for stromal gating and rare endocrine specificity.",
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "mesenchymal_core / mesenchymal gated axes",
+      "description": "The mesenchymal gate is heavily fibroblast/ECM-weighted, which is plausible for stellate/fibroblast cells but weak as a shared gate for pericytes and vascular smooth muscle.",
+      "suggested_fix": "Broaden the stromal/mural gating design by adding mural markers to an inclusive mesenchymal/mural core, or make the mural identity a plain or less fibroblast-gated axis while retaining fibroblast/stellate resolution separately.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "marker-plausibility",
+      "where": "epsilon_cell",
+      "description": "The epsilon-cell module is driven by one specific marker, GHRL, plus several generic endocrine markers, so it may not separate epsilon cells robustly from other endocrine cells.",
+      "suggested_fix": "Strengthen the module with additional literature-supported human epsilon/ghrelin-cell markers if available, or reduce generic endocrine overlap so the axis is mainly driven by epsilon-specific signal.",
+      "remove": []
+    },
+    {
+      "severity": "minor",
+      "category": "axis-design",
+      "where": "stellate_myofibroblast_activation",
+      "description": "The activated stellate/myofibroblast program is recognizable but leans toward injury/fibrosis or dissociation-activated remodeling in an otherwise healthy baseline pancreas scenario.",
+      "suggested_fix": "Reframe or rename this as a stromal matrix-remodeling/activation state gated within stellate/fibroblast biology, rather than presenting it as a separate healthy lineage on par with quiescent fibroblast/stellate or mural cells.",
+      "remove": []
+    }
+  ],
+  "out_of_scope": [
+    "Citation verification was not performed; this review only judged biological coverage and marker plausibility."
+  ]
+}

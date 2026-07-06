@@ -1,0 +1,237 @@
+raw_name,canonical,n_runs,n_cohorts,cohorts,top_genes,standardized_resolved
+plasma_cell,plasmacell,20,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","MZB1, XBP1, JCHAIN, SDC1, IGKC, PRDM1, IGHG1, DERL3",plasmacell
+classical_monocyte,classicalmonocyte,19,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","FCN1, S100A8, S100A9, VCAN, CD14, LYZ, CTSS, CCR2",classicalmonocyte
+megakaryocyte_platelet,megakaryocyteplatelet,19,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","PPBP, PF4, GP9, ITGA2B, TUBB1, NRGN, GP1BA, ITGB3",megakaryocyteplatelet
+nonclassical_monocyte,nonclassicalmonocyte,19,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","FCGR3A, MS4A7, CX3CR1, IFITM3, LST1, LILRB2, LILRB1, RHOC",nonclassicalmonocyte
+eosinophil,eosinophil,18,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","CLC, PRG2, RNASE2, CCR3, SIGLEC8, EPX, RNASE3, IL5RA",eosinophil
+interferon_response,interferonresponse,18,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","ISG15, IFIT1, IFIT3, MX1, OAS1, IFIT2, IRF7, IFI6",interferonresponse
+nk_cell,nkcell,17,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","KLRD1, NKG7, GNLY, FCGR3A, PRF1, KLRF1, TYROBP, GZMB",nkcell
+endothelial,endothelial,16,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","PECAM1, VWF, KDR, CDH5, ESAM, EMCN, RAMP2, ENG",endothelial
+osteolineage,osteolineage,13,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","BGLAP, IBSP, COL1A1, RUNX2, ALPL, SPP1, COL1A2, SP7",osteolineage
+basophil_mast,basophilmast,12,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","MS4A2, HDC, CPA3, TPSAB1, TPSB2, GATA2, KIT, IL3RA",basophilmast
+b_cell,bcell,11,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","MS4A1, CD79A, CD79B, BANK1, CD74, HLA-DRA, PAX5, CD22",bcell
+pericyte_smooth_muscle,pericytesmoothmuscle,10,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","RGS5, ACTA2, MCAM, MYH11, CSPG4, TAGLN, PDGFRB, NOTCH3",pericytesmoothmuscle
+cDC1,cdc1,9,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","CLEC9A, XCR1, CADM1, IRF8, BATF3, IDO1, THBD, CLNK",cdc1
+cDC2,cdc2,9,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","CD1C, FCER1A, CLEC10A, CD1E, HLA-DQA1, CST3, IRF4, FCGR2B",cdc2
+cd8_cytotoxic_t,cd8cytotoxict,9,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","CD8A, CD8B, NKG7, PRF1, GZMK, CCL5, GZMB, GZMH",cd8cytotoxict
+mature_neutrophil,matureneutrophil,9,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","CSF3R, FCGR3B, CXCR2, S100A8, S100A9, CEACAM8, LCN2, LTF",matureneutrophil
+mesenchymal_stromal,mesenchymalstromal,9,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","CXCL12, LEPR, PDGFRA, COL1A1, DCN, THY1, KITLG, VCAM1",mesenchymalstromal
+t_cell,tcell,9,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","CD3D, CD3E, TRAC, IL7R, CD3G, LCK, CD2, TRBC1",tcell
+cell_cycle,cellcycle,8,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","MKI67, TOP2A, PCNA, TYMS, UBE2C, STMN1, HMGB2, CENPF",cellcycle
+macrophage,macrophage,8,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","C1QA, C1QB, C1QC, APOE, MRC1, CD163, MAFB, MSR1",macrophage
+plasmacytoid_dc,plasmacytoiddc,8,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","IL3RA, CLEC4C, LILRA4, TCF4, IRF7, GZMB, JCHAIN, PLD4",plasmacytoiddc
+adipocyte,adipocyte,7,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","ADIPOQ, PLIN1, FABP4, LEP, LPL, PPARG, CEBPA, CIDEC",adipocyte
+cd4_naive_memory_t,cd4naivememoryt,7,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","IL7R, CCR7, TCF7, LEF1, CD4, LTB, MAL, SELL",cd4naivememoryt
+lymphoid_progenitor,lymphoidprogenitor,7,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","DNTT, VPREB1, IGLL1, RAG1, RAG2, IL7R, PAX5, CD79A",lymphoidprogenitor
+myeloid_core,myeloidcore,7,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","LYZ, LST1, TYROBP, FCER1G, CTSS, SPI1, AIF1, S100A8",myeloidcore
+regulatory_t,regulatoryt,7,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","FOXP3, IL2RA, CTLA4, IKZF2, TNFRSF18, TIGIT, LAYN, LAIR2",regulatoryt
+basophil,basophil,6,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","MS4A2, HDC, CLC, GATA2, FCER1A, CPA3, IL3RA, CCR3",basophil
+cdc1,cdc1,6,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","CLEC9A, XCR1, BATF3, CADM1, IRF8, IDO1, THBD, CLNK",cdc1
+cdc2,cdc2,6,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","CD1C, FCER1A, CLEC10A, IRF4, CD1E, HLA-DQA1, CST3, CD1D",cdc2
+erythroid,erythroid,6,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","HBB, HBA1, HBA2, GYPA, ALAS2, KLF1, AHSP, CA1",erythroid
+marrow_macrophage,marrowmacrophage,6,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","C1QA, C1QB, C1QC, APOE, MRC1, CD68, MSR1, MAFB",marrowmacrophage
+mast_cell,mastcell,6,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","TPSAB1, TPSB2, CPA3, KIT, HDC, MS4A2, GATA2, HPGDS",mastcell
+myeloid_progenitor,myeloidprogenitor,6,1,gpt_5_5_noref_unrefined_high_human_immune,"MPO, ELANE, PRTN3, AZU1, CTSG, CEBPE, CSF3R, CEBPA",myeloidprogenitor
+regulatory_t_cell,regulatorytcell,6,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","FOXP3, IL2RA, CTLA4, IKZF2, TIGIT, TNFRSF18, ENTPD1, CCR8",regulatorytcell
+t_cell_core,tcellcore,6,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","CD3D, CD3E, TRAC, CD3G, IL7R, TRBC1, LCK, TRBC2",tcellcore
+cd4_t_cell,cd4tcell,5,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","CD4, IL7R, CCR7, LTB, TCF7, LEF1, MAL, ANXA1",cd4tcell
+cd8_t_cell,cd8tcell,5,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","CD8A, CD8B, GZMK, CCL5, NKG7, CST7, KLRG1, EOMES",cd8tcell
+cycling,cycling,5,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","MKI67, TOP2A, UBE2C, TYMS, STMN1, HMGB2, PCNA, MCM5",cycling
+early_erythroid,earlyerythroid,5,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","GATA1, KLF1, TAL1, EPOR, TFRC, ALAS2, SLC4A1, GYPA",earlyerythroid
+hspc_primitive,hspcprimitive,5,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","CD34, HLF, SPINK2, MLLT3, CRHBP, MEIS1, AVP, PROM1",hspcprimitive
+immature_granulocyte,immaturegranulocyte,5,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","MPO, ELANE, PRTN3, AZU1, CTSG, DEFA4, CEBPE, LTF",immaturegranulocyte
+inflammatory_activation,inflammatoryactivation,5,1,gpt_5_5_noref_unrefined_high_human_immune,"NFKBIA, CCL3, CCL4, CXCL8, FOS, IL1B, TNF, JUN",inflammatoryactivation
+lymphoid_core,lymphoidcore,5,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","CD3D, CD79A, NKG7, TRAC, IL7R, MS4A1, LTB, CD3E",lymphoidcore
+pDC,pdc,5,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","CLEC4C, LILRA4, IL3RA, TCF4, IRF7, GZMB, PLD4, IRF8",pdc
+treg,treg,5,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","FOXP3, IL2RA, CTLA4, IKZF2, TNFRSF18, TIGIT, LAYN, RTN3",treg
+antigen_presentation,antigenpresentation,4,1,gpt_5_5_noref_unrefined_high_human_immune,"HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, CD74, CIITA, HLA-DQA1, HLA-DQB1",antigenpresentation
+b_cell_progenitor,bcellprogenitor,4,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","VPREB1, IGLL1, DNTT, PAX5, RAG1, RAG2, CD79A, CD24",bcellprogenitor
+cytotoxic_effector,cytotoxiceffector,4,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","NKG7, GNLY, PRF1, GZMB, GZMH, CCL5, CST7, KLRD1",cytotoxiceffector
+erythroid_lineage,erythroidlineage,4,1,gpt_5_5_unrefined_high_human_immune,"KLF1, ALAS2, HBB, HBA1, HBA2, SLC4A1, GYPA, AHSP",erythroidlineage
+hematopoietic_stem_progenitor,hematopoieticstemprogenitor,4,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","CD34, PROM1, SPINK2, HLF, MEIS1, MLLT3, GATA2, CRHBP",hematopoieticstemprogenitor
+late_erythroid,lateerythroid,4,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","HBA1, HBA2, HBB, AHSP, CA1, ALAS2, GYPA, HBD",lateerythroid
+monocyte_core,monocytecore,4,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","LST1, LYZ, FCN1, CTSS, VCAN, S100A8, S100A9, TYMP",monocytecore
+neutrophil_granulocyte,neutrophilgranulocyte,4,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","CSF3R, FCGR3B, CXCR2, MMP8, CEACAM8, LCN2, S100A8, S100A9",neutrophilgranulocyte
+pan_leukocyte,panleukocyte,4,1,gpt_5_5_noref_unrefined_high_human_immune,"PTPRC, LCP1, CORO1A, RAC2, CD52, TYROBP, FYB1, CD53",panleukocyte
+pdc,pdc,4,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","IL3RA, CLEC4C, TCF4, IRF7, LILRA4, GZMB, PLD4, SCT",pdc
+adipo_msc,adipomsc,3,1,gpt_5_5_unrefined_high_human_immune,"CXCL12, LEPR, LPL, APOE, PPARG, CEBPA, FOXC1, LBP",adipomsc
+b_lymphoid_progenitor,blymphoidprogenitor,3,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","DNTT, RAG1, RAG2, VPREB1, VPREB3, IGLL1, CD79A, PAX5",blymphoidprogenitor
+cell_cycle_g2m,cellcycleg2m,3,1,gpt_5_5_unrefined_high_human_immune,"MKI67, TOP2A, STMN1, UBE2C, HMGB2, CENPF, PCLAF, TYMS",cellcycleg2m
+fibro_msc,fibromsc,3,1,gpt_5_5_unrefined_high_human_immune,"PDPN, DCN, DPT, CSPG4, HAS1, NT5E, APOD, GSN",fibromsc
+gamma_delta_mait_t_cell,gammadeltamaittcell,3,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","TRDC, TRGC1, TRGC2, SLC4A10, KLRB1, ZBTB16, IL18RAP, TRAV1-2",gammadeltamaittcell
+hematopoietic_core,hematopoieticcore,3,1,gpt_5_5_noref_unrefined_high_human_immune,"PTPRC, CORO1A, LCP1, CD52, LAPTM5, ITGB2, ARHGAP15, ARHGDIB",hematopoieticcore
+leukocyte_core,leukocytecore,3,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","PTPRC, CORO1A, LCP1, CD52, FYB1, ITGB2, ARHGAP15, IKZF1",leukocytecore
+mait_gamma_delta_t,maitgammadeltat,3,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","TRDC, TRGC1, KLRB1, SLC4A10, TRAV1-2, TRGC2, ZBTB16, IL18RAP",maitgammadeltat
+marrow_adipocyte,marrowadipocyte,3,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","ADIPOQ, LPL, FABP4, PLIN1, PPARG, CEBPA, CFD, APOC1",marrowadipocyte
+memory_b,memoryb,3,1,gpt_5_5_noref_unrefined_high_human_immune,"CD27, TNFRSF13B, AIM2, BANK1, IGHG1, IGHG3, FCRL5, MS4A1",memoryb
+memory_b_cell,memorybcell,3,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","CD27, TNFRSF13B, AIM2, BANK1, MS4A1, ITGAX, FCRL5, CRIP1",memorybcell
+monocyte,monocyte,3,1,gpt_5_5_noref_unrefined_high_human_immune,"LYZ, LST1, FCN1, S100A8, S100A9, CTSS, VCAN, CD14",monocyte
+myeloid_granulocyte_progenitor,myeloidgranulocyteprogenitor,3,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","MPO, ELANE, PRTN3, AZU1, CTSG, CEBPE, CSF3R, LTF",myeloidgranulocyteprogenitor
+naive_b,naiveb,3,1,gpt_5_5_noref_unrefined_high_human_immune,"TCL1A, IGHD, IGHM, IL4R, FCER2, CCR7, CD22, PAX5",naiveb
+naive_b_cell,naivebcell,3,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","TCL1A, IGHD, FCER2, IL4R, CD22, CD79A, MS4A1, IGHM",naivebcell
+neutrophil_mature,neutrophilmature,3,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","S100A8, S100A9, FCGR3B, CSF3R, CXCR2, MNDA, NAMPT, VCAN",neutrophilmature
+pan_t_cell,pantcell,3,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","CD3D, CD3E, TRAC, CD2, CD3G, CD7, LCK, LAT",pantcell
+primitive_hspc,primitivehspc,3,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","CD34, PROM1, HLF, MEIS1, SPINK2, CRHBP, AVP, KIT",primitivehspc
+adipocyte_stromal,adipocytestromal,2,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","ADIPOQ, CEBPA, PLIN1, FABP4, LPL, PPARG, LEP, CFD",adipocytestromal
+antigen_presenting,antigenpresenting,2,1,gpt_5_5_noref_unrefined_high_human_immune,"HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, CD74, HLA-DQA1, HLA-DQB1, CIITA",antigenpresenting
+arterial_endothelial,arterialendothelial,2,1,gpt_5_5_unrefined_high_human_immune,"CXCL12, ICAM2, PODXL, CDH5, PECAM1, VWF, CD34, GJA4",arterialendothelial
+b_cell_core,bcellcore,2,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","MS4A1, CD79A, CD79B, CD19, BANK1, CD37, IGHM, PAX5",bcellcore
+cd4_t,cd4t,2,1,gpt_5_5_noref_unrefined_high_human_immune,"CD4, IL7R, CCR7, LTB, MAL, TCF7, LEF1, ANXA1",cd4t
+conventional_dendritic,conventionaldendritic,2,1,gpt_5_5_unrefined_high_human_immune,"FCER1A, CD1C, CLEC10A, ITGAX, HLA-DRA, HLA-DPB1, CST3, IRF4",conventionaldendritic
+dendritic_core,dendriticcore,2,1,gpt_5_5_noref_unrefined_high_human_immune,"HLA-DRA, HLA-DPA1, HLA-DPB1, CD74, IRF8, CST3, FCER1A, HLA-DRB1",dendriticcore
+eosinophil_basophil_mast,eosinophilbasophilmast,2,1,gpt_5_5_unrefined_high_human_immune,"CLC, PRG2, CPA3, MS4A2, TPSAB1, HDC, RNASE2, RNASE3",eosinophilbasophilmast
+erythroid_early,erythroidearly,2,1,gpt_5_5_noref_unrefined_high_human_immune,"GYPA, ALAS2, KLF1, TFRC, CA1, HMBS, HBD, AHSP",erythroidearly
+erythroid_late,erythroidlate,2,1,gpt_5_5_noref_unrefined_high_human_immune,"HBB, HBA1, HBA2, AHSP, SLC4A1, GYPA, CA1, ALAS2",erythroidlate
+erythroid_progenitor,erythroidprogenitor,2,1,gpt_5_5_noref_unrefined_high_human_immune,"GATA1, TAL1, KLF1, TFRC, CA1, ALAS2, AHSP, EPOR",erythroidprogenitor
+gamma_delta_t,gammadeltat,2,1,gpt_5_5_noref_unrefined_high_human_immune,"TRDC, TRGC1, TRGC2, KLRD1, NKG7, GNLY, GZMB, TRDV2",gammadeltat
+granulocyte_monocyte_progenitor,granulocytemonocyteprogenitor,2,1,gpt_5_5_unrefined_high_human_immune,"MPO, ELANE, AZU1, PRTN3, CTSG, CEBPE, LTF, DEFA4",granulocytemonocyteprogenitor
+granulocyte_neutrophil,granulocyteneutrophil,2,1,gpt_5_5_unrefined_high_human_immune,"S100A8, S100A9, FCGR3B, CSF3R, CXCR2, LCN2, MPO, MMP8",granulocyteneutrophil
+hspc_stem_progenitor,hspcstemprogenitor,2,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","CD34, SPINK2, MEIS1, PROM1, HLF, CRHBP, AVP, KIT",hspcstemprogenitor
+immune_leukocyte,immuneleukocyte,2,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","PTPRC, CD52, LCP1, CORO1A, ARHGDIB, HCST, CYBB, LST1",immuneleukocyte
+inflammatory_myeloid_response,inflammatorymyeloidresponse,2,1,gpt_5_5_unrefined_high_human_immune,"NFKBIA, IL1B, CXCL8, CCL3, CCL4, JUNB, TNFAIP3, IER3",inflammatorymyeloidresponse
+inflammatory_nfkb,inflammatorynfkb,2,1,gpt_5_5_unrefined_high_human_immune,"NFKBIA, TNFAIP3, FOS, CXCL8, CCL3, CCL4, IL1B, JUNB",inflammatorynfkb
+innate_like_t,innateliket,2,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","TRDC, TRGC1, KLRB1, SLC4A10, ZBTB16, NCR3, TRGC2, TRAV1-2",innateliket
+lymphoid_lineage,lymphoidlineage,2,1,gpt_5_5_unrefined_high_human_immune,"IL7R, CD3D, NKG7, LTB, TRAC, CD3E, MS4A1, GNLY",lymphoidlineage
+lymphoid_primed_progenitor,lymphoidprimedprogenitor,2,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","DNTT, IL7R, VPREB1, TCF3, RAG1, RAG2, IGLL1, EBF1",lymphoidprimedprogenitor
+marrow_mesenchymal_stromal,marrowmesenchymalstromal,2,1,gpt_5_5_noref_unrefined_high_human_immune,"CXCL12, LEPR, KITLG, PDGFRA, VCAM1, DCN, ANGPT1, COL1A1",marrowmesenchymalstromal
+mature_b_cell,maturebcell,2,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","MS4A1, CD79A, CD79B, CD22, BANK1, CD19, PAX5, CD37",maturebcell
+megakaryocyte_erythroid_progenitor,megakaryocyteerythroidprogenitor,2,1,gpt_5_5_noref_unrefined_high_human_immune,"GATA1, TAL1, KLF1, EPOR, MPL, ITGA2B, TFRC, HMBS",megakaryocyteerythroidprogenitor
+multipotent_progenitor,multipotentprogenitor,2,1,gpt_5_5_noref_unrefined_high_human_immune,"KIT, GATA2, MECOM, MYB, LMO2, FLT3, RUNX1, TAL1",multipotentprogenitor
+myeloid_lineage,myeloidlineage,2,1,gpt_5_5_unrefined_high_human_immune,"LYZ, FCN1, S100A8, S100A9, CSF3R, LST1, CTSS, SPI1",myeloidlineage
+naive_memory_t,naivememoryt,2,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","CCR7, SELL, TCF7, LEF1, IL7R, LTB, MAL",naivememoryt
+naive_memory_t_cell,naivememorytcell,2,1,gpt_5_5_unrefined_high_human_immune,"IL7R, CCR7, LTB, LEF1, TCF7, MAL, SELL, CD27",naivememorytcell
+naive_t_cell,naivetcell,2,1,gpt_5_5_noref_unrefined_high_human_immune,"CCR7, SELL, TCF7, LEF1, IL7R, LTB, MAL",naivetcell
+neutrophil,neutrophil,2,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","CSF3R, FCGR3B, CXCR2, S100A8, S100A9, LCN2, MMP8, CEACAM8",neutrophil
+osteo_lineage,osteolineage,2,1,gpt_5_5_unrefined_high_human_immune,"NCAM1, SPP1, BGLAP, IBSP, COL1A1, COL1A2, RUNX2, ALPL",osteolineage
+osteoclast,osteoclast,2,1,gpt_5_5_noref_unrefined_high_human_immune,"CTSK, ACP5, DCSTAMP, OCSTAMP, TNFRSF11A, MMP9, ATP6V0D2, CLCN7",osteoclast
+osteolineage_stromal,osteolineagestromal,2,2,"gpt_5_5_noref_unrefined_high_human_immune, gpt_5_5_unrefined_high_human_immune","RUNX2, ALPL, BGLAP, IBSP, SPP1, COL1A1, COL1A2, SP7",osteolineagestromal
+plasmacytoid_dendritic,plasmacytoiddendritic,2,1,gpt_5_5_unrefined_high_human_immune,"CLEC4C, LILRA4, IL3RA, TCF4, GZMB, PLD4, IRF7, SERPINF1",plasmacytoiddendritic
+sinusoidal_endothelial,sinusoidalendothelial,2,1,gpt_5_5_unrefined_high_human_immune,"CDH5, PECAM1, VWF, ACKR1, SELE, EPHB4, NR2F2, STAB2",sinusoidalendothelial
+vascular_smooth_muscle,vascularsmoothmuscle,2,1,gpt_5_5_unrefined_high_human_immune,"ACTA2, RGS5, TAGLN, MYH11, MCAM, CSPG4, NOTCH3",vascularsmoothmuscle
+B_cell,bcell,1,1,gpt_5_5_unrefined_high_human_immune,"MS4A1, CD79A, CD79B, CD19, BANK1, PAX5, CD74",bcell
+CD4_naive_memory_T,cd4naivememoryt,1,1,gpt_5_5_unrefined_high_human_immune,"CD4, IL7R, CCR7, TCF7, LEF1, LTB, MAL",cd4naivememoryt
+NK_cell,nkcell,1,1,gpt_5_5_unrefined_high_human_immune,"KLRD1, NKG7, GNLY, PRF1, FCGR3A, KLRF1, NCR1, GZMB",nkcell
+T_cell,tcell,1,1,gpt_5_5_unrefined_high_human_immune,"CD3D, CD3E, CD3G, TRAC, CD2, IL7R, LTB",tcell
+activation_immediate_early,activationimmediateearly,1,1,gpt_5_5_noref_unrefined_high_human_immune,"FOS, JUN, JUNB, DUSP1, EGR1, IER2, NR4A1",activationimmediateearly
+adipocyte_bm,adipocytebm,1,1,gpt_5_5_unrefined_high_human_immune,"ADIPOQ, LEP, LPL, PLIN1, FABP4, CEBPA",adipocytebm
+adipocyte_niche,adipocyteniche,1,1,gpt_5_5_unrefined_high_human_immune,"ADIPOQ, PLIN1, LPL, FABP4, CFD, PPARG",adipocyteniche
+antigen_presentation_mhc2,antigenpresentationmhc2,1,1,gpt_5_5_unrefined_high_human_immune,"HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, CD74, CIITA",antigenpresentationmhc2
+antigen_presenting_core,antigenpresentingcore,1,1,gpt_5_5_noref_unrefined_high_human_immune,"HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, CD74, CIITA, HLA-DQA1, HLA-DQB1",antigenpresentingcore
+axl_siglec6_dc,axlsiglec6dc,1,1,gpt_5_5_unrefined_high_human_immune,"AXL, SIGLEC6, PPP1R14A, CD22, DAB2, LILRA4",axlsiglec6dc
+b_cell_all,bcellall,1,1,gpt_5_5_noref_unrefined_high_human_immune,"MS4A1, CD79A, CD79B, CD19, CD22, PAX5, BLK, CD74",bcellall
+b_cell_mature,bcellmature,1,1,gpt_5_5_unrefined_high_human_immune,"MS4A1, CD79A, CD79B, CD74, HLA-DRA, BANK1, PAX5",bcellmature
+b_lineage,blineage,1,1,gpt_5_5_noref_unrefined_high_human_immune,"CD79A, CD79B, MS4A1, CD19, BANK1, PAX5, CD74, HLA-DRA",blineage
+b_plasma_lineage,bplasmalineage,1,1,gpt_5_5_noref_unrefined_high_human_immune,"MS4A1, CD79A, CD79B, PAX5, MZB1, XBP1, JCHAIN, SDC1",bplasmalineage
+bone_marrow_niche,bonemarrowniche,1,1,gpt_5_5_unrefined_high_human_immune,"COL1A1, COL1A2, DCN, LUM, CXCL12, LEPR, PDGFRA, KITLG",bonemarrowniche
+bone_marrow_niche_core,bonemarrownichecore,1,1,gpt_5_5_noref_unrefined_high_human_immune,"COL1A1, COL1A2, DCN, LUM, CXCL12, PDGFRA, PECAM1, VWF",bonemarrownichecore
+c_dc1,cdc1,1,1,gpt_5_5_unrefined_high_human_immune,"CLEC9A, XCR1, BATF3, CADM1, IRF8, IDO1",cdc1
+c_dc2,cdc2,1,1,gpt_5_5_unrefined_high_human_immune,"CD1C, CLEC10A, FCER1A, CST3, HLA-DRA, HLA-DPB1",cdc2
+c_dendritic_cell,cdendriticcell,1,1,gpt_5_5_noref_unrefined_high_human_immune,"FCER1A, CLEC10A, CD1C, CST3, HLA-DQA1, HLA-DPB1, IRF4",cdendriticcell
+c_dendritic_cell_1,cdendriticcell1,1,1,gpt_5_5_noref_unrefined_high_human_immune,"CLEC9A, XCR1, CADM1, BATF3, IRF8, IDO1, CPNE3",cdendriticcell1
+cd4_naive_memory,cd4naivememory,1,1,gpt_5_5_unrefined_high_human_immune,"CD4, IL7R, CCR7, SELL, LEF1, TCF7, KLF2",cd4naivememory
+cd56bright_nk_cell,cd56brightnkcell,1,1,gpt_5_5_noref_unrefined_high_human_immune,"NCAM1, XCL1, XCL2, KLRC1, GZMK, IL7R",cd56brightnkcell
+cd8_t,cd8t,1,1,gpt_5_5_noref_unrefined_high_human_immune,"CD8A, CD8B, GZMK, NKG7, CCL5, CRTAM",cd8t
+conventional_dc1,conventionaldc1,1,1,gpt_5_5_unrefined_high_human_immune,"CLEC9A, XCR1, BATF3, CADM1, IRF8, CLNK",conventionaldc1
+conventional_dc2,conventionaldc2,1,1,gpt_5_5_unrefined_high_human_immune,"CD1C, FCER1A, CLEC10A, CD1E, CST3, HLA-DQA1",conventionaldc2
+cxcl12_msc,cxcl12msc,1,1,gpt_5_5_noref_unrefined_high_human_immune,"CXCL12, LEPR, PDGFRA, THY1, COL1A1, COL1A2, DCN, LPL",cxcl12msc
+cycling_g2m,cyclingg2m,1,1,gpt_5_5_unrefined_high_human_immune,"MKI67, TOP2A, UBE2C, HMGB2, STMN1, PCLAF, TYMS",cyclingg2m
+cycling_progenitor,cyclingprogenitor,1,1,gpt_5_5_unrefined_high_human_immune,"MKI67, TOP2A, UBE2C, CENPF, HMGB2, STMN1, PCNA, TYMS",cyclingprogenitor
+cycling_progenitor_state,cyclingprogenitorstate,1,1,gpt_5_5_unrefined_high_human_immune,"MKI67, TOP2A, UBE2C, STMN1, PCNA, TYMS, HMGB2",cyclingprogenitorstate
+cytotoxic_T,cytotoxict,1,1,gpt_5_5_unrefined_high_human_immune,"CD8A, CD8B, NKG7, GZMB, PRF1, GNLY, CST7",cytotoxict
+cytotoxic_cd8_t_cell,cytotoxiccd8tcell,1,1,gpt_5_5_unrefined_high_human_immune,"CD8A, CD8B, NKG7, GNLY, GZMB, GZMH, PRF1, CCL5",cytotoxiccd8tcell
+cytotoxic_nk_cd8,cytotoxicnkcd8,1,1,gpt_5_5_unrefined_high_human_immune,"NKG7, GNLY, PRF1, GZMB, GZMH, CST7, FGFBP2, KLRD1",cytotoxicnkcd8
+cytotoxic_t,cytotoxict,1,1,gpt_5_5_noref_unrefined_high_human_immune,"NKG7, PRF1, GZMB, GZMH, GNLY, CCL5, CST7",cytotoxict
+dc_core,dccore,1,1,gpt_5_5_noref_unrefined_high_human_immune,"HLA-DRA, HLA-DRB1, CD74, CST3, IRF8, FCER1A, ITGAX",dccore
+dendritic_cell,dendriticcell,1,1,gpt_5_5_unrefined_high_human_immune,"HLA-DRA, HLA-DQA1, HLA-DPB1, CD1C, CLEC10A, FCER1A, LILRA4",dendriticcell
+developing_b,developingb,1,1,gpt_5_5_noref_unrefined_high_human_immune,"DNTT, RAG1, RAG2, VPREB1, VPREB3, IGLL1, MME, EBF1",developingb
+early_b_cell,earlybcell,1,1,gpt_5_5_noref_unrefined_high_human_immune,"DNTT, RAG1, RAG2, VPREB1, VPREB3, IGLL1, CD34, MME",earlybcell
+early_b_lymphoid,earlyblymphoid,1,1,gpt_5_5_noref_unrefined_high_human_immune,"DNTT, RAG1, RAG2, VPREB1, IGLL1, PAX5, CD79A, CD19",earlyblymphoid
+early_granulocyte,earlygranulocyte,1,1,gpt_5_5_noref_unrefined_high_human_immune,"MPO, ELANE, PRTN3, CTSG, AZU1, DEFA4, CAMP, OLFM4",earlygranulocyte
+early_lymphoid_progenitor,earlylymphoidprogenitor,1,1,gpt_5_5_unrefined_high_human_immune,"DNTT, RAG1, RAG2, VPREB1, CD79A, IL7R",earlylymphoidprogenitor
+early_myeloid_granulocytic,earlymyeloidgranulocytic,1,1,gpt_5_5_unrefined_high_human_immune,"MPO, ELANE, AZU1, PRTN3, CTSG, RNASE2, CEBPE, GFI1",earlymyeloidgranulocytic
+early_neutrophil_granulocyte,earlyneutrophilgranulocyte,1,1,gpt_5_5_noref_unrefined_high_human_immune,"MPO, ELANE, PRTN3, AZU1, CTSG, CEBPE, DEFA4, BPI",earlyneutrophilgranulocyte
+endothelial_bm,endothelialbm,1,1,gpt_5_5_unrefined_high_human_immune,"PECAM1, CDH5, VWF, KDR, EMCN, ESAM, RAMP2",endothelialbm
+endothelial_niche,endothelialniche,1,1,gpt_5_5_unrefined_high_human_immune,"PECAM1, VWF, KDR, ENG, EMCN, CDH5, CLDN5",endothelialniche
+endothelial_vascular,endothelialvascular,1,1,gpt_5_5_unrefined_high_human_immune,"PECAM1, VWF, KDR, EMCN, ESAM, CDH5, CLDN5, ENG",endothelialvascular
+erythroid_all,erythroidall,1,1,gpt_5_5_noref_unrefined_high_human_immune,"GATA1, KLF1, TAL1, TFRC, EPOR, ALAS2, SLC4A1, HBA1",erythroidall
+erythroid_mature,erythroidmature,1,1,gpt_5_5_unrefined_high_human_immune,"HBB, HBA1, HBA2, HBD, ALAS2, SLC4A1, GYPA, BLVRB",erythroidmature
+erythroid_megakaryocyte_primed,erythroidmegakaryocyteprimed,1,1,gpt_5_5_noref_unrefined_high_human_immune,"GATA1, KLF1, TAL1, LMO2, NFE2, ZFPM1, EPOR",erythroidmegakaryocyteprimed
+erythroid_megakaryocyte_priming,erythroidmegakaryocytepriming,1,1,gpt_5_5_unrefined_high_human_immune,"KLF1, CA1, TFR2, GATA1, TAL1, LMO2, ITGA2B, PLEK",erythroidmegakaryocytepriming
+erythroid_megakaryocyte_progenitor,erythroidmegakaryocyteprogenitor,1,1,gpt_5_5_noref_unrefined_high_human_immune,"GATA1, KLF1, TAL1, GFI1B, EPOR, MPL, ITGA2B, ZFPM1",erythroidmegakaryocyteprogenitor
+erythroid_program,erythroidprogram,1,1,gpt_5_5_unrefined_high_human_immune,"HBB, HBA1, HBA2, AHSP, ALAS2, KLF1, GYPA, SLC4A1",erythroidprogram
+fetal_like_erythroid,fetallikeerythroid,1,1,gpt_5_5_noref_unrefined_high_human_immune,"HBG1, HBG2, HBZ, GYPA, KLF1, AHSP, ALAS2",fetallikeerythroid
+gamma_delta_t_cell,gammadeltatcell,1,1,gpt_5_5_unrefined_high_human_immune,"TRDC, TRGC1, TRGC2, TRDV2, KLRB1, NKG7",gammadeltatcell
+granulocyte_immature,granulocyteimmature,1,1,gpt_5_5_noref_unrefined_high_human_immune,"MPO, ELANE, AZU1, PRTN3, CTSG, CEBPE, DEFA4, BPI",granulocyteimmature
+granulocyte_precursor,granulocyteprecursor,1,1,gpt_5_5_unrefined_high_human_immune,"MPO, ELANE, AZU1, CTSG, PRTN3, DEFA4, CEBPE",granulocyteprecursor
+hematopoietic_cd45,hematopoieticcd45,1,1,gpt_5_5_unrefined_high_human_immune,"PTPRC, LCP1, CORO1A, LAPTM5, CD52, ARHGAP15",hematopoieticcd45
+hematopoietic_leukocyte,hematopoieticleukocyte,1,1,gpt_5_5_unrefined_high_human_immune,"PTPRC, LCP1, CORO1A, LAPTM5, SRGN, FYB1",hematopoieticleukocyte
+hematopoietic_leukocyte_core,hematopoieticleukocytecore,1,1,gpt_5_5_unrefined_high_human_immune,"PTPRC, LAPTM5, CORO1A, LCP1, ARHGDIB, FYB1",hematopoieticleukocytecore
+hematopoietic_stem_mpp,hematopoieticstemmpp,1,1,gpt_5_5_unrefined_high_human_immune,"CD34, KIT, PROM1, HLF, MLLT3, MECOM, SPINK2, MEIS1",hematopoieticstemmpp
+hsc_mpp,hscmpp,1,1,gpt_5_5_unrefined_high_human_immune,"HLF, CRHBP, ADGRG6, PCDH9, SPINK2, CD34, PROM1",hscmpp
+hsc_mpp_stemness,hscmppstemness,1,1,gpt_5_5_unrefined_high_human_immune,"HLF, CRHBP, SPINK2, ADGRG6, DUSP1, AVP, MEIS1, MLLT3",hscmppstemness
+hsc_quiescent,hscquiescent,1,1,gpt_5_5_noref_unrefined_high_human_immune,"HLF, MECOM, MLLT3, MEIS1, AVP, NRIP1, SOCS2, PROCR",hscquiescent
+hspc_core,hspccore,1,1,gpt_5_5_unrefined_high_human_immune,"CD34, PROM1, AVP, HLF, MLLT3, SPINK2, CRHBP, MEIS1",hspccore
+hspc_quiescence,hspcquiescence,1,1,gpt_5_5_noref_unrefined_high_human_immune,"HLF, MEIS1, MECOM, NRIP1, MLLT3, SOCS2, PROCR, THY1",hspcquiescence
+hspc_stem_primed,hspcstemprimed,1,1,gpt_5_5_noref_unrefined_high_human_immune,"CD34, PROM1, SPINK2, HLF, MEIS1, MLLT3, AVP, CRHBP",hspcstemprimed
+hspc_stem_primitive,hspcstemprimitive,1,1,gpt_5_5_unrefined_high_human_immune,"CD34, PROM1, SPINK2, HLF, MLLT3, MEIS1, CRHBP, AVP",hspcstemprimitive
+immature_neutrophil,immatureneutrophil,1,1,gpt_5_5_noref_unrefined_high_human_immune,"MPO, ELANE, AZU1, PRTN3, CTSG, CEBPE, DEFA4",immatureneutrophil
+immediate_activation,immediateactivation,1,1,gpt_5_5_noref_unrefined_high_human_immune,"FOS, JUN, JUNB, DUSP1, NFKBIA, TNFAIP3, CD69, IL2RA",immediateactivation
+immediate_early_stress,immediateearlystress,1,1,gpt_5_5_noref_unrefined_high_human_immune,"FOS, JUN, JUNB, DUSP1, EGR1, IER2, KLF6",immediateearlystress
+inflammatory_myeloid,inflammatorymyeloid,1,1,gpt_5_5_unrefined_high_human_immune,"IL1B, CCL3, CCL4, CXCL8, NFKBIA, TNFAIP3, IER3, JUNB",inflammatorymyeloid
+inflammatory_myeloid_state,inflammatorymyeloidstate,1,1,gpt_5_5_noref_unrefined_high_human_immune,"IL1B, NFKBIA, TNFAIP3, CXCL8, CCL3, CCL4, PTGS2",inflammatorymyeloidstate
+interferon_stimulated,interferonstimulated,1,1,gpt_5_5_unrefined_high_human_immune,"ISG15, IFIT1, IFIT2, IFIT3, MX1, MX2, OAS1, OAS2",interferonstimulated
+late_erythroid_reticulocyte,lateerythroidreticulocyte,1,1,gpt_5_5_noref_unrefined_high_human_immune,"HBB, HBA1, HBA2, AHSP, ALAS2, SLC4A1, CA1, CA2",lateerythroidreticulocyte
+leukocyte_gate,leukocytegate,1,1,gpt_5_5_unrefined_high_human_immune,"PTPRC, LCP1, CORO1A, LAPTM5, ARHGAP15, SRGN",leukocytegate
+lymphocyte_core,lymphocytecore,1,1,gpt_5_5_noref_unrefined_high_human_immune,"CD3D, CD3E, TRAC, NKG7, GNLY, CD79A, MS4A1, IL7R",lymphocytecore
+lymphoid_priming,lymphoidpriming,1,1,gpt_5_5_unrefined_high_human_immune,"DNTT, RAG1, RAG2, VPREB1, IGLL1, CD79A, EBF1, PAX5",lymphoidpriming
+lymphoid_progenitor_b_precursor,lymphoidprogenitorbprecursor,1,1,gpt_5_5_noref_unrefined_high_human_immune,"DNTT, RAG1, RAG2, VPREB1, IGLL1, EBF1, PAX5, CD79A",lymphoidprogenitorbprecursor
+macrophage_bm,macrophagebm,1,1,gpt_5_5_unrefined_high_human_immune,"CD68, C1QA, C1QB, C1QC, APOE, MRC1, CSF1R",macrophagebm
+mait_like_t_cell,maitliketcell,1,1,gpt_5_5_unrefined_high_human_immune,"TRAV1-2, KLRB1, SLC4A10, IL18RAP, CCR6, RORC, DPP4",maitliketcell
+marrow_cxcl12_stromal,marrowcxcl12stromal,1,1,gpt_5_5_unrefined_high_human_immune,"CXCL12, LEPR, PDGFRA, KITLG, DCN, LUM, COL1A1, PRRX1",marrowcxcl12stromal
+marrow_endothelial,marrowendothelial,1,1,gpt_5_5_unrefined_high_human_immune,"PECAM1, VWF, KDR, EMCN, RAMP2, CLDN5, ESAM",marrowendothelial
+marrow_niche,marrowniche,1,1,gpt_5_5_noref_unrefined_high_human_immune,"CXCL12, LEPR, PDGFRA, COL1A1, COL3A1, DCN, LUM, PECAM1",marrowniche
+marrow_niche_stromal_core,marrownichestromalcore,1,1,gpt_5_5_noref_unrefined_high_human_immune,"CXCL12, LEPR, PDGFRA, PDGFRB, VCAM1, COL1A1, COL1A2, DCN",marrownichestromalcore
+marrow_osteolineage,marrowosteolineage,1,1,gpt_5_5_unrefined_high_human_immune,"RUNX2, SP7, ALPL, BGLAP, IBSP, COL1A1, SPARC",marrowosteolineage
+marrow_stromal_all,marrowstromalall,1,1,gpt_5_5_noref_unrefined_high_human_immune,"CXCL12, LEPR, PDGFRA, PECAM1, VWF, PDGFRB, COL1A1, DCN",marrowstromalall
+marrow_stromal_msc,marrowstromalmsc,1,1,gpt_5_5_noref_unrefined_high_human_immune,"CXCL12, LEPR, PDGFRA, THY1, VCAM1, KITLG, ANGPT1, NT5E",marrowstromalmsc
+marrow_stromal_niche,marrowstromalniche,1,1,gpt_5_5_unrefined_high_human_immune,"CXCL12, LEPR, VCAM1, PDGFRA, COL1A1, COL3A1, DCN",marrowstromalniche
+mature_dc,maturedc,1,1,gpt_5_5_noref_unrefined_high_human_immune,"CCR7, LAMP3, CCL19, CCL22, FSCN1, BIRC3, CD83, RELB",maturedc
+mature_erythroid,matureerythroid,1,1,gpt_5_5_noref_unrefined_high_human_immune,"HBB, HBA1, HBA2, HBD, GYPA, ALAS2, AHSP, SLC4A1",matureerythroid
+mature_lymphoid,maturelymphoid,1,1,gpt_5_5_noref_unrefined_high_human_immune,"CD3D, TRAC, MS4A1, CD79A, NKG7, GNLY, KLRD1, IL7R",maturelymphoid
+megakaryocyte_platelet_lineage,megakaryocyteplateletlineage,1,1,gpt_5_5_unrefined_high_human_immune,"PPBP, PF4, NRGN, GP9, ITGA2B, ITGB3, TUBB1, GP1BA",megakaryocyteplateletlineage
+mesenchymal_stroma,mesenchymalstroma,1,1,gpt_5_5_unrefined_high_human_immune,"CXCL12, PDGFRA, LEPR, NGFR, NT5E, THY1, ENG",mesenchymalstroma
+mesenchymal_stromal_bm,mesenchymalstromalbm,1,1,gpt_5_5_unrefined_high_human_immune,"CXCL12, LEPR, VCAM1, PDGFRA, PDGFRB, NGFR, KITLG",mesenchymalstromalbm
+mesenchymal_stromal_car,mesenchymalstromalcar,1,1,gpt_5_5_unrefined_high_human_immune,"CXCL12, LEPR, VCAM1, KITLG, PDGFRA, THY1, NT5E, ENG",mesenchymalstromalcar
+mesenchymal_stromal_niche,mesenchymalstromalniche,1,1,gpt_5_5_unrefined_high_human_immune,"CXCL12, LEPR, PDGFRA, PDGFRB, VCAM1, KITLG, NGFR",mesenchymalstromalniche
+mhc_ii_antigen_presentation,mhciiantigenpresentation,1,1,gpt_5_5_unrefined_high_human_immune,"HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, HLA-DQA1, HLA-DQB1, CD74, CIITA",mhciiantigenpresentation
+monocyte_all,monocyteall,1,1,gpt_5_5_noref_unrefined_high_human_immune,"LYZ, LST1, S100A8, S100A9, FCN1, VCAN, CTSS, LGALS3",monocyteall
+monocyte_classical,monocyteclassical,1,1,gpt_5_5_unrefined_high_human_immune,"LYZ, FCN1, VCAN, S100A8, S100A9, LST1, CD14",monocyteclassical
+monocyte_macrophage_core,monocytemacrophagecore,1,1,gpt_5_5_noref_unrefined_high_human_immune,"LYZ, LST1, CTSS, S100A8, S100A9, FCN1, AIF1, TYROBP",monocytemacrophagecore
+monocyte_nonclassical,monocytenonclassical,1,1,gpt_5_5_unrefined_high_human_immune,"FCGR3A, MS4A7, LST1, IFITM3, LILRB2, CX3CR1, RHOC",monocytenonclassical
+myeloid_all,myeloidall,1,1,gpt_5_5_noref_unrefined_high_human_immune,"LYZ, LST1, FCN1, S100A8, S100A9, CSF3R, MPO, HLA-DRA",myeloidall
+myeloid_gate,myeloidgate,1,1,gpt_5_5_unrefined_high_human_immune,"LYZ, LST1, TYROBP, FCER1G, AIF1, SPI1, CTSS",myeloidgate
+myeloid_granulocyte_precursor,myeloidgranulocyteprecursor,1,1,gpt_5_5_unrefined_high_human_immune,"MPO, ELANE, PRTN3, AZU1, CTSG, CAMP, LTF",myeloidgranulocyteprecursor
+myeloid_granulocyte_priming,myeloidgranulocytepriming,1,1,gpt_5_5_unrefined_high_human_immune,"MPO, ELANE, AZU1, CTSG, PRTN3, LYZ, CSF1R, CEBPE",myeloidgranulocytepriming
+myeloid_inflammatory_activation,myeloidinflammatoryactivation,1,1,gpt_5_5_noref_unrefined_high_human_immune,"IL1B, CXCL8, NFKBIA, TNFAIP3, CCL3, CCL4, JUN, FOS",myeloidinflammatoryactivation
+myeloid_primed_progenitor,myeloidprimedprogenitor,1,1,gpt_5_5_noref_unrefined_high_human_immune,"MPO, ELANE, AZU1, PRTN3, CTSG, CEBPA, SPI1",myeloidprimedprogenitor
+natural_killer_cell,naturalkillercell,1,1,gpt_5_5_unrefined_high_human_immune,"NKG7, GNLY, PRF1, KLRD1, FCGR3A, KLRC1, KLRF1, NCR1",naturalkillercell
+nk_cd16_cytotoxic,nkcd16cytotoxic,1,1,gpt_5_5_noref_unrefined_high_human_immune,"FCGR3A, PRF1, GZMB, KLRD1, CX3CR1, FGFBP2",nkcd16cytotoxic
+nk_cd56bright,nkcd56bright,1,1,gpt_5_5_noref_unrefined_high_human_immune,"NCAM1, XCL1, XCL2, IL7R, SELL, KLRC1",nkcd56bright
+nk_identity,nkidentity,1,1,gpt_5_5_unrefined_high_human_immune,"KLRD1, KLRF1, FCGR3A, TYROBP, NKG7, GNLY, TRDC, KLRC1",nkidentity
+osteolineage_bm,osteolineagebm,1,1,gpt_5_5_unrefined_high_human_immune,"RUNX2, ALPL, SPARC, COL1A1, COL1A2, BGLAP, IBSP",osteolineagebm
+osteolineage_niche,osteolineageniche,1,1,gpt_5_5_unrefined_high_human_immune,"BGLAP, RUNX2, SP7, ALPL, COL1A1, IBSP, SPP1",osteolineageniche
+pan_dc_apc,pandcapc,1,1,gpt_5_5_noref_unrefined_high_human_immune,"HLA-DRA, HLA-DRB1, CD74, FCER1A, ITGAX, IRF8, CIITA",pandcapc
+pan_dendritic,pandendritic,1,1,gpt_5_5_noref_unrefined_high_human_immune,"FLT3, IRF8, HLA-DRA, ITGAX, CLEC10A, FCER1A, LILRA4, CLEC9A",pandendritic
+pan_hematopoietic,panhematopoietic,1,1,gpt_5_5_unrefined_high_human_immune,"PTPRC, LCP1, CORO1A, CD52, CD37, ARHGEF1, FYB1",panhematopoietic
+perivascular_smooth_muscle,perivascularsmoothmuscle,1,1,gpt_5_5_unrefined_high_human_immune,"ACTA2, TAGLN, MYH11, RGS5, MCAM, NOTCH3",perivascularsmoothmuscle
+plasmacytoid_dendritic_cell,plasmacytoiddendriticcell,1,1,gpt_5_5_noref_unrefined_high_human_immune,"IL3RA, CLEC4C, LILRA4, TCF4, IRF7, GZMB, JCHAIN",plasmacytoiddendriticcell
+pro_b_cell,probcell,1,1,gpt_5_5_noref_unrefined_high_human_immune,"DNTT, VPREB1, VPREB3, IGLL1, RAG1, RAG2, MME, CD24",probcell
+proliferation_g2m,proliferationg2m,1,1,gpt_5_5_unrefined_high_human_immune,"MKI67, TOP2A, AURKB, BIRC5, CCNB1, CDK1, CDC20",proliferationg2m
+regulatory_T,regulatoryt,1,1,gpt_5_5_unrefined_high_human_immune,"FOXP3, IL2RA, CTLA4, TIGIT, IKZF2, TNFRSF18",regulatoryt
+schwann_cell,schwanncell,1,1,gpt_5_5_unrefined_high_human_immune,"PLP1, NGFR, SOX10, MPZ, S100B",schwanncell
+t_activation,tactivation,1,1,gpt_5_5_unrefined_high_human_immune,"IL2, TNF, IFNG, CD69, ICOS, NME1, LIF, G0S2",tactivation
+t_cell_all,tcellall,1,1,gpt_5_5_noref_unrefined_high_human_immune,"CD3D, CD3E, CD3G, TRAC, TRBC1, LAT, LCK, IL7R",tcellall
+t_cytotoxic,tcytotoxic,1,1,gpt_5_5_unrefined_high_human_immune,"CD8A, CD8B, GZMK, NKG7, CCL5, PRF1, GZMB",tcytotoxic
+t_naive_memory,tnaivememory,1,1,gpt_5_5_unrefined_high_human_immune,"CCR7, TCF7, LEF1, SELL, MAL, IL7R, LTB",tnaivememory
+thy1_msc,thy1msc,1,1,gpt_5_5_unrefined_high_human_immune,"THY1, LBP, CXCL12, FOXC1, LEPR, PDGFRA",thy1msc
+vascular_smooth_muscle_pericyte,vascularsmoothmusclepericyte,1,1,gpt_5_5_unrefined_high_human_immune,"ACTA2, RGS5, TAGLN, MCAM, PDGFRB, CSPG4, MYH11, NOTCH3",vascularsmoothmusclepericyte
