@@ -65,9 +65,17 @@ done
 
 # --- structured-framework analyses (human pancreas) -------------------------
 run "$PY" "$PLOTS/plot_reproducibility.py" --dataset human_pancreas
-run "$PY" "$PLOTS/plot_three_way_summary.py" --dataset human_pancreas --model-tag gpt_5_5_high
+# Four blueprint cohorts vs three free-form arms. The blueprint arms and the scIB
+# bio/batch panels reproduce here; the free-form arms' structural panels (c gene
+# Jaccard, e #dims, f citations) need the free-form embeddings + status mirrors and
+# so populate only under reproduce_all.sh (the heavy path).
+run "$PY" "$PLOTS/plot_three_way_summary.py" --dataset human_pancreas --model-tag gpt_5_5_high \
+  --blueprint-tags gpt_5_5_unrefined_high,gpt_5_5_refine_high,gpt_5_5_noref_unrefined_high,gpt_5_5_noref_refine_high \
+  --freeform-variants constrained,naive,noref
 run "$PY" "$PLOTS/plot_blueprint_repertoire.py" --dataset human_pancreas
-run "$PY" "$PLOTS/plot_resource_costs.py" --dataset human_pancreas --overwrite
+# --include-refine stacks the Stage-B refinement cost onto the refine cohorts, as in
+# the manuscript ("Stage B refinement is included in the blueprint costs throughout").
+run "$PY" "$PLOTS/plot_resource_costs.py" --dataset human_pancreas --overwrite --include-refine
 run "$PY" "$PLOTS/plot_refinement_ablation.py" --dataset human_pancreas
 
 # --- developmental-tree showcase (mouse gastrulation) -----------------------

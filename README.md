@@ -140,6 +140,12 @@ panels and axis tree, the held-out transfer bars, and the authored-blueprint car
 in minutes with only the conda env, and needs no downloads or baselines. Figures land under
 `outs/plots/`.
 
+Two things need the full path below. The quick path does not build the embedding-visualization
+figures (UMAP grids, marker dot plots, axis-faithfulness matrices, branch filmstrips). And in
+the three-way summary, the free-form arms of the structural panels (gene Jaccard, axis count,
+citation density) stay empty, since they need the regenerated free-form embeddings. The
+blueprint arms and the scIB panels still reproduce.
+
 ### Full (end-to-end)
 
 The embedding-visualization figures (UMAP grids, marker-gene dot plots, axis-faithfulness

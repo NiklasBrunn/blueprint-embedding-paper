@@ -39,6 +39,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import shutil
 import subprocess
@@ -148,6 +149,13 @@ def apply_freeform_cohort(cohort_dir: Path, dataset: str, overwrite: bool) -> tu
         total += 1
         parquet = EMBEDDINGS_ROOT / dataset / f"{cohort}_seed{seed}.parquet"
         if _run_embedder(script, dataset, parquet, overwrite):
+            # Status mirror consumed by plot_three_way_summary's freeform_stats
+            # (embed_status / embed_detail); the Finalize step of the freeform
+            # orchestrator writes the same file during real runs.
+            status = parquet.with_name(f"{cohort}_seed{seed}_status.json")
+            status.write_text(json.dumps(
+                {"embed_status": "OK",
+                 "embed_detail": str(parquet.relative_to(REPO_ROOT))}, indent=2) + "\n")
             ok += 1
     return ok, total
 
