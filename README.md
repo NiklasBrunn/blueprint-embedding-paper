@@ -175,8 +175,9 @@ The web-app suite lives under `webapp/tests/` and needs the web-app environment
 
 The datasets are public and fetched by `run_data_pipeline.sh`. They are the mouse isocortex
 atlas (Tasic 2016/2018, Zeisel 2018), the human pancreas and human immune scIB compendia
-(Luecken 2022), and the mouse gastrulation atlas (Pijuan-Sala 2019). Processed AnnData and
-authored blueprints are archived with the manuscript.
+(Luecken 2022), and the mouse gastrulation atlas (Pijuan-Sala 2019). The authored blueprints
+and all analysis code are in this repository. The processed AnnData objects are not deposited
+but can be regenerated from the public source datasets with the data pipeline.
 
 ## Citation
 
