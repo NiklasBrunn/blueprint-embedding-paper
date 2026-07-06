@@ -11,8 +11,8 @@ The axes can also be steered into structured topologies such as a developmental 
 
 ![Overview of the blueprint workflow.](docs/img/model_overview.png)
 
-*(**a**) A coding agent edits the blueprint template to author literature-cited gene programs
-and axes, without seeing the data. (**b**) Applying the blueprint is a deterministic, CPU-only
+*Left: a coding agent edits the blueprint template to author literature-cited gene programs
+and axes, without seeing the data. Right: applying the blueprint is a deterministic, CPU-only
 pass that embeds an `.h5ad` into a cell-by-axis table. (Figure 1a,b of the manuscript.)*
 
 > **Manuscript.** This repository contains the code for *"Coding agents author interpretable
