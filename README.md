@@ -20,7 +20,7 @@ pass that embeds an `.h5ad` into a cell-by-axis table. (Figure 1a,b of the manus
 > Paper: **[link to be added]**.
 
 > ⚠️ **Authoring blueprints uses paid LLM credits.** The agentic pipelines and the web app's
-> Generate tab drive an external coding-agent CLI (currently Codex or Claude), which needs
+> Generate tab drive an external coding-agent CLI (pipelines: Codex or Claude; web app: Codex), which needs
 > your own provider account, an API key or subscription, and the provider's CLI installed
 > locally. Each authoring run is billed to your account. The cost scales with the model, the
 > reasoning effort, the number of runs, and whether Stage B refinement is enabled.
@@ -72,6 +72,14 @@ to use the web app's Map and Explore tabs. Node.js 18+ is a prerequisite for eit
 
 - **Codex** (OpenAI): `npm install -g @openai/codex`. See [github.com/openai/codex](https://github.com/openai/codex) and the [CLI docs](https://developers.openai.com/codex/cli).
 - **Claude Code** (Anthropic): `npm install -g @anthropic-ai/claude-code`. See the [setup docs](https://code.claude.com/docs/en/setup) and [github.com/anthropics/claude-code](https://github.com/anthropics/claude-code).
+
+Tested with (preprint runs used earlier CLI versions; model availability depends on your account):
+
+| Component | CLI | Models |
+| --- | --- | --- |
+| Pipelines, Codex (`analysis/agent_*.sh`) | Codex CLI 0.155.1 | `gpt-5.5` (preprint), `gpt-5.6-sol`, `gpt-5.6-terra`, `gpt-5.6-luna` |
+| Pipelines, Claude (`analysis/*_claude.sh`) | Claude Code 2.1.280 | any `claude --model` id or alias |
+| Web app, Generate tab | Codex CLI 0.155.1 | as Codex pipelines |
 
 ## Usage
 

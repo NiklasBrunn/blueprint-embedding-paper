@@ -130,7 +130,7 @@ SOURCE_EXTRACT_SCRIPT="${REPO_ROOT}/scripts/agentic_embedding/extract_run.py"
 WORK_ROOT="${REPO_ROOT}/work"
 
 DEFAULT_MAX_REFINE_ITERATIONS=3
-DATASET_CHOICES=(mouse_brain human_pancreas mouse_gastrulation)
+DATASET_CHOICES=(mouse_brain human_pancreas mouse_gastrulation mouse_cortex human_immune)
 REASONING_CHOICES=(low medium high xhigh)
 
 usage() {
@@ -154,7 +154,7 @@ Optional:
   --force                    Overwrite an existing destination workdir
                              in the _refine cohort (default: refuse).
   --model SLUG               Override auto-detected codex model
-                             (e.g. gpt-5.5, gpt-5.4, gpt-5.4-mini).
+                             (e.g. gpt-5.5, gpt-5.6-luna).
   --reasoning-effort LEVEL   Override auto-detected reasoning effort
                              (low | medium | high | xhigh).
   -h, --help                 Print this message and exit.
@@ -308,7 +308,7 @@ if [[ -z "${BASE}" || -z "${REASONING}" || -z "${DATASET}" ]]; then
 fi
 
 # Under a noref source cohort, run the whole Stage B loop on the
-# resource-optional contract by swapping the Discriminator/Generator prompts
+# resource-free contract by swapping the Discriminator/Generator prompts
 # to their `_noref` siblings (the Stage-A populator contract +
 # embedder_blueprint.py are already the noref variants, carried over per-run
 # in Artifact staging). Mirrors agent_edit_blueprint.sh's --noref --with-refine swap.
@@ -382,12 +382,15 @@ SESSION_LOG_DIR="${PARENT_DIR}/sessions"
 BLUEPRINT_INPUT="${REPO_ROOT}/data/preprocessed/${DATASET}_pp.h5ad"
 
 CODEX_ARGS=(
+  -s workspace-write
   -c "tools.web_search=true"
   -c "sandbox_workspace_write.network_access=true"
   -m "${MODEL}"
   -c "model_reasoning_effort=\"${REASONING_EFFORT}\""
 )
 CODEX_ARGS+=(--disable fast_mode)
+# Isolation: hide the user's Codex plugins, apps, memories and skills from the agent.
+CODEX_ARGS+=(--disable plugins --disable apps --disable memories -c "skills.include_instructions=false")
 
 for required_file in \
     "${SOURCE_PROMPT_DISCRIMINATE}" \
@@ -481,6 +484,7 @@ done
   printf 'embed: %s\n'                  "${EMBED}"
   printf 'codex_web_search: always-on\n'
   printf 'codex_network_access: always-on\n'
+  printf 'codex_sandbox: workspace-write (isolated: no plugins/apps/memories/skills)\n'
   printf 'parent_dir: %s\n' "${PARENT_NAME}"
   printf 'workdirs:\n'
   for w in "${WORKDIRS[@]}"; do
@@ -545,7 +549,7 @@ for workdir in "${SURVIVORS[@]}"; do
           "$(date '+%H:%M:%S')" "$(basename "${workdir}")" "${nn}" >> "${SESSION_LOG}"
       set +e
       _t0=$(date +%s)
-      codex exec ${CODEX_ARGS[@]+"${CODEX_ARGS[@]}"} "${DISCRIMINATE_PROMPT}" \
+      codex exec ${CODEX_ARGS[@]+"${CODEX_ARGS[@]}"} "${DISCRIMINATE_PROMPT}" </dev/null \
         >"${disc_log}" 2>&1
       disc_rc=$?
       _t1=$(date +%s)
@@ -599,7 +603,7 @@ PYEOF
             "${nn}" "${gen_attempt}" >> "${SESSION_LOG}"
         set +e
         _t2=$(date +%s)
-        codex exec ${CODEX_ARGS[@]+"${CODEX_ARGS[@]}"} "${gen_prompt_used}" \
+        codex exec ${CODEX_ARGS[@]+"${CODEX_ARGS[@]}"} "${gen_prompt_used}" </dev/null \
           >"${gen_log}" 2>&1
         gen_rc=$?
         _t3=$(date +%s)
@@ -961,7 +965,7 @@ if [[ -f "${EXTRACT_COST_SCRIPT}" ]]; then
   cost_out_dir="${REPO_ROOT}/outs/embeddings/${DATASET}"
   for workdir in "${WORKDIRS[@]}"; do
     python "${EXTRACT_COST_SCRIPT}" "${workdir}" || true
-    if [[ -s "${workdir}/cost.json" && -s "${workdir}/.embed_detail" ]]; then
+    if [[ -s "${workdir}/cost.json" && "$(cat "${workdir}/.embed_status" 2>/dev/null)" == "OK" ]]; then
       detail=$(cat "${workdir}/.embed_detail")
       if [[ "${detail}" == *.parquet ]]; then
         stem=$(basename "${detail}" .parquet)

@@ -15,7 +15,7 @@
 # Isolation mode is *inherited* from the source cohort slug:
 #   - source slug ends in `_userctx_unrefined_<r>_<ds>` → destination
 #     slug ends in `_userctx_refine_<r>_<ds>`, run with project memory
-#     + skills enabled (no --disable-slash-commands, no
+#     + skills enabled (no --safe-mode, no
 #     CLAUDE_CODE_DISABLE_AUTO_MEMORY=1).
 #   - otherwise → destination slug ends in `_refine_<r>_<ds>`, run with
 #     full isolation (matches agent_edit_blueprint_claude.sh's default).
@@ -93,8 +93,8 @@ SOURCE_EXTRACT_SCRIPT="${REPO_ROOT}/scripts/agentic_embedding/extract_run.py"
 WORK_ROOT="${REPO_ROOT}/work"
 
 DEFAULT_MAX_REFINE_ITERATIONS=3
-DATASET_CHOICES=(mouse_brain human_pancreas mouse_gastrulation)
-REASONING_CHOICES=(low medium high xhigh)
+DATASET_CHOICES=(mouse_brain human_pancreas mouse_gastrulation mouse_cortex human_immune)
+REASONING_CHOICES=(low medium high xhigh max)
 
 usage() {
   cat <<'EOF'
@@ -129,7 +129,7 @@ Auto-detection:
   contains _userctx, the destination keeps _userctx and runs claude with
   project memory + skills enabled; otherwise the destination runs in
   isolated mode (CLAUDE_CODE_DISABLE_AUTO_MEMORY=1,
-  --disable-slash-commands --setting-sources user).
+  --safe-mode --strict-mcp-config).
 
 Output layout (<tag> = refine for an _unrefined source, noref_refine for a _noref source):
   Destination workdirs at  work/<base>_<tag>_<reasoning>_<dataset>/<YYMMDD>_blueprint_runNN/
@@ -267,7 +267,7 @@ if [[ -z "${BASE}" || -z "${REASONING}" || -z "${DATASET}" ]]; then
 fi
 
 # Under a noref source cohort, run the whole Stage B loop on the
-# resource-optional contract by swapping the Discriminator/Generator prompts
+# resource-free contract by swapping the Discriminator/Generator prompts
 # to their `_noref` siblings (the Stage-A populator contract +
 # embedder_blueprint.py are already the noref variants, carried over per-run
 # in Artifact staging). Mirrors agent_edit_blueprint_claude.sh's --noref --with-refine swap.
@@ -312,7 +312,7 @@ REASONING_EFFORT="${REASONING_OVERRIDE:-${REASONING_AUTO:-${REASONING}}}"
 
 if [[ -z "${MODEL}" ]]; then
   printf 'Could not auto-detect claude model from %s/sessions/*.log.\n' "${SOURCE_PARENT}" >&2
-  printf 'Pass --model SLUG to override (e.g. claude-opus-4-7).\n' >&2
+  printf 'Pass --model SLUG to override (e.g. claude-opus-5-5).\n' >&2
   exit 1
 fi
 if ! valid_choice "${REASONING_EFFORT}" "${REASONING_CHOICES[@]}"; then
@@ -353,10 +353,10 @@ CLAUDE_ARGS=(
   --model "${MODEL}"
   --effort "${REASONING_EFFORT}"
   --dangerously-skip-permissions
-  --output-format text
+  --output-format json
 )
 if [[ "${ISOLATE}" == "on" ]]; then
-  CLAUDE_ARGS+=(--disable-slash-commands --setting-sources user)
+  CLAUDE_ARGS+=(--safe-mode --strict-mcp-config)
   export CLAUDE_CODE_DISABLE_AUTO_MEMORY=1
 fi
 
@@ -443,8 +443,7 @@ done
   printf 'claude_network_access: always-on (--dangerously-skip-permissions)\n'
   if [[ "${ISOLATE}" == "on" ]]; then
     printf 'claude_auto_memory: disabled (CLAUDE_CODE_DISABLE_AUTO_MEMORY=1)\n'
-    printf 'claude_skills: disabled (--disable-slash-commands)\n'
-    printf 'claude_setting_sources: user (ignores project/local settings)\n'
+    printf 'claude_customizations: disabled (--safe-mode --strict-mcp-config)\n'
   else
     printf 'claude_auto_memory: enabled (inherited from source _userctx)\n'
     printf 'claude_skills: enabled (inherited from source _userctx)\n'
@@ -512,7 +511,7 @@ for workdir in "${SURVIVORS[@]}"; do
           "$(date '+%H:%M:%S')" "$(basename "${workdir}")" "${nn}" >> "${SESSION_LOG}"
       set +e
       _t0=$(date +%s)
-      claude "${CLAUDE_ARGS[@]}" "${DISCRIMINATE_PROMPT}" \
+      claude "${CLAUDE_ARGS[@]}" "${DISCRIMINATE_PROMPT}" </dev/null \
         >"${disc_log}" 2>&1
       disc_rc=$?
       _t1=$(date +%s)
@@ -566,7 +565,7 @@ PYEOF
             "${nn}" "${gen_attempt}" >> "${SESSION_LOG}"
         set +e
         _t2=$(date +%s)
-        claude "${CLAUDE_ARGS[@]}" "${gen_prompt_used}" \
+        claude "${CLAUDE_ARGS[@]}" "${gen_prompt_used}" </dev/null \
           >"${gen_log}" 2>&1
         gen_rc=$?
         _t3=$(date +%s)
@@ -926,7 +925,7 @@ if [[ -f "${EXTRACT_COST_SCRIPT}" ]]; then
   cost_out_dir="${REPO_ROOT}/outs/embeddings/${DATASET}"
   for workdir in "${WORKDIRS[@]}"; do
     python "${EXTRACT_COST_SCRIPT}" "${workdir}" || true
-    if [[ -s "${workdir}/cost.json" && -s "${workdir}/.embed_detail" ]]; then
+    if [[ -s "${workdir}/cost.json" && "$(cat "${workdir}/.embed_status" 2>/dev/null)" == "OK" ]]; then
       detail=$(cat "${workdir}/.embed_detail")
       if [[ "${detail}" == *.parquet ]]; then
         stem=$(basename "${detail}" .parquet)

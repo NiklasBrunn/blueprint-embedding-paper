@@ -44,32 +44,38 @@ configuration.
 
 ### Resource-unconstrained variant (`--noref`)
 
-`--noref` runs a comparison cohort in which literature citations are *optional* (the agent
-MAY cite IF≥10 papers/atlases/databases but is not required to). It swaps in
+`--noref` runs a comparison cohort without literature grounding: there is no citation
+mechanism, and gene modules are plain gene lists. It swaps in
 `scripts/agentic_embedding/embedder_blueprint_noref.py` and the `*_noref.md` prompt
 templates, and tags the cohort `_noref_{unrefined|refine}`. It composes with
 `--with-refine`. The runs surface as a distinct cohort in `metrics.csv` / `costs.csv`
 alongside the `_unrefined` / `_refine` rows.
 
-## Claude script: isolation caveat
+## Agent isolation
 
-Unlike `codex`, the `claude` CLI auto-loads project- and user-specific context into every
+Codex runs use `-s workspace-write` (edits confined to the workdir, network on for web search
+and the Crossref check) and hide the user's Codex plugins, apps, memories and skills
+(`--disable plugins --disable apps --disable memories -c skills.include_instructions=false`).
+
+### Claude script: isolation caveat
+
+Like `codex`, the `claude` CLI auto-loads project- and user-specific context into every
 non-interactive run:
 
 - **Project auto-memory** at `~/.claude/projects/<slug>/memory/MEMORY.md` (and linked notes),
-  a local per-machine artifact that Codex has no equivalent of. If that memory holds anything
+  a local per-machine artifact. If that memory holds anything
   relevant to blueprint authoring, for example a list of high-impact journals or reference
   atlases, Claude effectively starts each run with a partial cheat sheet for the
   literature-grounding sub-task that Codex never sees.
-- **User-level skills** under `~/.claude/skills/`, several of which auto-trigger and shift
-  the agent's process priors.
+- **User-level skills, plugins and MCP servers**, which can shift the agent's process priors
+  or add literature access Codex runs do not have.
 
 To keep Claude cohorts apples-to-apples with Codex, `agent_edit_blueprint_claude.sh`
 defaults to **isolated mode** (pass `--no-isolate` to opt out):
 
 - `CLAUDE_CODE_DISABLE_AUTO_MEMORY=1` — disables project auto-memory.
-- `--disable-slash-commands` — disables user-level skills.
-- `--setting-sources user` — ignores the repo's `.claude/settings.local.json`.
+- `--safe-mode` — disables CLAUDE.md, skills, plugins, hooks and custom agents.
+- `--strict-mcp-config` — loads no MCP servers (e.g. literature connectors).
 
 These knobs keep subscription OAuth working (no `--bare`), so default-isolated runs do not
 require an `ANTHROPIC_API_KEY`. `--no-isolate` loads project memory + skills and tags the

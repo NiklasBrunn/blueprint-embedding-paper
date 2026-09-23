@@ -193,7 +193,7 @@ def _build_summary(
     # next to the output parquet during build_embedding; when the
     # caller threads its path in, fold per-module coverage fields into
     # blueprint.modules and add a top-level dataset_coverage header.
-    # Absent sidecar → summary is unchanged (Extract (Stage A) / Extract (Stage B)).
+    # Absent sidecar → summary is unchanged.
     if coverage_path is not None and coverage_path.exists():
         coverage = json.loads(coverage_path.read_text())
         cov_by_name = {m["name"]: m for m in coverage.get("modules", [])}

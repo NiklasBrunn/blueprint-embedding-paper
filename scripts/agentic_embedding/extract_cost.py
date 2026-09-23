@@ -27,7 +27,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 
 # Codex prints the session token total on the line after a bare "tokens used"
 # line, with "." (or " ") as a thousands separator (e.g. "48.158" -> 48158).
-# Claude's text-mode transcript has no such line.
+# Claude (`--output-format json`) instead prints one JSON result with a `usage` block.
 _TOKENS_LINE_RE = re.compile(r"^\s*tokens used\s*$", re.IGNORECASE)
 _NUMERIC_LINE_RE = re.compile(r"^[\d.,\s]+$")
 _TIMING_RE = re.compile(r"\[timing\]\s+(.*)$", re.MULTILINE)
@@ -140,8 +140,25 @@ def _session_phase_secs(run_dir: Path) -> dict[str, int | None]:
     return out
 
 
+def _claude_json_tokens(lines: list[str]) -> int | None:
+    """Total tokens from the last `claude -p --output-format json` result line."""
+    for line in reversed(lines):
+        if not line.lstrip().startswith("{"):
+            continue
+        try:
+            usage = json.loads(line).get("usage") or {}
+        except (ValueError, AttributeError):
+            continue
+        keys = ("input_tokens", "output_tokens",
+                "cache_creation_input_tokens", "cache_read_input_tokens")
+        if any(k in usage for k in keys):
+            return sum(int(usage.get(k) or 0) for k in keys)
+    return None
+
+
 def _tokens_in_log(log_path: Path) -> int | None:
-    """Sum every `tokens used\\n<N>` block in a codex transcript; None if none."""
+    """Sum every `tokens used\\n<N>` block in a codex transcript, else read a
+    claude JSON result; None if neither is present."""
     txt = _read_text(log_path)
     if not txt:
         return None
@@ -160,7 +177,7 @@ def _tokens_in_log(log_path: Path) -> int | None:
                     total += int(digits)
                     found = True
             break
-    return total if found else None
+    return total if found else _claude_json_tokens(lines)
 
 
 def _parse_timing_line(log_path: Path) -> dict:
@@ -319,12 +336,12 @@ def _build_cost(run_dir: Path) -> dict:
         "stage_a_s": _phase_secs("stage_a"),
         "stage_b_s": stage_b_s,
         "embed_s": _phase_secs("embed"),
-        # Token cost (codex; null for claude text-mode).
+        # Token cost (codex transcript or claude JSON result).
         "agent_tokens_stage_a": tokens_a,
         "agent_tokens_stage_b_refine": tokens_b_refine,
         "agent_tokens_total": tokens_total,
         "agent_tokens_note": None if tokens_found
-        else "no 'tokens used' line in the agent transcript (claude text-mode emits none)",
+        else "no 'tokens used' line or claude JSON usage in the agent transcript",
         # Embed embedding-build timing/footprint, parsed from embed.log's
         # `[timing]` line. New runs emit the 4-bucket taxonomy (walltime = load_data
         # + obtain_model + build_embedding + other); fall back to the legacy

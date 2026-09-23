@@ -5,7 +5,7 @@
 # produce a parquet sibling to the blueprint embeddings, named
 # freeform_<variant>_<model_slug>_<reasoning>_<dataset>_seed<N>.parquet.
 #
-# Two variants quantify *what* the constrained blueprint pipeline buys:
+# Three variants quantify *what* the constrained blueprint pipeline buys:
 #
 #   --variant constrained  (default)  uses
 #       agent_prompt_freeform_constrained.md
@@ -54,7 +54,7 @@ REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 PROMPT_TEMPLATE_DIR="${REPO_ROOT}/prompt_templates"
 WORK_ROOT="${REPO_ROOT}/work"
 
-DATASET_CHOICES=(mouse_brain human_pancreas)
+DATASET_CHOICES=(mouse_brain human_pancreas mouse_gastrulation mouse_cortex human_immune)
 REASONING_CHOICES=(low medium high xhigh)
 VARIANT_CHOICES=(constrained naive noref)
 
@@ -65,8 +65,8 @@ Usage: agent_edit_freeform.sh --dataset NAME --model SLUG --reasoning-effort LEV
                               [--no-embed] [-h|--help]
 
 Required:
-  --dataset NAME             mouse_brain | human_pancreas.
-  --model SLUG               Codex model slug, e.g. gpt-5.5, gpt-5.4-mini.
+  --dataset NAME             mouse_brain | human_pancreas | mouse_gastrulation | mouse_cortex | human_immune.
+  --model SLUG               Codex model slug, e.g. gpt-5.5, gpt-5.6-luna.
   --reasoning-effort LEVEL   low | medium | high | xhigh.
 
 Optional:
@@ -147,12 +147,15 @@ PARENT_DIR="${WORK_ROOT}/${PARENT_NAME}"
 SESSION_LOG_DIR="${PARENT_DIR}/sessions"
 
 CODEX_ARGS=(
+  -s workspace-write
   -c "tools.web_search=true"
   -c "sandbox_workspace_write.network_access=true"
   -m "${MODEL}"
   -c "model_reasoning_effort=\"${REASONING_EFFORT}\""
 )
 CODEX_ARGS+=(--disable fast_mode)
+# Isolation: hide the user's Codex plugins, apps, memories and skills from the agent.
+CODEX_ARGS+=(--disable plugins --disable apps --disable memories -c "skills.include_instructions=false")
 
 for required_file in "${SOURCE_PROMPT_FREEFORM}" "${SOURCE_SCENARIO}"; do
   if [[ ! -f "${required_file}" ]]; then
@@ -177,9 +180,10 @@ SESSION_LOG="${SESSION_LOG_DIR}/${SESSION_ID}.log"
 NEXT_RUN=1
 
 shopt -s nullglob
-for existing_dir in "${PARENT_DIR}/${RUN_DATE}_freeform_run"*; do
+# Seeds (= runNN) stay unique per cohort across dates.
+for existing_dir in "${PARENT_DIR}/"*_freeform_run*; do
   existing_name="$(basename "${existing_dir}")"
-  if [[ "${existing_name}" =~ ^${RUN_DATE}_freeform_run([0-9]{2})$ ]]; then
+  if [[ "${existing_name}" =~ ^[0-9]{6}_freeform_run([0-9]{2})$ ]]; then
     run_number=$((10#${BASH_REMATCH[1]}))
     if (( run_number >= NEXT_RUN )); then
       NEXT_RUN=$((run_number + 1))
@@ -223,6 +227,7 @@ done
   printf 'embed: %s\n'                  "${EMBED}"
   printf 'codex_web_search: always-on\n'
   printf 'codex_network_access: always-on\n'
+  printf 'codex_sandbox: workspace-write (isolated: no plugins/apps/memories/skills)\n'
   printf 'parent_dir: %s\n' "${PARENT_NAME}"
   printf 'workdirs:\n'
   for w in "${WORKDIRS[@]}"; do
@@ -245,7 +250,7 @@ for workdir in "${WORKDIRS[@]}"; do
     printf '[%s] [%s] stage_a starting\n' "$(date '+%H:%M:%S')" "$(basename "${workdir}")" >> "${SESSION_LOG}"
     set +e
     _t0=$(date +%s)
-    codex exec ${CODEX_ARGS[@]+"${CODEX_ARGS[@]}"} "${EDIT_PROMPT}" >"${log}" 2>&1
+    codex exec ${CODEX_ARGS[@]+"${CODEX_ARGS[@]}"} "${EDIT_PROMPT}" </dev/null >"${log}" 2>&1
     rc=$?
     _t1=$(date +%s)
     set -e
@@ -434,7 +439,7 @@ if [[ -f "${EXTRACT_COST_SCRIPT}" ]]; then
     # Mirror cost.json next to the embedding parquet under outs/embeddings/<dataset>/
     # so downstream cost/quality joins can read from outs/ without walking work/.
     # Parallel to the cost.json mirror in agent_edit_blueprint{,_claude}.sh.
-    if [[ -s "${workdir}/cost.json" && -s "${workdir}/.embed_detail" ]]; then
+    if [[ -s "${workdir}/cost.json" && "$(cat "${workdir}/.embed_status" 2>/dev/null)" == "OK" ]]; then
       detail=$(cat "${workdir}/.embed_detail")
       if [[ "${detail}" == *.parquet ]]; then
         stem=$(basename "${detail}" .parquet)

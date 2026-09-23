@@ -71,23 +71,23 @@
 #
 #   bash analysis/agent_edit_blueprint_claude.sh \
 #       --dataset mouse_brain \
-#       --model claude-opus-4-7 --reasoning-effort high
+#       --model claude-opus-5-5 --reasoning-effort high
 #
 #   # Add Stage B refinement (default cap is 3; pass --max-iterations to override):
 #   bash analysis/agent_edit_blueprint_claude.sh \
 #       --dataset mouse_brain \
-#       --model claude-opus-4-7 --reasoning-effort high \
+#       --model claude-opus-5-5 --reasoning-effort high \
 #       --with-refine
 #
 #   # Diagnostic probe — project memory + skills enabled (cohort gets _userctx marker):
 #   bash analysis/agent_edit_blueprint_claude.sh \
 #       --dataset mouse_brain \
-#       --model claude-opus-4-7 --reasoning-effort high --no-isolate
+#       --model claude-opus-5-5 --reasoning-effort high --no-isolate
 #
 #   # Resource-unconstrained variant (cohort tag _noref_unrefined; Stage A only):
 #   bash analysis/agent_edit_blueprint_claude.sh \
 #       --dataset mouse_brain \
-#       --model claude-opus-4-7 --reasoning-effort high --noref
+#       --model claude-opus-5-5 --reasoning-effort high --noref
 #
 #   # See all flags:
 #   bash analysis/agent_edit_blueprint_claude.sh --help
@@ -110,7 +110,7 @@ WORK_ROOT="${REPO_ROOT}/work"
 
 DEFAULT_MAX_REFINE_ITERATIONS=3
 DATASET_CHOICES=(mouse_brain human_pancreas mouse_gastrulation mouse_cortex human_immune)
-REASONING_CHOICES=(low medium high xhigh)
+REASONING_CHOICES=(low medium high xhigh max)
 
 usage() {
   cat <<'EOF'
@@ -127,10 +127,10 @@ resource-unconstrained variant with --noref. The two flags compose.
 Required:
   --dataset NAME             mouse_brain | human_pancreas | mouse_gastrulation | mouse_cortex | human_immune.
   --model SLUG               Claude model id passed to `claude --model`.
-                             Recommended: claude-opus-4-7 (xhigh-capable),
-                             claude-sonnet-4-6, claude-haiku-4-5-20251001.
-  --reasoning-effort LEVEL   One of: low, medium, high, xhigh (xhigh requires
-                             claude-opus-4-7). Maps to `claude --effort`.
+                             Any id or alias `claude --model` accepts; pin a full id
+                             (e.g. claude-opus-5-5) for reproducible cohorts.
+  --reasoning-effort LEVEL   One of: low, medium, high, xhigh, max (model-dependent).
+                             Maps to `claude --effort`.
 
 Optional:
   --with-refine              Opt INTO Stage B (Discriminator/Generator refinement loop).
@@ -140,9 +140,10 @@ Optional:
   --max-iterations N         Maximum Discriminator rounds when --with-refine is set
                              (default: 3). The loop exits early on rating "fine".
   --no-isolate               Opt out of isolation, which is ON by default. Isolation
-                             runs with project auto-memory and user-level skills
-                             disabled (adds `--disable-slash-commands --setting-sources
-                             user` to every claude invocation and exports
+                             runs with auto-memory and all user customizations
+                             (CLAUDE.md, skills, plugins, hooks, MCP) disabled
+                             (adds `--safe-mode --strict-mcp-config` to every
+                             claude invocation and exports
                              CLAUDE_CODE_DISABLE_AUTO_MEMORY=1), keeping cohorts
                              apples-to-apples with codex. With --no-isolate, project
                              memory + skills load and the cohort directory + Embed
@@ -288,7 +289,7 @@ if ! [[ "${MAX_REFINE_ITERATIONS}" =~ ^[0-9]+$ ]] || (( MAX_REFINE_ITERATIONS < 
 fi
 
 # Swap the populator prompt + blueprint template under --noref so the
-# agent edits the resource-optional variant. When --with-refine is
+# agent edits the resource-free variant. When --with-refine is
 # additionally set, swap the Discriminator/Generator prompts too so the
 # whole loop runs under the no-ref contract.
 if [[ "${NOREF}" == "on" ]]; then
@@ -304,7 +305,7 @@ BLUEPRINT_INPUT="${REPO_ROOT}/data/preprocessed/${DATASET}_pp.h5ad"
 
 SOURCE_SCENARIO="${REPO_ROOT}/configs/scenario_config_${DATASET}.jsonc"
 
-# model_slug: claude-opus-4-7 -> claude_opus_4_7,
+# model_slug: claude-opus-5-5 -> claude_opus_5_5,
 # claude-haiku-4-5-20251001 -> claude_haiku_4_5_20251001.
 MODEL_SLUG="${MODEL//./_}"
 MODEL_SLUG="${MODEL_SLUG//-/_}"
@@ -318,7 +319,7 @@ fi
 # spells out both. Four combinations:
 #   default               → `_unrefined`        (Stage A only, constrained)
 #   --with-refine         → `_refine`           (sibling `_unrefined` snapshot)
-#   --noref               → `_noref_unrefined`  (Stage A only, resources optional)
+#   --noref               → `_noref_unrefined`  (Stage A only, no resources)
 #   --noref --with-refine → `_noref_refine`     (sibling `_noref_unrefined` snapshot)
 # Pure-Stage-A runs land at the exact same artifact layout as the Stage A
 # snapshot half of the matching --with-refine run. This keeps the
@@ -359,11 +360,11 @@ CLAUDE_ARGS=(
   --model "${MODEL}"
   --effort "${REASONING_EFFORT}"
   --dangerously-skip-permissions
-  --output-format text
+  --output-format json
 )
 
 if [[ "${ISOLATE}" == "on" ]]; then
-  CLAUDE_ARGS+=(--disable-slash-commands --setting-sources user)
+  CLAUDE_ARGS+=(--safe-mode --strict-mcp-config)
   export CLAUDE_CODE_DISABLE_AUTO_MEMORY=1
 fi
 
@@ -400,9 +401,10 @@ SESSION_LOG="${SESSION_LOG_DIR}/${SESSION_ID}.log"
 NEXT_RUN=1
 
 shopt -s nullglob
-for existing_dir in "${PARENT_DIR}/${RUN_DATE}_blueprint_run"*; do
+# Seeds (= runNN) stay unique per cohort across dates.
+for existing_dir in "${PARENT_DIR}/"*_blueprint_run*; do
   existing_name="$(basename "${existing_dir}")"
-  if [[ "${existing_name}" =~ ^${RUN_DATE}_blueprint_run([0-9]{2})$ ]]; then
+  if [[ "${existing_name}" =~ ^[0-9]{6}_blueprint_run([0-9]{2})$ ]]; then
     run_number=$((10#${BASH_REMATCH[1]}))
     if (( run_number >= NEXT_RUN )); then
       NEXT_RUN=$((run_number + 1))
@@ -454,8 +456,7 @@ done
   printf 'claude_network_access: always-on (--dangerously-skip-permissions)\n'
   if [[ "${ISOLATE}" == "on" ]]; then
     printf 'claude_auto_memory: disabled (CLAUDE_CODE_DISABLE_AUTO_MEMORY=1)\n'
-    printf 'claude_skills: disabled (--disable-slash-commands)\n'
-    printf 'claude_setting_sources: user (ignores project/local settings)\n'
+    printf 'claude_customizations: disabled (--safe-mode --strict-mcp-config)\n'
   else
     printf 'claude_auto_memory: enabled (project memory loaded; cohort marked _userctx)\n'
     printf 'claude_skills: enabled (~/.claude/skills/ advertised; cohort marked _userctx)\n'
@@ -495,10 +496,12 @@ for workdir in "${WORKDIRS[@]}"; do
     printf '[%s] [%s] stage_a starting\n' "$(date '+%H:%M:%S')" "$(basename "${workdir}")" >> "${SESSION_LOG}"
     set +e
     _t0=$(date +%s)
-    claude "${CLAUDE_ARGS[@]}" "${EDIT_PROMPT}" >"${log}" 2>&1
+    claude "${CLAUDE_ARGS[@]}" "${EDIT_PROMPT}" </dev/null >"${log}" 2>&1
     rc=$?
     _t1=$(date +%s)
     set -e
+    # A clean exit that left the template untouched is a failure.
+    (( rc == 0 )) && cmp -s "${SOURCE_BLUEPRINT}" embedder_blueprint.py && rc=3
     echo "$((_t1 - _t0))" > "${workdir}/.stage_a_secs"
     printf '[%s] [%s] stage_a finished (exit=%d)\n' "$(date '+%H:%M:%S')" "$(basename "${workdir}")" "${rc}" >> "${SESSION_LOG}"
     echo "${rc}" > "${workdir}/.stage_a_rc"
@@ -597,7 +600,7 @@ if [[ "${WITH_REFINE}" == "on" ]] && (( ${#SURVIVORS[@]} > 0 )); then
             "$(date '+%H:%M:%S')" "$(basename "${workdir}")" "${nn}" >> "${SESSION_LOG}"
         set +e
         _t0=$(date +%s)
-        claude "${CLAUDE_ARGS[@]}" "${DISCRIMINATE_PROMPT}" \
+        claude "${CLAUDE_ARGS[@]}" "${DISCRIMINATE_PROMPT}" </dev/null \
           >"${disc_log}" 2>&1
         disc_rc=$?
         _t1=$(date +%s)
@@ -652,7 +655,7 @@ PYEOF
               "${nn}" "${gen_attempt}" >> "${SESSION_LOG}"
           set +e
           _t2=$(date +%s)
-          claude "${CLAUDE_ARGS[@]}" "${gen_prompt_used}" \
+          claude "${CLAUDE_ARGS[@]}" "${gen_prompt_used}" </dev/null \
             >"${gen_log}" 2>&1
           gen_rc=$?
           _t3=$(date +%s)
@@ -1057,7 +1060,7 @@ if [[ -f "${EXTRACT_COST_SCRIPT}" ]]; then
     # Mirror cost.json next to the embedding parquet under outs/embeddings/<dataset>/
     # so downstream cost/quality joins can read from outs/ without walking work/.
     # Matches the existing Embed summary.json mirror pattern.
-    if [[ -s "${workdir}/cost.json" && -s "${workdir}/.embed_detail" ]]; then
+    if [[ -s "${workdir}/cost.json" && "$(cat "${workdir}/.embed_status" 2>/dev/null)" == "OK" ]]; then
       detail=$(cat "${workdir}/.embed_detail")
       if [[ "${detail}" == *.parquet ]]; then
         stem=$(basename "${detail}" .parquet)

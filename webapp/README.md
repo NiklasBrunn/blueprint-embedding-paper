@@ -153,16 +153,18 @@ your `PATH`, plus your own OpenAI API key. (Map/Explore need neither.)
 
 The pipeline runs `codex` **non-interactively** inside per-run workdirs under
 `webapp/runtime/`, so it works out of the box on any machine with **no manual
-directory-trust step**. The app invokes codex with two flags (see
+directory-trust step**. The app invokes codex with these flags (see
 `CODEX_ARGS` in `webapp/pipeline_driver.sh`):
 
 - **`--skip-git-repo-check`** — the runtime workdirs are not git repositories, and
   codex otherwise refuses to run in a non-repo / untrusted directory (failing with
   `Not in a trusted directory` in the generation log). This flag skips that guard.
 - **`-s workspace-write`** — pins codex to the least-privilege *workspace-write*
-  sandbox: the agent may read and write **only within its own workdir** (it edits
-  `build_blueprint()`), with no broader disk or system access. Web search is the
-  only network access enabled (`sandbox_workspace_write.network_access=true`).
+  sandbox: the agent may write **only within its own workdir** (it edits
+  `build_blueprint()`); reads are not restricted. Network access is on
+  (`sandbox_workspace_write.network_access=true`) for web search and the DOI check.
+- **`--disable plugins --disable apps --disable memories -c skills.include_instructions=false`**
+  — hides your personal Codex plugins, apps, memories and skills from the agent.
 
 These require a reasonably **recent codex** (the flags/config keys must be
 supported) — check with `codex --version`. If an older codex still refuses to run,

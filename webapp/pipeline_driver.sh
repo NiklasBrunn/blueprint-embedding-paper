@@ -120,9 +120,9 @@
 #   # Cheaper sweep:
 #   bash analysis/agent_edit_blueprint.sh \
 #       --dataset human_pancreas \
-#       --model gpt-5.4-mini --reasoning-effort medium
+#       --model gpt-5.6-luna --reasoning-effort medium
 #
-#   # Add Stage B refinement (Discriminator/Generator loop, cap 5 iters):
+#   # Add Stage B refinement (Discriminator/Generator loop, default cap 3 iters):
 #   bash analysis/agent_edit_blueprint.sh \
 #       --dataset mouse_brain \
 #       --model gpt-5.5 --reasoning-effort high \
@@ -139,8 +139,8 @@
 #       --dataset mouse_brain \
 #       --model gpt-5.5 --reasoning-effort high --no-embed
 #
-#   # Resource-unconstrained variant (resources optional in the prompt
-#   # and in the API). Cohort tag _noref_unrefined; Stage A only.
+#   # Resource-unconstrained variant (no resources in the prompt
+#   # or the API). Cohort tag _noref_unrefined; Stage A only.
 #   bash analysis/agent_edit_blueprint.sh \
 #       --dataset mouse_brain \
 #       --model gpt-5.5 --reasoning-effort high --noref
@@ -150,8 +150,8 @@
 #
 # FLAGS:
 #   --dataset NAME             REQUIRED. mouse_brain | human_pancreas | mouse_gastrulation | mouse_cortex | human_immune.
-#   --model SLUG               REQUIRED. e.g. gpt-5.5, gpt-5.4, gpt-5.4-mini, gpt-5.3-codex.
-#   --reasoning-effort LEVEL   REQUIRED. low | medium | high | xhigh (xhigh: gpt-5.5 only).
+#   --model SLUG               REQUIRED. e.g. gpt-5.5, gpt-5.6-luna.
+#   --reasoning-effort LEVEL   REQUIRED. low | medium | high | xhigh.
 #   --with-refine              opt INTO Stage B (Discriminator/Generator refinement).
 #                              When set, MODEL_SLUG carries a `_refine` suffix; when
 #                              unset, it carries `_unrefined`. The two refinement-status
@@ -213,8 +213,8 @@ resource-unconstrained variant with --noref. The two flags compose.
 
 Required:
   --dataset NAME             mouse_brain | human_pancreas | mouse_gastrulation | mouse_cortex | human_immune.
-  --model SLUG               Codex model slug, e.g. gpt-5.5, gpt-5.4, gpt-5.4-mini.
-  --reasoning-effort LEVEL   One of: low, medium, high, xhigh (xhigh is gpt-5.5 only).
+  --model SLUG               Codex model slug, e.g. gpt-5.5, gpt-5.6-luna.
+  --reasoning-effort LEVEL   One of: low, medium, high, xhigh.
 
 Optional:
   --with-refine              Opt INTO Stage B (Discriminator/Generator refinement loop).
@@ -425,7 +425,7 @@ if ! [[ "${MAX_REFINE_ITERATIONS}" =~ ^[0-9]+$ ]] || (( MAX_REFINE_ITERATIONS < 
 fi
 
 # Swap the populator prompt + blueprint template under --noref so the
-# agent edits the resource-optional variant. When --with-refine is
+# agent edits the resource-free variant. When --with-refine is
 # additionally set, swap the Discriminator/Generator prompts too so the
 # whole loop runs under the no-ref contract.
 if [[ "${NOREF}" == "on" ]]; then
@@ -448,7 +448,7 @@ SOURCE_SCENARIO="${REPO_ROOT}/configs/scenario_config_${DATASET}.jsonc"
 [[ -n "${SCENARIO_FILE}" ]]           && SOURCE_SCENARIO="${SCENARIO_FILE}"
 [[ -n "${BLUEPRINT_INPUT_OVERRIDE}" ]] && BLUEPRINT_INPUT="${BLUEPRINT_INPUT_OVERRIDE}"
 
-# model_slug: gpt-5.5 -> gpt_5_5, gpt-5.4-mini -> gpt_5_4_mini.
+# model_slug: gpt-5.5 -> gpt_5_5, gpt-5.6-luna -> gpt_5_6_luna.
 MODEL_SLUG="${MODEL//./_}"
 MODEL_SLUG="${MODEL_SLUG//-/_}"
 # Always append a cohort-identity tag so every cohort surfaces with a
@@ -459,7 +459,7 @@ MODEL_SLUG="${MODEL_SLUG//-/_}"
 # spells out both. Four combinations:
 #   default               → `_unrefined`        (Stage A only, constrained)
 #   --with-refine         → `_refine`           (sibling `_unrefined` snapshot)
-#   --noref               → `_noref_unrefined`  (Stage A only, resources optional)
+#   --noref               → `_noref_unrefined`  (Stage A only, no resources)
 #   --noref --with-refine → `_noref_refine`     (sibling `_noref_unrefined` snapshot)
 # Pure-Stage-A runs land at the exact same artifact layout as the Stage A
 # snapshot half of the matching --with-refine run (constrained `_unrefined`
@@ -505,6 +505,8 @@ CODEX_ARGS=(
   -c "model_reasoning_effort=\"${REASONING_EFFORT}\""
 )
 CODEX_ARGS+=(--disable fast_mode)
+# Isolation: hide the user's Codex plugins, apps, memories and skills from the agent.
+CODEX_ARGS+=(--disable plugins --disable apps --disable memories -c "skills.include_instructions=false")
 
 required_files=(
   "${SOURCE_BLUEPRINT}"
@@ -554,9 +556,10 @@ SESSION_LOG="${SESSION_LOG_DIR}/${SESSION_ID}.log"
 NEXT_RUN=1
 
 shopt -s nullglob
-for existing_dir in "${PARENT_DIR}/${RUN_DATE}_blueprint_run"*; do
+# Seeds (= runNN) stay unique per cohort across dates.
+for existing_dir in "${PARENT_DIR}/"*_blueprint_run*; do
   existing_name="$(basename "${existing_dir}")"
-  if [[ "${existing_name}" =~ ^${RUN_DATE}_blueprint_run([0-9]{2})$ ]]; then
+  if [[ "${existing_name}" =~ ^[0-9]{6}_blueprint_run([0-9]{2})$ ]]; then
     run_number=$((10#${BASH_REMATCH[1]}))
     if (( run_number >= NEXT_RUN )); then
       NEXT_RUN=$((run_number + 1))
@@ -605,6 +608,7 @@ done
   printf 'noref: %s\n'                  "${NOREF}"
   printf 'codex_web_search: always-on\n'
   printf 'codex_network_access: always-on\n'
+  printf 'codex_sandbox: workspace-write (isolated: no plugins/apps/memories/skills)\n'
   printf 'parent_dir: %s\n' "${PARENT_NAME}"
   printf 'workdirs:\n'
   for w in "${WORKDIRS[@]}"; do
@@ -645,11 +649,13 @@ for workdir in "${WORKDIRS[@]}"; do
       python "${SCRIPT_DIR}/_mock_codex.py" >"${log}" 2>&1
       rc=$?
     else
-      codex exec ${CODEX_ARGS[@]+"${CODEX_ARGS[@]}"} "${EDIT_PROMPT}" >"${log}" 2>&1
+      codex exec ${CODEX_ARGS[@]+"${CODEX_ARGS[@]}"} "${EDIT_PROMPT}" </dev/null >"${log}" 2>&1
       rc=$?
     fi
     _t1=$(date +%s)
     set -e
+    # A clean exit that left the template untouched is a failure.
+    (( rc == 0 )) && cmp -s "${SOURCE_BLUEPRINT}" embedder_blueprint.py && rc=3
     echo "$((_t1 - _t0))" > "${workdir}/.stage_a_secs"
     printf '[%s] [%s] stage_a finished (exit=%d)\n' "$(date '+%H:%M:%S')" "$(basename "${workdir}")" "${rc}" >> "${SESSION_LOG}"
     echo "${rc}" > "${workdir}/.stage_a_rc"
@@ -755,7 +761,7 @@ if [[ "${WITH_REFINE}" == "on" ]] && (( ${#SURVIVORS[@]} > 0 )); then
             "$(date '+%H:%M:%S')" "$(basename "${workdir}")" "${nn}" >> "${SESSION_LOG}"
         set +e
         _t0=$(date +%s)
-        codex exec ${CODEX_ARGS[@]+"${CODEX_ARGS[@]}"} "${DISCRIMINATE_PROMPT}" \
+        codex exec ${CODEX_ARGS[@]+"${CODEX_ARGS[@]}"} "${DISCRIMINATE_PROMPT}" </dev/null \
           >"${disc_log}" 2>&1
         disc_rc=$?
         _t1=$(date +%s)
@@ -810,7 +816,7 @@ PYEOF
               "${nn}" "${gen_attempt}" >> "${SESSION_LOG}"
           set +e
           _t2=$(date +%s)
-          codex exec ${CODEX_ARGS[@]+"${CODEX_ARGS[@]}"} "${gen_prompt_used}" \
+          codex exec ${CODEX_ARGS[@]+"${CODEX_ARGS[@]}"} "${gen_prompt_used}" </dev/null \
             >"${gen_log}" 2>&1
           gen_rc=$?
           _t3=$(date +%s)
@@ -1237,7 +1243,7 @@ if [[ -f "${EXTRACT_COST_SCRIPT}" ]]; then
     # Mirror cost.json next to the embedding parquet under outs/embeddings/<dataset>/
     # so downstream cost/quality joins can read from outs/ without walking work/.
     # Matches the existing Embed summary.json mirror pattern.
-    if [[ -s "${workdir}/cost.json" && -s "${workdir}/.embed_detail" ]]; then
+    if [[ -s "${workdir}/cost.json" && "$(cat "${workdir}/.embed_status" 2>/dev/null)" == "OK" ]]; then
       detail=$(cat "${workdir}/.embed_detail")
       if [[ "${detail}" == *.parquet ]]; then
         stem=$(basename "${detail}" .parquet)
